@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from '@/components/ui/navigation-menu';
-import { ChevronDown } from 'lucide-react';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { ChevronDown, Globe } from 'lucide-react';
 
 const Navbar = () => {
   return (
@@ -94,12 +95,27 @@ const Navbar = () => {
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
             {/* Language selector */}
-            <div className="hidden md:flex items-center space-x-2 text-sm">
-              <span className="text-foreground font-medium">ES</span>
-              <span className="text-muted-foreground">CAT</span>
-              <span className="text-muted-foreground">FR</span>
-              <span className="text-muted-foreground">EN</span>
-            </div>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="hidden md:flex items-center space-x-2 text-sm px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">
+                <Globe className="h-4 w-4" />
+                <span className="font-medium">ES</span>
+                <ChevronDown className="h-3 w-3" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem className="font-medium">
+                  ES - Español
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  CAT - Català
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  FR - Français
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  EN - English
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             {/* CTA Button */}
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium">
