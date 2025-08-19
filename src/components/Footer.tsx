@@ -1,7 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const handleLogoTripleClick = () => {
     let clickCount = 0;
     return () => {
@@ -66,11 +69,11 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h3 className="font-bold mb-4">Recursos</h3>
+            <h3 className="font-bold mb-4">{t('nav.resources')}</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Ebooks</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Webinars</a></li>
+              <li><Link to="/blog" className="hover:text-primary transition-colors">{t('nav.blog')}</Link></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t('nav.ebooks')}</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t('nav.webinars')}</a></li>
             </ul>
           </div>
 
