@@ -4,6 +4,7 @@ import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMe
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { ChevronDown, Globe } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
+import skiSolutionLogo from '@/assets/ski-solution-logo.png';
 
 const Navbar = () => {
   const { t, currentLanguage, changeLanguage } = useTranslation();
@@ -17,9 +18,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-foreground">
-              Ski Solution <span className="text-primary">360</span>
-            </div>
+            <img 
+              src={skiSolutionLogo} 
+              alt="Ski Solution 360" 
+              className="h-10 w-auto"
+            />
           </div>
 
           {/* Navigation Menu */}

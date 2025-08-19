@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/hooks/useTranslation';
+import skiSolutionLogo from '@/assets/ski-solution-logo.png';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -106,12 +107,12 @@ const Footer = () => {
         {/* Bottom section */}
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
           {/* Logo with triple click handler */}
-          <div 
-            className="text-xl font-bold cursor-pointer mb-4 md:mb-0"
+          <img 
+            src={skiSolutionLogo} 
+            alt="Ski Solution 360" 
+            className="h-8 w-auto cursor-pointer mb-4 md:mb-0"
             onClick={logoClickHandler}
-          >
-            Ski Solution <span className="text-primary">360</span>
-          </div>
+          />
 
           {/* Legal links */}
           <div className="flex space-x-6 text-sm">

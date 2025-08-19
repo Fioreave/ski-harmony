@@ -1,4 +1,5 @@
 import React from 'react';
+import mountainsAurora from '@/assets/mountains-aurora.png';
 
 const MetricsSection = () => {
   const metrics = [
@@ -12,8 +13,17 @@ const MetricsSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-secondary">
-      <div className="container mx-auto px-4">
+    <section 
+      className="py-16 bg-secondary relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${mountainsAurora})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <div className="absolute inset-0 bg-secondary/80"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4 text-secondary-foreground">
             Números que hablan por sí solos
