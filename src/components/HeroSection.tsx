@@ -1,25 +1,26 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { PlayCircle } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="min-h-screen flex items-center justify-center bg-background pt-16">
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground leading-tight">
-            El Software todo en uno para tu{' '}
-            <span className="text-primary">estación de esquí</span>
+            {t('hero.h1')}
           </h1>
           
           <h2 className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Gestiona reservas, forfaits, alquiler, escuela, restauración y mucho más desde un único panel conectado a tu ERP. 
-            Optimiza tus ingresos con precios dinámicos y datos en tiempo real.
+            {t('hero.h2')}
           </h2>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 text-lg font-medium">
-              Solicita una demo
+              {t('nav.request-demo')}
             </Button>
             
             <Button variant="outline" size="lg" className="px-8 py-4 text-lg">

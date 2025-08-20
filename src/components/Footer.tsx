@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { useTranslation } from '@/hooks/useTranslation';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSelector from '@/components/LanguageSelector';
 import skiSolutionLogo from '@/assets/ski-solution-logo.png';
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t } = useLanguage();
   const handleLogoTripleClick = () => {
     let clickCount = 0;
     return () => {
@@ -114,11 +115,14 @@ const Footer = () => {
             onClick={logoClickHandler}
           />
 
-          {/* Legal links */}
-          <div className="flex space-x-6 text-sm">
-            <a href="#" className="hover:text-primary transition-colors">Aviso legal</a>
-            <a href="#" className="hover:text-primary transition-colors">Privacidad</a>
-            <a href="#" className="hover:text-primary transition-colors">Cookies</a>
+          {/* Language selector and legal links */}
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <LanguageSelector variant="footer" />
+            <div className="flex space-x-6 text-sm">
+              <a href="#" className="hover:text-primary transition-colors">Aviso legal</a>
+              <a href="#" className="hover:text-primary transition-colors">Privacidad</a>
+              <a href="#" className="hover:text-primary transition-colors">Cookies</a>
+            </div>
           </div>
         </div>
       </div>

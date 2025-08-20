@@ -1,23 +1,26 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Layers, TrendingUp, Zap } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const BenefitsSection = () => {
+  const { t } = useLanguage();
+  
   const benefits = [
     {
       icon: <Layers className="h-12 w-12 text-primary" />,
-      title: "Todo en uno",
-      description: "Un único sistema modular, sin cambiar tu hardware."
+      title: t('benefits.all-in-one.title'),
+      description: t('benefits.all-in-one.desc')
     },
     {
       icon: <TrendingUp className="h-12 w-12 text-primary" />,
-      title: "Más ingresos",
-      description: "Motor de pricing dinámico y venta anticipada online."
+      title: t('benefits.more-revenue.title'),
+      description: t('benefits.more-revenue.desc')
     },
     {
       icon: <Zap className="h-12 w-12 text-primary" />,
-      title: "Operación sin fricciones",
-      description: "Acceso rápido, autoservicio y control total."
+      title: t('benefits.smooth-operation.title'),
+      description: t('benefits.smooth-operation.desc')
     }
   ];
 
