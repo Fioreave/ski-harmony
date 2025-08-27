@@ -77,13 +77,13 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-lime-50">
       <Navbar />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-blue-100 text-blue-900 px-4 py-2">
+            <Badge className="mb-4 bg-lime-100 text-lime-900 px-4 py-2">
               Vela & Buceo
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
@@ -138,12 +138,12 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
               </div>
             </div>
 
-            <Card className="bg-gradient-to-br from-blue-50 to-cyan-50 border-0 shadow-xl">
+            <Card className="bg-gradient-to-br from-lime-50 to-lime-100 border-0 shadow-xl">
               <CardHeader>
-                <div className="bg-blue-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <div className="bg-lime-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                   <Waves className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl font-bold text-blue-900">
+                <CardTitle className="text-2xl font-bold text-lime-900">
                   La solución: Ski Solution 360 adaptado a deportes acuáticos
                 </CardTitle>
               </CardHeader>
@@ -228,12 +228,12 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center border-0 bg-gradient-to-br from-blue-50 to-cyan-50">
+            <Card className="text-center border-0 bg-gradient-to-br from-lime-50 to-lime-100">
               <CardHeader>
-                <div className="bg-blue-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-lime-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Anchor className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-blue-900">
+                <CardTitle className="text-xl font-bold text-lime-900">
                   Embarcaciones
                 </CardTitle>
               </CardHeader>
@@ -245,12 +245,12 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-gradient-to-br from-cyan-50 to-teal-50">
+            <Card className="text-center border-0 bg-gradient-to-br from-lime-100 to-lime-200">
               <CardHeader>
-                <div className="bg-cyan-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-lime-700 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Package className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-cyan-900">
+                <CardTitle className="text-xl font-bold text-lime-900">
                   Equipamiento
                 </CardTitle>
               </CardHeader>
@@ -262,12 +262,12 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-gradient-to-br from-teal-50 to-green-50">
+            <Card className="text-center border-0 bg-gradient-to-br from-lime-200 to-lime-300">
               <CardHeader>
-                <div className="bg-teal-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-lime-800 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-teal-900">
+                <CardTitle className="text-xl font-bold text-lime-900">
                   Cursos
                 </CardTitle>
               </CardHeader>
@@ -296,25 +296,25 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
                 icon: <Waves className="h-8 w-8" />,
                 title: "Condiciones marítimas",
                 desc: "Integración con meteorología marina",
-                color: "bg-blue-600",
+                color: "bg-lime-600",
               },
               {
                 icon: <Anchor className="h-8 w-8" />,
                 title: "Títulos náuticos",
                 desc: "Control de certificaciones y niveles",
-                color: "bg-cyan-600",
+                color: "bg-lime-700",
               },
               {
                 icon: <Calendar className="h-8 w-8" />,
                 title: "Mareas y vientos",
                 desc: "Planificación según condiciones",
-                color: "bg-teal-600",
+                color: "bg-lime-800",
               },
               {
                 icon: <Package className="h-8 w-8" />,
                 title: "Material específico",
                 desc: "Trajes, equipos de buceo, embarcaciones",
-                color: "bg-blue-700",
+                color: "bg-lime-900",
               },
             ].map((feature, index) => (
               <Card

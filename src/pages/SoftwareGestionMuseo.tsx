@@ -78,14 +78,14 @@ const SoftwareGestionMuseo = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-lime-50">
       <Navbar />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-purple-100 text-purple-900 px-4 py-2">
+            <Badge className="mb-4 bg-lime-100 text-lime-900 px-4 py-2">
               Museos y Centros Culturales
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
@@ -140,12 +140,12 @@ const SoftwareGestionMuseo = () => {
               </div>
             </div>
 
-            <Card className="bg-gradient-to-br from-purple-50 to-pink-50 border-0 shadow-xl">
+            <Card className="bg-gradient-to-br from-lime-50 to-lime-100 border-0 shadow-xl">
               <CardHeader>
-                <div className="bg-purple-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <div className="bg-lime-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                   <Building className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl font-bold text-purple-900">
+                <CardTitle className="text-2xl font-bold text-lime-900">
                   La solución: Ski Solution 360 para el sector cultural
                 </CardTitle>
               </CardHeader>
@@ -229,12 +229,12 @@ const SoftwareGestionMuseo = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center border-0 bg-gradient-to-br from-purple-50 to-pink-50">
+            <Card className="text-center border-0 bg-gradient-to-br from-lime-50 to-lime-100">
               <CardHeader>
-                <div className="bg-purple-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-lime-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <QrCode className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-purple-900">
+                <CardTitle className="text-xl font-bold text-lime-900">
                   Acceso rápido
                 </CardTitle>
               </CardHeader>
@@ -245,12 +245,12 @@ const SoftwareGestionMuseo = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-gradient-to-br from-blue-50 to-indigo-50">
+            <Card className="text-center border-0 bg-gradient-to-br from-lime-100 to-lime-200">
               <CardHeader>
-                <div className="bg-blue-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-lime-700 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-blue-900">
+                <CardTitle className="text-xl font-bold text-lime-900">
                   Grupos escolares
                 </CardTitle>
               </CardHeader>
@@ -261,12 +261,12 @@ const SoftwareGestionMuseo = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-gradient-to-br from-green-50 to-emerald-50">
+            <Card className="text-center border-0 bg-gradient-to-br from-lime-200 to-lime-300">
               <CardHeader>
-                <div className="bg-green-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-lime-800 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <BookOpen className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-green-900">
+                <CardTitle className="text-xl font-bold text-lime-900">
                   Experiencia cultural
                 </CardTitle>
               </CardHeader>
@@ -295,25 +295,25 @@ const SoftwareGestionMuseo = () => {
                 icon: <Calendar className="h-8 w-8" />,
                 title: "Exposiciones temporales",
                 desc: "Gestión de entradas con fechas limitadas",
-                color: "bg-purple-600",
+                color: "bg-lime-600",
               },
               {
                 icon: <Users className="h-8 w-8" />,
                 title: "Visitas guiadas",
                 desc: "Reservas por horarios y idiomas",
-                color: "bg-blue-600",
+                color: "bg-lime-700",
               },
               {
                 icon: <Building className="h-8 w-8" />,
                 title: "Eventos culturales",
                 desc: "Conciertos, conferencias y actividades",
-                color: "bg-green-600",
+                color: "bg-lime-800",
               },
               {
                 icon: <Target className="h-8 w-8" />,
                 title: "Aforo controlado",
                 desc: "Gestión de límites por sala o exposición",
-                color: "bg-orange-600",
+                color: "bg-lime-900",
               },
             ].map((useCase, index) => (
               <Card

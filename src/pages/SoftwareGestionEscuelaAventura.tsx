@@ -78,13 +78,13 @@ const SoftwareGestionEscuelaAventura = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-lime-50">
       <Navbar />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-emerald-100 text-emerald-900 px-4 py-2">
+            <Badge className="mb-4 bg-lime-100 text-lime-900 px-4 py-2">
               Aventura / Outdoor
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
@@ -138,12 +138,12 @@ const SoftwareGestionEscuelaAventura = () => {
               </div>
             </div>
 
-            <Card className="bg-gradient-to-br from-emerald-50 to-green-50 border-0 shadow-xl">
+            <Card className="bg-gradient-to-br from-lime-50 to-lime-100 border-0 shadow-xl">
               <CardHeader>
-                <div className="bg-emerald-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <div className="bg-lime-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                   <Mountain className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl font-bold text-emerald-900">
+                <CardTitle className="text-2xl font-bold text-lime-900">
                   La solución: Ski Solution 360 adaptado a la aventura
                 </CardTitle>
               </CardHeader>
@@ -169,12 +169,12 @@ const SoftwareGestionEscuelaAventura = () => {
             </h2>
           </div>
 
-          <Card className="bg-gradient-to-r from-emerald-600 to-green-600 border-0 text-white">
+          <Card className="bg-gradient-to-r from-lime-600 to-lime-700 border-0 text-white">
             <CardContent className="p-8 md:p-12">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
                 <div className="lg:col-span-2">
                   <div className="flex items-start gap-4 mb-6">
-                    <Quote className="h-8 w-8 text-emerald-200 flex-shrink-0" />
+                    <Quote className="h-8 w-8 text-lime-200 flex-shrink-0" />
                     <blockquote className="text-xl md:text-2xl font-medium">
                       "Antes teníamos actividades de rafting, escalada y
                       senderismo gestionadas por separado. Ahora todo está
@@ -182,20 +182,20 @@ const SoftwareGestionEscuelaAventura = () => {
                       actividad desde la misma web."
                     </blockquote>
                   </div>
-                  <p className="text-emerald-100">
+                  <p className="text-lime-100">
                     Aventura Total - Centro Multiaventura
                   </p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                   <div className="text-center">
                     <div className="text-4xl font-bold mb-2">80%</div>
-                    <div className="text-sm text-emerald-100">
+                    <div className="text-sm text-lime-100">
                       Menos tiempo gestión
                     </div>
                   </div>
                   <div className="text-center mt-4">
                     <div className="text-4xl font-bold mb-2">45%</div>
-                    <div className="text-sm text-emerald-100">
+                    <div className="text-sm text-lime-100">
                       Más reservas online
                     </div>
                   </div>
@@ -272,12 +272,12 @@ const SoftwareGestionEscuelaAventura = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center border-0 bg-gradient-to-br from-emerald-50 to-green-50">
+            <Card className="text-center border-0 bg-gradient-to-br from-lime-50 to-lime-100">
               <CardHeader>
-                <div className="bg-emerald-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-lime-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Mountain className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-emerald-900">
+                <CardTitle className="text-xl font-bold text-lime-900">
                   Multiaventura
                 </CardTitle>
               </CardHeader>
@@ -288,12 +288,12 @@ const SoftwareGestionEscuelaAventura = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-gradient-to-br from-blue-50 to-indigo-50">
+            <Card className="text-center border-0 bg-gradient-to-br from-lime-100 to-lime-200">
               <CardHeader>
-                <div className="bg-blue-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-lime-700 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Calendar className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-blue-900">
+                <CardTitle className="text-xl font-bold text-lime-900">
                   Estacional
                 </CardTitle>
               </CardHeader>
@@ -304,12 +304,12 @@ const SoftwareGestionEscuelaAventura = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-gradient-to-br from-purple-50 to-pink-50">
+            <Card className="text-center border-0 bg-gradient-to-br from-lime-200 to-lime-300">
               <CardHeader>
-                <div className="bg-purple-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-lime-800 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Target className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-purple-900">
+                <CardTitle className="text-xl font-bold text-lime-900">
                   Escalable
                 </CardTitle>
               </CardHeader>
