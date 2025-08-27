@@ -31,11 +31,13 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img
-              src={skiSolutionLogo}
-              alt="Ski Solution 360"
-              className="h-10 w-auto"
-            />
+            <Link to="/">
+              <img
+                src={skiSolutionLogo}
+                alt="Ski Solution 360"
+                className="h-10 w-auto"
+              />
+            </Link>
           </div>
 
           {/* Navigation Menu */}
@@ -49,37 +51,50 @@ const Navbar = () => {
                 <NavigationMenuContent>
                   <div className="grid gap-2 p-4 w-80 bg-background border border-border rounded-md shadow-lg">
                     <NavigationMenuLink asChild>
-                      <Link to="/ski-solution-360" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                      <Link
+                        to="/ski-solution-360"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
                         Plataforma Core
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <Link to="/precio-dinamico-forfaits" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                      <Link
+                        to="/precio-dinamico-forfaits"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
                         Ticketing & Dynamic Pricing
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <Link to="/control-accesos-rfid" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
-                        Control de Accesos RFID
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link to="/software-escuela-esqui" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                      <Link
+                        to="/software-escuela-esqui"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
                         Escuela & Clases
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <Link to="/gestion-alquiler-equipo" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                      <Link
+                        to="/gestion-alquiler-equipo"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
                         Alquiler & Inventario
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <Link to="/punto-venta-restauracion" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                      <Link
+                        to="/punto-venta-restauracion"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
                         F&B & Retail POS
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <Link to="/bi-crm-ski" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                      <Link
+                        to="/bi-crm-ski"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
                         BI & CRM 360
                       </Link>
                     </NavigationMenuLink>
@@ -95,42 +110,66 @@ const Navbar = () => {
                 <NavigationMenuContent>
                   <div className="grid gap-2 p-4 w-96 bg-background border border-border rounded-md shadow-lg">
                     <NavigationMenuLink asChild>
-                      <Link to="/software-gestion-ski-resort" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                      <Link
+                        to="/software-gestion-ski-resort"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
                         Grandes Resorts
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <Link to="/software-gestion-ski-resort-mediano" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                      <Link
+                        to="/software-gestion-ski-resort-mediano"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
                         Resorts Medianos
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <Link to="/software-gestion-escuelas-esqui" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                      <Link
+                        to="/software-gestion-escuelas-esqui"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
                         Escuelas Esquí
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <Link to="/software-gestion-jardines-nieve" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                      <Link
+                        to="/software-gestion-jardines-nieve"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
                         Jardines de Nieve
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <Link to="/software-gestion-bike-parks" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                      <Link
+                        to="/software-gestion-bike-parks"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
                         Bike Parks
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <Link to="/software-gestion-escuela-aventura" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                      <Link
+                        to="/software-gestion-escuela-aventura"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
                         Aventura / Outdoor
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <Link to="/software-gestion-escuela-vela-buceo" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                      <Link
+                        to="/software-gestion-escuela-vela-buceo"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
                         Vela & Buceo
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <Link to="/software-gestion-museo" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                      <Link
+                        to="/software-gestion-museo"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
                         Museos
                       </Link>
                     </NavigationMenuLink>
@@ -147,18 +186,30 @@ const Navbar = () => {
 
               {/* Recursos */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger>
-                  Recursos
-                </NavigationMenuTrigger>
+                <NavigationMenuTrigger>Recursos</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-2 p-4 w-64 bg-background border border-border rounded-md shadow-lg">
                     <NavigationMenuLink asChild>
-                      <Link to="/ebooks" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                      <Link
+                        to="https://blog.skisolution360.com/"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
+                        Blog
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        to="/ebooks"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
                         Ebooks
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
-                      <Link to="/webinars" className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                      <Link
+                        to="/webinars"
+                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                      >
                         Webinars
                       </Link>
                     </NavigationMenuLink>

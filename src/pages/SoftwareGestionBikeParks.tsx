@@ -1,78 +1,353 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import Navbar from "@/components/Navbar";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  Bike,
+  Calendar,
+  Users,
+  BarChart3,
+  CheckCircle,
+  Sun,
+  Quote,
+} from "lucide-react";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const SoftwareGestionBikeParks = () => {
+  const challenges = [
+    "Control de accesos para remontes reutilizando la infraestructura de invierno",
+    "Gestión del alquiler de bicicletas, cascos y protecciones con alta rotación",
+    "Reserva y cobro de clases o clinics de MTB",
+    "Evitar colas y saturaciones en momentos punta",
+    "Falta de visibilidad sobre el uso de pistas y afluencia diaria",
+  ];
+
+  const modules = [
+    {
+      name: "Ticketing & Dynamic Pricing",
+      desc: "Venta online de bike pass con precios por día, medio día o packs",
+      icon: <Calendar className="h-6 w-6" />,
+    },
+    {
+      name: "Control de accesos RFID/QR",
+      desc: "Uso de los mismos tornos de invierno para entradas rápidas",
+      icon: <CheckCircle className="h-6 w-6" />,
+    },
+    {
+      name: "Alquiler & Inventario",
+      desc: "Gestión de bicis, tallas, cascos y protecciones con trazabilidad",
+      icon: <Bike className="h-6 w-6" />,
+    },
+    {
+      name: "Escuela & Clases",
+      desc: "Reservas online de clinics, rutas guiadas o formación técnica",
+      icon: <Users className="h-6 w-6" />,
+    },
+    {
+      name: "BI & CRM",
+      desc: "Datos de afluencia, segmentación y comunicación a clientes",
+      icon: <BarChart3 className="h-6 w-6" />,
+    },
+    {
+      name: "Plataforma Core",
+      desc: "Coordinación central de todas las áreas en un único panel",
+      icon: <Sun className="h-6 w-6" />,
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-orange-50">
       <Navbar />
-      
-      <main className="pt-16">
-        {/* Breadcrumbs */}
-        <nav className="py-4 px-4">
-          <div className="container-custom">
-            <span className="text-sm text-muted-foreground">
-              <Link to="/" className="hover:text-foreground">Inicio</Link> / 
-              <Link to="/segmentos" className="hover:text-foreground"> Segmentos</Link> / 
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-primary/10 text-[hsl(var(--ski-lime-dark))] px-4 py-2">
               Bike Parks
-            </span>
+            </Badge>
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+              Software de Gestión para Bike Parks
+            </h1>
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8">
+              Gestiona accesos, alquiler y actividades de tu bike park con Ski
+              Solution 360. Optimiza ventas, control de aforo y operaciones en
+              temporada de verano.
+            </p>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Los bike parks son una gran oportunidad de ingresos fuera de la
+              temporada de nieve, pero requieren una gestión ágil y adaptada a
+              una operación muy dinámica.
+            </p>
           </div>
-        </nav>
+        </div>
+      </section>
 
-        {/* Hero Section */}
-        <section className="section-spacing">
-          <div className="container-custom">
-            <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-bold mb-8">
-                Bike Parks
-              </h1>
-              
-              <div className="space-y-8">
-                <div>
-                  <h2 className="text-2xl font-bold mb-4">Retos comunes</h2>
-                  <div className="space-y-3">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <p>Estacionalidad.</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <p>Control de alquiler de bicicletas y cascos.</p>
-                    </div>
+      {/* Challenges Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                Los principales desafíos incluyen:
+              </h2>
+              <div className="space-y-4">
+                {challenges.map((challenge, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-[hsl(var(--ski-lime-dark))] rounded-full mt-3 flex-shrink-0"></div>
+                    <p className="text-slate-600">{challenge}</p>
                   </div>
-                </div>
-
-                <div>
-                  <h2 className="text-2xl font-bold mb-4">Solución Ski Solution 360</h2>
-                  <div className="space-y-3">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <p>Ticketing estival.</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <p>Alquiler & Inventario digital.</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <p>CRM para captar público joven.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-8">
-                  <Button size="lg" className="btn-demo">
-                    Solicita una demo
-                  </Button>
-                </div>
+                ))}
               </div>
             </div>
-          </div>
-        </section>
-      </main>
 
+            <Card className="bg-primary/5 border-0 shadow-xl">
+              <CardHeader>
+                <div className="bg-[hsl(var(--ski-lime-dark))] w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                  <Bike className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
+                  La solución: Ski Solution 360 adaptado al verano
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-700">
+                  Ski Solution 360 permite reconvertir fácilmente la
+                  infraestructura y módulos de invierno para gestionar bike
+                  parks, maximizando el uso de recursos y aumentando la
+                  facturación estival.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Modules Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Módulos recomendados
+            </h2>
+            <p className="text-lg text-slate-600">
+              Reutiliza tu infraestructura de invierno para el verano
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {modules.map((module, index) => (
+              <Card
+                key={index}
+                className="border border-orange-100 hover:shadow-lg transition-shadow bg-white"
+              >
+                <CardHeader className="pb-4">
+                  <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-3 text-[hsl(var(--ski-lime-dark))]">
+                    {module.icon}
+                  </div>
+                  <CardTitle className="text-lg font-bold text-slate">
+                    {module.name}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <p className="text-slate-600">{module.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Study Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Caso de éxito
+            </h2>
+          </div>
+
+          <Card
+            className="bg-gradient-to-l 
+from-[hsl(var(--primary)/3)] 
+via-[hsl(var(--ski-lime-dark)/3)] 
+to-[hsl(var(--ski-lime-dark)/3)]
+             border-0 text-white"
+          >
+            <CardContent className="p-8 md:p-12">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                <div className="lg:col-span-2">
+                  <div className="flex items-start gap-4 mb-6">
+                    <Quote className="h-8 w-8 text-white flex-shrink-0" />
+                    <blockquote className="text-xl md:text-2xl text-white font-bold">
+                      "Convertimos nuestra estación en un bike park rentable.
+                      Los mismos accesos de invierno ahora controlan las
+                      bicicletas, y el alquiler funciona perfectamente con el
+                      sistema integrado."
+                    </blockquote>
+                  </div>
+                  <p className="text-white font-medium">
+                    Bike Park Montaña Verde
+                  </p>
+                </div>
+                <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6">
+                  <div className="text-center">
+                    <div className="text-4xl text-slate-700 font-bold mb-2">
+                      300%
+                    </div>
+                    <div className="text-sm text-slate-700">
+                      Aumento ingresos verano
+                    </div>
+                  </div>
+                  <div className="text-center mt-4">
+                    <div className="text-4xl font-bold mb-2 text-slate-700">
+                      60%
+                    </div>
+                    <div className="text-sm text-slate-700">
+                      Menos tiempo gestión
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Beneficios clave
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: <Bike className="h-8 w-8" />,
+                title: "Reutilización",
+                desc: "Aprovecha infraestructura existente",
+              },
+              {
+                icon: <Calendar className="h-8 w-8" />,
+                title: "Ingresos extra",
+                desc: "Facturación en temporada baja",
+              },
+              {
+                icon: <Users className="h-8 w-8" />,
+                title: "Control total",
+                desc: "Gestión integrada de todos los servicios",
+              },
+              {
+                icon: <BarChart3 className="h-8 w-8" />,
+                title: "Datos valiosos",
+                desc: "Analítica de temporada completa",
+              },
+            ].map((benefit, index) => (
+              <Card
+                key={index}
+                className="text-center border-0 hover:shadow-lg transition-shadow"
+              >
+                <CardHeader>
+                  <div
+                    className={`w-16 h-16 flex items-center justify-center mx-auto mb-4 text-[hsl(var(--ski-lime-dark))]`}
+                  >
+                    {benefit.icon}
+                  </div>
+                  <CardTitle className="text-lg font-bold text-slate-900">
+                    {benefit.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600">{benefit.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Highlight */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="text-center bg-white border-0 shadow-md hover:shadow-xl transition-shadow">
+              <CardHeader>
+                <div className="bg-[hsl(var(--ski-lime-dark))] w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Sun className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-xl font-bold text-[hsl(var(--ski-lime-dark))]">
+                  Temporada completa
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-600">
+                  Extiende tu temporada y maximiza la rentabilidad anual
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center bg-white border-0 shadow-md hover:shadow-xl transition-shadow">
+              <CardHeader>
+                <div className="bg-[hsl(var(--ski-lime-dark))] w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-xl font-bold text-[hsl(var(--ski-lime-dark))]">
+                  Fácil transición
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-600">
+                  Cambio fluido de esquí a bike park sin complicaciones
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center bg-white border-0 shadow-md hover:shadow-xl transition-shadow">
+              <CardHeader>
+                <div className="bg-[hsl(var(--ski-lime-dark))] w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <BarChart3 className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-xl font-bold text-[hsl(var(--ski-lime-dark))]">
+                  Control integrado
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-600">
+                  Una sola plataforma para gestionar ambas temporadas
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            ¿Quieres que tu estación siga generando ingresos todo el año?
+          </h2>
+          <p className="text-xl text-slate-300 mb-8">
+            Ski Solution 360 – Haz que tu verano sea tan rentable como el
+            invierno
+          </p>
+          <Button
+            size="lg"
+            className="bg-primary hover:bg-[hsl(var(--ski-lime-dark))] text-slate px-8 py-3"
+          >
+            Solicita una demo para bike parks
+          </Button>
+        </div>
+      </section>
       <Footer />
     </div>
   );

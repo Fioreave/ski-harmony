@@ -243,13 +243,13 @@ const Empresa = () => {
         </div>
       </section>*/}
       {/* BDR Matrix */}
-      <section className="section-spacing bg-secondary">
+      <section className="section-spacing bg-gradient-to-br from-background to-muted">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-5xl font-bold mb-6 text-primary">
               Nuestra Matriz Tecnológica
             </h2>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-slay-800 mb-8">
               Ski Solution 360 forma parte del grupo BDR Informática, una
               empresa con más de 27 años de experiencia en desarrollo de
               software empresarial. Esta solidez nos permite ofrecer:

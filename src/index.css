@@ -24,6 +24,7 @@ All colors MUST be HSL.
     --secondary-foreground: 0 0% 100%;
 
     --ski-lime: 80 100% 50%;
+    --ski-lime-dark: 76.7 100% 45.1%;
     --ski-black: 0 0% 0%;
     --ski-white: 0 0% 100%;
 
@@ -76,6 +77,7 @@ All colors MUST be HSL.
     --secondary-foreground: 0 0% 0%;
 
     --ski-lime: 80 100% 50%;
+    --ski-lime-dark: 76.7 100% 45.1%;
     --ski-black: 0 0% 0%;
     --ski-white: 0 0% 100%;
 
@@ -135,7 +137,7 @@ All colors MUST be HSL.
   .btn-demo {
     @apply transition-none;
   }
-  
+
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
