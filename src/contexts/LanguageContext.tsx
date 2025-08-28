@@ -91,6 +91,18 @@ const translations: Translations = {
     fr: 'Demander une démo',
     en: 'Request a demo'
   },
+  'nav.menu': {
+    es: 'Menú',
+    cat: 'Menú',
+    fr: 'Menu',
+    en: 'Menu'
+  },
+  'nav.language': {
+    es: 'Idioma',
+    cat: 'Idioma',
+    fr: 'Langue',
+    en: 'Language'
+  },
 
   // Common
   'common.home': {
