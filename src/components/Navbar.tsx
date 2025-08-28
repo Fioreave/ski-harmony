@@ -49,7 +49,7 @@ const Navbar = () => {
                   <Link to="/solucion">Solución</Link>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-2 p-4 w-80 bg-background border border-border rounded-md shadow-lg">
+                  <div className="grid gap-2 p-4 w-80 bg-background border border-border rounded-md shadow-lg z-50">
                     <NavigationMenuLink asChild>
                       <Link
                         to="/ski-solution-360"
@@ -108,7 +108,7 @@ const Navbar = () => {
                   <Link to="/segmentos">Segmentos</Link>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-2 p-4 w-96 bg-background border border-border rounded-md shadow-lg">
+                  <div className="grid gap-2 p-4 w-96 bg-background border border-border rounded-md shadow-lg z-50">
                     <NavigationMenuLink asChild>
                       <Link
                         to="/software-gestion-ski-resort"
@@ -188,7 +188,7 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Recursos</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-2 p-4 w-64 bg-background border border-border rounded-md shadow-lg">
+                  <div className="grid gap-2 p-4 w-64 bg-background border border-border rounded-md shadow-lg z-50">
                     <NavigationMenuLink asChild>
                       <Link
                         to="https://blog.skisolution360.com/"
