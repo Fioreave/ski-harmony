@@ -10,6 +10,7 @@ import {
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Settings,
   TrendingUp,
@@ -107,6 +108,7 @@ const modules = [
 ];
 
 const Solucion = () => {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -233,7 +235,7 @@ const Solucion = () => {
                         variant="outline"
                         className="w-full hover:bg-primary hover:text-primary-foreground transition-colors"
                       >
-                        <Link to={module.href}>Pedir demo del módulo</Link>
+                        <Link to={module.href}>{t('modules.demo-cta')}</Link>
                       </Button>
                     </CardContent>
                   </Card>

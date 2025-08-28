@@ -15,15 +15,15 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown, Globe } from "lucide-react";
-import { useTranslation } from "@/hooks/useTranslation";
+import { useLanguage } from "@/contexts/LanguageContext";
 import skiSolutionLogo from "@/assets/ski-solution-logo.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const { t, currentLanguage, changeLanguage } = useTranslation();
+  const { t, language, setLanguage } = useLanguage();
 
   const handleLanguageChange = (lang: string) => {
-    changeLanguage(lang as any);
+    setLanguage(lang as any);
   };
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border backdrop-blur-sm">
@@ -46,7 +46,7 @@ const Navbar = () => {
               {/* Solución con subpáginas */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger>
-                  <Link to="/solucion">Solución</Link>
+                  <Link to="/solucion">{t('nav.solution')}</Link>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-2 p-4 w-80 bg-background border border-border rounded-md shadow-lg z-50">
@@ -55,7 +55,7 @@ const Navbar = () => {
                         to="/ski-solution-360"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        Plataforma Core
+                        {t('modules.core.title')}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -63,7 +63,7 @@ const Navbar = () => {
                         to="/precio-dinamico-forfaits"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        Ticketing & Dynamic Pricing
+                        {t('modules.ticketing.title')}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -71,7 +71,7 @@ const Navbar = () => {
                         to="/software-escuela-esqui"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        Escuela & Clases
+                        {t('modules.school.title')}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -79,7 +79,7 @@ const Navbar = () => {
                         to="/gestion-alquiler-equipo"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        Alquiler & Inventario
+                        {t('modules.rental.title')}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -87,7 +87,7 @@ const Navbar = () => {
                         to="/punto-venta-restauracion"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        F&B & Retail POS
+                        {t('modules.pos.title')}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -95,7 +95,7 @@ const Navbar = () => {
                         to="/bi-crm-ski"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        BI & CRM 360
+                        {t('modules.crm.title')}
                       </Link>
                     </NavigationMenuLink>
                   </div>
@@ -105,7 +105,7 @@ const Navbar = () => {
               {/* Segmentos */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger>
-                  <Link to="/segmentos">Segmentos</Link>
+                  <Link to="/segmentos">{t('nav.segments')}</Link>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-2 p-4 w-96 bg-background border border-border rounded-md shadow-lg z-50">
@@ -114,7 +114,7 @@ const Navbar = () => {
                         to="/software-gestion-ski-resort"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        Grandes Resorts
+                        {t('segments.large-resorts')}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -122,7 +122,7 @@ const Navbar = () => {
                         to="/software-gestion-ski-resort-mediano"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        Resorts Medianos
+                        {t('segments.medium-resorts')}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -130,7 +130,7 @@ const Navbar = () => {
                         to="/software-gestion-escuelas-esqui"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        Escuelas Esquí
+                        {t('segments.ski-schools')}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -138,7 +138,7 @@ const Navbar = () => {
                         to="/software-gestion-jardines-nieve"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        Jardines de Nieve
+                        {t('segments.snow-gardens')}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -146,7 +146,7 @@ const Navbar = () => {
                         to="/software-gestion-bike-parks"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        Bike Parks
+                        {t('segments.bike-parks')}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -154,7 +154,7 @@ const Navbar = () => {
                         to="/software-gestion-escuela-aventura"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        Aventura / Outdoor
+                        {t('segments.outdoor-activities')}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -162,7 +162,7 @@ const Navbar = () => {
                         to="/software-gestion-escuela-vela-buceo"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        Vela & Buceo
+                        {t('segments.sailing-diving')}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -170,7 +170,7 @@ const Navbar = () => {
                         to="/software-gestion-museo"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        Museos
+                        {t('segments.museums')}
                       </Link>
                     </NavigationMenuLink>
                   </div>
@@ -180,13 +180,13 @@ const Navbar = () => {
               {/* Casos de éxito */}
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className="px-5 py-2">
-                  <Link to="/casos-exito">Casos de éxito</Link>
+                  <Link to="/casos-exito">{t('nav.success-stories')}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
               {/* Recursos */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Recursos</NavigationMenuTrigger>
+                <NavigationMenuTrigger>{t('nav.resources')}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-2 p-4 w-64 bg-background border border-border rounded-md shadow-lg z-50">
                     <NavigationMenuLink asChild>
@@ -194,7 +194,7 @@ const Navbar = () => {
                         to="https://blog.skisolution360.com/"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        Blog
+                        {t('nav.blog')}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -202,7 +202,7 @@ const Navbar = () => {
                         to="/ebooks"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        Ebooks
+                        {t('nav.ebooks')}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -210,7 +210,7 @@ const Navbar = () => {
                         to="/webinars"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        Webinars
+                        {t('nav.webinars')}
                       </Link>
                     </NavigationMenuLink>
                   </div>
@@ -220,17 +220,17 @@ const Navbar = () => {
               {/* Otros */}
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className="px-5 py-2">
-                  <Link to="/partners">Partners</Link>
+                  <Link to="/partners">{t('nav.partners')}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className="px-5 py-2">
-                  <Link to="/empresa">Compañía</Link>
+                  <Link to="/empresa">{t('nav.company')}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className="px-5 py-2">
-                  <Link to="/faq-software-gestion-estacion-esqui">FAQ</Link>
+                  <Link to="/faq-software-gestion-estacion-esqui">{t('nav.faq')}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -243,7 +243,7 @@ const Navbar = () => {
               <DropdownMenuTrigger className="hidden md:flex items-center space-x-2 text-sm px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">
                 <Globe className="h-4 w-4" />
                 <span className="font-medium">
-                  {currentLanguage.toUpperCase()}
+                  {language.toUpperCase()}
                 </span>
                 <ChevronDown className="h-3 w-3" />
               </DropdownMenuTrigger>
@@ -268,7 +268,7 @@ const Navbar = () => {
 
             {/* CTA Button */}
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium">
-              Solicita una demo
+              {t('nav.request-demo')}
             </Button>
           </div>
         </div>
