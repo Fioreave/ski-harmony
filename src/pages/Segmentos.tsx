@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { 
   Building2, 
   Briefcase, 
@@ -14,58 +15,60 @@ import {
   Building 
 } from "lucide-react";
 
-const segments = [
-  {
-    title: "Grandes Resorts",
-    href: "/software-gestion-ski-resort",
-    description: "Soluciones integrales para grandes estaciones de esquí con miles de visitantes diarios.",
-    icon: Building2
-  },
-  {
-    title: "Resorts Medianos",
-    href: "/software-gestion-ski-resort-mediano",
-    description: "Optimización de recursos y competitividad para estaciones medianas.",
-    icon: Briefcase
-  },
-  {
-    title: "Escuelas de Esquí",
-    href: "/software-gestion-escuelas-esqui",
-    description: "Gestión especializada de clases, monitores y horarios para escuelas de esquí.",
-    icon: GraduationCap
-  },
-  {
-    title: "Jardines de Nieve",
-    href: "/software-gestion-jardines-nieve",
-    description: "Soluciones específicas para la gestión segura de niños pequeños.",
-    icon: Baby
-  },
-  {
-    title: "Bike Parks",
-    href: "/software-gestion-bike-parks",
-    description: "Gestión estival de actividades de ciclismo de montaña y alquiler.",
-    icon: Bike
-  },
-  {
-    title: "Actividades Outdoor",
-    href: "/software-gestion-escuela-aventura",
-    description: "Multiactividad outdoor: tirolinas, escalada, rutas y aventura.",
-    icon: Mountain
-  },
-  {
-    title: "Escuela de Vela y Buceo",
-    href: "/software-gestion-escuela-vela-buceo",
-    description: "Gestión de actividades acuáticas y material específico de agua.",
-    icon: Waves
-  },
-  {
-    title: "Museos",
-    href: "/software-gestion-museo",
-    description: "Control de entradas, aforos y experiencias digitales culturales.",
-    icon: Building
-  }
-];
 
 const Segmentos = () => {
+  const { t } = useLanguage();
+  
+  const segments = [
+    {
+      title: t('segmentos.large-resorts.title'),
+      href: "/software-gestion-ski-resort",
+      description: t('segmentos.large-resorts.description'),
+      icon: Building2
+    },
+    {
+      title: t('segmentos.medium-resorts.title'),
+      href: "/software-gestion-ski-resort-mediano",
+      description: t('segmentos.medium-resorts.description'),
+      icon: Briefcase
+    },
+    {
+      title: t('segmentos.ski-schools.title'),
+      href: "/software-gestion-escuelas-esqui",
+      description: t('segmentos.ski-schools.description'),
+      icon: GraduationCap
+    },
+    {
+      title: t('segmentos.snow-gardens.title'),
+      href: "/software-gestion-jardines-nieve",
+      description: t('segmentos.snow-gardens.description'),
+      icon: Baby
+    },
+    {
+      title: t('segmentos.bike-parks.title'),
+      href: "/software-gestion-bike-parks",
+      description: t('segmentos.bike-parks.description'),
+      icon: Bike
+    },
+    {
+      title: t('segmentos.outdoor-activities.title'),
+      href: "/software-gestion-escuela-aventura",
+      description: t('segmentos.outdoor-activities.description'),
+      icon: Mountain
+    },
+    {
+      title: t('segmentos.sailing-diving.title'),
+      href: "/software-gestion-escuela-vela-buceo",
+      description: t('segmentos.sailing-diving.description'),
+      icon: Waves
+    },
+    {
+      title: t('segmentos.museums.title'),
+      href: "/software-gestion-museo",
+      description: t('segmentos.museums.description'),
+      icon: Building
+    }
+  ];
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -85,10 +88,10 @@ const Segmentos = () => {
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
-                Segmentos a los que ayudamos
+                {t('segmentos.title')}
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground animate-stagger-1">
-                Cada estación tiene retos únicos. Ski Solution 360 adapta sus módulos para resolver las necesidades de cada segmento, desde grandes resorts hasta museos.
+                {t('segmentos.subtitle')}
               </p>
             </div>
           </div>
@@ -133,17 +136,17 @@ const Segmentos = () => {
           <div className="container-custom text-center">
             <div className="max-w-2xl mx-auto animate-fade-in-up">
               <h3 className="text-2xl md:text-3xl font-bold mb-6">
-                ¿No encuentras tu segmento?
+                {t('segmentos.not-found.title')}
               </h3>
               <p className="text-lg text-muted-foreground mb-8">
-                Nuestro sistema es modular y se adapta a cualquier tipo de actividad y negocio.
+                {t('segmentos.not-found.description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="btn-demo text-lg px-8 py-3 bg-primary text-primary-foreground hover:scale-105 transition-all duration-200 rounded-md">
-                  Consulta tu caso
+                  {t('segmentos.consult-case')}
                 </button>
                 <button className="text-lg px-8 py-3 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors rounded-md">
-                  Ver todos los módulos
+                  {t('segmentos.see-modules')}
                 </button>
               </div>
             </div>

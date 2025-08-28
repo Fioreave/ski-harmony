@@ -937,6 +937,328 @@ const translations: Translations = {
     en: 'Executive dashboard with live KPIs, customer segmentation and automated marketing tools.'
   },
 
+  // Segmentos page
+  'segmentos.title': {
+    es: 'Segmentos a los que ayudamos',
+    cat: 'Segments als quals ajudem',
+    fr: 'Segments que nous aidons',
+    en: 'Segments we help'
+  },
+  'segmentos.subtitle': {
+    es: 'Cada estación tiene retos únicos. Ski Solution 360 adapta sus módulos para resolver las necesidades de cada segmento, desde grandes resorts hasta museos.',
+    cat: 'Cada estació té reptes únics. Ski Solution 360 adapta els seus mòduls per resoldre les necessitats de cada segment, des de grans resorts fins a museus.',
+    fr: 'Chaque station a des défis uniques. Ski Solution 360 adapte ses modules pour répondre aux besoins de chaque segment, des grands resorts aux musées.',
+    en: 'Each station has unique challenges. Ski Solution 360 adapts its modules to solve the needs of each segment, from large resorts to museums.'
+  },
+  'segmentos.large-resorts.title': {
+    es: 'Grandes Resorts',
+    cat: 'Grans Resorts',
+    fr: 'Grands Resorts',
+    en: 'Large Resorts'
+  },
+  'segmentos.large-resorts.description': {
+    es: 'Soluciones integrales para grandes estaciones de esquí con miles de visitantes diarios.',
+    cat: 'Solucions integrals per a grans estacions d\'esquí amb milers de visitants diaris.',
+    fr: 'Solutions intégrales pour les grandes stations de ski avec des milliers de visiteurs quotidiens.',
+    en: 'Comprehensive solutions for large ski resorts with thousands of daily visitors.'
+  },
+  'segmentos.medium-resorts.title': {
+    es: 'Resorts Medianos',
+    cat: 'Resorts Mitjans',
+    fr: 'Resorts Moyens',
+    en: 'Medium Resorts'
+  },
+  'segmentos.medium-resorts.description': {
+    es: 'Optimización de recursos y competitividad para estaciones medianas.',
+    cat: 'Optimització de recursos i competitivitat per a estacions mitjanes.',
+    fr: 'Optimisation des ressources et compétitivité pour les stations moyennes.',
+    en: 'Resource optimization and competitiveness for medium-sized resorts.'
+  },
+  'segmentos.ski-schools.title': {
+    es: 'Escuelas de Esquí',
+    cat: 'Escoles d\'Esquí',
+    fr: 'Écoles de Ski',
+    en: 'Ski Schools'
+  },
+  'segmentos.ski-schools.description': {
+    es: 'Gestión especializada de clases, monitores y horarios para escuelas de esquí.',
+    cat: 'Gestió especialitzada de classes, monitors i horaris per a escoles d\'esquí.',
+    fr: 'Gestion spécialisée des cours, moniteurs et horaires pour les écoles de ski.',
+    en: 'Specialized management of classes, instructors and schedules for ski schools.'
+  },
+  'segmentos.snow-gardens.title': {
+    es: 'Jardines de Nieve',
+    cat: 'Jardins de Neu',
+    fr: 'Jardins de Neige',
+    en: 'Snow Gardens'
+  },
+  'segmentos.snow-gardens.description': {
+    es: 'Soluciones específicas para la gestión segura de niños pequeños.',
+    cat: 'Solucions específiques per a la gestió segura de nens petits.',
+    fr: 'Solutions spécifiques pour la gestion sécurisée des jeunes enfants.',
+    en: 'Specific solutions for safe management of young children.'
+  },
+  'segmentos.bike-parks.title': {
+    es: 'Bike Parks',
+    cat: 'Bike Parks',
+    fr: 'Bike Parks',
+    en: 'Bike Parks'
+  },
+  'segmentos.bike-parks.description': {
+    es: 'Gestión estival de actividades de ciclismo de montaña y alquiler.',
+    cat: 'Gestió estival d\'activitats de ciclisme de muntanya i lloguer.',
+    fr: 'Gestion estivale des activités de VTT et de location.',
+    en: 'Summer management of mountain biking activities and rentals.'
+  },
+  'segmentos.outdoor-activities.title': {
+    es: 'Actividades Outdoor',
+    cat: 'Activitats Outdoor',
+    fr: 'Activités Outdoor',
+    en: 'Outdoor Activities'
+  },
+  'segmentos.outdoor-activities.description': {
+    es: 'Multiactividad outdoor: tirolinas, escalada, rutas y aventura.',
+    cat: 'Multiactivitat outdoor: tirolinas, escalada, rutes i aventura.',
+    fr: 'Multi-activité outdoor : tyroliennes, escalade, randonnées et aventure.',
+    en: 'Multi-activity outdoor: zip lines, climbing, trails and adventure.'
+  },
+  'segmentos.sailing-diving.title': {
+    es: 'Escuela de Vela y Buceo',
+    cat: 'Escola de Vela i Busseig',
+    fr: 'École de Voile et Plongée',
+    en: 'Sailing and Diving School'
+  },
+  'segmentos.sailing-diving.description': {
+    es: 'Gestión de actividades acuáticas y material específico de agua.',
+    cat: 'Gestió d\'activitats aquàtiques i material específic d\'aigua.',
+    fr: 'Gestion des activités aquatiques et matériel spécifique à l\'eau.',
+    en: 'Management of aquatic activities and water-specific equipment.'
+  },
+  'segmentos.museums.title': {
+    es: 'Museos',
+    cat: 'Museus',
+    fr: 'Musées',
+    en: 'Museums'
+  },
+  'segmentos.museums.description': {
+    es: 'Control de entradas, aforos y experiencias digitales culturales.',
+    cat: 'Control d\'entrades, aforaments i experiències digitals culturals.',
+    fr: 'Contrôle des entrées, jauges et expériences numériques culturelles.',
+    en: 'Ticket control, capacity management and digital cultural experiences.'
+  },
+  'segmentos.not-found.title': {
+    es: '¿No encuentras tu segmento?',
+    cat: 'No trobes el teu segment?',
+    fr: 'Vous ne trouvez pas votre segment?',
+    en: 'Can\'t find your segment?'
+  },
+  'segmentos.not-found.description': {
+    es: 'Nuestro sistema es modular y se adapta a cualquier tipo de actividad y negocio.',
+    cat: 'El nostre sistema és modular i s\'adapta a qualsevol tipus d\'activitat i negoci.',
+    fr: 'Notre système est modulaire et s\'adapte à tout type d\'activité et d\'entreprise.',
+    en: 'Our system is modular and adapts to any type of activity and business.'
+  },
+  'segmentos.consult-case': {
+    es: 'Consulta tu caso',
+    cat: 'Consulta el teu cas',
+    fr: 'Consultez votre cas',
+    en: 'Consult your case'
+  },
+  'segmentos.see-modules': {
+    es: 'Ver todos los módulos',
+    cat: 'Veure tots els mòduls',
+    fr: 'Voir tous les modules',
+    en: 'See all modules'
+  },
+
+  // Solucion page
+  'solucion.title': {
+    es: 'La Solución Integral para tu Estación de Esquí',
+    cat: 'La Solució Integral per a la teva Estació d\'Esquí',
+    fr: 'La Solution Intégrale pour votre Station de Ski',
+    en: 'The Comprehensive Solution for your Ski Resort'
+  },
+  'solucion.description.1': {
+    es: 'Ski Solution 360 es la plataforma todo‐en‐uno diseñada específicamente para gestionar de forma integral una estación de esquí o centro de actividades outdoor.',
+    cat: 'Ski Solution 360 és la plataforma tot‐en‐un dissenyada específicament per gestionar de forma integral una estació d\'esquí o centre d\'activitats outdoor.',
+    fr: 'Ski Solution 360 est la plateforme tout-en-un conçue spécifiquement pour gérer de manière intégrale une station de ski ou un centre d\'activités outdoor.',
+    en: 'Ski Solution 360 is the all-in-one platform specifically designed to comprehensively manage a ski resort or outdoor activity center.'
+  },
+  'solucion.description.2': {
+    es: 'Desde un único panel modular podrás controlar la venta de forfaits, el alquiler de material, la gestión de la escuela, el control de accesos, la restauración y el retail, con integración directa a tu ERP y CRM.',
+    cat: 'Des d\'un únic panell modular podràs controlar la venda de forfaits, el lloguer de material, la gestió de l\'escola, el control d\'accessos, la restauració i el retail, amb integració directa al teu ERP i CRM.',
+    fr: 'Depuis un panneau modulaire unique, vous pourrez contrôler la vente de forfaits, la location de matériel, la gestion de l\'école, le contrôle d\'accès, la restauration et le retail, avec intégration directe à votre ERP et CRM.',
+    en: 'From a single modular panel you can control ski pass sales, equipment rental, school management, access control, catering and retail, with direct integration to your ERP and CRM.'
+  },
+  'solucion.benefits.title': {
+    es: 'Beneficios globales',
+    cat: 'Beneficis globals',
+    fr: 'Avantages globaux',
+    en: 'Global benefits'
+  },
+  'solucion.benefits.centralized.title': {
+    es: 'Operación centralizada',
+    cat: 'Operació centralitzada',
+    fr: 'Opération centralisée',
+    en: 'Centralized operation'
+  },
+  'solucion.benefits.centralized.description': {
+    es: 'Un solo sistema para todas las áreas del negocio, sin duplicar tareas ni herramientas.',
+    cat: 'Un sol sistema per a totes les àrees del negoci, sense duplicar tasques ni eines.',
+    fr: 'Un seul système pour toutes les zones de l\'entreprise, sans dupliquer les tâches ni les outils.',
+    en: 'One system for all business areas, without duplicating tasks or tools.'
+  },
+  'solucion.benefits.revenue.title': {
+    es: 'Más ingresos, menos costes',
+    cat: 'Més ingressos, menys costos',
+    fr: 'Plus de revenus, moins de coûts',
+    en: 'More revenue, lower costs'
+  },
+  'solucion.benefits.revenue.description': {
+    es: 'Motor de precios dinámicos y venta anticipada para maximizar la facturación; reutiliza hardware existente para reducir inversión inicial.',
+    cat: 'Motor de preus dinàmics i venda anticipada per maximitzar la facturació; reutilitza maquinari existent per reduir la inversió inicial.',
+    fr: 'Moteur de prix dynamiques et vente anticipée pour maximiser la facturation ; réutilisez le matériel existant pour réduire l\'investissement initial.',
+    en: 'Dynamic pricing engine and advance sales to maximize billing; reuse existing hardware to reduce initial investment.'
+  },
+  'solucion.benefits.experience.title': {
+    es: 'Experiencia sin fricciones',
+    cat: 'Experiència sense friccions',
+    fr: 'Expérience sans friction',
+    en: 'Frictionless experience'
+  },
+  'solucion.benefits.experience.description': {
+    es: 'Compra online, autoservicio y accesos rápidos que mejoran la satisfacción del cliente y reducen colas.',
+    cat: 'Compra online, autoservei i accessos ràpids que milloren la satisfacció del client i redueixen cues.',
+    fr: 'Achat en ligne, libre-service et accès rapides qui améliorent la satisfaction client et réduisent les files d\'attente.',
+    en: 'Online purchasing, self-service and quick access that improve customer satisfaction and reduce queues.'
+  },
+  'solucion.benefits.data.title': {
+    es: 'Datos en tiempo real',
+    cat: 'Dades en temps real',
+    fr: 'Données en temps réel',
+    en: 'Real-time data'
+  },
+  'solucion.benefits.data.description': {
+    es: 'toma decisiones estratégicas basadas en analítica instantánea de ventas, aforo y rendimiento.',
+    cat: 'pren decisions estratègiques basades en analítica instantània de vendes, aforament i rendiment.',
+    fr: 'prenez des décisions stratégiques basées sur l\'analytique instantanée des ventes, de la capacité et des performances.',
+    en: 'make strategic decisions based on instant analytics of sales, capacity and performance.'
+  },
+  'solucion.benefits.year-round.title': {
+    es: 'Preparado para todo el año',
+    cat: 'Preparat per a tot l\'any',
+    fr: 'Prêt toute l\'année',
+    en: 'Ready year-round'
+  },
+  'solucion.benefits.year-round.description': {
+    es: 'Optimiza también tu operación en verano con módulos adaptados a bike parks, actividades guiadas y escuelas de deportes outdoor.',
+    cat: 'Optimitza també la teva operació a l\'estiu amb mòduls adaptats a bike parks, activitats guiades i escoles d\'esports outdoor.',
+    fr: 'Optimisez également votre fonctionnement en été avec des modules adaptés aux bike parks, activités guidées et écoles de sports outdoor.',
+    en: 'Also optimize your summer operation with modules adapted to bike parks, guided activities and outdoor sports schools.'
+  },
+  'solucion.cta.title': {
+    es: 'Con Ski Solution 360, tu estación no solo funciona mejor:',
+    cat: 'Amb Ski Solution 360, la teva estació no només funciona millor:',
+    fr: 'Avec Ski Solution 360, votre station ne fonctionne pas seulement mieux :',
+    en: 'With Ski Solution 360, your resort doesn\'t just work better:'
+  },
+  'solucion.cta.description': {
+    es: 'Se convierte en un ecosistema conectado, eficiente y rentable, listo para crecer en cualquier temporada.',
+    cat: 'Es converteix en un ecosistema connectat, eficient i rendible, llest per créixer en qualsevol temporada.',
+    fr: 'Elle devient un écosystème connecté, efficace et rentable, prêt à croître en toute saison.',
+    en: 'It becomes a connected, efficient and profitable ecosystem, ready to grow in any season.'
+  },
+  'solucion.modules.title': {
+    es: 'Módulos',
+    cat: 'Mòduls',
+    fr: 'Modules',
+    en: 'Modules'
+  },
+  'solucion.modules.core.title': {
+    es: 'Plataforma Core',
+    cat: 'Plataforma Core',
+    fr: 'Plateforme Core',
+    en: 'Core Platform'
+  },
+  'solucion.modules.core.description': {
+    es: 'Sistema modular que se adapta a tu estación con integración nativa con ERP y CRM.',
+    cat: 'Sistema modular que s\'adapta a la teva estació amb integració nativa amb ERP i CRM.',
+    fr: 'Système modulaire qui s\'adapte à votre station avec intégration native avec ERP et CRM.',
+    en: 'Modular system that adapts to your resort with native ERP and CRM integration.'
+  },
+  'solucion.modules.ticketing.title': {
+    es: 'Ticketing & Dynamic Pricing',
+    cat: 'Ticketing & Dynamic Pricing',
+    fr: 'Billetterie & Prix Dynamiques',
+    en: 'Ticketing & Dynamic Pricing'
+  },
+  'solucion.modules.ticketing.description': {
+    es: 'Ajusta precios según demanda, condiciones de nieve y fecha de compra.',
+    cat: 'Ajusta preus segons demanda, condicions de neu i data de compra.',
+    fr: 'Ajustez les prix selon la demande, les conditions de neige et la date d\'achat.',
+    en: 'Adjust prices according to demand, snow conditions and purchase date.'
+  },
+  'solucion.modules.access-control.title': {
+    es: 'Control de Accesos RFID',
+    cat: 'Control d\'Accessos RFID',
+    fr: 'Contrôle d\'Accès RFID',
+    en: 'RFID Access Control'
+  },
+  'solucion.modules.access-control.description': {
+    es: 'Integración con tornos RFID, QR y Mobile Pass para validación instantánea.',
+    cat: 'Integració amb torns RFID, QR i Mobile Pass per a validació instantània.',
+    fr: 'Intégration avec tourniquets RFID, QR et Mobile Pass pour validation instantanée.',
+    en: 'Integration with RFID turnstiles, QR and Mobile Pass for instant validation.'
+  },
+  'solucion.modules.school.title': {
+    es: 'Escuela & Clases',
+    cat: 'Escola & Classes',
+    fr: 'École & Cours',
+    en: 'School & Classes'
+  },
+  'solucion.modules.school.description': {
+    es: 'Reservas online de clases con asignación automática de monitores.',
+    cat: 'Reserves online de classes amb assignació automàtica de monitors.',
+    fr: 'Réservations en ligne de cours avec attribution automatique d\'instructeurs.',
+    en: 'Online class bookings with automatic instructor assignment.'
+  },
+  'solucion.modules.rental.title': {
+    es: 'Alquiler & Inventario',
+    cat: 'Lloguer & Inventari',
+    fr: 'Location & Inventaire',
+    en: 'Rental & Inventory'
+  },
+  'solucion.modules.rental.description': {
+    es: 'Control de inventario en tiempo real con gestión de reservas digital.',
+    cat: 'Control d\'inventari en temps real amb gestió de reserves digital.',
+    fr: 'Contrôle d\'inventaire en temps réel avec gestion de réservations numériques.',
+    en: 'Real-time inventory control with digital reservation management.'
+  },
+  'solucion.modules.pos.title': {
+    es: 'F&B & Retail POS',
+    cat: 'F&B & Retail POS',
+    fr: 'F&B & Retail POS',
+    en: 'F&B & Retail POS'
+  },
+  'solucion.modules.pos.description': {
+    es: 'Punto de venta unificado para bares, restaurantes y tiendas.',
+    cat: 'Punt de venda unificat per a bars, restaurants i botigues.',
+    fr: 'Point de vente unifié pour bars, restaurants et boutiques.',
+    en: 'Unified point of sale for bars, restaurants and shops.'
+  },
+  'solucion.modules.bi-crm.title': {
+    es: 'BI & CRM 360',
+    cat: 'BI & CRM 360',
+    fr: 'BI & CRM 360',
+    en: 'BI & CRM 360'
+  },
+  'solucion.modules.bi-crm.description': {
+    es: 'Análisis en tiempo real con segmentación avanzada de clientes.',
+    cat: 'Anàlisi en temps real amb segmentació avançada de clients.',
+    fr: 'Analyse en temps réel avec segmentation avancée des clients.',
+    en: 'Real-time analysis with advanced customer segmentation.'
+  },
+
   'metrics.title': {
     es: 'Números que hablan por sí solos',
     cat: 'Números que parlen per si sols',
