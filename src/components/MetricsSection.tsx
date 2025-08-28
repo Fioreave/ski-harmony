@@ -1,7 +1,9 @@
 import React from 'react';
 import mountainsAurora from '@/assets/mountains-aurora.png';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const MetricsSection = () => {
+  const { t } = useLanguage();
   const metrics = [
     { value: "+25", label: "estaciones y escuelas gestionadas" },
     { value: "+100.000", label: "forfaits vendidos online cada temporada" },
@@ -26,7 +28,7 @@ const MetricsSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4 text-secondary-foreground">
-            Números que hablan por sí solos
+            {t('metrics.title')}
           </h2>
         </div>
 
@@ -47,7 +49,7 @@ const MetricsSection = () => {
         {/* Client logos */}
         <div className="border-t border-border pt-8">
           <p className="text-center text-secondary-foreground mb-6 text-sm uppercase tracking-wide">
-            Confían en nosotros
+            {t('metrics.trust')}
           </p>
           <div className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center justify-center opacity-60">
             <div className="h-16 bg-background/20 rounded flex items-center justify-center text-xs text-secondary-foreground">

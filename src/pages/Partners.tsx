@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Partners = () => {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -23,10 +25,10 @@ const Partners = () => {
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent animate-fade-in">
-                Integraciones & Partners
+                {t('partners.hero.title')}
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in animation-delay-200">
-                Conoce a nuestros socios estratégicos que nos ayudan a ofrecer la mejor solución integral para tu estación de esquí.
+                {t('partners.hero.description')}
               </p>
             </div>
           </div>
@@ -44,7 +46,7 @@ const Partners = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Sistema de Accesos</h3>
+                <h3 className="text-xl font-bold mb-3 text-foreground">{t('partners.access-systems')}</h3>
                 <div className="space-y-2">
                   <div className="flex items-center text-sm">
                     <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
@@ -68,7 +70,7 @@ const Partners = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Medios de Pago</h3>
+                <h3 className="text-xl font-bold mb-3 text-foreground">{t('partners.payment-methods')}</h3>
                 <div className="space-y-2">
                   <div className="flex items-center text-sm">
                     <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
@@ -92,7 +94,7 @@ const Partners = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9m0 9c-5 0-9-4-9-9s4-9 9-9" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Plataformas Online</h3>
+                <h3 className="text-xl font-bold mb-3 text-foreground">{t('partners.online-platforms')}</h3>
                 <div className="space-y-2">
                   <div className="flex items-center text-sm">
                     <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
@@ -112,7 +114,7 @@ const Partners = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">ERP & Contabilidad</h3>
+                <h3 className="text-xl font-bold mb-3 text-foreground">{t('partners.erp-accounting')}</h3>
                 <div className="space-y-2">
                   <div className="flex items-center text-sm">
                     <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
@@ -132,7 +134,7 @@ const Partners = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Servicios Especializados</h3>
+                <h3 className="text-xl font-bold mb-3 text-foreground">{t('partners.specialized-services')}</h3>
                 <div className="space-y-2">
                   <div className="flex items-center text-sm">
                     <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
@@ -152,7 +154,7 @@ const Partners = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Mobile Wallets</h3>
+                <h3 className="text-xl font-bold mb-3 text-foreground">{t('partners.mobile-wallets')}</h3>
                 <div className="space-y-2">
                   <div className="flex items-center text-sm">
                     <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
@@ -177,10 +179,10 @@ const Partners = () => {
           <div className="container-custom text-center">
             <div className="max-w-2xl mx-auto animate-fade-in">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                ¿Necesitas una integración específica?
+                {t('partners.need-integration')}
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Trabajamos constantemente para ampliar nuestro ecosistema de partners e integraciones.
+                {t('partners.integration-description')}
               </p>
               <button className="bg-primary hover:bg-primary/90 text-black font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg text-lg">
                 Solicita una demo

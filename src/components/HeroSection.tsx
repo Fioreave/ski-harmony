@@ -25,22 +25,22 @@ const HeroSection = () => {
             
             <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
               <PlayCircle className="mr-2 h-5 w-5" />
-              Ver vídeo demo
+              {t('hero.video-demo')}
             </Button>
           </div>
 
           {/* Hero visual placeholder */}
           <div className="relative">
             <div className="bg-muted rounded-lg h-64 md:h-96 flex items-center justify-center border-2 border-dashed border-border">
-              <p className="text-muted-foreground text-lg">Dashboard Preview / Hero Image</p>
+              <p className="text-muted-foreground text-lg">{t('hero.dashboard-preview')}</p>
             </div>
             
             {/* Floating elements */}
             <div className="absolute -top-4 -left-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium text-sm">
-              ⚡ Tiempo real
+              ⚡ {t('hero.real-time')}
             </div>
             <div className="absolute -bottom-4 -right-4 bg-secondary text-secondary-foreground px-4 py-2 rounded-lg font-medium text-sm">
-              📊 Analytics
+              📊 {t('hero.analytics')}
             </div>
           </div>
         </div>

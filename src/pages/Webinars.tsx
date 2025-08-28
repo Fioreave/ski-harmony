@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Webinars = () => {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -25,10 +27,10 @@ const Webinars = () => {
           <div className="container-custom">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Webinars
+                {t('webinars.title')}
               </h1>
               <p className="text-lg text-muted-foreground">
-                Participa en nuestras sesiones online sobre las últimas tendencias en gestión de estaciones de esquí.
+                {t('webinars.description')}
               </p>
             </div>
           </div>

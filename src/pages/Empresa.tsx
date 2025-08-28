@@ -12,32 +12,31 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Empresa = () => {
+  const { t } = useLanguage();
+  
   const values = [
     {
       icon: Target,
-      title: "Especialización",
-      description:
-        "Más de 27 años enfocados exclusivamente en el sector de estaciones de esquí y turismo de montaña.",
+      title: t('empresa.values.specialization.title'),
+      description: t('empresa.values.specialization.description'),
     },
     {
       icon: Lightbulb,
-      title: "Innovación",
-      description:
-        "Desarrollo constante de nuevas funcionalidades basadas en las necesidades reales del mercado.",
+      title: t('empresa.values.innovation.title'),
+      description: t('empresa.values.innovation.description'),
     },
     {
       icon: Zap,
-      title: "Eficiencia",
-      description:
-        "Soluciones que optimizan procesos, reducen costos y maximizan la rentabilidad de nuestros clientes.",
+      title: t('empresa.values.efficiency.title'),
+      description: t('empresa.values.efficiency.description'),
     },
     {
       icon: Heart,
-      title: "Compromiso",
-      description:
-        "Acompañamos a nuestros clientes en cada paso de su transformación digital con soporte 24/7.",
+      title: t('empresa.values.commitment.title'),
+      description: t('empresa.values.commitment.description'),
     },
   ];
 
@@ -103,28 +102,27 @@ const Empresa = () => {
           <div className="max-w-4xl mx-auto text-center">
             <Building2 className="w-16 h-16 text-accent mx-auto mb-6" />
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Nuestra Compañía
+              {t('empresa.title')}
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Más de 27 años de experiencia tecnológica ayudando a estaciones de
-              esquí a transformar su negocio
+              {t('empresa.hero.subtitle')}
             </p>
             <div className="flex justify-center space-x-8 text-center">
               <div>
                 <div className="text-3xl font-bold text-accent">27+</div>
                 <p className="text-sm text-muted-foreground">
-                  Años de experiencia
+                  {t('empresa.years-experience')}
                 </p>
               </div>
               <div>
                 <div className="text-3xl font-bold text-accent">50+</div>
                 <p className="text-sm text-muted-foreground">
-                  Estaciones transformadas
+                  {t('empresa.resorts-transformed')}
                 </p>
               </div>
               <div>
                 <div className="text-3xl font-bold text-accent">15</div>
-                <p className="text-sm text-muted-foreground">Países</p>
+                <p className="text-sm text-muted-foreground">{t('empresa.countries')}</p>
               </div>
             </div>
           </div>
@@ -135,35 +133,27 @@ const Empresa = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Nuestra Historia</h2>
+              <h2 className="text-3xl font-bold mb-6">{t('empresa.history.title')}</h2>
               <p className="text-muted-foreground mb-6">
-                Fundada en 1997 como BDR Informática, nuestra empresa nació con
-                la visión de digitalizar el sector del turismo de montaña.
-                Durante más de dos décadas, hemos evolucionado junto con la
-                tecnología y las necesidades de nuestros clientes.
+                {t('empresa.history.paragraph1')}
               </p>
               <p className="text-muted-foreground mb-8">
-                Ski Solution 360 representa la culminación de toda nuestra
-                experiencia: una plataforma integral que no solo gestiona
-                operaciones, sino que transforma completamente la forma en que
-                las estaciones de esquí interactúan con sus clientes.
+                {t('empresa.history.paragraph2')}
               </p>
 
               <div className="bg-accent/5 p-6 rounded-lg">
                 <h3 className="font-bold text-lg mb-3 flex items-center">
                   <Target className="w-5 h-5 text-accent mr-2" />
-                  Nuestra Misión
+                  {t('empresa.mission.title')}
                 </h3>
                 <p className="text-sm">
-                  Ayudar a estaciones de esquí y centros outdoor a optimizar
-                  operaciones, aumentar ingresos y mejorar la experiencia de
-                  clientes con tecnología potente, flexible y fácil de usar.
+                  {t('empresa.mission.description')}
                 </p>
               </div>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-6">Hitos Importantes</h3>
+              <h3 className="text-xl font-bold mb-6">{t('empresa.milestones.title')}</h3>
               <div className="space-y-4">
                 {milestones.map((milestone, index) => (
                   <div key={index} className="flex items-center space-x-4">
@@ -182,10 +172,9 @@ const Empresa = () => {
       <section className="section-spacing bg-muted/30">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Nuestros Valores</h2>
+            <h2 className="text-3xl font-bold mb-4">{t('empresa.values.title')}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Los principios que guían cada decisión y cada línea de código que
-              escribimos
+              {t('empresa.values.subtitle')}
             </p>
           </div>
 
@@ -247,36 +236,34 @@ const Empresa = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-5xl font-bold mb-6 text-primary">
-              Nuestra Matriz Tecnológica
+              {t('empresa.matrix.title')}
             </h2>
             <p className="text-slay-800 mb-8">
-              Ski Solution 360 forma parte del grupo BDR Informática, una
-              empresa con más de 27 años de experiencia en desarrollo de
-              software empresarial. Esta solidez nos permite ofrecer:
+              {t('empresa.matrix.description')}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-6 bg-background rounded-lg">
                 <TrendingUp className="w-8 h-8 text-accent mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Estabilidad Financiera</h3>
+                <h3 className="font-bold mb-2">{t('empresa.matrix.financial-stability')}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Respaldados por décadas de crecimiento sostenible
+                  {t('empresa.matrix.financial-description')}
                 </p>
               </div>
 
               <div className="p-6 bg-background rounded-lg">
                 <Users2 className="w-8 h-8 text-accent mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Equipo Experimentado</h3>
+                <h3 className="font-bold mb-2">{t('empresa.matrix.experienced-team')}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Desarrolladores con experiencia en sistemas críticos
+                  {t('empresa.matrix.team-description')}
                 </p>
               </div>
 
               <div className="p-6 bg-background rounded-lg">
                 <Award className="w-8 h-8 text-accent mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Reconocimiento</h3>
+                <h3 className="font-bold mb-2">{t('empresa.matrix.recognition')}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Certificaciones y premios en innovación tecnológica
+                  {t('empresa.matrix.recognition-description')}
                 </p>
               </div>
             </div>
@@ -287,17 +274,16 @@ const Empresa = () => {
       <section className="section-spacing">
         <div className="container-custom text-center">
           <h2 className="text-3xl font-bold mb-4">
-            ¿Quieres conocer más sobre nosotros?
+            {t('empresa.contact.title')}
           </h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Estaremos encantados de contarte más sobre nuestra empresa, nuestro
-            equipo y cómo podemos ayudar a tu estación de esquí.
+            {t('empresa.contact.description')}
           </p>
           <Button
             className="btn-demo text-lg px-8 py-4"
             onClick={() => (window.location.href = "/contacto")}
           >
-            Contacta con nuestro equipo
+            {t('empresa.contact.button')}
           </Button>
         </div>
       </section>

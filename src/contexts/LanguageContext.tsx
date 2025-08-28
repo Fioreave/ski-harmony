@@ -563,13 +563,13 @@ const translations: Translations = {
   },
 
   // Partners Page
-  'partners.title': {
+  'partners.hero.title': {
     es: 'Integraciones & Partners',
     cat: 'Integracions & Partners',
     fr: 'Intégrations & Partenaires',
     en: 'Integrations & Partners'
   },
-  'partners.description': {
+  'partners.hero.description': {
     es: 'Conoce a nuestros socios estratégicos que nos ayudan a ofrecer la mejor solución integral para tu estación de esquí.',
     cat: 'Coneix els nostres socis estratègics que ens ajuden a oferir la millor solució integral per a la teva estació d\'esquí.',
     fr: 'Découvrez nos partenaires stratégiques qui nous aident à offrir la meilleure solution intégrale pour votre station de ski.',
@@ -622,6 +622,357 @@ const translations: Translations = {
     cat: 'Treballem constantment per ampliar el nostre ecosistema de partners i integracions.',
     fr: 'Nous travaillons constamment pour élargir notre écosystème de partenaires et d\'intégrations.',
     en: 'We constantly work to expand our ecosystem of partners and integrations.'
+  },
+
+  // Empresa page
+  'empresa.title': {
+    es: 'Nuestra Compañía',
+    cat: 'La nostra Companyia',
+    fr: 'Notre Société',
+    en: 'Our Company'
+  },
+  'empresa.hero.subtitle': {
+    es: 'Más de 27 años de experiencia tecnológica ayudando a estaciones de esquí a transformar su negocio',
+    cat: 'Més de 27 anys d\'experiència tecnològica ajudant estacions d\'esquí a transformar el seu negoci',
+    fr: 'Plus de 27 ans d\'expérience technologique aidant les stations de ski à transformer leur activité',
+    en: 'Over 27 years of technological experience helping ski resorts transform their business'
+  },
+  'empresa.years-experience': {
+    es: 'Años de experiencia',
+    cat: 'Anys d\'experiència',
+    fr: 'Années d\'expérience',
+    en: 'Years of experience'
+  },
+  'empresa.resorts-transformed': {
+    es: 'Estaciones transformadas',
+    cat: 'Estacions transformades',
+    fr: 'Stations transformées',
+    en: 'Resorts transformed'
+  },
+  'empresa.countries': {
+    es: 'Países',
+    cat: 'Països',
+    fr: 'Pays',
+    en: 'Countries'
+  },
+  'empresa.history.title': {
+    es: 'Nuestra Historia',
+    cat: 'La nostra Història',
+    fr: 'Notre Histoire',
+    en: 'Our History'
+  },
+  'empresa.history.paragraph1': {
+    es: 'Fundada en 1997 como BDR Informática, nuestra empresa nació con la visión de digitalizar el sector del turismo de montaña. Durante más de dos décadas, hemos evolucionado junto con la tecnología y las necesidades de nuestros clientes.',
+    cat: 'Fundada el 1997 com BDR Informàtica, la nostra empresa va néixer amb la visió de digitalitzar el sector del turisme de muntanya. Durant més de dues dècades, hem evolucionat juntament amb la tecnologia i les necessitats dels nostres clients.',
+    fr: 'Fondée en 1997 sous le nom de BDR Informática, notre entreprise est née avec la vision de numériser le secteur du tourisme de montagne. Pendant plus de deux décennies, nous avons évolué avec la technologie et les besoins de nos clients.',
+    en: 'Founded in 1997 as BDR Informática, our company was born with the vision of digitalizing the mountain tourism sector. For over two decades, we have evolved alongside technology and our clients\' needs.'
+  },
+  'empresa.history.paragraph2': {
+    es: 'Ski Solution 360 representa la culminación de toda nuestra experiencia: una plataforma integral que no solo gestiona operaciones, sino que transforma completamente la forma en que las estaciones de esquí interactúan con sus clientes.',
+    cat: 'Ski Solution 360 representa la culminació de tota la nostra experiència: una plataforma integral que no només gestiona operacions, sinó que transforma completament la manera com les estacions d\'esquí interactuen amb els seus clients.',
+    fr: 'Ski Solution 360 représente l\'aboutissement de toute notre expérience : une plateforme intégrale qui ne gère pas seulement les opérations, mais transforme complètement la façon dont les stations de ski interagissent avec leurs clients.',
+    en: 'Ski Solution 360 represents the culmination of all our experience: a comprehensive platform that not only manages operations, but completely transforms how ski resorts interact with their customers.'
+  },
+  'empresa.mission.title': {
+    es: 'Nuestra Misión',
+    cat: 'La nostra Missió',
+    fr: 'Notre Mission',
+    en: 'Our Mission'
+  },
+  'empresa.mission.description': {
+    es: 'Ayudar a estaciones de esquí y centros outdoor a optimizar operaciones, aumentar ingresos y mejorar la experiencia de clientes con tecnología potente, flexible y fácil de usar.',
+    cat: 'Ajudar estacions d\'esquí i centres outdoor a optimitzar operacions, augmentar ingressos i millorar l\'experiència dels clients amb tecnologia potent, flexible i fàcil d\'usar.',
+    fr: 'Aider les stations de ski et les centres outdoor à optimiser leurs opérations, augmenter leurs revenus et améliorer l\'expérience client avec une technologie puissante, flexible et facile à utiliser.',
+    en: 'Help ski resorts and outdoor centers optimize operations, increase revenue and improve customer experience with powerful, flexible and easy-to-use technology.'
+  },
+  'empresa.milestones.title': {
+    es: 'Hitos Importantes',
+    cat: 'Fites Importants',
+    fr: 'Jalons Importants',
+    en: 'Important Milestones'
+  },
+  'empresa.values.title': {
+    es: 'Nuestros Valores',
+    cat: 'Els nostres Valors',
+    fr: 'Nos Valeurs',
+    en: 'Our Values'
+  },
+  'empresa.values.subtitle': {
+    es: 'Los principios que guían cada decisión y cada línea de código que escribimos',
+    cat: 'Els principis que guien cada decisió i cada línia de codi que escrivim',
+    fr: 'Les principes qui guident chaque décision et chaque ligne de code que nous écrivons',
+    en: 'The principles that guide every decision and every line of code we write'
+  },
+  'empresa.values.specialization.title': {
+    es: 'Especialización',
+    cat: 'Especialització',
+    fr: 'Spécialisation',
+    en: 'Specialization'
+  },
+  'empresa.values.specialization.description': {
+    es: 'Más de 27 años enfocados exclusivamente en el sector de estaciones de esquí y turismo de montaña.',
+    cat: 'Més de 27 anys enfocats exclusivament en el sector d\'estacions d\'esquí i turisme de muntanya.',
+    fr: 'Plus de 27 ans concentrés exclusivement sur le secteur des stations de ski et du tourisme de montagne.',
+    en: 'Over 27 years focused exclusively on the ski resort and mountain tourism sector.'
+  },
+  'empresa.values.innovation.title': {
+    es: 'Innovación',
+    cat: 'Innovació',
+    fr: 'Innovation',
+    en: 'Innovation'
+  },
+  'empresa.values.innovation.description': {
+    es: 'Desarrollo constante de nuevas funcionalidades basadas en las necesidades reales del mercado.',
+    cat: 'Desenvolupament constant de noves funcionalitats basades en les necessitats reals del mercat.',
+    fr: 'Développement constant de nouvelles fonctionnalités basées sur les besoins réels du marché.',
+    en: 'Constant development of new functionalities based on real market needs.'
+  },
+  'empresa.values.efficiency.title': {
+    es: 'Eficiencia',
+    cat: 'Eficiència',
+    fr: 'Efficacité',
+    en: 'Efficiency'
+  },
+  'empresa.values.efficiency.description': {
+    es: 'Soluciones que optimizan procesos, reducen costos y maximizan la rentabilidad de nuestros clientes.',
+    cat: 'Solucions que optimitzen processos, redueixen costos i maximitzen la rendibilitat dels nostres clients.',
+    fr: 'Solutions qui optimisent les processus, réduisent les coûts et maximisent la rentabilité de nos clients.',
+    en: 'Solutions that optimize processes, reduce costs and maximize our clients\' profitability.'
+  },
+  'empresa.values.commitment.title': {
+    es: 'Compromiso',
+    cat: 'Compromís',
+    fr: 'Engagement',
+    en: 'Commitment'
+  },
+  'empresa.values.commitment.description': {
+    es: 'Acompañamos a nuestros clientes en cada paso de su transformación digital con soporte 24/7.',
+    cat: 'Acompanyem els nostres clients en cada pas de la seva transformació digital amb suport 24/7.',
+    fr: 'Nous accompagnons nos clients à chaque étape de leur transformation numérique avec un support 24/7.',
+    en: 'We accompany our clients in every step of their digital transformation with 24/7 support.'
+  },
+  'empresa.matrix.title': {
+    es: 'Nuestra Matriz Tecnológica',
+    cat: 'La nostra Matriu Tecnològica',
+    fr: 'Notre Matrice Technologique',
+    en: 'Our Technology Matrix'
+  },
+  'empresa.matrix.description': {
+    es: 'Ski Solution 360 forma parte del grupo BDR Informática, una empresa con más de 27 años de experiencia en desarrollo de software empresarial. Esta solidez nos permite ofrecer:',
+    cat: 'Ski Solution 360 forma part del grup BDR Informàtica, una empresa amb més de 27 anys d\'experiència en desenvolupament de programari empresarial. Aquesta solidesa ens permet oferir:',
+    fr: 'Ski Solution 360 fait partie du groupe BDR Informática, une entreprise avec plus de 27 ans d\'expérience en développement de logiciels d\'entreprise. Cette solidité nous permet d\'offrir :',
+    en: 'Ski Solution 360 is part of the BDR Informática group, a company with over 27 years of experience in enterprise software development. This strength allows us to offer:'
+  },
+  'empresa.matrix.financial-stability': {
+    es: 'Estabilidad Financiera',
+    cat: 'Estabilitat Financera',
+    fr: 'Stabilité Financière',
+    en: 'Financial Stability'
+  },
+  'empresa.matrix.financial-description': {
+    es: 'Respaldados por décadas de crecimiento sostenible',
+    cat: 'Recolzats per dècades de creixement sostenible',
+    fr: 'Soutenus par des décennies de croissance durable',
+    en: 'Backed by decades of sustainable growth'
+  },
+  'empresa.matrix.experienced-team': {
+    es: 'Equipo Experimentado',
+    cat: 'Equip Experimentat',
+    fr: 'Équipe Expérimentée',
+    en: 'Experienced Team'
+  },
+  'empresa.matrix.team-description': {
+    es: 'Desarrolladores con experiencia en sistemas críticos',
+    cat: 'Desenvolupadors amb experiència en sistemes crítics',
+    fr: 'Développeurs avec expérience dans les systèmes critiques',
+    en: 'Developers with experience in critical systems'
+  },
+  'empresa.matrix.recognition': {
+    es: 'Reconocimiento',
+    cat: 'Reconeixement',
+    fr: 'Reconnaissance',
+    en: 'Recognition'
+  },
+  'empresa.matrix.recognition-description': {
+    es: 'Certificaciones y premios en innovación tecnológica',
+    cat: 'Certificacions i premis en innovació tecnològica',
+    fr: 'Certifications et prix en innovation technologique',
+    en: 'Certifications and awards in technological innovation'
+  },
+  'empresa.contact.title': {
+    es: '¿Quieres conocer más sobre nosotros?',
+    cat: 'Vols conèixer més sobre nosaltres?',
+    fr: 'Voulez-vous en savoir plus sur nous?',
+    en: 'Want to know more about us?'
+  },
+  'empresa.contact.description': {
+    es: 'Estaremos encantados de contarte más sobre nuestra empresa, nuestro equipo y cómo podemos ayudar a tu estación de esquí.',
+    cat: 'Estarem encantats d\'explicar-te més sobre la nostra empresa, el nostre equip i com podem ajudar la teva estació d\'esquí.',
+    fr: 'Nous serons ravis de vous en dire plus sur notre entreprise, notre équipe et comment nous pouvons aider votre station de ski.',
+    en: 'We\'ll be happy to tell you more about our company, our team and how we can help your ski resort.'
+  },
+  'empresa.contact.button': {
+    es: 'Contacta con nuestro equipo',
+    cat: 'Contacta amb el nostre equip',
+    fr: 'Contactez notre équipe',
+    en: 'Contact our team'
+  },
+
+  // Webinars page
+  'webinars.title': {
+    es: 'Webinars',
+    cat: 'Webinars',
+    fr: 'Webinaires',
+    en: 'Webinars'
+  },
+  'webinars.description': {
+    es: 'Participa en nuestras sesiones online sobre las últimas tendencias en gestión de estaciones de esquí.',
+    cat: 'Participa en les nostres sessions online sobre les últimes tendències en gestió d\'estacions d\'esquí.',
+    fr: 'Participez à nos sessions en ligne sur les dernières tendances en gestion de stations de ski.',
+    en: 'Participate in our online sessions about the latest trends in ski resort management.'
+  },
+
+  // Homepage sections
+  'benefits.section.title': {
+    es: 'Por qué elegir Ski Solution 360',
+    cat: 'Per què triar Ski Solution 360',
+    fr: 'Pourquoi choisir Ski Solution 360',
+    en: 'Why choose Ski Solution 360'
+  },
+  'benefits.section.subtitle': {
+    es: 'La plataforma integral que revoluciona la gestión de estaciones de esquí',
+    cat: 'La plataforma integral que revoluciona la gestió d\'estacions d\'esquí',
+    fr: 'La plateforme intégrale qui révolutionne la gestion des stations de ski',
+    en: 'The comprehensive platform that revolutionizes ski resort management'
+  },
+
+  'modules.section.title': {
+    es: 'Módulos principales',
+    cat: 'Mòduls principals',
+    fr: 'Modules principaux',
+    en: 'Main modules'
+  },
+  'modules.section.subtitle': {
+    es: 'Solución modular completa para cada área de tu estación de esquí',
+    cat: 'Solució modular completa per a cada àrea de la teva estació d\'esquí',
+    fr: 'Solution modulaire complète pour chaque zone de votre station de ski',
+    en: 'Complete modular solution for every area of your ski resort'
+  },
+
+  'homepage.ticketing.title': {
+    es: 'Venta online y precios dinámicos',
+    cat: 'Venda online i preus dinàmics',
+    fr: 'Vente en ligne et prix dynamiques',
+    en: 'Online sales and dynamic pricing'
+  },
+  'homepage.ticketing.description': {
+    es: 'Sistema de reservas y venta anticipada con motor de pricing inteligente que optimiza ingresos según demanda y ocupación.',
+    cat: 'Sistema de reserves i venda anticipada amb motor de pricing intel·ligent que optimitza ingressos segons demanda i ocupació.',
+    fr: 'Système de réservation et de vente anticipée avec moteur de pricing intelligent qui optimise les revenus selon la demande et l\'occupation.',
+    en: 'Reservation and advance sales system with intelligent pricing engine that optimizes revenue based on demand and occupancy.'
+  },
+
+  'homepage.access.title': {
+    es: 'Control de accesos',
+    cat: 'Control d\'accessos',
+    fr: 'Contrôle d\'accès',
+    en: 'Access control'
+  },
+  'homepage.access.description': {
+    es: 'Gestión completa de forfaits, pases de temporada y control de accesos en tiempo real con integración a tornos y barreras.',
+    cat: 'Gestió completa de forfaits, passis de temporada i control d\'accessos en temps real amb integració a torns i barreres.',
+    fr: 'Gestion complète des forfaits, passes de saison et contrôle d\'accès en temps réel avec intégration aux tourniquets et barrières.',
+    en: 'Complete management of ski passes, season tickets and real-time access control with integration to turnstiles and barriers.'
+  },
+
+  'homepage.rental.title': {
+    es: 'Alquiler de material',
+    cat: 'Lloguer de material',
+    fr: 'Location de matériel',
+    en: 'Equipment rental'
+  },
+  'homepage.rental.description': {
+    es: 'Gestión integral del alquiler de esquís, tablas, botas y equipamiento con trazabilidad completa y mantenimiento predictivo.',
+    cat: 'Gestió integral del lloguer d\'esquís, taules, botes i equipament amb traçabilitat completa i manteniment predictiu.',
+    fr: 'Gestion intégrale de la location de skis, planches, chaussures et équipements avec traçabilité complète et maintenance prédictive.',
+    en: 'Comprehensive management of ski, board, boot and equipment rental with complete traceability and predictive maintenance.'
+  },
+
+  'homepage.school.title': {
+    es: 'Escuela y actividades',
+    cat: 'Escola i activitats',
+    fr: 'École et activités',
+    en: 'School and activities'
+  },
+  'homepage.school.description': {
+    es: 'Reserva de clases, gestión de instructores, planificación de actividades y seguimiento del progreso de alumnos.',
+    cat: 'Reserva de classes, gestió d\'instructors, planificació d\'activitats i seguiment del progrés d\'alumnes.',
+    fr: 'Réservation de cours, gestion des instructeurs, planification d\'activités et suivi des progrès des élèves.',
+    en: 'Class booking, instructor management, activity planning and student progress tracking.'
+  },
+
+  'homepage.restaurant.title': {
+    es: 'Restauración y tiendas (F&B + Retail)',
+    cat: 'Restauració i botigues (F&B + Retail)',
+    fr: 'Restauration et boutiques (F&B + Retail)',
+    en: 'Food & Beverage and Retail'
+  },
+  'homepage.restaurant.description': {
+    es: 'TPV integrado, gestión de stock, cartas digitales y análisis de consumo para maximizar ingresos en servicios complementarios.',
+    cat: 'TPV integrat, gestió d\'estoc, cartes digitals i anàlisi de consum per maximitzar ingressos en serveis complementaris.',
+    fr: 'TPV intégré, gestion des stocks, menus numériques et analyse de consommation pour maximiser les revenus des services complémentaires.',
+    en: 'Integrated POS, inventory management, digital menus and consumption analysis to maximize revenue from complementary services.'
+  },
+
+  'homepage.crm.title': {
+    es: 'CRM y analítica en tiempo real',
+    cat: 'CRM i analítica en temps real',
+    fr: 'CRM et analytique en temps réel',
+    en: 'CRM and real-time analytics'
+  },
+  'homepage.crm.description': {
+    es: 'Dashboard ejecutivo con KPIs en vivo, segmentación de clientes y herramientas de marketing automatizado.',
+    cat: 'Dashboard executiu amb KPIs en viu, segmentació de clients i eines de màrqueting automatitzat.',
+    fr: 'Tableau de bord exécutif avec KPI en direct, segmentation de la clientèle et outils de marketing automatisé.',
+    en: 'Executive dashboard with live KPIs, customer segmentation and automated marketing tools.'
+  },
+
+  'metrics.title': {
+    es: 'Números que hablan por sí solos',
+    cat: 'Números que parlen per si sols',
+    fr: 'Des chiffres qui parlent d\'eux-mêmes',
+    en: 'Numbers that speak for themselves'
+  },
+  'metrics.trust': {
+    es: 'Confían en nosotros',
+    cat: 'Confien en nosaltres',
+    fr: 'Ils nous font confiance',
+    en: 'They trust us'
+  },
+
+  'hero.video-demo': {
+    es: 'Ver vídeo demo',
+    cat: 'Veure vídeo demo',
+    fr: 'Voir la vidéo démo',
+    en: 'Watch demo video'
+  },
+  'hero.real-time': {
+    es: 'Tiempo real',
+    cat: 'Temps real',
+    fr: 'Temps réel',
+    en: 'Real time'
+  },
+  'hero.analytics': {
+    es: 'Analytics',
+    cat: 'Analítiques',
+    fr: 'Analytiques',
+    en: 'Analytics'
+  },
+  'hero.dashboard-preview': {
+    es: 'Dashboard Preview / Hero Image',
+    cat: 'Previsualització del Dashboard / Imatge Hero',
+    fr: 'Aperçu du tableau de bord / Image héro',
+    en: 'Dashboard Preview / Hero Image'
   },
 
   // Languages

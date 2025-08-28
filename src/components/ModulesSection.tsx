@@ -8,44 +8,41 @@ import {
   Utensils,
   BarChart3,
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ModulesSection = () => {
+  const { t } = useLanguage();
+  
   const modules = [
     {
       icon: <ShoppingCart className="h-8 w-8 text-primary" />,
-      title: "Venta online y precios dinámicos",
-      description:
-        "Sistema de reservas y venta anticipada con motor de pricing inteligente que optimiza ingresos según demanda y ocupación.",
+      title: t('homepage.ticketing.title'),
+      description: t('homepage.ticketing.description'),
     },
     {
       icon: <Shield className="h-8 w-8 text-primary" />,
-      title: "Control de accesos",
-      description:
-        "Gestión completa de forfaits, pases de temporada y control de accesos en tiempo real con integración a tornos y barreras.",
+      title: t('homepage.access.title'),
+      description: t('homepage.access.description'),
     },
     {
       icon: <Bike className="h-8 w-8 text-primary" />,
-      title: "Alquiler de material",
-      description:
-        "Gestión integral del alquiler de esquís, tablas, botas y equipamiento con trazabilidad completa y mantenimiento predictivo.",
+      title: t('homepage.rental.title'),
+      description: t('homepage.rental.description'),
     },
     {
       icon: <GraduationCap className="h-8 w-8 text-primary" />,
-      title: "Escuela y actividades",
-      description:
-        "Reserva de clases, gestión de instructores, planificación de actividades y seguimiento del progreso de alumnos.",
+      title: t('homepage.school.title'),
+      description: t('homepage.school.description'),
     },
     {
       icon: <Utensils className="h-8 w-8 text-primary" />,
-      title: "Restauración y tiendas (F&B + Retail)",
-      description:
-        "TPV integrado, gestión de stock, cartas digitales y análisis de consumo para maximizar ingresos en servicios complementarios.",
+      title: t('homepage.restaurant.title'),
+      description: t('homepage.restaurant.description'),
     },
     {
       icon: <BarChart3 className="h-8 w-8 text-primary" />,
-      title: "CRM y analítica en tiempo real",
-      description:
-        "Dashboard ejecutivo con KPIs en vivo, segmentación de clientes y herramientas de marketing automatizado.",
+      title: t('homepage.crm.title'),
+      description: t('homepage.crm.description'),
     },
   ];
 
@@ -54,10 +51,10 @@ const ModulesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-foreground">
-            Módulos principales
+            {t('modules.section.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Solución modular completa para cada área de tu estación de esquí
+            {t('modules.section.subtitle')}
           </p>
         </div>
 
