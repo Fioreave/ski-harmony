@@ -82,30 +82,72 @@ const App = () => (
             {/* Solution pages */}
             <Route path="/solucion" element={<Solucion />} />
             <Route path="/ski-solution-360" element={<SkiSolution360 />} />
-            <Route path="/precio-dinamico-forfaits" element={<PrecioDinamicoForfaits />} />
-            <Route path="/control-accesos-rfid" element={<ControlAccesosRfid />} />
-            <Route path="/software-escuela-esqui" element={<SoftwareEscuelaEsqui />} />
-            <Route path="/gestion-alquiler-equipo" element={<GestionAlquilerEquipo />} />
-            <Route path="/punto-venta-restauracion" element={<PuntoVentaRestauracion />} />
+            <Route
+              path="/precio-dinamico-forfaits"
+              element={<PrecioDinamicoForfaits />}
+            />
+            <Route
+              path="/control-accesos-rfid"
+              element={<ControlAccesosRfid />}
+            />
+            <Route
+              path="/software-escuela-esqui"
+              element={<SoftwareEscuelaEsqui />}
+            />
+            <Route
+              path="/gestion-alquiler-equipo"
+              element={<GestionAlquilerEquipo />}
+            />
+            <Route
+              path="/punto-venta-restauracion"
+              element={<PuntoVentaRestauracion />}
+            />
             <Route path="/bi-crm-ski" element={<BiCrmSki />} />
 
             {/* Segments pages */}
             <Route path="/segmentos" element={<Segmentos />} />
-            <Route path="/software-gestion-ski-resort" element={<SoftwareGestionSkiResort />} />
-            <Route path="/software-gestion-ski-resort-mediano" element={<SoftwareGestionSkiResortMediano />} />
-            <Route path="/software-gestion-escuelas-esqui" element={<SoftwareGestionEscuelasEsqui />} />
-            <Route path="/software-gestion-jardines-nieve" element={<SoftwareGestionJardinesNieve />} />
-            <Route path="/software-gestion-bike-parks" element={<SoftwareGestionBikeParks />} />
-            <Route path="/software-gestion-escuela-aventura" element={<SoftwareGestionEscuelaAventura />} />
-            <Route path="/software-gestion-escuela-vela-buceo" element={<SoftwareGestionEscuelaVelaBuceo />} />
-            <Route path="/software-gestion-museo" element={<SoftwareGestionMuseo />} />
+            <Route
+              path="/software-gestion-ski-resort"
+              element={<SoftwareGestionSkiResort />}
+            />
+            <Route
+              path="/software-gestion-ski-resort-mediano"
+              element={<SoftwareGestionSkiResortMediano />}
+            />
+            <Route
+              path="/software-gestion-escuelas-esqui"
+              element={<SoftwareGestionEscuelasEsqui />}
+            />
+            <Route
+              path="/software-gestion-jardines-nieve"
+              element={<SoftwareGestionJardinesNieve />}
+            />
+            <Route
+              path="/software-gestion-bike-parks"
+              element={<SoftwareGestionBikeParks />}
+            />
+            <Route
+              path="/software-gestion-escuela-aventura"
+              element={<SoftwareGestionEscuelaAventura />}
+            />
+            <Route
+              path="/software-gestion-escuela-vela-buceo"
+              element={<SoftwareGestionEscuelaVelaBuceo />}
+            />
+            <Route
+              path="/software-gestion-museo"
+              element={<SoftwareGestionMuseo />}
+            />
 
             {/* Other pages */}
             <Route path="/casos-exito" element={<CasosExito />} />
             <Route path="/ebooks" element={<Ebooks />} />
             <Route path="/webinars" element={<Webinars />} />
             <Route path="/partners" element={<Partners />} />
-            <Route path="/faq-software-gestion-estacion-esqui" element={<Faq />} />
+            <Route
+              path="/faq-software-gestion-estacion-esqui"
+              element={<Faq />}
+            />
 
             {/* Legacy routes redirect to Spanish */}
             <Route path="/blog" element={<Navigate to="/es/blog" replace />} />

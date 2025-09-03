@@ -133,19 +133,19 @@ const SoftwareGestionMuseo = () => {
               <div className="space-y-4">
                 {challenges.map((challenge, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-[hsl(var(--ski-lime-dark))] rounded-full mt-3 flex-shrink-0"></div>
                     <p className="text-slate-600">{challenge}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <Card className="bg-gradient-to-br from-lime-50 to-lime-100 border-0 shadow-xl">
+            <Card className="bg-white border-0 shadow-xl">
               <CardHeader>
-                <div className="bg-lime-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <div className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                   <Building className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl font-bold text-lime-900">
+                <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
                   La solución: Ski Solution 360 para el sector cultural
                 </CardTitle>
               </CardHeader>
@@ -180,7 +180,7 @@ const SoftwareGestionMuseo = () => {
                 className="border border-purple-100 hover:shadow-lg transition-shadow bg-white"
               >
                 <CardHeader className="pb-4">
-                  <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-3 text-purple-600">
+                  <div className="bg-lime-100 w-12 h-12 rounded-lg flex items-center justify-center mb-3 text-[hsl(var(--ski-lime-dark))]">
                     {module.icon}
                   </div>
                   <CardTitle className="text-lg font-bold text-slate-900">
@@ -209,12 +209,12 @@ const SoftwareGestionMuseo = () => {
             {benefits.map((benefit, index) => (
               <Card
                 key={index}
-                className="border-0 bg-gradient-to-br from-blue-50 to-indigo-50 hover:shadow-md transition-shadow"
+                className="border-0 bg-white shadow-sm hover:shadow-md transition-shadow"
               >
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-blue-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="h-5 w-5 text-blue-600" />
+                    <div className="bg-lime-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <CheckCircle className="h-5 w-5 text-[hsl(var(--ski-lime-dark))]" />
                     </div>
                     <p className="text-slate-700 font-medium">{benefit}</p>
                   </div>
@@ -229,12 +229,12 @@ const SoftwareGestionMuseo = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center border-0 bg-gradient-to-br from-lime-50 to-lime-100">
+            <Card className="text-center border-0 bg-white shadow-sm">
               <CardHeader>
-                <div className="bg-lime-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <QrCode className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-lime-900">
+                <CardTitle className="text-xl font-bold text-[hsl(var(--ski-lime-dark))]">
                   Acceso rápido
                 </CardTitle>
               </CardHeader>
@@ -245,12 +245,12 @@ const SoftwareGestionMuseo = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-gradient-to-br from-lime-100 to-lime-200">
+            <Card className="text-center border-0 bg-white shadow-sm">
               <CardHeader>
-                <div className="bg-lime-700 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-lime-900">
+                <CardTitle className="text-xl font-bold text-[hsl(var(--ski-lime-dark))]">
                   Grupos escolares
                 </CardTitle>
               </CardHeader>
@@ -261,12 +261,12 @@ const SoftwareGestionMuseo = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-gradient-to-br from-lime-200 to-lime-300">
+            <Card className="text-center border-0 bg-white shadow-sm">
               <CardHeader>
-                <div className="bg-lime-800 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <BookOpen className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-lime-900">
+                <CardTitle className="text-xl font-bold text-[hsl(var(--ski-lime-dark))]">
                   Experiencia cultural
                 </CardTitle>
               </CardHeader>
@@ -295,25 +295,21 @@ const SoftwareGestionMuseo = () => {
                 icon: <Calendar className="h-8 w-8" />,
                 title: "Exposiciones temporales",
                 desc: "Gestión de entradas con fechas limitadas",
-                color: "bg-lime-600",
               },
               {
                 icon: <Users className="h-8 w-8" />,
                 title: "Visitas guiadas",
                 desc: "Reservas por horarios y idiomas",
-                color: "bg-lime-700",
               },
               {
                 icon: <Building className="h-8 w-8" />,
                 title: "Eventos culturales",
                 desc: "Conciertos, conferencias y actividades",
-                color: "bg-lime-800",
               },
               {
                 icon: <Target className="h-8 w-8" />,
                 title: "Aforo controlado",
                 desc: "Gestión de límites por sala o exposición",
-                color: "bg-lime-900",
               },
             ].map((useCase, index) => (
               <Card
@@ -322,11 +318,13 @@ const SoftwareGestionMuseo = () => {
               >
                 <CardHeader>
                   <div
-                    className={`${useCase.color} w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4 text-white`}
+                    className={
+                      "bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4 text-white"
+                    }
                   >
                     {useCase.icon}
                   </div>
-                  <CardTitle className="text-lg font-bold text-slate-900">
+                  <CardTitle className="text-lg font-bold text-[hsl(var(--ski-lime-dark))]">
                     {useCase.title}
                   </CardTitle>
                 </CardHeader>
@@ -350,7 +348,7 @@ const SoftwareGestionMuseo = () => {
           </p>
           <Button
             size="lg"
-            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3"
+            className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary hover:bg-purple-700 text-slate-950 px-8 py-3"
           >
             Solicita una demo para tu museo
           </Button>

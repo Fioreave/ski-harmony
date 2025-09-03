@@ -64,7 +64,7 @@ const Navbar = () => {
               {/* Solución con subpáginas */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger>
-                  <Link to="/solucion">{t('nav.solution')}</Link>
+                  <Link to="/solucion">{t("nav.solution")}</Link>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-2 p-4 w-80 bg-background border border-border rounded-md shadow-lg z-50">
@@ -73,7 +73,7 @@ const Navbar = () => {
                         to="/ski-solution-360"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('modules.core.title')}
+                        {t("modules.core.title")}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -81,7 +81,7 @@ const Navbar = () => {
                         to="/precio-dinamico-forfaits"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('modules.ticketing.title')}
+                        {t("modules.ticketing.title")}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -89,7 +89,7 @@ const Navbar = () => {
                         to="/software-escuela-esqui"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('modules.school.title')}
+                        {t("modules.school.title")}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -97,7 +97,7 @@ const Navbar = () => {
                         to="/gestion-alquiler-equipo"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('modules.rental.title')}
+                        {t("modules.rental.title")}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -105,7 +105,7 @@ const Navbar = () => {
                         to="/punto-venta-restauracion"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('modules.pos.title')}
+                        {t("modules.pos.title")}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -113,7 +113,7 @@ const Navbar = () => {
                         to="/bi-crm-ski"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('modules.crm.title')}
+                        {t("modules.crm.title")}
                       </Link>
                     </NavigationMenuLink>
                   </div>
@@ -123,7 +123,7 @@ const Navbar = () => {
               {/* Segmentos */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger>
-                  <Link to="/segmentos">{t('nav.segments')}</Link>
+                  <Link to="/segmentos">{t("nav.segments")}</Link>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-2 p-4 w-96 bg-background border border-border rounded-md shadow-lg z-50">
@@ -132,7 +132,7 @@ const Navbar = () => {
                         to="/software-gestion-ski-resort"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('segments.large-resorts')}
+                        {t("segments.large-resorts")}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -140,7 +140,7 @@ const Navbar = () => {
                         to="/software-gestion-ski-resort-mediano"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('segments.medium-resorts')}
+                        {t("segments.medium-resorts")}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -148,7 +148,7 @@ const Navbar = () => {
                         to="/software-gestion-escuelas-esqui"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('segments.ski-schools')}
+                        {t("segments.ski-schools")}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -156,7 +156,7 @@ const Navbar = () => {
                         to="/software-gestion-jardines-nieve"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('segments.snow-gardens')}
+                        {t("segments.snow-gardens")}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -164,7 +164,7 @@ const Navbar = () => {
                         to="/software-gestion-bike-parks"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('segments.bike-parks')}
+                        {t("segments.bike-parks")}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -172,7 +172,7 @@ const Navbar = () => {
                         to="/software-gestion-escuela-aventura"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('segments.outdoor-activities')}
+                        {t("segments.outdoor-activities")}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -180,7 +180,7 @@ const Navbar = () => {
                         to="/software-gestion-escuela-vela-buceo"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('segments.sailing-diving')}
+                        {t("segments.sailing-diving")}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -188,7 +188,7 @@ const Navbar = () => {
                         to="/software-gestion-museo"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('segments.museums')}
+                        {t("segments.museums")}
                       </Link>
                     </NavigationMenuLink>
                   </div>
@@ -198,21 +198,23 @@ const Navbar = () => {
               {/* Casos de éxito */}
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className="px-5 py-2">
-                  <Link to="/casos-exito">{t('nav.success-stories')}</Link>
+                  <Link to="/casos-exito">{t("nav.success-stories")}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
               {/* Recursos */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger>{t('nav.resources')}</NavigationMenuTrigger>
+                <NavigationMenuTrigger>
+                  {t("nav.resources")}
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-2 p-4 w-64 bg-background border border-border rounded-md shadow-lg z-50">
                     <NavigationMenuLink asChild>
                       <Link
-                        to="https://blog.skisolution360.com/"
+                        to="/blog"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('nav.blog')}
+                        {t("nav.blog")}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -220,7 +222,7 @@ const Navbar = () => {
                         to="/ebooks"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('nav.ebooks')}
+                        {t("nav.ebooks")}
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
@@ -228,7 +230,7 @@ const Navbar = () => {
                         to="/webinars"
                         className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
                       >
-                        {t('nav.webinars')}
+                        {t("nav.webinars")}
                       </Link>
                     </NavigationMenuLink>
                   </div>
@@ -238,17 +240,19 @@ const Navbar = () => {
               {/* Otros */}
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className="px-5 py-2">
-                  <Link to="/partners">{t('nav.partners')}</Link>
+                  <Link to="/partners">{t("nav.partners")}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className="px-5 py-2">
-                  <Link to="/empresa">{t('nav.company')}</Link>
+                  <Link to="/empresa">{t("nav.company")}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className="px-5 py-2">
-                  <Link to="/faq-software-gestion-estacion-esqui">{t('nav.faq')}</Link>
+                  <Link to="/faq-software-gestion-estacion-esqui">
+                    {t("nav.faq")}
+                  </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -264,14 +268,16 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-80 bg-background">
               <SheetHeader>
-                <SheetTitle className="text-left">{t('nav.menu')}</SheetTitle>
+                <SheetTitle className="text-left">{t("nav.menu")}</SheetTitle>
               </SheetHeader>
               <div className="mt-6 space-y-4">
                 <Accordion type="single" collapsible className="w-full">
                   {/* Solución */}
                   <AccordionItem value="solution">
                     <AccordionTrigger className="text-left">
-                      <Link to="/solucion" onClick={closeMobileMenu}>{t('nav.solution')}</Link>
+                      <Link to="/solucion" onClick={closeMobileMenu}>
+                        {t("nav.solution")}
+                      </Link>
                     </AccordionTrigger>
                     <AccordionContent>
                       <div className="space-y-2 pl-4">
@@ -280,42 +286,42 @@ const Navbar = () => {
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('modules.core.title')}
+                          {t("modules.core.title")}
                         </Link>
                         <Link
                           to="/precio-dinamico-forfaits"
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('modules.ticketing.title')}
+                          {t("modules.ticketing.title")}
                         </Link>
                         <Link
                           to="/software-escuela-esqui"
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('modules.school.title')}
+                          {t("modules.school.title")}
                         </Link>
                         <Link
                           to="/gestion-alquiler-equipo"
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('modules.rental.title')}
+                          {t("modules.rental.title")}
                         </Link>
                         <Link
                           to="/punto-venta-restauracion"
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('modules.pos.title')}
+                          {t("modules.pos.title")}
                         </Link>
                         <Link
                           to="/bi-crm-ski"
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('modules.crm.title')}
+                          {t("modules.crm.title")}
                         </Link>
                       </div>
                     </AccordionContent>
@@ -324,7 +330,9 @@ const Navbar = () => {
                   {/* Segmentos */}
                   <AccordionItem value="segments">
                     <AccordionTrigger className="text-left">
-                      <Link to="/segmentos" onClick={closeMobileMenu}>{t('nav.segments')}</Link>
+                      <Link to="/segmentos" onClick={closeMobileMenu}>
+                        {t("nav.segments")}
+                      </Link>
                     </AccordionTrigger>
                     <AccordionContent>
                       <div className="space-y-2 pl-4">
@@ -333,56 +341,56 @@ const Navbar = () => {
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('segments.large-resorts')}
+                          {t("segments.large-resorts")}
                         </Link>
                         <Link
                           to="/software-gestion-ski-resort-mediano"
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('segments.medium-resorts')}
+                          {t("segments.medium-resorts")}
                         </Link>
                         <Link
                           to="/software-gestion-escuelas-esqui"
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('segments.ski-schools')}
+                          {t("segments.ski-schools")}
                         </Link>
                         <Link
                           to="/software-gestion-jardines-nieve"
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('segments.snow-gardens')}
+                          {t("segments.snow-gardens")}
                         </Link>
                         <Link
                           to="/software-gestion-bike-parks"
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('segments.bike-parks')}
+                          {t("segments.bike-parks")}
                         </Link>
                         <Link
                           to="/software-gestion-escuela-aventura"
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('segments.outdoor-activities')}
+                          {t("segments.outdoor-activities")}
                         </Link>
                         <Link
                           to="/software-gestion-escuela-vela-buceo"
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('segments.sailing-diving')}
+                          {t("segments.sailing-diving")}
                         </Link>
                         <Link
                           to="/software-gestion-museo"
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('segments.museums')}
+                          {t("segments.museums")}
                         </Link>
                       </div>
                     </AccordionContent>
@@ -390,29 +398,31 @@ const Navbar = () => {
 
                   {/* Recursos */}
                   <AccordionItem value="resources">
-                    <AccordionTrigger className="text-left">{t('nav.resources')}</AccordionTrigger>
+                    <AccordionTrigger className="text-left">
+                      {t("nav.resources")}
+                    </AccordionTrigger>
                     <AccordionContent>
                       <div className="space-y-2 pl-4">
                         <Link
-                          to="https://blog.skisolution360.com/"
+                          to="/blog"
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('nav.blog')}
+                          {t("nav.blog")}
                         </Link>
                         <Link
                           to="/ebooks"
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('nav.ebooks')}
+                          {t("nav.ebooks")}
                         </Link>
                         <Link
                           to="/webinars"
                           className="block py-2 text-sm hover:text-primary"
                           onClick={closeMobileMenu}
                         >
-                          {t('nav.webinars')}
+                          {t("nav.webinars")}
                         </Link>
                       </div>
                     </AccordionContent>
@@ -426,85 +436,87 @@ const Navbar = () => {
                     className="block py-2 hover:text-primary font-medium"
                     onClick={closeMobileMenu}
                   >
-                    {t('nav.success-stories')}
+                    {t("nav.success-stories")}
                   </Link>
                   <Link
                     to="/partners"
                     className="block py-2 hover:text-primary font-medium"
                     onClick={closeMobileMenu}
                   >
-                    {t('nav.partners')}
+                    {t("nav.partners")}
                   </Link>
                   <Link
                     to="/empresa"
                     className="block py-2 hover:text-primary font-medium"
                     onClick={closeMobileMenu}
                   >
-                    {t('nav.company')}
+                    {t("nav.company")}
                   </Link>
                   <Link
                     to="/faq-software-gestion-estacion-esqui"
                     className="block py-2 hover:text-primary font-medium"
                     onClick={closeMobileMenu}
                   >
-                    {t('nav.faq')}
+                    {t("nav.faq")}
                   </Link>
                 </div>
 
                 {/* Language selector in mobile */}
                 <div className="pt-4 border-t">
-                  <div className="text-sm font-medium text-muted-foreground mb-2">{t('nav.language')}</div>
+                  <div className="text-sm font-medium text-muted-foreground mb-2">
+                    {t("nav.language")}
+                  </div>
                   <div className="grid grid-cols-2 gap-2">
                     <Button
-                      variant={language === 'es' ? 'default' : 'outline'}
+                      variant={language === "es" ? "default" : "outline"}
                       size="sm"
                       onClick={() => {
-                        handleLanguageChange('es');
+                        handleLanguageChange("es");
                         closeMobileMenu();
                       }}
                     >
-                      {t('lang.es')}
+                      {t("lang.es")}
                     </Button>
                     <Button
-                      variant={language === 'cat' ? 'default' : 'outline'}
+                      variant={language === "cat" ? "default" : "outline"}
                       size="sm"
                       onClick={() => {
-                        handleLanguageChange('cat');
+                        handleLanguageChange("cat");
                         closeMobileMenu();
                       }}
                     >
-                      {t('lang.cat')}
+                      {t("lang.cat")}
                     </Button>
                     <Button
-                      variant={language === 'fr' ? 'default' : 'outline'}
+                      variant={language === "fr" ? "default" : "outline"}
                       size="sm"
                       onClick={() => {
-                        handleLanguageChange('fr');
+                        handleLanguageChange("fr");
                         closeMobileMenu();
                       }}
                     >
-                      {t('lang.fr')}
+                      {t("lang.fr")}
                     </Button>
                     <Button
-                      variant={language === 'en' ? 'default' : 'outline'}
+                      variant={language === "en" ? "default" : "outline"}
                       size="sm"
                       onClick={() => {
-                        handleLanguageChange('en');
+                        handleLanguageChange("en");
                         closeMobileMenu();
                       }}
                     >
-                      {t('lang.en')}
+                      {t("lang.en")}
                     </Button>
                   </div>
                 </div>
 
                 {/* CTA Button in mobile */}
                 <div className="pt-4">
-                  <Button 
+                  <Button
                     className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-medium"
                     onClick={closeMobileMenu}
                   >
-                    {t('nav.request-demo')}
+                    {t("nav.request-demo")}
                   </Button>
                 </div>
               </div>
@@ -517,9 +529,7 @@ const Navbar = () => {
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center space-x-2 text-sm px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">
                 <Globe className="h-4 w-4" />
-                <span className="font-medium">
-                  {language.toUpperCase()}
-                </span>
+                <span className="font-medium">{language.toUpperCase()}</span>
                 <ChevronDown className="h-3 w-3" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
@@ -543,7 +553,7 @@ const Navbar = () => {
 
             {/* CTA Button */}
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium">
-              {t('nav.request-demo')}
+              {t("nav.request-demo")}
             </Button>
           </div>
         </div>

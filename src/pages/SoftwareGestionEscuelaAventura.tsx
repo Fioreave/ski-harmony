@@ -103,7 +103,7 @@ const SoftwareGestionEscuelaAventura = () => {
               <Badge
                 key={index}
                 variant="secondary"
-                className="bg-emerald-100 text-emerald-900 px-4 py-2"
+                className="bg-lime-100 text-emerald-800 px-4 py-2"
               >
                 {activity}
               </Badge>
@@ -113,7 +113,7 @@ const SoftwareGestionEscuelaAventura = () => {
       </section>
 
       {/* Challenges Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -131,19 +131,19 @@ const SoftwareGestionEscuelaAventura = () => {
               <div className="space-y-4">
                 {challenges.map((challenge, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
                     <p className="text-slate-600">{challenge}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <Card className="bg-gradient-to-br from-lime-50 to-lime-100 border-0 shadow-xl">
+            <Card className="bg-white border-0 shadow-xl">
               <CardHeader>
-                <div className="bg-lime-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <div className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                   <Mountain className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl font-bold text-lime-900">
+                <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
                   La solución: Ski Solution 360 adaptado a la aventura
                 </CardTitle>
               </CardHeader>
@@ -169,7 +169,7 @@ const SoftwareGestionEscuelaAventura = () => {
             </h2>
           </div>
 
-          <Card className="bg-gradient-to-r from-lime-600 to-lime-700 border-0 text-white">
+          <Card className="bg-gradient-to-r from-lime-500 to-primary border-0 text-white">
             <CardContent className="p-8 md:p-12">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
                 <div className="lg:col-span-2">
@@ -186,7 +186,7 @@ const SoftwareGestionEscuelaAventura = () => {
                     Aventura Total - Centro Multiaventura
                   </p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6">
                   <div className="text-center">
                     <div className="text-4xl font-bold mb-2">80%</div>
                     <div className="text-sm text-lime-100">
@@ -225,7 +225,7 @@ const SoftwareGestionEscuelaAventura = () => {
                 className="border border-emerald-100 hover:shadow-lg transition-shadow bg-white"
               >
                 <CardHeader className="pb-4">
-                  <div className="bg-emerald-100 w-12 h-12 rounded-lg flex items-center justify-center mb-3 text-emerald-600">
+                  <div className="bg-lime-100 w-12 h-12 rounded-lg flex items-center justify-center mb-3 text-[hsl(var(--ski-lime-dark))]">
                     {module.icon}
                   </div>
                   <CardTitle className="text-lg font-bold text-slate-900">
@@ -272,12 +272,12 @@ const SoftwareGestionEscuelaAventura = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center border-0 bg-gradient-to-br from-lime-50 to-lime-100">
+            <Card className="text-center border-0  bg-white shadow-md">
               <CardHeader>
-                <div className="bg-lime-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Mountain className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-lime-900">
+                <CardTitle className="text-xl font-bold text-[hsl(var(--ski-lime-dark))]">
                   Multiaventura
                 </CardTitle>
               </CardHeader>
@@ -288,12 +288,12 @@ const SoftwareGestionEscuelaAventura = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-gradient-to-br from-lime-100 to-lime-200">
+            <Card className="text-center border-0  bg-white shadow-md">
               <CardHeader>
-                <div className="bg-lime-700 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Calendar className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-lime-900">
+                <CardTitle className="text-xl font-bold text-[hsl(var(--ski-lime-dark))]">
                   Estacional
                 </CardTitle>
               </CardHeader>
@@ -304,12 +304,12 @@ const SoftwareGestionEscuelaAventura = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-gradient-to-br from-lime-200 to-lime-300">
+            <Card className="text-center border-0 bg-white shadow-md">
               <CardHeader>
-                <div className="bg-lime-800 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Target className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-lime-900">
+                <CardTitle className="text-xl font-bold text-[hsl(var(--ski-lime-dark))]">
                   Escalable
                 </CardTitle>
               </CardHeader>
@@ -324,14 +324,14 @@ const SoftwareGestionEscuelaAventura = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-950 ">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             ¿Listo para vivir tu temporada más organizada?
           </h2>
           <Button
             size="lg"
-            className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3"
+            className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary hover:bg-emerald-700 text-black px-8 py-3"
           >
             Solicita una demo para actividades outdoor
           </Button>

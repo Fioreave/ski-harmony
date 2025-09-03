@@ -72,7 +72,7 @@ const SoftwareGestionJardinesNieve = () => {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-lime-100 text-lime-900 px-4 py-2">
+            <Badge className="mb-4 text-[hsl(var(--ski-lime-dark))] bg-primary/10 px-4 py-2">
               Jardines de Nieve
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
@@ -103,19 +103,19 @@ const SoftwareGestionJardinesNieve = () => {
               <div className="space-y-4">
                 {challenges.map((challenge, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
                     <p className="text-slate-600">{challenge}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <Card className="bg-gradient-to-br from-lime-50 to-lime-100 border-0 shadow-xl">
+            <Card className="bg-white border-0 shadow-xl">
               <CardHeader>
-                <div className="bg-lime-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <div className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                   <Snowflake className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl font-bold text-lime-900">
+                <CardTitle className="text-2xl font-bold text-primary">
                   La solución: digitalización simple y adaptada a tu escala
                 </CardTitle>
               </CardHeader>
@@ -142,14 +142,14 @@ const SoftwareGestionJardinesNieve = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <Card className="bg-gradient-to-r from-lime-600 to-lime-700 border-0 text-white">
+            <Card className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary">
               <CardContent className="p-8">
                 <div className="text-center mb-6">
                   <Snowflake className="h-16 w-16 mx-auto mb-4 text-lime-200" />
-                  <h3 className="text-2xl font-bold mb-4">
+                  <h3 className="text-2xl text-white font-bold mb-4">
                     Jardín de Nieve Montaña Blanca
                   </h3>
-                  <p className="text-lime-100">
+                  <p className="text-white font-medium">
                     "Desde que implementamos Ski Solution 360, nuestros padres
                     pueden reservar online y nosotros tenemos control total de
                     los grupos y horarios."
@@ -163,19 +163,19 @@ const SoftwareGestionJardinesNieve = () => {
                 Resultados obtenidos:
               </h3>
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-green-50 p-4 rounded-lg text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-2">
+                <div className="bg-lime-50 p-4 rounded-lg text-center">
+                  <div className="text-3xl font-bold text-lime-600 mb-2">
                     70%
                   </div>
                   <div className="text-sm text-green-700">
                     Menos tiempo en gestión
                   </div>
                 </div>
-                <div className="bg-blue-50 p-4 rounded-lg text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">
+                <div className="bg-lime-50 p-4 rounded-lg text-center">
+                  <div className="text-3xl font-bold text-lime-600 mb-2">
                     95%
                   </div>
-                  <div className="text-sm text-blue-700">
+                  <div className="text-sm text-lime-700">
                     Satisfacción padres
                   </div>
                 </div>
@@ -251,12 +251,12 @@ const SoftwareGestionJardinesNieve = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center border-0 bg-gradient-to-br from-lime-50 to-lime-100">
+            <Card className="text-center border-0 bg-primary/10">
               <CardHeader>
-                <div className="bg-lime-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-[hsl(var(--ski-lime-dark))] w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Clock className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-lime-900">
+                <CardTitle className="text-xl font-bold text-[hsl(var(--ski-lime-dark))]">
                   Fácil y rápido
                 </CardTitle>
               </CardHeader>
@@ -267,12 +267,12 @@ const SoftwareGestionJardinesNieve = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-gradient-to-br from-lime-100 to-lime-200">
+            <Card className="text-center border-0 bg-primary/10">
               <CardHeader>
-                <div className="bg-lime-700 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-[hsl(var(--ski-lime-dark))] w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <DollarSign className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-lime-900">
+                <CardTitle className="text-xl font-bold text-[hsl(var(--ski-lime-dark))]">
                   Precio ajustado
                 </CardTitle>
               </CardHeader>
@@ -283,12 +283,12 @@ const SoftwareGestionJardinesNieve = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-gradient-to-br from-lime-200 to-lime-300">
+            <Card className="text-center border-0 bg-primary/10">
               <CardHeader>
-                <div className="bg-lime-800 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="bg-[hsl(var(--ski-lime-dark))] w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Heart className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-lime-900">
+                <CardTitle className="text-xl font-bold text-[hsl(var(--ski-lime-dark))]">
                   Para los pequeños
                 </CardTitle>
               </CardHeader>
@@ -310,7 +310,7 @@ const SoftwareGestionJardinesNieve = () => {
           </h2>
           <Button
             size="lg"
-            className="bg-lime-600 hover:bg-lime-700 text-white px-8 py-3"
+            className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary text-white px-8 py-3"
           >
             Solicita una demo adaptada
           </Button>
