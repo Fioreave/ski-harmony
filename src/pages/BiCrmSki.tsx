@@ -18,6 +18,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const BiCrmSki = () => {
+  const { t } = useLanguage();
   const benefits = [
     {
       icon: <BarChart3 className="w-6 h-6" />,
@@ -84,16 +85,13 @@ const BiCrmSki = () => {
               BI & CRM
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
-              Datos que impulsan <span className="text-accent">decisiones</span>{" "}
-              y fidelizan clientes
+              {t('bicrm.hero.title')}
             </h1>
             <p className="text-lg text-muted-foreground mb-10 max-w-4xl mx-auto leading-relaxed">
-              Toma decisiones basadas en datos y fideliza a tus clientes con el
-              módulo BI & CRM de Ski Solution 360. Informes en tiempo real,
-              segmentación y campañas personalizadas.
+              {t('bicrm.hero.description')}
             </p>
             <Button className="btn-demo text-lg px-8 py-4 shadow-lg hover:shadow-xl">
-              Solicita una demo
+              {t('common.request-demo')}
             </Button>
           </div>
         </div>
