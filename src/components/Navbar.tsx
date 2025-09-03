@@ -197,7 +197,7 @@ const Navbar = () => {
 
               {/* Casos de éxito */}
               <NavigationMenuItem>
-                <NavigationMenuLink asChild className="px-5 py-2">
+                <NavigationMenuLink asChild className="w-80 px-5 py-2">
                   <Link to="/casos-exito">{t("nav.success-stories")}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
