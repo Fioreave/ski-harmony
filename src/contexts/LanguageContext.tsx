@@ -2129,8 +2129,239 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
     navigate(newPath);
   };
 
+  // Add form translations to the existing translations object
+  const formTranslations = {
+    // Demo Form
+    'demoForm.title': {
+      es: 'Solicitar Demo Gratuita',
+      cat: 'Sol·licitar Demo Gratuïta',
+      fr: 'Demander une Démo Gratuite',
+      en: 'Request Free Demo'
+    },
+    'demoForm.description': {
+      es: 'Completa este formulario y nuestro equipo se pondrá en contacto contigo',
+      cat: 'Completa aquest formulari i el nostre equip es posarà en contacte amb tu',
+      fr: 'Complétez ce formulaire et notre équipe vous contactera',
+      en: 'Complete this form and our team will contact you'
+    },
+    'demoForm.name': {
+      es: 'Nombre',
+      cat: 'Nom',
+      fr: 'Nom',
+      en: 'Name'
+    },
+    'demoForm.company': {
+      es: 'Empresa',
+      cat: 'Empresa',
+      fr: 'Entreprise',
+      en: 'Company'
+    },
+    'demoForm.phone': {
+      es: 'Teléfono',
+      cat: 'Telèfon',
+      fr: 'Téléphone',
+      en: 'Phone'
+    },
+    'demoForm.email': {
+      es: 'Email',
+      cat: 'Email',
+      fr: 'Email',
+      en: 'Email'
+    },
+    'demoForm.employees': {
+      es: 'Número de empleados',
+      cat: 'Nombre d\'empleats',
+      fr: 'Nombre d\'employés',
+      en: 'Number of employees'
+    },
+    'demoForm.selectEmployees': {
+      es: 'Selecciona el número de empleados',
+      cat: 'Selecciona el nombre d\'empleats',
+      fr: 'Sélectionnez le nombre d\'employés',
+      en: 'Select number of employees'
+    },
+    'demoForm.more500': {
+      es: 'Más de 500',
+      cat: 'Més de 500',
+      fr: 'Plus de 500',
+      en: 'More than 500'
+    },
+    'demoForm.sector': {
+      es: 'Sector',
+      cat: 'Sector',
+      fr: 'Secteur',
+      en: 'Sector'
+    },
+    'demoForm.selectSector': {
+      es: 'Selecciona tu sector',
+      cat: 'Selecciona el teu sector',
+      fr: 'Sélectionnez votre secteur',
+      en: 'Select your sector'
+    },
+    'demoForm.skiResort': {
+      es: 'Estación de Esquí',
+      cat: 'Estació d\'Esquí',
+      fr: 'Station de Ski',
+      en: 'Ski Resort'
+    },
+    'demoForm.adventurePark': {
+      es: 'Parque de Aventura',
+      cat: 'Parc d\'Aventura',
+      fr: 'Parc d\'Aventure',
+      en: 'Adventure Park'
+    },
+    'demoForm.bikePark': {
+      es: 'Bike Park',
+      cat: 'Bike Park',
+      fr: 'Bike Park',
+      en: 'Bike Park'
+    },
+    'demoForm.museum': {
+      es: 'Museo',
+      cat: 'Museu',
+      fr: 'Musée',
+      en: 'Museum'
+    },
+    'demoForm.other': {
+      es: 'Otro',
+      cat: 'Altre',
+      fr: 'Autre',
+      en: 'Other'
+    },
+    'demoForm.availability': {
+      es: '¿Qué disponibilidad tienes? ¿Mañana o tardes?',
+      cat: 'Quina disponibilitat tens? Matí o tardes?',
+      fr: 'Quelle est votre disponibilité? Matin ou après-midi?',
+      en: 'What is your availability? Morning or afternoon?'
+    },
+    'demoForm.selectAvailability': {
+      es: 'Selecciona tu disponibilidad',
+      cat: 'Selecciona la teva disponibilitat',
+      fr: 'Sélectionnez votre disponibilité',
+      en: 'Select your availability'
+    },
+    'demoForm.morning': {
+      es: 'Mañanas',
+      cat: 'Matins',
+      fr: 'Matins',
+      en: 'Mornings'
+    },
+    'demoForm.afternoon': {
+      es: 'Tardes',
+      cat: 'Tardes',
+      fr: 'Après-midis',
+      en: 'Afternoons'
+    },
+    'demoForm.both': {
+      es: 'Ambos',
+      cat: 'Ambdós',
+      fr: 'Les deux',
+      en: 'Both'
+    },
+    'demoForm.submit': {
+      es: 'Solicitar Demo',
+      cat: 'Sol·licitar Demo',
+      fr: 'Demander une Démo',
+      en: 'Request Demo'
+    },
+
+    // Contact Form
+    'contactForm.title': {
+      es: 'Contacta con Nosotros',
+      cat: 'Contacta amb Nosaltres',
+      fr: 'Contactez-nous',
+      en: 'Contact Us'
+    },
+    'contactForm.description': {
+      es: 'Envíanos tu consulta y te responderemos lo antes posible',
+      cat: 'Envia\'ns la teva consulta i et respondrem al més aviat possible',
+      fr: 'Envoyez-nous votre demande et nous vous répondrons dès que possible',
+      en: 'Send us your inquiry and we will respond as soon as possible'
+    },
+    'contactForm.name': {
+      es: 'Nombre',
+      cat: 'Nom',
+      fr: 'Nom',
+      en: 'Name'
+    },
+    'contactForm.company': {
+      es: 'Empresa',
+      cat: 'Empresa',
+      fr: 'Entreprise',
+      en: 'Company'
+    },
+    'contactForm.modules': {
+      es: 'Módulos de interés',
+      cat: 'Mòduls d\'interès',
+      fr: 'Modules d\'intérêt',
+      en: 'Modules of interest'
+    },
+    'contactForm.moduleTicketing': {
+      es: 'Ticketing y Precio Dinámico',
+      cat: 'Ticketing i Preu Dinàmic',
+      fr: 'Billetterie et Prix Dynamique',
+      en: 'Ticketing and Dynamic Pricing'
+    },
+    'contactForm.moduleAccess': {
+      es: 'Control de Accesos RFID',
+      cat: 'Control d\'Accessos RFID',
+      fr: 'Contrôle d\'Accès RFID',
+      en: 'RFID Access Control'
+    },
+    'contactForm.moduleRental': {
+      es: 'Gestión de Alquiler de Equipos',
+      cat: 'Gestió d\'Lloguer d\'Equips',
+      fr: 'Gestion de Location d\'Équipements',
+      en: 'Equipment Rental Management'
+    },
+    'contactForm.moduleSchool': {
+      es: 'Software Escuela de Esquí',
+      cat: 'Software Escola d\'Esquí',
+      fr: 'Logiciel École de Ski',
+      en: 'Ski School Software'
+    },
+    'contactForm.moduleRestaurant': {
+      es: 'Punto de Venta Restauración',
+      cat: 'Punt de Venda Restauració',
+      fr: 'Point de Vente Restauration',
+      en: 'Restaurant Point of Sale'
+    },
+    'contactForm.moduleBiCrm': {
+      es: 'BI & CRM para Ski Resorts',
+      cat: 'BI & CRM per Ski Resorts',
+      fr: 'BI & CRM pour Stations de Ski',
+      en: 'BI & CRM for Ski Resorts'
+    },
+    'contactForm.moduleAnalytics': {
+      es: 'Analytics y Reporting',
+      cat: 'Analytics i Reporting',
+      fr: 'Analytics et Reporting',
+      en: 'Analytics and Reporting'
+    },
+    'contactForm.information': {
+      es: '¿Qué información necesitas?',
+      cat: 'Quina informació necessites?',
+      fr: 'Quelles informations avez-vous besoin?',
+      en: 'What information do you need?'
+    },
+    'contactForm.informationPlaceholder': {
+      es: 'Describe qué información específica necesitas o qué te gustaría saber sobre nuestras soluciones...',
+      cat: 'Descriu quina informació específica necessites o què t\'agradaria saber sobre les nostres solucions...',
+      fr: 'Décrivez les informations spécifiques dont vous avez besoin ou ce que vous aimeriez savoir sur nos solutions...',
+      en: 'Describe what specific information you need or what you would like to know about our solutions...'
+    },
+    'contactForm.submit': {
+      es: 'Enviar Consulta',
+      cat: 'Enviar Consulta',
+      fr: 'Envoyer la Demande',
+      en: 'Send Inquiry'
+    },
+  };
+
+  const allTranslations = { ...translations, ...formTranslations };
+
   const t = (key: string): string => {
-    return translations[key]?.[language] || key;
+    return allTranslations[key]?.[language] || key;
   };
 
   return (
