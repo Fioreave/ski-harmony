@@ -6,9 +6,6 @@ const MetricsSection = () => {
   const { t } = useLanguage();
   const metrics = [
     { value: "+25", label: "estaciones y escuelas gestionadas" },
-    { value: "+100.000", label: "forfaits vendidos online cada temporada" },
-    { value: "99%", label: "disponibilidad de la plataforma (uptime)" },
-    { value: "40%", label: "menos tiempo de espera en taquillas" },
     { value: "+25%", label: "incremento en ventas anticipadas" },
     { value: "+30", label: "sistemas PMS/ERP/CRM integrados" },
     { value: "0€", label: "inversión inicial en hardware" }
@@ -33,7 +30,7 @@ const MetricsSection = () => {
         </div>
 
         {/* Metrics grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 mb-12">
           {metrics.map((metric, index) => (
             <div key={index} className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
