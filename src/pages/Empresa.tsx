@@ -115,13 +115,13 @@ const Empresa = () => {
                 </p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-accent">50+</div>
+                <div className="text-3xl font-bold text-accent">35+</div>
                 <p className="text-sm text-muted-foreground">
                   {t('empresa.resorts-transformed')}
                 </p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-accent">15</div>
+                <div className="text-3xl font-bold text-accent">7+</div>
                 <p className="text-sm text-muted-foreground">{t('empresa.countries')}</p>
               </div>
             </div>
