@@ -14,12 +14,6 @@ import {
   Waves, 
   Building 
 } from "lucide-react";
-import raftingImg from "@/assets/rafting.png";
-import divingImg from "@/assets/diving.png";
-import windsurfingImg from "@/assets/windsurfing.png";
-import climbingImg from "@/assets/climbing.png";
-import mountainBikingImg from "@/assets/mountain-biking.png";
-import kayakingImg from "@/assets/kayaking.png";
 
 
 const Segmentos = () => {
@@ -30,57 +24,49 @@ const Segmentos = () => {
       title: t('segmentos.large-resorts.title'),
       href: "/software-gestion-ski-resort",
       description: t('segmentos.large-resorts.description'),
-      icon: Building2,
-      image: null
+      icon: Building2
     },
     {
       title: t('segmentos.medium-resorts.title'),
       href: "/software-gestion-ski-resort-mediano",
       description: t('segmentos.medium-resorts.description'),
-      icon: Briefcase,
-      image: null
+      icon: Briefcase
     },
     {
       title: t('segmentos.ski-schools.title'),
       href: "/software-gestion-escuelas-esqui",
       description: t('segmentos.ski-schools.description'),
-      icon: GraduationCap,
-      image: null
+      icon: GraduationCap
     },
     {
       title: t('segmentos.snow-gardens.title'),
       href: "/software-gestion-jardines-nieve",
       description: t('segmentos.snow-gardens.description'),
-      icon: Baby,
-      image: null
+      icon: Baby
     },
     {
       title: t('segmentos.bike-parks.title'),
       href: "/software-gestion-bike-parks",
       description: t('segmentos.bike-parks.description'),
-      icon: Bike,
-      image: mountainBikingImg
+      icon: Bike
     },
     {
       title: t('segmentos.outdoor-activities.title'),
       href: "/software-gestion-escuela-aventura",
       description: t('segmentos.outdoor-activities.description'),
-      icon: Mountain,
-      image: climbingImg
+      icon: Mountain
     },
     {
       title: t('segmentos.sailing-diving.title'),
       href: "/software-gestion-escuela-vela-buceo",
       description: t('segmentos.sailing-diving.description'),
-      icon: Waves,
-      image: divingImg
+      icon: Waves
     },
     {
       title: t('segmentos.museums.title'),
       href: "/software-gestion-museo",
       description: t('segmentos.museums.description'),
-      icon: Building,
-      image: null
+      icon: Building
     }
   ];
   return (
@@ -120,18 +106,8 @@ const Segmentos = () => {
                 return (
                   <Card 
                     key={index} 
-                    className={`card-hover border-0 shadow-lg bg-background group animate-stagger-${Math.min(index + 1, 4)} overflow-hidden`}
+                    className={`card-hover border-0 shadow-lg bg-background group animate-stagger-${Math.min(index + 1, 4)}`}
                   >
-                    {segment.image && (
-                      <div className="relative h-48 overflow-hidden">
-                        <img 
-                          src={segment.image} 
-                          alt={segment.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                      </div>
-                    )}
                     <CardHeader className="pb-4">
                       <div className="w-12 h-12 mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                         <Icon className="w-6 h-6 text-primary" />
