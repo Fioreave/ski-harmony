@@ -141,15 +141,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Brand claim */}
-        <div className="text-center mb-8">
-          <p className="text-lg font-medium">
-            Tu estación, más rentable, más ágil, mejor preparada para el futuro.
-          </p>
-        </div>
-
         {/* Partner logos placeholder */}
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-4 items-center justify-center mb-8 opacity-60">
+        {/*<div className="grid grid-cols-2 md:grid-cols-6 gap-4 items-center justify-center mb-8 opacity-60">
           <div className="h-12 bg-muted rounded flex items-center justify-center text-xs">
             Partner 1
           </div>
@@ -168,7 +161,7 @@ const Footer = () => {
           <div className="h-12 bg-muted rounded flex items-center justify-center text-xs">
             Partner 6
           </div>
-        </div>
+        </div>*/}
 
         {/* Bottom section */}
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
@@ -179,10 +172,17 @@ const Footer = () => {
             className="h-8 w-auto cursor-pointer mb-4 md:mb-0"
             onClick={logoClickHandler}
           />
+          {/* Brand claim */}
+          <div className="text-center">
+            <p className="text-lg font-medium">
+              Tu estación, más rentable, más ágil, mejor preparada para el
+              futuro.
+            </p>
+          </div>
 
           {/* Language selector and legal links */}
           <div className="flex flex-col md:flex-row items-center gap-4">
-            <LanguageSelector variant="footer" />
+            {/*  <LanguageSelector variant="footer" />*/}
             <div className="flex space-x-6 text-sm">
               <a href="#" className="hover:text-primary transition-colors">
                 Aviso legal

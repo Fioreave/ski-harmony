@@ -264,11 +264,11 @@ const translations: Translations = {
     fr: "BI & CRM 360",
     en: "BI & CRM 360",
   },
-  "modules.demo-cta": {
-    es: "Pedir demo del módulo",
-    cat: "Demanar demo del mòdul",
-    fr: "Demander une démo du module",
-    en: "Request module demo",
+  "modules.sabermas-cta": {
+    es: "Saber Más",
+    cat: "Saber Més",
+    fr: "En Savoir Plus",
+    en: "Learn More",
   },
 
   // Ski Solution 360 Page
@@ -1399,13 +1399,13 @@ const translations: Translations = {
     es: "FAQ",
     cat: "FAQ",
     en: "FAQ",
-    fr: "FAQ"
+    fr: "FAQ",
   },
   "faq.description": {
     es: "Preguntas frecuentes sobre nuestro software de gestión para estaciones de esquí.",
     cat: "Preguntes freqüents sobre el nostre programari de gestió per a estacions d'esquí.",
     en: "Frequently asked questions about our ski resort management software.",
-    fr: "Questions fréquemment posées sur notre logiciel de gestion pour stations de ski."
+    fr: "Questions fréquemment posées sur notre logiciel de gestion pour stations de ski.",
   },
 
   // Ebooks Page
@@ -1413,13 +1413,13 @@ const translations: Translations = {
     es: "Ebooks",
     cat: "Ebooks",
     en: "Ebooks",
-    fr: "Ebooks"
+    fr: "Ebooks",
   },
   "ebooks.description": {
     es: "Descarga nuestros recursos gratuitos sobre gestión de estaciones de esquí y optimización de ingresos.",
     cat: "Descarrega els nostres recursos gratuïts sobre gestió d'estacions d'esquí i optimització d'ingressos.",
     en: "Download our free resources on ski resort management and revenue optimization.",
-    fr: "Téléchargez nos ressources gratuites sur la gestion des stations de ski et l'optimisation des revenus."
+    fr: "Téléchargez nos ressources gratuites sur la gestion des stations de ski et l'optimisation des revenus.",
   },
 
   // Casos de Éxito Page
@@ -1427,13 +1427,13 @@ const translations: Translations = {
     es: "Casos de éxito",
     cat: "Casos d'èxit",
     en: "Success stories",
-    fr: "Études de cas"
+    fr: "Études de cas",
   },
   "casosExito.description": {
     es: "Descubre cómo nuestros clientes han transformado sus operaciones con Ski Solution 360.",
     cat: "Descobreix com els nostres clients han transformat les seves operacions amb Ski Solution 360.",
     en: "Discover how our clients have transformed their operations with Ski Solution 360.",
-    fr: "Découvrez comment nos clients ont transformé leurs opérations avec Ski Solution 360."
+    fr: "Découvrez comment nos clients ont transformé leurs opérations avec Ski Solution 360.",
   },
 
   // BI & CRM Page
@@ -1441,37 +1441,37 @@ const translations: Translations = {
     es: "Datos que impulsan decisiones y fidelizan clientes",
     cat: "Dades que impulsen decisions i fidelitzen clients",
     en: "Data that drives decisions and builds customer loyalty",
-    fr: "Données qui stimulent les décisions et fidélisent les clients"
+    fr: "Données qui stimulent les décisions et fidélisent les clients",
   },
   "bicrm.hero.subtitle": {
     es: "BI & CRM",
     cat: "BI & CRM",
     en: "BI & CRM",
-    fr: "BI & CRM"
+    fr: "BI & CRM",
   },
   "bicrm.hero.description": {
     es: "Toma decisiones basadas en datos y fideliza a tus clientes con el módulo BI & CRM de Ski Solution 360. Informes en tiempo real, segmentación y campañas personalizadas.",
     cat: "Pren decisions basades en dades i fidelitza els teus clients amb el mòdul BI & CRM de Ski Solution 360. Informes en temps real, segmentació i campanyes personalitzades.",
     en: "Make data-driven decisions and build customer loyalty with Ski Solution 360's BI & CRM module. Real-time reports, segmentation and personalized campaigns.",
-    fr: "Prenez des décisions basées sur les données et fidélisez vos clients avec le module BI & CRM de Ski Solution 360. Rapports en temps réel, segmentation et campagnes personnalisées."
+    fr: "Prenez des décisions basées sur les données et fidélisez vos clients avec le module BI & CRM de Ski Solution 360. Rapports en temps réel, segmentation et campagnes personnalisées.",
   },
   "bicrm.benefits.title": {
     es: "Beneficios clave",
     cat: "Beneficis clau",
     en: "Key Benefits",
-    fr: "Avantages clés"
+    fr: "Avantages clés",
   },
   "bicrm.howItWorks.title": {
     es: "Cómo funciona",
     cat: "Com funciona",
     en: "How it works",
-    fr: "Comment ça marche"
+    fr: "Comment ça marche",
   },
   "bicrm.cta.title": {
     es: "Convierte datos en decisiones",
     cat: "Converteix dades en decisions",
     en: "Turn data into decisions",
-    fr: "Transformez les données en décisions"
+    fr: "Transformez les données en décisions",
   },
 
   // Blog Page
@@ -1479,61 +1479,61 @@ const translations: Translations = {
     es: "Guías y consejos para estaciones de esquí",
     cat: "Guies i consells per a estacions d'esquí",
     en: "Guides and advice for ski resorts",
-    fr: "Guides et conseils pour stations de ski"
+    fr: "Guides et conseils pour stations de ski",
   },
   "blog.hero.subtitle": {
     es: "Blog Ski Solution 360",
     cat: "Blog Ski Solution 360",
     en: "Ski Solution 360 Blog",
-    fr: "Blog Ski Solution 360"
+    fr: "Blog Ski Solution 360",
   },
   "blog.hero.description": {
     es: "Descubre tendencias y mejores prácticas para digitalizar y optimizar tu estación",
     cat: "Descobreix tendències i millors pràctiques per digitalitzar i optimitzar la teva estació",
     en: "Discover trends and best practices to digitize and optimize your resort",
-    fr: "Découvrez les tendances et meilleures pratiques pour numériser et optimiser votre station"
+    fr: "Découvrez les tendances et meilleures pratiques pour numériser et optimiser votre station",
   },
   "blog.latest.title": {
     es: "Últimos artículos",
     cat: "Últims articles",
     en: "Latest articles",
-    fr: "Derniers articles"
+    fr: "Derniers articles",
   },
   "blog.readMore": {
     es: "Leer artículo completo",
     cat: "Llegir article complet",
     en: "Read full article",
-    fr: "Lire l'article complet"
+    fr: "Lire l'article complet",
   },
   "blog.loadMore": {
     es: "Cargar más",
     cat: "Carregar més",
     en: "Load more",
-    fr: "Charger plus"
+    fr: "Charger plus",
   },
   "blog.loading": {
     es: "Cargando...",
     cat: "Carregant...",
     en: "Loading...",
-    fr: "Chargement..."
+    fr: "Chargement...",
   },
   "blog.cta.title": {
     es: "¿Listo para transformar tu estación?",
     cat: "Llest per transformar la teva estació?",
     en: "Ready to transform your resort?",
-    fr: "Prêt à transformer votre station?"
+    fr: "Prêt à transformer votre station?",
   },
   "blog.cta.description": {
     es: "Aplica todo lo que has aprendido en estos artículos con la ayuda de nuestros expertos",
     cat: "Aplica tot el que has après en aquests articles amb l'ajuda dels nostres experts",
     en: "Apply everything you've learned in these articles with the help of our experts",
-    fr: "Appliquez tout ce que vous avez appris dans ces articles avec l'aide de nos experts"
+    fr: "Appliquez tout ce que vous avez appris dans ces articles avec l'aide de nos experts",
   },
   "blog.cta.button": {
     es: "Solicita una consultoría gratuita",
     cat: "Sol·licita una consultoria gratuïta",
     en: "Request a free consultation",
-    fr: "Demander une consultation gratuite"
+    fr: "Demander une consultation gratuite",
   },
 
   // Control de Accesos RFID Page
@@ -1541,37 +1541,37 @@ const translations: Translations = {
     es: "Control de Accesos RFID",
     cat: "Control d'Accessos RFID",
     en: "RFID Access Control",
-    fr: "Contrôle d'Accès RFID"
+    fr: "Contrôle d'Accès RFID",
   },
   "controlAccesos.description": {
     es: "Control total de accesos con tecnología RFID, QR y Mobile Pass para una experiencia sin fricciones.",
     cat: "Control total d'accessos amb tecnologia RFID, QR i Mobile Pass per a una experiència sense friccions.",
     en: "Total access control with RFID, QR and Mobile Pass technology for a frictionless experience.",
-    fr: "Contrôle total des accès avec la technologie RFID, QR et Mobile Pass pour une expérience sans friction."
+    fr: "Contrôle total des accès avec la technologie RFID, QR et Mobile Pass pour une expérience sans friction.",
   },
   "controlAccesos.benefits.title": {
     es: "Beneficios clave",
     cat: "Beneficis clau",
     en: "Key benefits",
-    fr: "Avantages clés"
+    fr: "Avantages clés",
   },
   "controlAccesos.howItWorks.title": {
     es: "Cómo funciona",
     cat: "Com funciona",
     en: "How it works",
-    fr: "Comment ça marche"
+    fr: "Comment ça marche",
   },
   "controlAccesos.cta.title": {
     es: "¿Quieres modernizar el control de accesos?",
     cat: "Vols modernitzar el control d'accessos?",
     en: "Want to modernize access control?",
-    fr: "Vous voulez moderniser le contrôle d'accès?"
+    fr: "Vous voulez moderniser le contrôle d'accès?",
   },
   "controlAccesos.cta.description": {
     es: "Elimina las colas y mejora la experiencia de tus visitantes.",
     cat: "Elimina les cues i millora l'experiència dels teus visitants.",
     en: "Eliminate queues and improve your visitors' experience.",
-    fr: "Éliminez les files d'attente et améliorez l'expérience de vos visiteurs."
+    fr: "Éliminez les files d'attente et améliorez l'expérience de vos visiteurs.",
   },
 
   // Gestión Alquiler Equipo Page
@@ -1579,31 +1579,31 @@ const translations: Translations = {
     es: "Alquiler & Inventario",
     cat: "Lloguer & Inventari",
     en: "Rental & Inventory",
-    fr: "Location & Inventaire"
+    fr: "Location & Inventaire",
   },
   "gestionAlquiler.description": {
     es: "Gestiona todo tu inventario de esquís, snowboards y accesorios con el módulo Alquiler & Inventario de Ski Solution 360. Reservas online, control de stock y mantenimiento integrado.",
     cat: "Gestiona tot el teu inventari d'esquís, snowboards i accessoris amb el mòdul Lloguer & Inventari de Ski Solution 360. Reserves online, control d'estoc i manteniment integrat.",
     en: "Manage all your inventory of skis, snowboards and accessories with Ski Solution 360's Rental & Inventory module. Online reservations, stock control and integrated maintenance.",
-    fr: "Gérez tout votre inventaire de skis, snowboards et accessoires avec le module Location & Inventaire de Ski Solution 360. Réservations en ligne, contrôle des stocks et maintenance intégrée."
+    fr: "Gérez tout votre inventaire de skis, snowboards et accessoires avec le module Location & Inventaire de Ski Solution 360. Réservations en ligne, contrôle des stocks et maintenance intégrée.",
   },
   "gestionAlquiler.benefits.title": {
     es: "Beneficios clave",
     cat: "Beneficis clau",
     en: "Key benefits",
-    fr: "Avantages clés"
+    fr: "Avantages clés",
   },
   "gestionAlquiler.howItWorks.title": {
     es: "¿Cómo funciona?",
     cat: "Com funciona?",
     en: "How does it work?",
-    fr: "Comment ça marche?"
+    fr: "Comment ça marche?",
   },
   "gestionAlquiler.cta.title": {
     es: "Mantén tu operación siempre equipada, controlada y rentable.",
     cat: "Mantén la teva operació sempre equipada, controlada i rendible.",
     en: "Keep your operation always equipped, controlled and profitable.",
-    fr: "Gardez votre opération toujours équipée, contrôlée et rentable."
+    fr: "Gardez votre opération toujours équipée, contrôlée et rentable.",
   },
 
   // Precio Dinámico Forfaits Page
@@ -1611,37 +1611,37 @@ const translations: Translations = {
     es: "Ticketing & Dynamic Pricing",
     cat: "Ticketing & Dynamic Pricing",
     en: "Ticketing & Dynamic Pricing",
-    fr: "Billetterie & Tarification Dynamique"
+    fr: "Billetterie & Tarification Dynamique",
   },
   "precioDinamico.description": {
     es: "Aumenta ingresos y mejora la experiencia de tus clientes con el sistema de ticketing y precios dinámicos de Ski Solution 360. Venta online, control de accesos y tarifas inteligentes en un único sistema.",
     cat: "Augmenta ingressos i millora l'experiència dels teus clients amb el sistema de ticketing i preus dinàmics de Ski Solution 360. Venda online, control d'accessos i tarifes intel·ligents en un únic sistema.",
     en: "Increase revenue and improve your customers' experience with Ski Solution 360's ticketing and dynamic pricing system. Online sales, access control and smart pricing in a single system.",
-    fr: "Augmentez les revenus et améliorez l'expérience de vos clients avec le système de billetterie et de tarification dynamique de Ski Solution 360. Vente en ligne, contrôle d'accès et tarification intelligente dans un seul système."
+    fr: "Augmentez les revenus et améliorez l'expérience de vos clients avec le système de billetterie et de tarification dynamique de Ski Solution 360. Vente en ligne, contrôle d'accès et tarification intelligente dans un seul système.",
   },
   "precioDinamico.howItWorks.title": {
     es: "Cómo funciona el Dynamic Pricing",
     cat: "Com funciona el Dynamic Pricing",
     en: "How Dynamic Pricing works",
-    fr: "Comment fonctionne la Tarification Dynamique"
+    fr: "Comment fonctionne la Tarification Dynamique",
   },
   "precioDinamico.benefits.title": {
     es: "Beneficios clave",
     cat: "Beneficis clau",
     en: "Key benefits",
-    fr: "Avantages clés"
+    fr: "Avantages clés",
   },
   "precioDinamico.cta.title": {
     es: "¿Quieres maximizar tus ingresos?",
     cat: "Vols maximitzar els teus ingressos?",
     en: "Want to maximize your revenue?",
-    fr: "Vous voulez maximiser vos revenus?"
+    fr: "Vous voulez maximiser vos revenus?",
   },
   "precioDinamico.cta.description": {
     es: "La combinación perfecta para vender más y mejor.",
     cat: "La combinació perfecta per vendre més i millor.",
     en: "The perfect combination to sell more and better.",
-    fr: "La combinaison parfaite pour vendre plus et mieux."
+    fr: "La combinaison parfaite pour vendre plus et mieux.",
   },
 
   // Punto de Venta Restauración Page
@@ -1649,43 +1649,43 @@ const translations: Translations = {
     es: "Ventas y stock unificados para tu estación",
     cat: "Vendes i estoc unificats per a la teva estació",
     en: "Unified sales and stock for your resort",
-    fr: "Ventes et stock unifiés pour votre station"
+    fr: "Ventes et stock unifiés pour votre station",
   },
   "puntoVenta.subtitle": {
     es: "F&B & Retail",
     cat: "F&B & Retail",
     en: "F&B & Retail",
-    fr: "F&B & Retail"
+    fr: "F&B & Retail",
   },
   "puntoVenta.heroSubtitle": {
     es: "Gestión de bares, restaurantes y tiendas en estaciones de esquí",
     cat: "Gestió de bars, restaurants i botigues en estacions d'esquí",
     en: "Management of bars, restaurants and shops in ski resorts",
-    fr: "Gestion des bars, restaurants et magasins dans les stations de ski"
+    fr: "Gestion des bars, restaurants et magasins dans les stations de ski",
   },
   "puntoVenta.description": {
     es: "Optimiza la gestión de puntos de venta en restauración y retail con el módulo F&B & Retail de Ski Solution 360. Stock en tiempo real, integración con ERP y ventas centralizadas.",
     cat: "Optimitza la gestió de punts de venda en restauració i retail amb el mòdul F&B & Retail de Ski Solution 360. Estoc en temps real, integració amb ERP i vendes centralitzades.",
     en: "Optimize the management of restaurant and retail points of sale with Ski Solution 360's F&B & Retail module. Real-time stock, ERP integration and centralized sales.",
-    fr: "Optimisez la gestion des points de vente en restauration et retail avec le module F&B & Retail de Ski Solution 360. Stock en temps réel, intégration ERP et ventes centralisées."
+    fr: "Optimisez la gestion des points de vente en restauration et retail avec le module F&B & Retail de Ski Solution 360. Stock en temps réel, intégration ERP et ventes centralisées.",
   },
   "puntoVenta.benefits.title": {
     es: "Beneficios clave",
     cat: "Beneficis clau",
     en: "Key benefits",
-    fr: "Avantages clés"
+    fr: "Avantages clés",
   },
   "puntoVenta.howItWorks.title": {
     es: "¿Cómo funciona?",
     cat: "Com funciona?",
     en: "How does it work?",
-    fr: "Comment ça marche?"
+    fr: "Comment ça marche?",
   },
   "puntoVenta.cta.title": {
     es: "Simplifica, controla y potencia tus ventas dentro de la estación.",
     cat: "Simplifica, controla i potencia les teves vendes dins de l'estació.",
     en: "Simplify, control and boost your sales within the resort.",
-    fr: "Simplifiez, contrôlez et boostez vos ventes au sein de la station."
+    fr: "Simplifiez, contrôlez et boostez vos ventes au sein de la station.",
   },
 
   // Software Escuela Esquí Page
@@ -1693,37 +1693,37 @@ const translations: Translations = {
     es: "Escuela & Clases - Gestión integral de actividades",
     cat: "Escola & Classes - Gestió integral d'activitats",
     en: "School & Classes - Comprehensive activity management",
-    fr: "École & Cours - Gestion intégrale des activités"
+    fr: "École & Cours - Gestion intégrale des activités",
   },
   "softwareEscuela.description": {
     es: "Organiza y optimiza tu escuela de esquí o actividades outdoor con el módulo Escuela & Clases de Ski Solution 360. Reservas online, asignación automática de monitores y cobros integrados.",
     cat: "Organitza i optimitza la teva escola d'esquí o activitats outdoor amb el mòdul Escola & Classes de Ski Solution 360. Reserves online, assignació automàtica de monitors i cobraments integrats.",
     en: "Organize and optimize your ski school or outdoor activities with Ski Solution 360's School & Classes module. Online reservations, automatic instructor assignment and integrated payments.",
-    fr: "Organisez et optimisez votre école de ski ou activités outdoor avec le module École & Cours de Ski Solution 360. Réservations en ligne, affectation automatique des moniteurs et paiements intégrés."
+    fr: "Organisez et optimisez votre école de ski ou activités outdoor avec le module École & Cours de Ski Solution 360. Réservations en ligne, affectation automatique des moniteurs et paiements intégrés.",
   },
   "softwareEscuela.benefits.title": {
     es: "Beneficios clave",
     cat: "Beneficis clau",
     en: "Key benefits",
-    fr: "Avantages clés"
+    fr: "Avantages clés",
   },
   "softwareEscuela.howItWorks.title": {
     es: "Cómo funciona",
     cat: "Com funciona",
     en: "How it works",
-    fr: "Comment ça marche"
+    fr: "Comment ça marche",
   },
   "softwareEscuela.cta.title": {
     es: "Planifica, organiza y gestiona",
     cat: "Planifica, organitza i gestiona",
     en: "Plan, organize and manage",
-    fr: "Planifiez, organisez et gérez"
+    fr: "Planifiez, organisez et gérez",
   },
   "softwareEscuela.cta.description": {
     es: "Planifica, organiza y gestiona cada actividad como nunca antes",
     cat: "Planifica, organitza i gestiona cada activitat com mai abans",
     en: "Plan, organize and manage each activity like never before",
-    fr: "Planifiez, organisez et gérez chaque activité comme jamais auparavant"
+    fr: "Planifiez, organisez et gérez chaque activité comme jamais auparavant",
   },
 
   // Software Gestión Bike Parks Page
@@ -1731,61 +1731,61 @@ const translations: Translations = {
     es: "Software de Gestión para Bike Parks",
     cat: "Programari de Gestió per a Bike Parks",
     en: "Management Software for Bike Parks",
-    fr: "Logiciel de Gestion pour Bike Parks"
+    fr: "Logiciel de Gestion pour Bike Parks",
   },
   "bikeParks.description": {
     es: "Gestiona accesos, alquiler y actividades de tu bike park con Ski Solution 360. Optimiza ventas, control de aforo y operaciones en temporada de verano.",
     cat: "Gestiona accessos, lloguer i activitats del teu bike park amb Ski Solution 360. Optimitza vendes, control d'aforament i operacions en temporada d'estiu.",
     en: "Manage access, rental and activities of your bike park with Ski Solution 360. Optimize sales, capacity control and operations in summer season.",
-    fr: "Gérez les accès, location et activités de votre bike park avec Ski Solution 360. Optimisez les ventes, contrôle de capacité et opérations en saison estivale."
+    fr: "Gérez les accès, location et activités de votre bike park avec Ski Solution 360. Optimisez les ventes, contrôle de capacité et opérations en saison estivale.",
   },
   "bikeParks.challenges.title": {
     es: "Los principales desafíos incluyen:",
     cat: "Els principals reptes inclouen:",
     en: "The main challenges include:",
-    fr: "Les principaux défis incluent:"
+    fr: "Les principaux défis incluent:",
   },
   "bikeParks.modules.title": {
     es: "Módulos recomendados",
     cat: "Mòduls recomanats",
     en: "Recommended modules",
-    fr: "Modules recommandés"
+    fr: "Modules recommandés",
   },
   "bikeParks.modules.subtitle": {
     es: "Reutiliza tu infraestructura de invierno para el verano",
     cat: "Reutilitza la teva infraestructura d'hivern per a l'estiu",
     en: "Reuse your winter infrastructure for summer",
-    fr: "Réutilisez votre infrastructure d'hiver pour l'été"
+    fr: "Réutilisez votre infrastructure d'hiver pour l'été",
   },
   "bikeParks.caseStudy.title": {
     es: "Caso de éxito",
     cat: "Cas d'èxit",
     en: "Success story",
-    fr: "Étude de cas"
+    fr: "Étude de cas",
   },
   "bikeParks.benefits.title": {
     es: "Beneficios clave",
     cat: "Beneficis clau",
     en: "Key benefits",
-    fr: "Avantages clés"
+    fr: "Avantages clés",
   },
   "bikeParks.cta.title": {
     es: "¿Quieres que tu estación siga generando ingresos todo el año?",
     cat: "Vols que la teva estació continuï generant ingressos tot l'any?",
     en: "Want your resort to keep generating revenue all year round?",
-    fr: "Vous voulez que votre station continue à générer des revenus toute l'année?"
+    fr: "Vous voulez que votre station continue à générer des revenus toute l'année?",
   },
   "bikeParks.cta.subtitle": {
     es: "Ski Solution 360 – Haz que tu verano sea tan rentable como el invierno",
     cat: "Ski Solution 360 – Fes que el teu estiu sigui tan rendible com l'hivern",
     en: "Ski Solution 360 – Make your summer as profitable as winter",
-    fr: "Ski Solution 360 – Rendez votre été aussi rentable que l'hiver"
+    fr: "Ski Solution 360 – Rendez votre été aussi rentable que l'hiver",
   },
   "bikeParks.cta.button": {
     es: "Solicita una demo para bike parks",
     cat: "Sol·licita una demo per a bike parks",
     en: "Request a demo for bike parks",
-    fr: "Demander une démo pour bike parks"
+    fr: "Demander une démo pour bike parks",
   },
 
   // Software Gestión Escuela Aventura Page
@@ -1793,49 +1793,49 @@ const translations: Translations = {
     es: "Software de Gestión para Actividades de Aventura y Outdoor",
     cat: "Programari de Gestió per a Activitats d'Aventura i Outdoor",
     en: "Management Software for Adventure and Outdoor Activities",
-    fr: "Logiciel de Gestion pour Activités d'Aventure et Outdoor"
+    fr: "Logiciel de Gestion pour Activités d'Aventure et Outdoor",
   },
   "escuelaAventura.description": {
     es: "Gestiona reservas, grupos, alquiler y pagos de tus actividades outdoor con Ski Solution 360. Ideal para rafting, escalada, senderismo, kayak o multiaventura.",
     cat: "Gestiona reserves, grups, lloguer i pagaments de les teves activitats outdoor amb Ski Solution 360. Ideal per a ràfting, escalada, senderisme, caiac o multiaventura.",
     en: "Manage bookings, groups, rental and payments for your outdoor activities with Ski Solution 360. Ideal for rafting, climbing, hiking, kayaking or multi-adventure.",
-    fr: "Gérez les réservations, groupes, location et paiements de vos activités outdoor avec Ski Solution 360. Idéal pour rafting, escalade, randonnée, kayak ou multi-aventure."
+    fr: "Gérez les réservations, groupes, location et paiements de vos activités outdoor avec Ski Solution 360. Idéal pour rafting, escalade, randonnée, kayak ou multi-aventure.",
   },
   "escuelaAventura.challenges.title": {
     es: "Retos comunes en empresas de actividades outdoor",
     cat: "Reptes comuns en empreses d'activitats outdoor",
     en: "Common challenges in outdoor activity companies",
-    fr: "Défis communs dans les entreprises d'activités outdoor"
+    fr: "Défis communs dans les entreprises d'activités outdoor",
   },
   "escuelaAventura.modules.title": {
     es: "Módulos recomendados",
     cat: "Mòduls recomanats",
     en: "Recommended modules",
-    fr: "Modules recommandés"
+    fr: "Modules recommandés",
   },
   "escuelaAventura.modules.subtitle": {
     es: "Todo lo que necesitas para gestionar tu centro de aventura",
     cat: "Tot el que necessites per gestionar el teu centre d'aventura",
     en: "Everything you need to manage your adventure center",
-    fr: "Tout ce dont vous avez besoin pour gérer votre centre d'aventure"
+    fr: "Tout ce dont vous avez besoin pour gérer votre centre d'aventure",
   },
   "escuelaAventura.advantages.title": {
     es: "Ventajas",
     cat: "Avantatges",
     en: "Advantages",
-    fr: "Avantages"
+    fr: "Avantages",
   },
   "escuelaAventura.cta.title": {
     es: "¿Listo para vivir tu temporada más organizada?",
     cat: "Llest per viure la teva temporada més organitzada?",
     en: "Ready to experience your most organized season?",
-    fr: "Prêt à vivre votre saison la plus organisée?"
+    fr: "Prêt à vivre votre saison la plus organisée?",
   },
   "escuelaAventura.cta.button": {
     es: "Solicita una demo para actividades outdoor",
     cat: "Sol·licita una demo per a activitats outdoor",
     en: "Request a demo for outdoor activities",
-    fr: "Demander une démo pour activités outdoor"
+    fr: "Demander une démo pour activités outdoor",
   },
 
   // Software Gestión Escuelas Vela y Buceo Page
@@ -1843,61 +1843,61 @@ const translations: Translations = {
     es: "Software de Gestión para Escuelas de Vela y Buceo",
     cat: "Programari de Gestió per a Escoles de Vela i Busseig",
     en: "Management Software for Sailing and Diving Schools",
-    fr: "Logiciel de Gestion pour Écoles de Voile et Plongée"
+    fr: "Logiciel de Gestion pour Écoles de Voile et Plongée",
   },
   "escuelaVelaBuceo.description": {
     es: "Gestiona reservas, cursos, monitores y alquiler de material para deportes acuáticos con Ski Solution 360. Ideal para escuelas de vela, buceo, surf o kitesurf.",
     cat: "Gestiona reserves, cursos, monitors i lloguer de material per a esports aquàtics amb Ski Solution 360. Ideal per a escoles de vela, busseig, surf o kitesurf.",
     en: "Manage bookings, courses, instructors and equipment rental for water sports with Ski Solution 360. Ideal for sailing, diving, surfing or kitesurfing schools.",
-    fr: "Gérez les réservations, cours, moniteurs et location de matériel pour sports nautiques avec Ski Solution 360. Idéal pour les écoles de voile, plongée, surf ou kitesurf."
+    fr: "Gérez les réservations, cours, moniteurs et location de matériel pour sports nautiques avec Ski Solution 360. Idéal pour les écoles de voile, plongée, surf ou kitesurf.",
   },
   "escuelaVelaBuceo.challenges.title": {
     es: "Retos comunes en escuelas náuticas y de buceo",
     cat: "Reptes comuns en escoles nàutiques i de busseig",
     en: "Common challenges in nautical and diving schools",
-    fr: "Défis communs dans les écoles nautiques et de plongée"
+    fr: "Défis communs dans les écoles nautiques et de plongée",
   },
   "escuelaVelaBuceo.modules.title": {
     es: "Módulos recomendados",
     cat: "Mòduls recomanats",
     en: "Recommended modules",
-    fr: "Modules recommandés"
+    fr: "Modules recommandés",
   },
   "escuelaVelaBuceo.modules.subtitle": {
     es: "Todo lo que necesitas para gestionar tu escuela náutica",
     cat: "Tot el que necessites per gestionar la teva escola nàutica",
     en: "Everything you need to manage your nautical school",
-    fr: "Tout ce dont vous avez besoin pour gérer votre école nautique"
+    fr: "Tout ce dont vous avez besoin pour gérer votre école nautique",
   },
   "escuelaVelaBuceo.advantages.title": {
     es: "Ventajas para escuelas de vela y buceo",
     cat: "Avantatges per a escoles de vela i busseig",
     en: "Advantages for sailing and diving schools",
-    fr: "Avantages pour écoles de voile et plongée"
+    fr: "Avantages pour écoles de voile et plongée",
   },
   "escuelaVelaBuceo.features.title": {
     es: "Funcionalidades específicas para deportes acuáticos",
     cat: "Funcionalitats específiques per a esports aquàtics",
     en: "Specific functionalities for water sports",
-    fr: "Fonctionnalités spécifiques pour sports nautiques"
+    fr: "Fonctionnalités spécifiques pour sports nautiques",
   },
   "escuelaVelaBuceo.cta.title": {
     es: "¿Quieres que tu escuela sea más ágil y rentable?",
     cat: "Vols que la teva escola sigui més àgil i rendible?",
     en: "Want your school to be more agile and profitable?",
-    fr: "Vous voulez que votre école soit plus agile et rentable?"
+    fr: "Vous voulez que votre école soit plus agile et rentable?",
   },
   "escuelaVelaBuceo.cta.subtitle": {
     es: "Ski Solution 360 – La tecnología que navega contigo hacia el éxito",
     cat: "Ski Solution 360 – La tecnologia que navega amb tu cap a l'èxit",
     en: "Ski Solution 360 – The technology that sails with you to success",
-    fr: "Ski Solution 360 – La technologie qui navigue avec vous vers le succès"
+    fr: "Ski Solution 360 – La technologie qui navigue avec vous vers le succès",
   },
   "escuelaVelaBuceo.cta.button": {
     es: "Solicita una demo para tu escuela náutica",
     cat: "Sol·licita una demo per a la teva escola nàutica",
     en: "Request a demo for your nautical school",
-    fr: "Demander une démo pour votre école nautique"
+    fr: "Demander une démo pour votre école nautique",
   },
 
   // Software Gestión Museo Page
@@ -1905,61 +1905,61 @@ const translations: Translations = {
     es: "Software de Gestión para Museos y Centros Culturales",
     cat: "Programari de Gestió per a Museus i Centres Culturals",
     en: "Management Software for Museums and Cultural Centers",
-    fr: "Logiciel de Gestion pour Musées et Centres Culturels"
+    fr: "Logiciel de Gestion pour Musées et Centres Culturels",
   },
   "gestionMuseo.description": {
     es: "Gestiona venta de entradas, control de accesos y reservas de grupos con Ski Solution 360. Optimiza la experiencia del visitante y la operación de tu museo.",
     cat: "Gestiona venda d'entrades, control d'accessos i reserves de grups amb Ski Solution 360. Optimitza l'experiència del visitant i l'operació del teu museu.",
     en: "Manage ticket sales, access control and group bookings with Ski Solution 360. Optimize the visitor experience and your museum's operation.",
-    fr: "Gérez la vente de billets, contrôle d'accès et réservations de groupes avec Ski Solution 360. Optimisez l'expérience visiteur et l'opération de votre musée."
+    fr: "Gérez la vente de billets, contrôle d'accès et réservations de groupes avec Ski Solution 360. Optimisez l'expérience visiteur et l'opération de votre musée.",
   },
   "gestionMuseo.challenges.title": {
     es: "Retos comunes en museos y centros culturales",
     cat: "Reptes comuns en museus i centres culturals",
     en: "Common challenges in museums and cultural centers",
-    fr: "Défis communs dans les musées et centres culturels"
+    fr: "Défis communs dans les musées et centres culturels",
   },
   "gestionMuseo.modules.title": {
     es: "Módulos recomendados",
     cat: "Mòduls recomanats",
     en: "Recommended modules",
-    fr: "Modules recommandés"
+    fr: "Modules recommandés",
   },
   "gestionMuseo.modules.subtitle": {
     es: "Tecnología adaptada al sector cultural",
     cat: "Tecnologia adaptada al sector cultural",
     en: "Technology adapted to the cultural sector",
-    fr: "Technologie adaptée au secteur culturel"
+    fr: "Technologie adaptée au secteur culturel",
   },
   "gestionMuseo.benefits.title": {
     es: "Beneficios para tu museo",
     cat: "Beneficis per al teu museu",
     en: "Benefits for your museum",
-    fr: "Avantages pour votre musée"
+    fr: "Avantages pour votre musée",
   },
   "gestionMuseo.useCases.title": {
     es: "Casos de uso específicos",
     cat: "Casos d'ús específics",
     en: "Specific use cases",
-    fr: "Cas d'usage spécifiques"
+    fr: "Cas d'usage spécifiques",
   },
   "gestionMuseo.cta.title": {
     es: "Digitaliza tu museo o centro cultural",
     cat: "Digitalitza el teu museu o centre cultural",
     en: "Digitize your museum or cultural center",
-    fr: "Numérisez votre musée ou centre culturel"
+    fr: "Numérisez votre musée ou centre culturel",
   },
   "gestionMuseo.cta.subtitle": {
     es: "Mejora la experiencia de tus visitantes y optimiza tu operación",
     cat: "Millora l'experiència dels teus visitants i optimitza la teva operació",
     en: "Improve your visitors' experience and optimize your operation",
-    fr: "Améliorez l'expérience de vos visiteurs et optimisez votre opération"
+    fr: "Améliorez l'expérience de vos visiteurs et optimisez votre opération",
   },
   "gestionMuseo.cta.button": {
     es: "Solicita una demo para tu museo",
     cat: "Sol·licita una demo per al teu museu",
     en: "Request a demo for your museum",
-    fr: "Demander une démo pour votre musée"
+    fr: "Demander une démo pour votre musée",
   },
 
   // Software Gestión Jardines Nieve Page
@@ -1967,61 +1967,61 @@ const translations: Translations = {
     es: "Software de Gestión para Jardines de Nieve",
     cat: "Programari de Gestió per a Jardins de Neu",
     en: "Management Software for Snow Gardens",
-    fr: "Logiciel de Gestion pour Jardins de Neige"
+    fr: "Logiciel de Gestion pour Jardins de Neige",
   },
   "jardinesNieve.description": {
     es: "Digitaliza tu jardín de nieve con Ski Solution 360. Control de reservas, pagos y grupos desde un sistema simple, económico y fácil de usar.",
     cat: "Digitalitza el teu jardí de neu amb Ski Solution 360. Control de reserves, pagaments i grups des d'un sistema simple, econòmic i fàcil d'usar.",
     en: "Digitize your snow garden with Ski Solution 360. Control of bookings, payments and groups from a simple, economical and easy-to-use system.",
-    fr: "Numérisez votre jardin de neige avec Ski Solution 360. Contrôle des réservations, paiements et groupes depuis un système simple, économique et facile à utiliser."
+    fr: "Numérisez votre jardin de neige avec Ski Solution 360. Contrôle des réservations, paiements et groupes depuis un système simple, économique et facile à utiliser.",
   },
   "jardinesNieve.challenges.title": {
     es: "Principales desafíos",
     cat: "Principals reptes",
     en: "Main challenges",
-    fr: "Principaux défis"
+    fr: "Principaux défis",
   },
   "jardinesNieve.solution.title": {
     es: "La solución: digitalización simple y adaptada a tu escala",
     cat: "La solució: digitalització simple i adaptada a la teva escala",
     en: "The solution: simple digitization adapted to your scale",
-    fr: "La solution: numérisation simple et adaptée à votre échelle"
+    fr: "La solution: numérisation simple et adaptée à votre échelle",
   },
   "jardinesNieve.caseStudy.title": {
     es: "Caso de éxito",
     cat: "Cas d'èxit",
     en: "Success story",
-    fr: "Étude de cas"
+    fr: "Étude de cas",
   },
   "jardinesNieve.modules.title": {
     es: "Módulos recomendados",
     cat: "Mòduls recomanats",
     en: "Recommended modules",
-    fr: "Modules recommandés"
+    fr: "Modules recommandés",
   },
   "jardinesNieve.modules.subtitle": {
     es: "Solo lo esencial para tu jardín de nieve",
     cat: "Només l'essencial per al teu jardí de neu",
     en: "Only the essentials for your snow garden",
-    fr: "Seulement l'essentiel pour votre jardin de neige"
+    fr: "Seulement l'essentiel pour votre jardin de neige",
   },
   "jardinesNieve.advantages.title": {
     es: "Ventajas",
     cat: "Avantatges",
     en: "Advantages",
-    fr: "Avantages"
+    fr: "Avantages",
   },
   "jardinesNieve.cta.title": {
     es: "¿Tu jardín de nieve necesita orden y agilidad?",
     cat: "El teu jardí de neu necessita ordre i agilitat?",
     en: "Does your snow garden need order and agility?",
-    fr: "Votre jardin de neige a-t-il besoin d'ordre et d'agilité?"
+    fr: "Votre jardin de neige a-t-il besoin d'ordre et d'agilité?",
   },
   "jardinesNieve.cta.button": {
     es: "Solicita una demo adaptada",
     cat: "Sol·licita una demo adaptada",
     en: "Request a tailored demo",
-    fr: "Demander une démo adaptée"
+    fr: "Demander une démo adaptée",
   },
 
   // Blog Post Page
@@ -2029,49 +2029,49 @@ const translations: Translations = {
     es: "Volver al blog",
     cat: "Tornar al blog",
     en: "Back to blog",
-    fr: "Retour au blog"
+    fr: "Retour au blog",
   },
   "blogPost.tableOfContents": {
     es: "Índice de contenidos",
     cat: "Índex de continguts",
     en: "Table of contents",
-    fr: "Table des matières"
+    fr: "Table des matières",
   },
   "blogPost.categories.news": {
     es: "Noticias",
     cat: "Notícies",
     en: "News",
-    fr: "Actualités"
+    fr: "Actualités",
   },
   "blogPost.categories.success-stories": {
     es: "Casos de éxito",
     cat: "Casos d'èxit",
     en: "Success stories",
-    fr: "Études de cas"
+    fr: "Études de cas",
   },
   "blogPost.categories.product": {
     es: "Producto",
     cat: "Producte",
     en: "Product",
-    fr: "Produit"
+    fr: "Produit",
   },
   "blogPost.categories.events": {
     es: "Eventos",
     cat: "Esdeveniments",
     en: "Events",
-    fr: "Événements"
+    fr: "Événements",
   },
   "blogPost.cta.title": {
     es: "¿Listo para revolucionar tu estación de esquí?",
     cat: "Llest per revolucionar la teva estació d'esquí?",
     en: "Ready to revolutionize your ski resort?",
-    fr: "Prêt à révolutionner votre station de ski?"
+    fr: "Prêt à révolutionner votre station de ski?",
   },
   "blogPost.cta.description": {
     es: "Descubre cómo nuestro software puede ayudarte a implementar precios dinámicos y optimizar tus ingresos de manera automática.",
     cat: "Descobreix com el nostre programari pot ajudar-te a implementar preus dinàmics i optimitzar els teus ingressos de manera automàtica.",
     en: "Discover how our software can help you implement dynamic pricing and optimize your revenue automatically.",
-    fr: "Découvrez comment notre logiciel peut vous aider à implémenter une tarification dynamique et optimiser vos revenus automatiquement."
+    fr: "Découvrez comment notre logiciel peut vous aider à implémenter une tarification dynamique et optimiser vos revenus automatiquement.",
   },
 
   // Not Found Page
@@ -2079,20 +2079,20 @@ const translations: Translations = {
     es: "404",
     cat: "404",
     en: "404",
-    fr: "404"
+    fr: "404",
   },
   "notFound.message": {
     es: "¡Ups! Página no encontrada",
     cat: "Ups! Pàgina no trobada",
     en: "Oops! Page not found",
-    fr: "Oups ! Page non trouvée"
+    fr: "Oups ! Page non trouvée",
   },
   "notFound.backHome": {
     es: "Volver al inicio",
     cat: "Tornar a l'inici",
     en: "Return to Home",
-    fr: "Retour à l'accueil"
-  }
+    fr: "Retour à l'accueil",
+  },
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
@@ -2132,229 +2132,229 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
   // Add form translations to the existing translations object
   const formTranslations = {
     // Demo Form
-    'demoForm.title': {
-      es: 'Solicitar Demo Gratuita',
-      cat: 'Sol·licitar Demo Gratuïta',
-      fr: 'Demander une Démo Gratuite',
-      en: 'Request Free Demo'
+    "demoForm.title": {
+      es: "Solicitar Demo Gratuita",
+      cat: "Sol·licitar Demo Gratuïta",
+      fr: "Demander une Démo Gratuite",
+      en: "Request Free Demo",
     },
-    'demoForm.description': {
-      es: 'Completa este formulario y nuestro equipo se pondrá en contacto contigo',
-      cat: 'Completa aquest formulari i el nostre equip es posarà en contacte amb tu',
-      fr: 'Complétez ce formulaire et notre équipe vous contactera',
-      en: 'Complete this form and our team will contact you'
+    "demoForm.description": {
+      es: "Completa este formulario y nuestro equipo se pondrá en contacto contigo",
+      cat: "Completa aquest formulari i el nostre equip es posarà en contacte amb tu",
+      fr: "Complétez ce formulaire et notre équipe vous contactera",
+      en: "Complete this form and our team will contact you",
     },
-    'demoForm.name': {
-      es: 'Nombre',
-      cat: 'Nom',
-      fr: 'Nom',
-      en: 'Name'
+    "demoForm.name": {
+      es: "Nombre",
+      cat: "Nom",
+      fr: "Nom",
+      en: "Name",
     },
-    'demoForm.company': {
-      es: 'Empresa',
-      cat: 'Empresa',
-      fr: 'Entreprise',
-      en: 'Company'
+    "demoForm.company": {
+      es: "Empresa",
+      cat: "Empresa",
+      fr: "Entreprise",
+      en: "Company",
     },
-    'demoForm.phone': {
-      es: 'Teléfono',
-      cat: 'Telèfon',
-      fr: 'Téléphone',
-      en: 'Phone'
+    "demoForm.phone": {
+      es: "Teléfono",
+      cat: "Telèfon",
+      fr: "Téléphone",
+      en: "Phone",
     },
-    'demoForm.email': {
-      es: 'Email',
-      cat: 'Email',
-      fr: 'Email',
-      en: 'Email'
+    "demoForm.email": {
+      es: "Email",
+      cat: "Email",
+      fr: "Email",
+      en: "Email",
     },
-    'demoForm.employees': {
-      es: 'Número de empleados',
-      cat: 'Nombre d\'empleats',
-      fr: 'Nombre d\'employés',
-      en: 'Number of employees'
+    "demoForm.employees": {
+      es: "Número de empleados",
+      cat: "Nombre d'empleats",
+      fr: "Nombre d'employés",
+      en: "Number of employees",
     },
-    'demoForm.selectEmployees': {
-      es: 'Selecciona el número de empleados',
-      cat: 'Selecciona el nombre d\'empleats',
-      fr: 'Sélectionnez le nombre d\'employés',
-      en: 'Select number of employees'
+    "demoForm.selectEmployees": {
+      es: "Selecciona el número de empleados",
+      cat: "Selecciona el nombre d'empleats",
+      fr: "Sélectionnez le nombre d'employés",
+      en: "Select number of employees",
     },
-    'demoForm.more500': {
-      es: 'Más de 500',
-      cat: 'Més de 500',
-      fr: 'Plus de 500',
-      en: 'More than 500'
+    "demoForm.more500": {
+      es: "Más de 500",
+      cat: "Més de 500",
+      fr: "Plus de 500",
+      en: "More than 500",
     },
-    'demoForm.sector': {
-      es: 'Sector',
-      cat: 'Sector',
-      fr: 'Secteur',
-      en: 'Sector'
+    "demoForm.sector": {
+      es: "Sector",
+      cat: "Sector",
+      fr: "Secteur",
+      en: "Sector",
     },
-    'demoForm.selectSector': {
-      es: 'Selecciona tu sector',
-      cat: 'Selecciona el teu sector',
-      fr: 'Sélectionnez votre secteur',
-      en: 'Select your sector'
+    "demoForm.selectSector": {
+      es: "Selecciona tu sector",
+      cat: "Selecciona el teu sector",
+      fr: "Sélectionnez votre secteur",
+      en: "Select your sector",
     },
-    'demoForm.skiResort': {
-      es: 'Estación de Esquí',
-      cat: 'Estació d\'Esquí',
-      fr: 'Station de Ski',
-      en: 'Ski Resort'
+    "demoForm.skiResort": {
+      es: "Estación de Esquí",
+      cat: "Estació d'Esquí",
+      fr: "Station de Ski",
+      en: "Ski Resort",
     },
-    'demoForm.adventurePark': {
-      es: 'Parque de Aventura',
-      cat: 'Parc d\'Aventura',
-      fr: 'Parc d\'Aventure',
-      en: 'Adventure Park'
+    "demoForm.adventurePark": {
+      es: "Parque de Aventura",
+      cat: "Parc d'Aventura",
+      fr: "Parc d'Aventure",
+      en: "Adventure Park",
     },
-    'demoForm.bikePark': {
-      es: 'Bike Park',
-      cat: 'Bike Park',
-      fr: 'Bike Park',
-      en: 'Bike Park'
+    "demoForm.bikePark": {
+      es: "Bike Park",
+      cat: "Bike Park",
+      fr: "Bike Park",
+      en: "Bike Park",
     },
-    'demoForm.museum': {
-      es: 'Museo',
-      cat: 'Museu',
-      fr: 'Musée',
-      en: 'Museum'
+    "demoForm.museum": {
+      es: "Museo",
+      cat: "Museu",
+      fr: "Musée",
+      en: "Museum",
     },
-    'demoForm.other': {
-      es: 'Otro',
-      cat: 'Altre',
-      fr: 'Autre',
-      en: 'Other'
+    "demoForm.other": {
+      es: "Otro",
+      cat: "Altre",
+      fr: "Autre",
+      en: "Other",
     },
-    'demoForm.availability': {
-      es: '¿Qué disponibilidad tienes? ¿Mañana o tardes?',
-      cat: 'Quina disponibilitat tens? Matí o tardes?',
-      fr: 'Quelle est votre disponibilité? Matin ou après-midi?',
-      en: 'What is your availability? Morning or afternoon?'
+    "demoForm.availability": {
+      es: "¿Qué disponibilidad tienes? ¿Mañana o tardes?",
+      cat: "Quina disponibilitat tens? Matí o tardes?",
+      fr: "Quelle est votre disponibilité? Matin ou après-midi?",
+      en: "What is your availability? Morning or afternoon?",
     },
-    'demoForm.selectAvailability': {
-      es: 'Selecciona tu disponibilidad',
-      cat: 'Selecciona la teva disponibilitat',
-      fr: 'Sélectionnez votre disponibilité',
-      en: 'Select your availability'
+    "demoForm.selectAvailability": {
+      es: "Selecciona tu disponibilidad",
+      cat: "Selecciona la teva disponibilitat",
+      fr: "Sélectionnez votre disponibilité",
+      en: "Select your availability",
     },
-    'demoForm.morning': {
-      es: 'Mañanas',
-      cat: 'Matins',
-      fr: 'Matins',
-      en: 'Mornings'
+    "demoForm.morning": {
+      es: "Mañanas",
+      cat: "Matins",
+      fr: "Matins",
+      en: "Mornings",
     },
-    'demoForm.afternoon': {
-      es: 'Tardes',
-      cat: 'Tardes',
-      fr: 'Après-midis',
-      en: 'Afternoons'
+    "demoForm.afternoon": {
+      es: "Tardes",
+      cat: "Tardes",
+      fr: "Après-midis",
+      en: "Afternoons",
     },
-    'demoForm.both': {
-      es: 'Ambos',
-      cat: 'Ambdós',
-      fr: 'Les deux',
-      en: 'Both'
+    "demoForm.both": {
+      es: "Ambos",
+      cat: "Ambdós",
+      fr: "Les deux",
+      en: "Both",
     },
-    'demoForm.submit': {
-      es: 'Solicitar Demo',
-      cat: 'Sol·licitar Demo',
-      fr: 'Demander une Démo',
-      en: 'Request Demo'
+    "demoForm.submit": {
+      es: "Solicitar Demo",
+      cat: "Sol·licitar Demo",
+      fr: "Demander une Démo",
+      en: "Request Demo",
     },
 
     // Contact Form
-    'contactForm.title': {
-      es: 'Contacta con Nosotros',
-      cat: 'Contacta amb Nosaltres',
-      fr: 'Contactez-nous',
-      en: 'Contact Us'
+    "contactForm.title": {
+      es: "Contacta con Nosotros",
+      cat: "Contacta amb Nosaltres",
+      fr: "Contactez-nous",
+      en: "Contact Us",
     },
-    'contactForm.description': {
-      es: 'Envíanos tu consulta y te responderemos lo antes posible',
-      cat: 'Envia\'ns la teva consulta i et respondrem al més aviat possible',
-      fr: 'Envoyez-nous votre demande et nous vous répondrons dès que possible',
-      en: 'Send us your inquiry and we will respond as soon as possible'
+    "contactForm.description": {
+      es: "Envíanos tu consulta y te responderemos lo antes posible",
+      cat: "Envia'ns la teva consulta i et respondrem al més aviat possible",
+      fr: "Envoyez-nous votre demande et nous vous répondrons dès que possible",
+      en: "Send us your inquiry and we will respond as soon as possible",
     },
-    'contactForm.name': {
-      es: 'Nombre',
-      cat: 'Nom',
-      fr: 'Nom',
-      en: 'Name'
+    "contactForm.name": {
+      es: "Nombre",
+      cat: "Nom",
+      fr: "Nom",
+      en: "Name",
     },
-    'contactForm.company': {
-      es: 'Empresa',
-      cat: 'Empresa',
-      fr: 'Entreprise',
-      en: 'Company'
+    "contactForm.company": {
+      es: "Empresa",
+      cat: "Empresa",
+      fr: "Entreprise",
+      en: "Company",
     },
-    'contactForm.modules': {
-      es: 'Módulos de interés',
-      cat: 'Mòduls d\'interès',
-      fr: 'Modules d\'intérêt',
-      en: 'Modules of interest'
+    "contactForm.modules": {
+      es: "Módulos de interés",
+      cat: "Mòduls d'interès",
+      fr: "Modules d'intérêt",
+      en: "Modules of interest",
     },
-    'contactForm.moduleTicketing': {
-      es: 'Ticketing y Precio Dinámico',
-      cat: 'Ticketing i Preu Dinàmic',
-      fr: 'Billetterie et Prix Dynamique',
-      en: 'Ticketing and Dynamic Pricing'
+    "contactForm.moduleTicketing": {
+      es: "Ticketing y Precio Dinámico",
+      cat: "Ticketing i Preu Dinàmic",
+      fr: "Billetterie et Prix Dynamique",
+      en: "Ticketing and Dynamic Pricing",
     },
-    'contactForm.moduleAccess': {
-      es: 'Control de Accesos RFID',
-      cat: 'Control d\'Accessos RFID',
-      fr: 'Contrôle d\'Accès RFID',
-      en: 'RFID Access Control'
+    "contactForm.moduleAccess": {
+      es: "Control de Accesos RFID",
+      cat: "Control d'Accessos RFID",
+      fr: "Contrôle d'Accès RFID",
+      en: "RFID Access Control",
     },
-    'contactForm.moduleRental': {
-      es: 'Gestión de Alquiler de Equipos',
-      cat: 'Gestió d\'Lloguer d\'Equips',
-      fr: 'Gestion de Location d\'Équipements',
-      en: 'Equipment Rental Management'
+    "contactForm.moduleRental": {
+      es: "Gestión de Alquiler de Equipos",
+      cat: "Gestió d'Lloguer d'Equips",
+      fr: "Gestion de Location d'Équipements",
+      en: "Equipment Rental Management",
     },
-    'contactForm.moduleSchool': {
-      es: 'Software Escuela de Esquí',
-      cat: 'Software Escola d\'Esquí',
-      fr: 'Logiciel École de Ski',
-      en: 'Ski School Software'
+    "contactForm.moduleSchool": {
+      es: "Software Escuela de Esquí",
+      cat: "Software Escola d'Esquí",
+      fr: "Logiciel École de Ski",
+      en: "Ski School Software",
     },
-    'contactForm.moduleRestaurant': {
-      es: 'Punto de Venta Restauración',
-      cat: 'Punt de Venda Restauració',
-      fr: 'Point de Vente Restauration',
-      en: 'Restaurant Point of Sale'
+    "contactForm.moduleRestaurant": {
+      es: "Punto de Venta Restauración",
+      cat: "Punt de Venda Restauració",
+      fr: "Point de Vente Restauration",
+      en: "Restaurant Point of Sale",
     },
-    'contactForm.moduleBiCrm': {
-      es: 'BI & CRM para Ski Resorts',
-      cat: 'BI & CRM per Ski Resorts',
-      fr: 'BI & CRM pour Stations de Ski',
-      en: 'BI & CRM for Ski Resorts'
+    "contactForm.moduleBiCrm": {
+      es: "BI & CRM para Ski Resorts",
+      cat: "BI & CRM per Ski Resorts",
+      fr: "BI & CRM pour Stations de Ski",
+      en: "BI & CRM for Ski Resorts",
     },
-    'contactForm.moduleAnalytics': {
-      es: 'Analytics y Reporting',
-      cat: 'Analytics i Reporting',
-      fr: 'Analytics et Reporting',
-      en: 'Analytics and Reporting'
+    "contactForm.moduleAnalytics": {
+      es: "Analytics y Reporting",
+      cat: "Analytics i Reporting",
+      fr: "Analytics et Reporting",
+      en: "Analytics and Reporting",
     },
-    'contactForm.information': {
-      es: '¿Qué información necesitas?',
-      cat: 'Quina informació necessites?',
-      fr: 'Quelles informations avez-vous besoin?',
-      en: 'What information do you need?'
+    "contactForm.information": {
+      es: "¿Qué información necesitas?",
+      cat: "Quina informació necessites?",
+      fr: "Quelles informations avez-vous besoin?",
+      en: "What information do you need?",
     },
-    'contactForm.informationPlaceholder': {
-      es: 'Describe qué información específica necesitas o qué te gustaría saber sobre nuestras soluciones...',
-      cat: 'Descriu quina informació específica necessites o què t\'agradaria saber sobre les nostres solucions...',
-      fr: 'Décrivez les informations spécifiques dont vous avez besoin ou ce que vous aimeriez savoir sur nos solutions...',
-      en: 'Describe what specific information you need or what you would like to know about our solutions...'
+    "contactForm.informationPlaceholder": {
+      es: "Describe qué información específica necesitas o qué te gustaría saber sobre nuestras soluciones...",
+      cat: "Descriu quina informació específica necessites o què t'agradaria saber sobre les nostres solucions...",
+      fr: "Décrivez les informations spécifiques dont vous avez besoin ou ce que vous aimeriez savoir sur nos solutions...",
+      en: "Describe what specific information you need or what you would like to know about our solutions...",
     },
-    'contactForm.submit': {
-      es: 'Enviar Consulta',
-      cat: 'Enviar Consulta',
-      fr: 'Envoyer la Demande',
-      en: 'Send Inquiry'
+    "contactForm.submit": {
+      es: "Enviar Consulta",
+      cat: "Enviar Consulta",
+      fr: "Envoyer la Demande",
+      en: "Send Inquiry",
     },
   };
 

@@ -60,7 +60,10 @@ const SkiSolution360 = () => {
         </nav>
 
         {/* Hero Section */}
-        <section className="section-spacing bg-gradient-to-br from-background via-background to-muted/30">
+        <section
+          id="#core"
+          className="section-spacing bg-gradient-to-br from-background via-background to-muted/30"
+        >
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
               <div className="w-20 h-20 mx-auto mb-8 bg-primary/10 rounded-full flex items-center justify-center animate-scale-in">

@@ -103,7 +103,7 @@ const PrecioDinamicoForfaits = () => {
         <section className="py-20 bg-gradient-to-t from-primary via-primary to-primary/1">
           <div className="container-custom text-center">
             <div className="max-w-4xl mx-auto animate-fade-in-up">
-              <p className="text-lg text-muted-foreground mt-6 text-black text-italic">
+              <p className="text-lg text-black-foreground mt-20 text-black text-italic">
                 "El módulo de Ticketing G Dynamic Pricing de Ski Solution 360 te
                 permite vender forfaits y entradas de forma unificada en todos
                 los canales —online, taquillas, kioscos y iPOS— y optimizar los

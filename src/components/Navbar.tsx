@@ -67,7 +67,7 @@ const Navbar = () => {
                   <Link to="/solucion">{t("nav.solution")}</Link>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-2 p-4 w-80 bg-background border border-border rounded-md shadow-lg z-50">
+                  <div className="grid gap-2 p-4 w-80 bg-background rounded-md shadow-lg z-50">
                     <NavigationMenuLink asChild>
                       <Link
                         to="/ski-solution-360"
@@ -197,12 +197,25 @@ const Navbar = () => {
 
               {/* Casos de éxito */}
               <NavigationMenuItem>
-                <NavigationMenuLink asChild className="w-80 px-5 py-2">
+                <NavigationMenuLink
+                  asChild
+                  className="px-5 py-2 w-max items-center justify-center rounded-md bg-background text-md transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                >
                   <Link to="/casos-exito">{t("nav.success-stories")}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
               {/* Recursos */}
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className="px-5 py-2 w-max items-center justify-center rounded-md bg-background text-md transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                >
+                  <Link to="/blog">{t("nav.blog")}</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              {/* Recursos 
               <NavigationMenuItem>
                 <NavigationMenuTrigger>
                   {t("nav.resources")}
@@ -217,39 +230,32 @@ const Navbar = () => {
                         {t("nav.blog")}
                       </Link>
                     </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        to="/ebooks"
-                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
-                      >
-                        {t("nav.ebooks")}
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        to="/webinars"
-                        className="block p-3 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
-                      >
-                        {t("nav.webinars")}
-                      </Link>
-                    </NavigationMenuLink>
                   </div>
                 </NavigationMenuContent>
-              </NavigationMenuItem>
+              </NavigationMenuItem>*/}
 
               {/* Otros */}
               <NavigationMenuItem>
-                <NavigationMenuLink asChild className="px-5 py-2">
+                <NavigationMenuLink
+                  asChild
+                  className="px-5 py-2 w-max items-center justify-center rounded-md bg-background text-md transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                >
                   <Link to="/partners">{t("nav.partners")}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink asChild className="px-5 py-2">
+                <NavigationMenuLink
+                  asChild
+                  className="px-5 py-2 w-max items-center justify-center rounded-md bg-background text-md transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                >
                   <Link to="/empresa">{t("nav.company")}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink asChild className="px-5 py-2">
+                <NavigationMenuLink
+                  asChild
+                  className="px-5 py-2 w-max items-center justify-center rounded-md bg-background text-md transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                >
                   <Link to="/faq-software-gestion-estacion-esqui">
                     {t("nav.faq")}
                   </Link>
@@ -397,7 +403,7 @@ const Navbar = () => {
                   </AccordionItem>
 
                   {/* Recursos */}
-                  <AccordionItem value="resources">
+                  {/* <AccordionItem value="resources">
                     <AccordionTrigger className="text-left">
                       {t("nav.resources")}
                     </AccordionTrigger>
@@ -426,11 +432,18 @@ const Navbar = () => {
                         </Link>
                       </div>
                     </AccordionContent>
-                  </AccordionItem>
+                  </AccordionItem>*/}
                 </Accordion>
 
                 {/* Simple Links */}
-                <div className="space-y-4 pt-4 border-t">
+                <div className="space-y-4">
+                  <Link
+                    to="/blog"
+                    className="block py-2 hover:text-primary font-medium"
+                    onClick={closeMobileMenu}
+                  >
+                    {t("nav.blog")}
+                  </Link>
                   <Link
                     to="/casos-exito"
                     className="block py-2 hover:text-primary font-medium"
