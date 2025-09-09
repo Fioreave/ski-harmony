@@ -16,20 +16,21 @@ const VideoSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="relative bg-muted rounded-xl overflow-hidden aspect-video border-2 border-dashed border-border">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Button size="lg" variant="outline" className="bg-background/90 backdrop-blur-sm">
-                <PlayCircle className="mr-2 h-8 w-8" />
-                <span className="text-lg">Reproducir demo (30s)</span>
-              </Button>
-            </div>
+          <div className="relative rounded-xl overflow-hidden aspect-video">
+            <video
+              src="/videos/ski-solution-video_web.mp4"
+              className="w-full h-full object-cover rounded-xl"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              controls
+            />
             
-            {/* Video thumbnail placeholder */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 opacity-30"></div>
-            
-            {/* Play button overlay */}
-            <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-              30s
+            {/* Duration overlay */}
+            <div className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm font-medium">
+              Demo
             </div>
           </div>
 
