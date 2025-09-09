@@ -59,7 +59,7 @@ const HeroSection = () => {
                   {t("hero.dashboard-preview")}
                 </p>*/}
                 <video
-                  src="/videos/ski-solution-video_web.mp4"
+                  src="/src/assets/02.mov"
                   className="w-full h-full object-cover rounded-lg"
                   autoPlay
                   loop

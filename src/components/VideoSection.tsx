@@ -18,7 +18,7 @@ const VideoSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="relative rounded-xl overflow-hidden aspect-video">
             <video
-              src="/videos/ski-solution-video_web.mp4"
+              src="/src/assets/02.mov"
               className="w-full h-full object-cover rounded-xl"
               autoPlay
               loop
