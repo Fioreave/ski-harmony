@@ -40,6 +40,7 @@ import Ebooks from "./pages/Ebooks";
 import Webinars from "./pages/Webinars";
 import Partners from "./pages/Partners";
 import Faq from "./pages/Faq";
+import Contacto from "./pages/Contacto";
 
 const queryClient = new QueryClient();
 
@@ -139,6 +140,7 @@ const App = () => (
               path="/faq-software-gestion-estacion-esqui"
               element={<Faq />}
             />
+            <Route path="/contacto" element={<Contacto />} />
 
             {/* Legacy routes redirect to Spanish */}
             <Route path="/blog" element={<Navigate to="/es/blog" replace />} />
