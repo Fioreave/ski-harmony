@@ -54,17 +54,23 @@ const Footer = () => {
             <h3 className="font-bold mb-4">Compañía</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Sobre nosotros
+                <a href="/" className="hover:text-primary transition-colors">
+                  Inicio
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a
+                  href="/empresa"
+                  className="hover:text-primary transition-colors"
+                >
                   Compañía
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a
+                  href="/partners"
+                  className="hover:text-primary transition-colors"
+                >
                   Partners
                 </a>
               </li>
@@ -76,17 +82,26 @@ const Footer = () => {
             <h3 className="font-bold mb-4">Soluciones</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a
+                  href="/soluciones"
+                  className="hover:text-primary transition-colors"
+                >
                   Solución
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a
+                  href="/segmentos"
+                  className="hover:text-primary transition-colors"
+                >
                   Segmentos
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a
+                  href="/casos-exito"
+                  className="hover:text-primary transition-colors"
+                >
                   Casos de éxito
                 </a>
               </li>
@@ -95,30 +110,30 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h3 className="font-bold mb-4">{t("nav.resources")}</h3>
+            <h3 className="font-bold mb-4">{t("nav.segments")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   to="/blog"
                   className="hover:text-primary transition-colors"
                 >
-                  {t("nav.blog")}
+                  {t("segments.large-resorts")}
                 </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-primary transition-colors">
-                  {t("nav.ebooks")}
+                  {t("segments.medium-resorts")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-primary transition-colors">
-                  {t("nav.webinars")}
+                  {t("segments.ski-schools")}
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Support 
           <div>
             <h3 className="font-bold mb-4">Soporte</h3>
             <ul className="space-y-2 text-sm">
@@ -138,7 +153,7 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div>*/}
         </div>
 
         {/* Partner logos placeholder */}
@@ -184,13 +199,28 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center gap-4">
             {/*  <LanguageSelector variant="footer" />*/}
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="hover:text-primary transition-colors">
+              <a
+                href="https://bdrinf.sharepoint.com/:b:/s/bdr/ERi0MekwFgZEviq3UtdrzZkBYddjzBHgwigX3e8bmSGskw?e=fLepiC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
                 Aviso legal
               </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              <a
+                href="https://bdrinf-my.sharepoint.com/personal/favegliano_bdrinformatica_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ffavegliano%5Fbdrinformatica%5Fcom%2FDocuments%2FEscritorio%2Fweb%5Fbdr%2FPoli%CC%81tica%20de%20privacidad%2Epdf&parent=%2Fpersonal%2Ffavegliano%5Fbdrinformatica%5Fcom%2FDocuments%2FEscritorio%2Fweb%5Fbdr&ga=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
                 Privacidad
               </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              <a
+                href="https://bdrinf.sharepoint.com/:b:/s/bdr/Ed1nF8Yi0HJKjV41IyxBuH4Buou84OyMYNythh5AHoG6tw?e=OOYszV"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
                 Cookies
               </a>
             </div>

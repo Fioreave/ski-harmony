@@ -22,10 +22,10 @@ const HeroSection = () => {
       {showDemoForm && <DemoRequestForm onClose={closeDemoForm} />}
       {showContactForm && <ContactForm onClose={closeContactForm} />}
 
-      <section className="min-h-screen flex items-center justify-center bg-background pt-16">
-        <div className="container mx-auto px-4 text-center">
+      <section className="pt-20 py-20 flex items-center justify-center bg-background pt-16">
+        <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground leading-tight">
+            <h1 className="pt-20 text-5xl md:text-7xl font-bold mb-6 text-foreground leading-tight">
               {t("hero.h1")}
             </h1>
 
@@ -33,7 +33,7 @@ const HeroSection = () => {
               {t("hero.h2")}
             </h2>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center ">
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 text-lg font-medium"
@@ -45,37 +45,35 @@ const HeroSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="px-8 py-4 text-lg"
+                className="text-lg"
                 onClick={openContactForm}
               >
                 Contacta con un experto
               </Button>
             </div>
 
-            {/* Hero visual placeholder */}
+            {/* Hero visual placeholder 
             <div className="relative">
-              <div className="bg-muted rounded-lg h-64 md:h-96 flex items-center justify-center border-2 border-dashed border-border">
-                {/*<p className="text-muted-foreground text-lg">
-                  {t("hero.dashboard-preview")}
-                </p>*/}
+              <div className="bg-muted rounded-lg w-full h-full flex items-center justify-center border-2 border-dashed border-border">
                 <video
-                  src="./02.mov"
+                  src="/src/videos/Ski-solution-video_web.mp4"
                   className="w-full h-full object-cover rounded-lg"
                   autoPlay
                   loop
                   muted
                   playsInline
+                  preload="auto"
                 />
-              </div>
+              </div>*/}
 
-              {/* Floating elements */}
+            {/* Floating elements
               <div className="absolute -top-4 -left-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium text-sm">
                 ⚡ {t("hero.real-time")}
               </div>
               <div className="absolute -bottom-4 -right-4 bg-secondary text-secondary-foreground px-4 py-2 rounded-lg font-medium text-sm">
                 📊 {t("hero.analytics")}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

@@ -1,13 +1,15 @@
 import React from "react";
 import mountainsAurora from "@/assets/mountains-aurora.png";
 import { useLanguage } from "@/contexts/LanguageContext";
+import logo from "@/assets/ski-solution-logo-negativo.png";
 
 const MetricsSection = () => {
   const { t } = useLanguage();
   const metrics = [
-    { value: "+25", label: "estaciones y escuelas gestionadas" },
-    { value: "+25%", label: "incremento en ventas anticipadas" },
-    { value: "+30", label: "sistemas PMS/ERP/CRM integrados" },
+    { value: "+27", label: "Años de experiencia" },
+    { value: "+7", label: "Paises" },
+    { value: "+35", label: "Estaciones y escuelas gestionadas" },
+    { value: "+30", label: "Sistemas PMS/ERP/CRM integrados" },
   ];
 
   return (
@@ -23,19 +25,19 @@ const MetricsSection = () => {
       <div className="absolute inset-0 bg-secondary/80"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-secondary-foreground">
+          <h2 className="text-3xl font-bold mb-4 text-secondary-foreground pb-6">
             {t("metrics.title")}
           </h2>
         </div>
 
         {/* Metrics grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 mb-12">
           {metrics.map((metric, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+              <div className="text-4xl md:text-4xl font-bold text-primary mb-2">
                 {metric.value}
               </div>
-              <p className="text-sm text-secondary-foreground">
+              <p className="text-md text-secondary-foreground">
                 {metric.label}
               </p>
             </div>
@@ -48,23 +50,23 @@ const MetricsSection = () => {
             {t("metrics.trust")}
           </p>
           <div className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center justify-center opacity-60">
-            <div className="h-16 bg-background/20 rounded flex items-center justify-center text-xs text-secondary-foreground">
-              Cliente 1
+            <div className="h-16 px-2 bg-background/20 rounded flex items-center justify-center text-xs text-secondary-foreground">
+              <img src={logo} alt="Ski Solution 360" />
             </div>
-            <div className="h-16 bg-background/20 rounded flex items-center justify-center text-xs text-secondary-foreground">
-              Cliente 2
+            <div className="h-16 bg-background/20 px-2 rounded flex items-center justify-center text-xs text-secondary-foreground">
+              <img src={logo} alt="Ski Solution 360" />
             </div>
-            <div className="h-16 bg-background/20 rounded flex items-center justify-center text-xs text-secondary-foreground">
-              Cliente 3
+            <div className="h-16 bg-background/20 px-2 rounded flex items-center justify-center text-xs text-secondary-foreground">
+              <img src={logo} alt="Ski Solution 360" />
             </div>
-            <div className="h-16 bg-background/20 rounded flex items-center justify-center text-xs text-secondary-foreground">
-              Cliente 4
+            <div className="h-16 bg-background/20 px-2 rounded flex items-center justify-center text-xs text-secondary-foreground">
+              <img src={logo} alt="Ski Solution 360" />
             </div>
-            <div className="h-16 bg-background/20 rounded flex items-center justify-center text-xs text-secondary-foreground">
-              Cliente 5
+            <div className="h-16 bg-background/20 px-2 rounded flex items-center justify-center text-xs text-secondary-foreground">
+              <img src={logo} alt="Ski Solution 360" />
             </div>
-            <div className="h-16 bg-background/20 rounded flex items-center justify-center text-xs text-secondary-foreground">
-              Cliente 6
+            <div className="h-16 bg-background/20 px-2 rounded flex items-center justify-center text-xs text-secondary-foreground">
+              <img src={logo} alt="Ski Solution 360" />
             </div>
           </div>
         </div>

@@ -40,6 +40,7 @@ import Ebooks from "./pages/Ebooks";
 import Webinars from "./pages/Webinars";
 import Partners from "./pages/Partners";
 import Faq from "./pages/Faq";
+import Contacto from "./pages/Contacto";
 
 const queryClient = new QueryClient();
 
@@ -131,6 +132,7 @@ const App = () => (
             />
 
             {/* Other pages */}
+            <Route path="/contacto" element={<Contacto />} />
             <Route path="/casos-exito" element={<CasosExito />} />
             <Route path="/ebooks" element={<Ebooks />} />
             <Route path="/webinars" element={<Webinars />} />
@@ -141,7 +143,7 @@ const App = () => (
             />
 
             {/* Legacy routes redirect to Spanish */}
-            <Route path="/blog" element={<Navigate to="/es/blog" replace />} />
+            <Route path="/blog" element={<Navigate to="/blog" replace />} />
             <Route
               path="/blog/:slug"
               element={<Navigate to="/es/blog" replace />}

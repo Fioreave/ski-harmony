@@ -99,7 +99,7 @@ const Solucion = () => {
     },
   ];
   return (
-    <div className="min-h-screen bg-background">
+    <div className="bg-background">
       <Navbar />
 
       <main className="pt-16">
@@ -142,7 +142,7 @@ const Solucion = () => {
                 return (
                   <Card
                     key={index}
-                    className={`card-hover border-0 shadow-lg bg-background animate-stagger-${
+                    className={`card-hover border-0 shadow-lg bg-card bg-background animate-stagger-${
                       index + 1
                     }`}
                   >
@@ -169,7 +169,7 @@ const Solucion = () => {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-b from-primary via-primary to-primary/1">
           <div className="container-custom text-center">
-            <div className="max-w-4xl mx-auto animate-fade-in-up">
+            <div className="max-w-xl mx-auto animate-fade-in-up">
               <h3 className="text-2xl md:text-3xl font-bold mb-2">
                 {t("solucion.cta.title")}
               </h3>
@@ -192,7 +192,7 @@ const Solucion = () => {
                 return (
                   <Card
                     key={index}
-                    className={`card-hover border-0 shadow-lg bg-background group animate-stagger-${Math.min(
+                    className={`card-hover border-0 shadow-lg bg-background group bg-card animate-stagger-${Math.min(
                       index + 1,
                       4
                     )}`}
