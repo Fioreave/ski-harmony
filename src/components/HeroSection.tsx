@@ -56,7 +56,11 @@ const HeroSection = () => {
             <div className="relative">
               <div className="bg-muted rounded-lg w-full h-full flex items-center justify-center border-2 border-dashed border-border">
                 <video
+<<<<<<< HEAD
                   src="/src/videos/Ski-solution-video_web.mp4"
+=======
+                  src="/src/assets/02.mov"
+>>>>>>> 889f3db24c7100fd133f28a7a592416790a2987e
                   className="w-full h-full object-cover rounded-lg"
                   autoPlay
                   loop

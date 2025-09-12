@@ -1,4 +1,5 @@
-import React from "react";
+// src/pages/components/DemoRequestForm.tsx (o donde lo tengas)
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -27,6 +28,10 @@ interface DemoRequestFormProps {
 const DemoRequestForm: React.FC<DemoRequestFormProps> = ({ onClose }) => {
   const { t } = useLanguage();
 
+  const [employees, setEmployees] = useState("");
+  const [sector, setSector] = useState("");
+  const [availability, setAvailability] = useState("");
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -35,15 +40,9 @@ const DemoRequestForm: React.FC<DemoRequestFormProps> = ({ onClose }) => {
       company: (document.getElementById("company") as HTMLInputElement).value,
       phone: (document.getElementById("phone") as HTMLInputElement).value,
       email: (document.getElementById("email") as HTMLInputElement).value,
-      employees:
-        (document.querySelector("[name=employees]") as HTMLInputElement)
-          ?.value || "",
-      sector:
-        (document.querySelector("[name=sector]") as HTMLInputElement)?.value ||
-        "",
-      availability:
-        (document.querySelector("[name=availability]") as HTMLInputElement)
-          ?.value || "",
+      employees,
+      sector,
+      availability,
     };
 
     const result = await sendForm(data, "demo-request");
@@ -52,7 +51,8 @@ const DemoRequestForm: React.FC<DemoRequestFormProps> = ({ onClose }) => {
       alert("✅ Formulario de demo enviado con éxito");
       onClose();
     } else {
-      alert("Error al enviar");
+      console.error("Falló envío:", result);
+      alert(`Error al enviar (HTTP ${result.status ?? ""})`);
     }
   };
 
@@ -76,19 +76,20 @@ const DemoRequestForm: React.FC<DemoRequestFormProps> = ({ onClose }) => {
             </div>
             <div className="space-y-2">
               <Label htmlFor="company">{t("demoForm.company")}</Label>
-              <Input id="company" type="text" required />
+              <Input id="company" type="text" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="phone">{t("demoForm.phone")}</Label>
-              <Input id="phone" type="tel" required />
+              <Input id="phone" type="tel" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="email">{t("demoForm.email")}</Label>
               <Input id="email" type="email" required />
             </div>
+
             <div className="space-y-2">
-              <Label htmlFor="employees">{t("demoForm.employees")}</Label>
-              <Select>
+              <Label>{t("demoForm.employees")}</Label>
+              <Select value={employees} onValueChange={setEmployees}>
                 <SelectTrigger>
                   <SelectValue placeholder={t("demoForm.selectEmployees")} />
                 </SelectTrigger>
@@ -101,9 +102,10 @@ const DemoRequestForm: React.FC<DemoRequestFormProps> = ({ onClose }) => {
                 </SelectContent>
               </Select>
             </div>
+
             <div className="space-y-2">
-              <Label htmlFor="sector">{t("demoForm.sector")}</Label>
-              <Select>
+              <Label>{t("demoForm.sector")}</Label>
+              <Select value={sector} onValueChange={setSector}>
                 <SelectTrigger>
                   <SelectValue placeholder={t("demoForm.selectSector")} />
                 </SelectTrigger>
@@ -122,9 +124,10 @@ const DemoRequestForm: React.FC<DemoRequestFormProps> = ({ onClose }) => {
                 </SelectContent>
               </Select>
             </div>
+
             <div className="space-y-2">
-              <Label htmlFor="availability">{t("demoForm.availability")}</Label>
-              <Select>
+              <Label>{t("demoForm.availability")}</Label>
+              <Select value={availability} onValueChange={setAvailability}>
                 <SelectTrigger>
                   <SelectValue placeholder={t("demoForm.selectAvailability")} />
                 </SelectTrigger>
@@ -139,6 +142,7 @@ const DemoRequestForm: React.FC<DemoRequestFormProps> = ({ onClose }) => {
                 </SelectContent>
               </Select>
             </div>
+
             <Button type="submit" className="w-full">
               {t("demoForm.submit")}
             </Button>

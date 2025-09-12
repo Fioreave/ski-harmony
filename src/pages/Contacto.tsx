@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
+import { toast } from "sonner";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -18,7 +21,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
-import { useLanguage } from "@/contexts/LanguageContext";
+
 import {
   MapPin,
   Phone,
@@ -30,12 +33,13 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Helmet } from "react-helmet";
-import { toast } from "sonner";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { sendForm } from "@/utils/api";
 
 const Contacto = () => {
   const { t } = useLanguage();
+
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -68,17 +72,45 @@ const Contacto = () => {
     },
   ];
 
+  const handleInputChange = (field: string, value: string | boolean) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     if (!formData.acceptPrivacy) {
       toast.error("Debes aceptar la política de privacidad");
       return;
     }
 
-    const result = await sendForm(formData, "contacto");
+    setLoading(true);
+
+    // Construimos el payload con los nombres que espera el backend
+    const payload = {
+      type: "contact",
+      name: formData.name,
+      email: formData.email, // requerido por tu StoreLeadRequest
+      phone: formData.phone,
+      company: formData.company,
+      // si quieres conservar "sede", lo anexamos al subject para no perderlo
+      subject: formData.sede
+        ? `${formData.subject || "Consulta"} (sede: ${formData.sede})`
+        : formData.subject,
+      message: formData.message, // requerido para type=contact
+      privacy: formData.acceptPrivacy,
+      marketing_optin: formData.acceptMarketing,
+      // modules no aplica aquí; si algún día agregas checkboxes, envía un array.
+    };
+
+    const result = await sendForm(payload, "contact-form");
+
+    setLoading(false);
 
     if (result.success) {
-      toast.success("Formulario enviado correctamente");
+      toast.success(
+        "Formulario enviado correctamente. Te contactaremos pronto."
+      );
       setFormData({
         name: "",
         email: "",
@@ -91,12 +123,11 @@ const Contacto = () => {
         acceptMarketing: false,
       });
     } else {
-      toast.error("Hubo un problema al enviar tu consulta");
+      console.error("Error envío contacto:", result);
+      toast.error(
+        `Error al enviar${result.status ? ` (HTTP ${result.status})` : ""}`
+      );
     }
-  };
-
-  const handleInputChange = (field: string, value: string | boolean) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   return (
@@ -112,7 +143,7 @@ const Contacto = () => {
       <Navbar />
 
       <main className="pt-20">
-        {/* Hero Section */}
+        {/* Hero */}
         <section className="py-20 bg-gradient-to-br from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -128,11 +159,11 @@ const Contacto = () => {
           </div>
         </section>
 
-        {/* Contact Form & Info Section */}
+        {/* Form + Info */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
+              {/* Formulario */}
               <div>
                 <Card>
                   <CardHeader>
@@ -196,7 +227,7 @@ const Contacto = () => {
                         />
                       </div>
 
-                      {/*<div className="space-y-2">
+                      <div className="space-y-2">
                         <Label>Sede</Label>
                         <Select
                           value={formData.sede}
@@ -213,7 +244,7 @@ const Contacto = () => {
                             <SelectItem value="girona">Girona</SelectItem>
                           </SelectContent>
                         </Select>
-                      </div>*/}
+                      </div>
 
                       <div className="space-y-2">
                         <Label htmlFor="subject">Asunto</Label>
@@ -259,7 +290,7 @@ const Contacto = () => {
                           >
                             Acepto la{" "}
                             <a
-                              href="/privacidad"
+                              href="#"
                               className="text-primary hover:underline"
                             >
                               política de privacidad
@@ -291,17 +322,17 @@ const Contacto = () => {
                       <Button
                         type="submit"
                         className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                        disabled={loading}
                       >
-                        ENVIAR FORMULARIO
+                        {loading ? "Enviando..." : "ENVIAR FORMULARIO"}
                       </Button>
                     </form>
                   </CardContent>
                 </Card>
               </div>
 
-              {/* Contact Information */}
+              {/* Información */}
               <div className="space-y-8">
-                {/* Contact Details */}
                 <Card>
                   <CardHeader>
                     <CardTitle>Información de contacto</CardTitle>
@@ -315,12 +346,25 @@ const Contacto = () => {
                           href="mailto:info@bdrinformatica.com"
                           className="text-primary hover:underline"
                         >
-                          hello@skisolution360.com
+                          info@bdrinformatica.com
                         </a>
                       </div>
                     </div>
 
-                    {/*<div className="pt-4">
+                    <div className="flex items-center space-x-3">
+                      <Mail className="h-5 w-5 text-primary" />
+                      <div>
+                        <p className="font-medium">Soporte:</p>
+                        <a
+                          href="mailto:soporte@bdrinformatica.com"
+                          className="text-primary hover:underline"
+                        >
+                          soporte@bdrinformatica.com
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="pt-4">
                       <p className="font-medium mb-3">
                         Nuestras redes sociales:
                       </p>
@@ -338,11 +382,10 @@ const Contacto = () => {
                           <Instagram className="h-4 w-4" />
                         </Button>
                       </div>
-                    </div>*/}
+                    </div>
                   </CardContent>
                 </Card>
 
-                {/* Offices */}
                 <div className="space-y-4">
                   <h3 className="text-xl font-semibold">Nuestras sedes</h3>
                   {offices.map((office) => (

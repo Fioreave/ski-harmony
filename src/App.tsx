@@ -141,6 +141,7 @@ const App = () => (
               path="/faq-software-gestion-estacion-esqui"
               element={<Faq />}
             />
+            <Route path="/contacto" element={<Contacto />} />
 
             {/* Legacy routes redirect to Spanish */}
             <Route path="/blog" element={<Navigate to="/blog" replace />} />

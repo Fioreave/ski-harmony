@@ -22,6 +22,8 @@ interface ContactFormProps {
 const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
   const { t } = useLanguage();
 
+  const [submitting, setSubmitting] = React.useState(false);
+
   const modules = [
     "contactForm.moduleTicketing",
     "contactForm.moduleAccess",
@@ -46,13 +48,16 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
       ).map((el) => (el as HTMLInputElement).id),
     };
 
+    setSubmitting(true);
     const result = await sendForm(data, "contact-form");
+    setSubmitting(false);
 
     if (result.success) {
       alert("Formulario de contacto enviado con éxito");
       onClose();
     } else {
-      alert("Error al enviar");
+      alert(`Error al enviar (código ${result.status ?? "?"})`);
+      console.error(result.error ?? result);
     }
   };
 
@@ -97,8 +102,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
               </Label>
               <Textarea id="information" rows={4} required />
             </div>
-            <Button type="submit" className="w-full">
-              {t("contactForm.submit")}
+            <Button type="submit" disabled={submitting} className="w-full">
+              {submitting
+                ? t("contactForm.sending") ?? "Enviando..."
+                : t("contactForm.submit")}
             </Button>
           </form>
         </CardContent>

@@ -19,19 +19,35 @@ const VideoSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="relative rounded-xl overflow-hidden aspect-video">
             <video
+<<<<<<< HEAD
               src="/videos/Ski-solution-video_web.mp4"
               className="w-full h-full object-cover rounded-xl"
               autoPlay
               loop
+=======
+              src="/videos/Ski-solution-video_web.mp4"
+              className="w-full h-full object-cover rounded-xl"
+              autoPlay
+              loop
+              muted
+>>>>>>> 889f3db24c7100fd133f28a7a592416790a2987e
               playsInline
               preload="auto"
               controls
             />
+<<<<<<< HEAD
 
             {/* Duration overlay 
             <div className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm font-medium">
               Demo
             </div>*/}
+=======
+            
+            {/* Duration overlay */}
+            <div className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm font-medium">
+              Demo
+            </div>
+>>>>>>> 889f3db24c7100fd133f28a7a592416790a2987e
           </div>
 
           <div className="text-center mt-6">
