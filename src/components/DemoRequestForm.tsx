@@ -48,11 +48,15 @@ const DemoRequestForm: React.FC<DemoRequestFormProps> = ({ onClose }) => {
     const result = await sendForm(data, "demo-request");
 
     if (result.success) {
-      alert("✅ Formulario de demo enviado con éxito");
-      onClose();
+      /* ok */
     } else {
-      console.error("Falló envío:", result);
-      alert(`Error al enviar (HTTP ${result.status ?? ""})`);
+      if (result.status === 0 && result.error === "cors_or_network") {
+        alert(
+          "Bloqueado por CORS o error de red.\nRevisa la consola y configuración de CORS en la API."
+        );
+      } else {
+        alert(`Error al enviar (HTTP ${result.status ?? "?"})`);
+      }
     }
   };
 

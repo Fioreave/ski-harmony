@@ -53,11 +53,15 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
     setSubmitting(false);
 
     if (result.success) {
-      alert("Formulario de contacto enviado con éxito");
-      onClose();
+      /* ok */
     } else {
-      alert(`Error al enviar (código ${result.status ?? "?"})`);
-      console.error(result.error ?? result);
+      if (result.status === 0 && result.error === "cors_or_network") {
+        alert(
+          "Bloqueado por CORS o error de red.\nRevisa la consola y configuración de CORS en la API."
+        );
+      } else {
+        alert(`Error al enviar (HTTP ${result.status ?? "?"})`);
+      }
     }
   };
 
