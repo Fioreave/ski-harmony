@@ -109,7 +109,7 @@ const Contacto = () => {
 
     if (result.success) {
       toast.success(
-        "Formulario enviado correctamente. Te contactaremos pronto."
+        "✅ Formulario enviado correctamente. Te contactaremos pronto."
       );
       setFormData({
         name: "",
@@ -124,9 +124,11 @@ const Contacto = () => {
       });
     } else {
       console.error("Error envío contacto:", result);
-      toast.error(
-        `Error al enviar${result.status ? ` (HTTP ${result.status})` : ""}`
-      );
+      if (result.status === 0) {
+        toast.error("Error de conexión. Verifica tu conexión a internet e inténtalo de nuevo.");
+      } else {
+        toast.error(`Error al enviar el formulario (HTTP ${result.status ?? "?"}). Inténtalo de nuevo.`);
+      }
     }
   };
 

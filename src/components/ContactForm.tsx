@@ -37,14 +37,15 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    const formDataElement = e.target as HTMLFormElement;
     const data = {
-      name: (document.getElementById("name") as HTMLInputElement).value,
-      company: (document.getElementById("company") as HTMLInputElement).value,
-      information: (
-        document.getElementById("information") as HTMLTextAreaElement
-      ).value,
+      name: (formDataElement.querySelector("#name") as HTMLInputElement).value,
+      email: (formDataElement.querySelector("#email") as HTMLInputElement)?.value || "",
+      company: (formDataElement.querySelector("#company") as HTMLInputElement).value,
+      phone: (formDataElement.querySelector("#phone") as HTMLInputElement)?.value || "",
+      message: (formDataElement.querySelector("#information") as HTMLTextAreaElement).value,
       modules: Array.from(
-        document.querySelectorAll("input[type=checkbox]:checked")
+        formDataElement.querySelectorAll("input[type=checkbox]:checked")
       ).map((el) => (el as HTMLInputElement).id),
     };
 
@@ -53,14 +54,16 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
     setSubmitting(false);
 
     if (result.success) {
-      /* ok */
+      alert("✅ Formulario enviado exitosamente. Te contactaremos pronto.");
+      onClose();
+      // Limpiar formulario
+      formDataElement.reset();
     } else {
-      if (result.status === 0 && result.error === "cors_or_network") {
-        alert(
-          "Bloqueado por CORS o error de red.\nRevisa la consola y configuración de CORS en la API."
-        );
+      console.error("Error al enviar:", result);
+      if (result.status === 0) {
+        alert("Error de conexión. Verifica tu conexión a internet e inténtalo de nuevo.");
       } else {
-        alert(`Error al enviar (HTTP ${result.status ?? "?"})`);
+        alert(`Error al enviar el formulario (HTTP ${result.status ?? "?"}). Inténtalo de nuevo.`);
       }
     }
   };
@@ -84,8 +87,16 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
               <Input id="name" type="text" required />
             </div>
             <div className="space-y-2">
+              <Label htmlFor="email">Email</Label>
+              <Input id="email" type="email" required />
+            </div>
+            <div className="space-y-2">
               <Label htmlFor="company">{t("contactForm.company")}</Label>
               <Input id="company" type="text" required />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="phone">Teléfono</Label>
+              <Input id="phone" type="tel" />
             </div>
             <div className="space-y-2">
               <Label>{t("contactForm.modules")}</Label>

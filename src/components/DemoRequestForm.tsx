@@ -32,6 +32,8 @@ const DemoRequestForm: React.FC<DemoRequestFormProps> = ({ onClose }) => {
   const [sector, setSector] = useState("");
   const [availability, setAvailability] = useState("");
 
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -43,19 +45,27 @@ const DemoRequestForm: React.FC<DemoRequestFormProps> = ({ onClose }) => {
       employees,
       sector,
       availability,
+      message: `Solicitud de demo - Empleados: ${employees}, Sector: ${sector}, Disponibilidad: ${availability}`,
     };
 
+    setLoading(true);
     const result = await sendForm(data, "demo-request");
+    setLoading(false);
 
     if (result.success) {
-      /* ok */
+      alert("✅ Solicitud de demo enviada exitosamente. Te contactaremos pronto para programar tu demo.");
+      onClose();
+      // Reset form
+      setEmployees("");
+      setSector("");
+      setAvailability("");
+      (e.target as HTMLFormElement).reset();
     } else {
-      if (result.status === 0 && result.error === "cors_or_network") {
-        alert(
-          "Bloqueado por CORS o error de red.\nRevisa la consola y configuración de CORS en la API."
-        );
+      console.error("Error al enviar demo:", result);
+      if (result.status === 0) {
+        alert("Error de conexión. Verifica tu conexión a internet e inténtalo de nuevo.");
       } else {
-        alert(`Error al enviar (HTTP ${result.status ?? "?"})`);
+        alert(`Error al enviar la solicitud (HTTP ${result.status ?? "?"}). Inténtalo de nuevo.`);
       }
     }
   };
@@ -147,8 +157,8 @@ const DemoRequestForm: React.FC<DemoRequestFormProps> = ({ onClose }) => {
               </Select>
             </div>
 
-            <Button type="submit" className="w-full">
-              {t("demoForm.submit")}
+            <Button type="submit" className="w-full" disabled={loading}>
+              {loading ? "Enviando..." : t("demoForm.submit")}
             </Button>
           </form>
         </CardContent>
