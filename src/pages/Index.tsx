@@ -1,12 +1,13 @@
-import React from 'react';
-import Navbar from '@/components/Navbar';
-import HeroSection from '@/components/HeroSection';
-import BenefitsSection from '@/components/BenefitsSection';
-import MetricsSection from '@/components/MetricsSection';
-import VideoSection from '@/components/VideoSection';
-import ModulesSection from '@/components/ModulesSection';
-import FinalClaimSection from '@/components/FinalClaimSection';
-import Footer from '@/components/Footer';
+import React from "react";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import BenefitsSection from "@/components/BenefitsSection";
+import MetricsSection from "@/components/MetricsSection";
+import VideoSection from "@/components/VideoSection";
+import ModulesSection from "@/components/ModulesSection";
+import FinalClaimSection from "@/components/FinalClaimSection";
+import Footer from "@/components/Footer";
+import PartnersSection from "@/components/PartnersSection";
 
 const Index = () => {
   return (
@@ -16,8 +17,9 @@ const Index = () => {
         <HeroSection />
         <BenefitsSection />
         <MetricsSection />
-        <VideoSection />
+        <PartnersSection />
         <ModulesSection />
+        <VideoSection />
         <FinalClaimSection />
       </main>
       <Footer />

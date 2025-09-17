@@ -1,15 +1,9 @@
-// src/pages/components/DemoRequestForm.tsx (o donde lo tengas)
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Card,
   CardContent,
@@ -21,51 +15,99 @@ import { X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { sendForm } from "@/utils/api";
 
-interface DemoRequestFormProps {
+interface ContactFormProps {
   onClose: () => void;
 }
 
-const DemoRequestForm: React.FC<DemoRequestFormProps> = ({ onClose }) => {
+const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
   const { t } = useLanguage();
 
-  const [employees, setEmployees] = useState("");
-  const [sector, setSector] = useState("");
-  const [availability, setAvailability] = useState("");
+  const [submitting, setSubmitting] = React.useState(false);
+  const [acceptPrivacy, setAcceptPrivacy] = React.useState(false);
+  const [acceptMarketing, setAcceptMarketing] = React.useState(false);
 
-  const [loading, setLoading] = useState(false);
+  // ✅ Opciones y estado controlado de módulos (ids en string)
+  const moduleOptions = [
+    "ticketing", // Ticketing y Precio Dinámico
+    "access", // Control de Accesos RFID
+    "rental", // Gestión de Alquiler de Equipos
+    "school", // Software Escuela de Esquí
+    "pos", // Punto de Venta Restauración
+    "bicrm", // BI & CRM para Ski Resorts
+    "analytics", // Analytics & Reporting
+  ];
+  const [selectedModules, setSelectedModules] = React.useState<string[]>([]);
+
+  const toggleModule = (id: string, checked: boolean | "indeterminate") => {
+    const on = checked === true;
+    setSelectedModules((prev) =>
+      on ? [...new Set([...prev, id])] : prev.filter((m) => m !== id)
+    );
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!acceptPrivacy) {
+      alert("Debes aceptar la política de privacidad");
+      return;
+    }
 
-    const data = {
-      name: (document.getElementById("name") as HTMLInputElement).value,
-      company: (document.getElementById("company") as HTMLInputElement).value,
-      phone: (document.getElementById("phone") as HTMLInputElement).value,
-      email: (document.getElementById("email") as HTMLInputElement).value,
-      employees,
-      sector,
-      availability,
-      message: `Solicitud de demo - Empleados: ${employees}, Sector: ${sector}, Disponibilidad: ${availability}`,
+    const form = e.target as HTMLFormElement;
+    const name = (form.querySelector("#name") as HTMLInputElement).value.trim();
+    const email = (
+      form.querySelector("#email") as HTMLInputElement
+    ).value.trim();
+    const company = (
+      form.querySelector("#company") as HTMLInputElement
+    ).value.trim();
+    const phone =
+      (form.querySelector("#phone") as HTMLInputElement)?.value.trim() || "";
+    const info = (
+      form.querySelector("#information") as HTMLTextAreaElement
+    ).value.trim();
+
+    const message =
+      info +
+      (selectedModules.length
+        ? ` | Módulos: ${selectedModules.join(", ")}`
+        : "");
+
+    const payload = {
+      type: "contact",
+      name,
+      email,
+      phone,
+      company,
+      message,
+      privacy: acceptPrivacy,
+      marketing_optin: acceptMarketing,
+      modules: selectedModules, // ✅ ahora es string[]
     };
 
-    setLoading(true);
-    const result = await sendForm(data, "demo-request");
-    setLoading(false);
+    setSubmitting(true);
+    const result = await sendForm(payload, "contact-form");
+    setSubmitting(false);
 
     if (result.success) {
-      alert("✅ Solicitud de demo enviada exitosamente. Te contactaremos pronto para programar tu demo.");
+      alert("✅ Formulario enviado exitosamente. Te contactaremos pronto.");
+      form.reset();
+      setAcceptPrivacy(false);
+      setAcceptMarketing(false);
+      setSelectedModules([]);
       onClose();
-      // Reset form
-      setEmployees("");
-      setSector("");
-      setAvailability("");
-      (e.target as HTMLFormElement).reset();
     } else {
-      console.error("Error al enviar demo:", result);
-      if (result.status === 0) {
-        alert("Error de conexión. Verifica tu conexión a internet e inténtalo de nuevo.");
+      const errs = result?.error?.errors;
+      if (errs) {
+        const pretty = Object.entries(errs)
+          .map(([k, v]) => `${k}: ${(v as string[]).join(", ")}`)
+          .join("\n");
+        alert("Errores de validación:\n" + pretty);
       } else {
-        alert(`Error al enviar la solicitud (HTTP ${result.status ?? "?"}). Inténtalo de nuevo.`);
+        alert(
+          `Error al enviar el formulario (HTTP ${
+            result.status ?? "?"
+          }). Inténtalo de nuevo.`
+        );
       }
     }
   };
@@ -75,90 +117,98 @@ const DemoRequestForm: React.FC<DemoRequestFormProps> = ({ onClose }) => {
       <Card className="w-full max-w-md max-h-[90vh] overflow-y-auto">
         <CardHeader>
           <div className="flex items-center justify-between">
-            <CardTitle>{t("demoForm.title")}</CardTitle>
+            <CardTitle>{t("contactForm.title")}</CardTitle>
             <Button variant="ghost" size="sm" onClick={onClose}>
               <X className="h-4 w-4" />
             </Button>
           </div>
-          <CardDescription>{t("demoForm.description")}</CardDescription>
+          <CardDescription>{t("contactForm.description")}</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="name">{t("demoForm.name")}</Label>
+              <Label htmlFor="name">{t("contactForm.name")}</Label>
               <Input id="name" type="text" required />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="company">{t("demoForm.company")}</Label>
-              <Input id="company" type="text" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="phone">{t("demoForm.phone")}</Label>
-              <Input id="phone" type="tel" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="email">{t("demoForm.email")}</Label>
+              <Label htmlFor="email">Email</Label>
               <Input id="email" type="email" required />
             </div>
-
             <div className="space-y-2">
-              <Label>{t("demoForm.employees")}</Label>
-              <Select value={employees} onValueChange={setEmployees}>
-                <SelectTrigger>
-                  <SelectValue placeholder={t("demoForm.selectEmployees")} />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="1-10">1-10</SelectItem>
-                  <SelectItem value="11-50">11-50</SelectItem>
-                  <SelectItem value="51-200">51-200</SelectItem>
-                  <SelectItem value="201-500">201-500</SelectItem>
-                  <SelectItem value="500+">{t("demoForm.more500")}</SelectItem>
-                </SelectContent>
-              </Select>
+              <Label htmlFor="company">{t("contactForm.company")}</Label>
+              <Input id="company" type="text" required />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="phone">Teléfono</Label>
+              <Input id="phone" type="tel" />
+            </div>
+
+            {/* ✅ Módulos controlados */}
+            <div className="space-y-2">
+              <Label>Módulos de interés</Label>
+              <div className="space-y-2">
+                {moduleOptions.map((id) => (
+                  <div key={id} className="flex items-center space-x-2">
+                    <Checkbox
+                      id={`mod-${id}`}
+                      checked={selectedModules.includes(id)}
+                      onCheckedChange={(c) => toggleModule(id, c)}
+                    />
+                    <Label
+                      htmlFor={`mod-${id}`}
+                      className="text-sm font-normal"
+                    >
+                      {id}
+                    </Label>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="space-y-2">
-              <Label>{t("demoForm.sector")}</Label>
-              <Select value={sector} onValueChange={setSector}>
-                <SelectTrigger>
-                  <SelectValue placeholder={t("demoForm.selectSector")} />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="ski-resort">
-                    {t("demoForm.skiResort")}
-                  </SelectItem>
-                  <SelectItem value="adventure-park">
-                    {t("demoForm.adventurePark")}
-                  </SelectItem>
-                  <SelectItem value="bike-park">
-                    {t("demoForm.bikePark")}
-                  </SelectItem>
-                  <SelectItem value="museum">{t("demoForm.museum")}</SelectItem>
-                  <SelectItem value="other">{t("demoForm.other")}</SelectItem>
-                </SelectContent>
-              </Select>
+              <Label htmlFor="information">
+                {t("contactForm.information")}
+              </Label>
+              <Textarea id="information" rows={4} required />
             </div>
 
+            {/* Consentimientos */}
             <div className="space-y-2">
-              <Label>{t("demoForm.availability")}</Label>
-              <Select value={availability} onValueChange={setAvailability}>
-                <SelectTrigger>
-                  <SelectValue placeholder={t("demoForm.selectAvailability")} />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="morning">
-                    {t("demoForm.morning")}
-                  </SelectItem>
-                  <SelectItem value="afternoon">
-                    {t("demoForm.afternoon")}
-                  </SelectItem>
-                  <SelectItem value="both">{t("demoForm.both")}</SelectItem>
-                </SelectContent>
-              </Select>
+              <div className="flex items-start space-x-2">
+                <Checkbox
+                  id="privacy"
+                  checked={acceptPrivacy}
+                  onCheckedChange={(c) => setAcceptPrivacy(Boolean(c))}
+                />
+                <Label htmlFor="privacy" className="text-sm leading-relaxed">
+                  Acepto la{" "}
+                  <a
+                    href="/privacidad"
+                    className="text-primary hover:underline"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    política de privacidad
+                  </a>{" "}
+                  *
+                </Label>
+              </div>
+              <div className="flex items-start space-x-2">
+                <Checkbox
+                  id="marketing"
+                  checked={acceptMarketing}
+                  onCheckedChange={(c) => setAcceptMarketing(Boolean(c))}
+                />
+                <Label htmlFor="marketing" className="text-sm leading-relaxed">
+                  Acepto recibir comunicaciones comerciales
+                </Label>
+              </div>
             </div>
 
-            <Button type="submit" className="w-full" disabled={loading}>
-              {loading ? "Enviando..." : t("demoForm.submit")}
+            <Button type="submit" disabled={submitting} className="w-full">
+              {submitting
+                ? t("contactForm.sending") ?? "Enviando..."
+                : t("contactForm.submit")}
             </Button>
           </form>
         </CardContent>
@@ -167,4 +217,4 @@ const DemoRequestForm: React.FC<DemoRequestFormProps> = ({ onClose }) => {
   );
 };
 
-export default DemoRequestForm;
+export default ContactForm;

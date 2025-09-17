@@ -22,49 +22,49 @@ import Navbar from "@/components/Navbar";
 
 const SoftwareGestionEscuelasEsqui = () => {
   const challenges = [
-    "Coordinación ineficiente entre reservas, asignaciones y horarios",
-    "Dificultades para cobrar por adelantado o gestionar cancelaciones",
-    "Falta de visibilidad sobre qué monitor tiene qué grupo",
-    "Poco control sobre el nivel, edad o necesidades del alumno",
-    "Clientes que no encuentran una vía clara y sencilla para reservar",
+    "Las reservas, asignaciones y horarios no siempre están coordinados.",
+    "Cobros por adelantado y cancelaciones pueden ser complicados de gestionar.",
+    "No siempre se sabe qué monitor tiene qué grupo.",
+    "Es difícil controlar nivel, edad o necesidades especiales de cada alumno.",
+    "Los clientes a veces no encuentran un camino fácil para reservar.",
   ];
 
   const modules = [
     {
       name: "Escuela & Clases",
-      desc: "Núcleo de la solución, con agenda, asignaciones y reservas online",
+      desc: "Agenda, asignaciones y reservas online para que cada clase esté bajo control.",
       icon: (
         <GraduationCap className="h-6 w-6 text-[hsl(var(--ski-lime-dark))]" />
       ),
     },
     {
       name: "Ticketing",
-      desc: "Si la escuela ofrece forfait combinado, puede integrarse en un mismo proceso",
+      desc: "Integra forfaits combinados si tu escuela forma parte de un resort.",
       icon: <CreditCard className="h-6 w-6 text-[hsl(var(--ski-lime-dark))]" />,
     },
     {
       name: "Alquiler & Inventario",
-      desc: "Ideal si la escuela gestiona su propio material",
+      desc: "Gestiona material y equipo sin problemas de stock ni pérdidas.",
       icon: <Users className="h-6 w-6 text-[hsl(var(--ski-lime-dark))]" />,
     },
     {
       name: "CRM & BI",
-      desc: "Seguimiento de alumnos, historial, estadísticas por curso y rendimiento",
+      desc: "Sigue a tus alumnos, historial de clases y estadísticas por curso.",
       icon: <Calendar className="h-6 w-6 text-[hsl(var(--ski-lime-dark))]" />,
     },
     {
       name: "Plataforma Core",
-      desc: "Para tener todo centralizado y escalable con el tiempo",
+      desc: "Centraliza todo y escala con tu escuela con el tiempo.",
       icon: <Star className="h-6 w-6 text-[hsl(var(--ski-lime-dark))]" />,
     },
   ];
 
   const advantages = [
-    "Automatiza reservas y reduce llamadas, errores y duplicidades",
-    "Asigna monitores por disponibilidad, nivel y grupo automáticamente",
-    "Mejora la experiencia del cliente con reservas rápidas y pago online",
-    "Visualiza en tiempo real la ocupación, ingresos y grupos activos",
-    "Escalable: ideal para escuelas independientes o como módulo dentro de una estación más grande",
+    "Automatiza reservas y reduce llamadas, errores y duplicidades.",
+    "Asigna monitores por disponibilidad, nivel y grupo automáticamente.",
+    "Facilita el pago online y adelanta cobros sin complicaciones.",
+    "Visualiza en tiempo real la ocupación, ingresos y grupos activos.",
+    "Escalable: ideal para escuelas independientes o como módulo dentro de estaciónes grandes.",
   ];
 
   return (
@@ -74,22 +74,14 @@ const SoftwareGestionEscuelasEsqui = () => {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <Badge className="mb-4 bg-green-100 text-green-900 px-4 py-2">
-              Escuelas de Esquí
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Software de Gestión para Escuelas de Esquí
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mt-6 mb-6">
+              Gestiona reservas, clases, monitores y pagos desde una sola
+              plataforma{" "}
             </h1>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8">
-              Gestiona reservas, clases, monitores y pagos con Ski Solution 360.
-              Plataforma pensada para escuelas de esquí que buscan digitalizar
-              su operación y ofrecer mejor servicio.
-            </p>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Las escuelas de esquí deben atender a cientos de alumnos por
-              semana, coordinar decenas de monitores y gestionar reservas,
-              cobros y asignaciones. Todo eso, muchas veces, con procesos
-              manuales o herramientas poco adaptadas.
+              Digitaliza reservas, asignaciones, pagos y comunicación con
+              alumnos en un único sistema. Menos errores, más control y una
+              experiencia más fluida para tus clientes.
             </p>
           </div>
         </div>
@@ -101,8 +93,13 @@ const SoftwareGestionEscuelasEsqui = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Los principales retos son:
+                Conocemos los retos habituales en las escuelas de esquí{" "}
               </h2>
+              <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8">
+                Sabemos que manejar cientos de alumnos y coordinar monitores
+                puede ser un caos cuando se usan varios sistemas o procesos
+                manuales.
+              </p>
               <div className="space-y-4">
                 {challenges.map((challenge, index) => (
                   <div key={index} className="flex items-start gap-3">
@@ -119,14 +116,14 @@ const SoftwareGestionEscuelasEsqui = () => {
                   <GraduationCap className="h-8 w-8 text-white" />
                 </div>
                 <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
-                  Digitaliza tu escuela
+                  Una plataforma que organiza tu escuela{" "}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-700">
-                  Ski Solution 360 ofrece una solución completa para modernizar
-                  tu escuela de esquí, desde las reservas online hasta la
-                  asignación automática de monitores.
+                  Ski Solution 360 centraliza reservas, asignaciones, pagos y
+                  seguimiento de alumnos. Funciona con tu sistema actual y se
+                  adapta al tamaño de tu escuela
                 </p>
               </CardContent>
             </Card>
@@ -150,8 +147,15 @@ const SoftwareGestionEscuelasEsqui = () => {
              to-[hsl(var(--ski-lime-dark))]
              border-0 text-white"
           >
+            <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
+              Así transformamos la Escuela de Esquí Valle Blanco{" "}
+            </CardTitle>{" "}
             <CardContent className="p-8 md:p-12">
               <div className="flex items-start gap-4 mb-6">
+                <p className="text-slate-700">
+                  Esto es lo que cambió en su día a día tras implantar Ski
+                  Solution 360:
+                </p>
                 <Quote className="h-8 w-8 text-white flex-shrink-0" />
                 <blockquote className="text-xl md:text-2xl font-medium">
                   "Antes llevábamos las reservas por WhatsApp y papel. Ahora
@@ -175,11 +179,11 @@ const SoftwareGestionEscuelasEsqui = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Módulos recomendados
+              Todo lo que necesitas, en un solo lugar{" "}
             </h2>
-            <p className="text-lg text-slate-600">
+            {/*<p className="text-lg text-slate-600">
               Todo lo que necesitas para gestionar tu escuela de esquí
-            </p>
+            </p>*/}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -210,8 +214,12 @@ const SoftwareGestionEscuelasEsqui = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Ventajas para escuelas de esquí
+              Resultados que puedes esperar{" "}
             </h2>
+            <p className="text-lg text-slate-600">
+              Mejora la experiencia de tus alumnos y simplifica la gestión
+              diaria de tu escuela.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -299,13 +307,15 @@ const SoftwareGestionEscuelasEsqui = () => {
             ¿Listos para dar clase sin perder el control?
           </h2>
           <p className="text-xl text-slate-300 mb-8">
-            Tu escuela organizada, conectada y lista para crecer
+            Tu escuela organizada, conectada y lista para crecer. Pide una demo
+            y descubre en 20 minutos cómo simplificar la gestión y mejorar la
+            experiencia de tus alumnos.{" "}
           </p>
           <Button
             size="lg"
             className="bg-[hsl(var(--ski-lime-dark))] hover:bg-green-700 text-white px-8 py-3"
           >
-            Solicita una demo para tu escuela
+            Solicita una demo
           </Button>
         </div>
       </section>

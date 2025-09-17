@@ -27,10 +27,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ChevronDown, Globe, Menu } from "lucide-react";
+import { ChevronDown, Globe, Menu, Router } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import skiSolutionLogo from "@/assets/ski-solution-logo.png";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 const Navbar = () => {
   const { t, language, setLanguage } = useLanguage();
@@ -251,7 +251,7 @@ const Navbar = () => {
                   <Link to="/empresa">{t("nav.company")}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
-              <NavigationMenuItem>
+              {/* <NavigationMenuItem>
                 <NavigationMenuLink
                   asChild
                   className="px-5 py-2 w-max items-center justify-center rounded-md bg-background text-md transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
@@ -260,7 +260,7 @@ const Navbar = () => {
                     {t("nav.faq")}
                   </Link>
                 </NavigationMenuLink>
-              </NavigationMenuItem>
+              </NavigationMenuItem>*/}
             </NavigationMenuList>
           </NavigationMenu>
 
@@ -465,16 +465,16 @@ const Navbar = () => {
                   >
                     {t("nav.company")}
                   </Link>
-                  <Link
+                  {/*<Link
                     to="/faq-software-gestion-estacion-esqui"
                     className="block py-2 hover:text-primary font-medium"
                     onClick={closeMobileMenu}
                   >
                     {t("nav.faq")}
-                  </Link>
+                  </Link>*/}
                 </div>
 
-                {/* Language selector in mobile */}
+                {/* Language selector in mobile 
                 <div className="pt-4 border-t">
                   <div className="text-sm font-medium text-muted-foreground mb-2">
                     {t("nav.language")}
@@ -521,15 +521,15 @@ const Navbar = () => {
                       {t("lang.en")}
                     </Button>
                   </div>
-                </div>
+                </div>*/}
 
                 {/* CTA Button in mobile */}
                 <div className="pt-4">
                   <Button
-                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-medium"
-                    onClick={closeMobileMenu}
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium"
+                    asChild
                   >
-                    {t("nav.request-demo")}
+                    <Link to="/contacto">Contáctanos</Link>
                   </Button>
                 </div>
               </div>
@@ -539,7 +539,7 @@ const Navbar = () => {
           {/* Right side actions - Desktop */}
           <div className="hidden lg:flex items-center space-x-4">
             {/* Language selector */}
-            <DropdownMenu>
+            {/*<DropdownMenu>
               <DropdownMenuTrigger className="flex items-center space-x-2 text-sm px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors">
                 <Globe className="h-4 w-4" />
                 <span className="font-medium">{language.toUpperCase()}</span>
@@ -562,11 +562,14 @@ const Navbar = () => {
                   {t("lang.en")}
                 </DropdownMenuItem>
               </DropdownMenuContent>
-            </DropdownMenu>
+            </DropdownMenu>*/}
 
             {/* CTA Button */}
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium">
-              {t("nav.request-demo")}
+            <Button
+              className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium"
+              asChild
+            >
+              <Link to="/contacto">Contáctanos</Link>
             </Button>
           </div>
         </div>

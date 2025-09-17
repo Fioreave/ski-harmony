@@ -22,6 +22,7 @@ import SoftwareEscuelaEsqui from "./pages/SoftwareEscuelaEsqui";
 import GestionAlquilerEquipo from "./pages/GestionAlquilerEquipo";
 import PuntoVentaRestauracion from "./pages/PuntoVentaRestauracion";
 import BiCrmSki from "./pages/BiCrmSki";
+import CookieBanner from "./pages/CookieBanner";
 
 // Segments pages
 import Segmentos from "./pages/Segmentos";
@@ -36,10 +37,10 @@ import SoftwareGestionMuseo from "./pages/SoftwareGestionMuseo";
 
 // Other pages
 import CasosExito from "./pages/CasosExito";
-import Ebooks from "./pages/Ebooks";
-import Webinars from "./pages/Webinars";
+// import Ebooks from "./pages/Ebooks";
+// import Webinars from "./pages/Webinars";
 import Partners from "./pages/Partners";
-import Faq from "./pages/Faq";
+//import Faq from "./pages/Faq";
 import Contacto from "./pages/Contacto";
 
 const queryClient = new QueryClient();
@@ -51,6 +52,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <CookieBanner />
 
         <LanguageProvider>
           <Routes>
@@ -134,13 +136,7 @@ const App = () => (
             {/* Other pages */}
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/casos-exito" element={<CasosExito />} />
-            <Route path="/ebooks" element={<Ebooks />} />
-            <Route path="/webinars" element={<Webinars />} />
             <Route path="/partners" element={<Partners />} />
-            <Route
-              path="/faq-software-gestion-estacion-esqui"
-              element={<Faq />}
-            />
             <Route path="/contacto" element={<Contacto />} />
 
             {/* Legacy routes redirect to Spanish */}
@@ -149,7 +145,6 @@ const App = () => (
               path="/blog/:slug"
               element={<Navigate to="/es/blog" replace />}
             />
-
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />
           </Routes>

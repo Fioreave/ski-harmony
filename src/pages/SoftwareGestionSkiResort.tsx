@@ -21,11 +21,11 @@ import Footer from "@/components/Footer";
 
 const SoftwareGestionSkiResort = () => {
   const challenges = [
-    "Sistemas desconectados entre venta, accesos, alquiler y escuela",
-    "Colas en taquillas y falta de autoservicio",
-    "Dificultad para prever picos de afluencia o ajustar precios",
-    "Gestión ineficiente del personal y recursos",
-    "Falta de visibilidad en tiempo real de lo que ocurre en pista, tienda o escuela",
+    "Sistemas que no siempre están conectados entre venta, accesos, alquiler y escuela.",
+    "Colas puntuales en taquillas y pocas opciones de autoservicio en horas de mayor afluencia.",
+    "Anticipar picos de visitantes y ajustar precios a tiempo no siempre resulta sencillo.",
+    "Los turnos y recursos pueden planificarse mejor según la demanda real.",
+    "No siempre se dispone de una visión en tiempo real de lo que ocurre en pista, tienda o escuela.",
   ];
 
   const results = [
@@ -34,6 +34,7 @@ const SoftwareGestionSkiResort = () => {
     "Optimización de personal según demanda real",
     "Unificación de sistemas y reducción de errores administrativos",
     "Datos fiables para tomar decisiones rápidas y con impacto",
+    "Todo medido en tiempo real para decidir con rapidez",
   ];
 
   return (
@@ -44,16 +45,16 @@ const SoftwareGestionSkiResort = () => {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <Badge className="mb-4 bg-primary/10 border-primary text-primary px-4 py-2">
-              Grandes Resorts
-            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Software de Gestión para Grandes Resorts de Esquí
             </h1>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto">
-              Digitaliza la operación completa de tu resort con Ski Solution
-              360. Venta online, accesos, alquiler, escuela, restauración y BI
-              en una sola plataforma integrada.
+            <h2 className="text-2xl font-medium text-slate-900 mt-4">
+              Gestiona todo tu resort desde una sola plataforma
+            </h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Digitaliza venta, accesos, alquiler, escuela, restauración y
+              análisis en un único sistema. Menos colas, más ingresos y
+              visibilidad en tiempo real.
             </p>
           </div>
 
@@ -63,8 +64,12 @@ const SoftwareGestionSkiResort = () => {
                 <Building2 className="h-10 w-10 text-primary" />
               </div>
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Retos comunes en grandes estaciones de esquí
+                Conocemos los retos habituales en los grandes resorts{" "}
               </h2>
+              <p>
+                Es normal que aparezcan cuando la actividad crece y hay muchos
+                sistemas en juego.
+              </p>
               <div className="space-y-4">
                 {challenges.map((challenge, index) => (
                   <div key={index} className="flex items-start gap-3">
@@ -78,20 +83,19 @@ const SoftwareGestionSkiResort = () => {
             <Card className="bg-gradient-to-br from-primary/5 to-indigo-50 border-0 shadow-xl">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-primary/70">
-                  Ski Solution 360 en versión completa
+                  Una sola plataforma para toda la operación
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-700 mb-6">
-                  Ski Solution 360 está diseñado para cubrir de forma integrada
-                  toda la operación de un resort de gran volumen. Conectamos
-                  cada punto de tu negocio bajo una sola plataforma, que además
-                  puede integrarse con tu ERP o CRM actual.
+                  Ski Solution 360 conecta cada área del resort en un mismo
+                  lugar. Funciona con tu sistema actual y puede integrarse con
+                  el software que ya usas.
                 </p>
                 <div className="flex items-center gap-2">
                   <Star className="h-5 w-5 text-yellow" />
                   <span className="font-semibold text-slate-900">
-                    Integración total
+                    Todo 100% conectado
                   </span>
                 </div>
               </CardContent>
@@ -105,8 +109,11 @@ const SoftwareGestionSkiResort = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Caso de éxito: Granvalira
+              Descubre el caso de éxito Granvalira{" "}
             </h2>
+            <h3 className="text-xl text-slate-900 mt-4">
+              Así cambió su día a día tras implantar Ski Solution 360:
+            </h3>
           </div>
 
           <div className="bg-primary text-primary-foreground rounded-2xl p-8 md:p-12 text-white">
@@ -146,10 +153,11 @@ const SoftwareGestionSkiResort = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Resultados que obtendrás
+              Resultados que puedes esperar{" "}
             </h2>
             <p className="text-lg text-slate-600">
-              Impacto directo en tu operación y rentabilidad
+              Un impacto directo en la experiencia del visitante y en la
+              rentabilidad de tu resort.{" "}
             </p>
           </div>
 
@@ -176,7 +184,7 @@ const SoftwareGestionSkiResort = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Módulos integrados para grandes resorts
+              Todo lo que necesitas, en un solo lugar{" "}
             </h2>
           </div>
 
@@ -184,23 +192,23 @@ const SoftwareGestionSkiResort = () => {
             {[
               {
                 icon: <BarChart3 className="text-primary h-8 w-8" />,
-                title: "Ticketing & Dynamic Pricing",
-                desc: "Venta online con precios adaptativos",
+                title: "Venta online y precios dinámicos",
+                desc: "Vende con antelación y ajusta precios según la demanda.",
               },
               {
                 icon: <Users className="text-primary h-8 w-8" />,
                 title: "Control de Accesos",
-                desc: "Gestión de remontes y validaciones",
+                desc: "Gestiona remontes y validaciones sin colas.",
               },
               {
                 icon: <Building2 className="text-primary h-8 w-8" />,
-                title: "Alquiler & Inventario",
-                desc: "Material deportivo y trazabilidad",
+                title: "Alquiler e inventario",
+                desc: "Material localizado y trazable, siempre disponible.",
               },
               {
                 icon: <TrendingUp className="text-primary h-8 w-8" />,
-                title: "BI & CRM",
-                desc: "Analítica y gestión de clientes",
+                title: "Análisis y Clientes",
+                desc: "Entiende a tus visitantes y mejora la relación con ellos.",
               },
             ].map((feature, index) => (
               <Card
@@ -228,17 +236,17 @@ const SoftwareGestionSkiResort = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            ¿Quieres verlo en acción?
+            ¿Lo vemos funcionando?{" "}
           </h2>
           <p className="text-xl text-slate-300 mb-8">
-            Recibe una propuesta personalizada y descubre cómo Ski Solution 360
-            puede transformar tu resort
+            Te preparamos una demostración con tus necesidades. Verás en 20
+            minutos cómo reducir colas y ganar visibilidad.
           </p>
           <Button
             size="lg"
             className="bg-primary rounded-lg hover:bg-none  hover:border-primary text-black px-8 py-3"
           >
-            Solicita una demo personalizada
+            Solicita una demo
           </Button>
         </div>
       </section>

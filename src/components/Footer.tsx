@@ -49,9 +49,9 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         {/* Main footer content */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Company */}
+          {/* Enlaces Útiles */}
           <div>
-            <h3 className="font-bold mb-4">Compañía</h3>
+            <h3 className="font-bold mb-4">Sobre Nosotros</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="/" className="hover:text-primary transition-colors">
@@ -60,10 +60,49 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="/blog"
+                  className="hover:text-primary transition-colors"
+                >
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/partners"
+                  className="hover:text-primary transition-colors"
+                >
+                  Partners
+                </a>
+              </li>
+              <li>
+                <a
                   href="/empresa"
                   className="hover:text-primary transition-colors"
                 >
                   Compañía
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Soluciones */}
+          <div>
+            <h3 className="font-bold mb-4">Soluciones</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a
+                  href="/ski-solution-360"
+                  className="hover:text-primary transition-colors"
+                >
+                  Core
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/bi-crm-ski"
+                  className="hover:text-primary transition-colors"
+                >
+                  BI & CRM
                 </a>
               </li>
               <li>
@@ -77,56 +116,31 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Solutions */}
-          <div>
-            <h3 className="font-bold mb-4">Soluciones</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  href="/soluciones"
-                  className="hover:text-primary transition-colors"
-                >
-                  Solución
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/segmentos"
-                  className="hover:text-primary transition-colors"
-                >
-                  Segmentos
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/casos-exito"
-                  className="hover:text-primary transition-colors"
-                >
-                  Casos de éxito
-                </a>
-              </li>
-            </ul>
-          </div>
-
           {/* Resources */}
           <div>
             <h3 className="font-bold mb-4">{t("nav.segments")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  to="/blog"
+                  to="/software-gestion-ski-resort"
                   className="hover:text-primary transition-colors"
                 >
                   {t("segments.large-resorts")}
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a
+                  href="/software-gestion-ski-resort-mediano"
+                  className="hover:text-primary transition-colors"
+                >
                   {t("segments.medium-resorts")}
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a
+                  href="/software-gestion-escuelas-esqui"
+                  className="hover:text-primary transition-colors"
+                >
                   {t("segments.ski-schools")}
                 </a>
               </li>
@@ -182,7 +196,7 @@ const Footer = () => {
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
           {/* Logo with triple click handler */}
           <img
-            src="/src/assets/ski-solution-logo-negativo.png"
+            src="/ski-solution-logo-negativo.png"
             alt="Ski Solution 360"
             className="h-8 w-auto cursor-pointer mb-4 md:mb-0"
             onClick={logoClickHandler}

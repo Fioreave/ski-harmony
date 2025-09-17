@@ -7,7 +7,7 @@ const VideoSection: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <div className="relative rounded-xl overflow-hidden aspect-video">
             <video
-              src="/videos/Ski-solution-video_web.mp4"
+              src="videos/Ski-solution-video_web.mp4"
               className="w-full h-full object-cover rounded-xl"
               autoPlay
               loop

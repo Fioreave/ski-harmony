@@ -23,7 +23,7 @@ import Footer from "@/components/Footer";
 const SoftwareGestionEscuelaAventura = () => {
   const challenges = [
     "Reservas dispersas entre teléfono, email y redes sociales",
-    "Gestión manual de grupos y horarios",
+    "Gestión manual de grupos, guias y horarios",
     "Falta de control sobre material y equipamiento",
     "Cobros tardíos o problemas con cancelaciones",
     "Poco seguimiento de clientes para fidelización",
@@ -32,27 +32,27 @@ const SoftwareGestionEscuelaAventura = () => {
   const modules = [
     {
       name: "Escuela & Clases",
-      desc: "Para organizar grupos, guías y horarios por actividad",
+      desc: "Organiza grupos, guías y horarios por cada actividad.",
       icon: <Users className="h-6 w-6" />,
     },
     {
       name: "Ticketing",
-      desc: "Venta anticipada online de entradas, rutas y experiencias",
+      desc: "Venta anticipada online de entradas, rutas y experiencias.",
       icon: <Calendar className="h-6 w-6" />,
     },
     {
       name: "Alquiler & Inventario",
-      desc: "Control de material como arneses, chalecos, remos, etc.",
+      desc: "Control de material como arneses, chalecos, remos y más.",
       icon: <Package className="h-6 w-6" />,
     },
     {
       name: "CRM & BI",
-      desc: "Segmentación de clientes, análisis de ocupación y campañas de fidelización",
+      desc: "Segmentación de clientes, análisis de ocupación y campañas de fidelización.",
       icon: <Target className="h-6 w-6" />,
     },
     {
       name: "Plataforma Core",
-      desc: "Coordinación de todos los procesos desde un único panel",
+      desc: "Coordinación de todos los procesos desde un único panel.",
       icon: <Mountain className="h-6 w-6" />,
     },
   ];
@@ -84,30 +84,17 @@ const SoftwareGestionEscuelaAventura = () => {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-lime-100 text-lime-900 px-4 py-2">
-              Aventura / Outdoor
-            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Software de Gestión para Actividades de Aventura y Outdoor
             </h1>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8">
-              Gestiona reservas, grupos, alquiler y pagos de tus actividades
-              outdoor con Ski Solution 360. Ideal para rafting, escalada,
-              senderismo, kayak o multiaventura.
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-4">
+              Gestiona reservas, grupos, alquiler y pagos desde una sola
+              plataforma.
             </p>
-          </div>
-
-          {/* Activities Grid */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {activities.map((activity, index) => (
-              <Badge
-                key={index}
-                variant="secondary"
-                className="bg-lime-100 text-emerald-800 px-4 py-2"
-              >
-                {activity}
-              </Badge>
-            ))}
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+              Centraliza rafting, escalada, senderismo, kayak y más. Menos caos,
+              más control y experiencias memorables para tus clientes.
+            </p>
           </div>
         </div>
       </section>
@@ -118,16 +105,16 @@ const SoftwareGestionEscuelaAventura = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Retos comunes en empresas de actividades outdoor
+                Retos comunes en empresas de aventura
               </h2>
               <p className="text-lg text-slate-600 mb-6">
-                Las empresas de aventura operan con alta estacionalidad,
-                múltiples actividades y recursos limitados, lo que hace que
-                coordinar todo sea un reto.
+                Coordinar múltiples actividades y recursos limitados puede ser
+                complicado, sobre todo en temporadas altas o con reservas
+                dispersas.
               </p>
-              <p className="text-lg text-slate-600 mb-8">
+              {/*<p className="text-lg text-slate-600 mb-8">
                 Entre los desafíos más frecuentes encontramos:
-              </p>
+              </p>*/}
               <div className="space-y-4">
                 {challenges.map((challenge, index) => (
                   <div key={index} className="flex items-start gap-3">
@@ -144,15 +131,15 @@ const SoftwareGestionEscuelaAventura = () => {
                   <Mountain className="h-8 w-8 text-white" />
                 </div>
                 <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
-                  La solución: Ski Solution 360 adaptado a la aventura
+                  Una plataforma que organiza tu centro de aventura{" "}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-700">
-                  Con Ski Solution 360, puedes centralizar la gestión de todas
-                  tus actividades en una sola plataforma, desde la reserva
-                  online hasta la asignación de guías y el control del
-                  inventario de equipo.
+                  Ski Solution 360 centraliza todas tus actividades en un solo
+                  lugar: reservas online, asignación de guías y control de
+                  inventario de equipo, adaptándose a la estacionalidad de tu
+                  negocio.
                 </p>
               </CardContent>
             </Card>
@@ -211,11 +198,11 @@ const SoftwareGestionEscuelaAventura = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Módulos recomendados
+              Todo lo que necesitas, en un solo lugar{" "}
             </h2>
-            <p className="text-lg text-slate-600">
+            {/*<p className="text-lg text-slate-600">
               Todo lo que necesitas para gestionar tu centro de aventura
-            </p>
+            </p>*/}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -329,11 +316,16 @@ const SoftwareGestionEscuelaAventura = () => {
           <h2 className="text-3xl font-bold text-white mb-6">
             ¿Listo para vivir tu temporada más organizada?
           </h2>
+          <p className="text-xl text-slate-300 mb-8">
+            Centraliza tus actividades, reservas y pagos con Ski Solution 360.
+            Pide una demo y descubre en 20 minutos cómo ganar tiempo, control y
+            satisfacción de tus clientes.
+          </p>
           <Button
             size="lg"
             className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary hover:bg-emerald-700 text-black px-8 py-3"
           >
-            Solicita una demo para actividades outdoor
+            Solicita una demo
           </Button>
         </div>
       </section>

@@ -25,43 +25,47 @@ const BRAND_HOVER = "#A6E600"; // lima más oscuro para hover/accesibilidad
 
 const SoftwareGestionSkiResortMediano = () => {
   const challenges = [
-    "Limitaciones de personal para gestionar múltiples áreas a la vez",
-    "Necesidad de modernizar sin grandes inversiones en hardware o sistemas",
-    "Picos de afluencia mal gestionados que saturan las taquillas",
-    "Pérdida de ingresos por no vender anticipadamente ni aplicar precios dinámicos",
-    "Falta de visibilidad global para tomar decisiones rápidas y eficaces",
+    "El personal debe atender varias tareas a la vez y cuesta mantener todo coordinado.",
+    "Modernizar sin grandes compras de hardware puede ser un reto.",
+    "En días de mucha afluencia, las taquillas se saturan con facilidad.",
+    "Se pierden ventas por no anticipar compras ni ajustar precios a la demanda.",
+    "Falta una visión global y en tiempo real para decidir con rapidez.",
   ];
 
   const modules = [
-    { name: "Plataforma Core", desc: "Gestión central desde un solo panel" },
     {
-      name: "Ticketing & Dynamic Pricing",
-      desc: "Venta online con tarifas ajustables según demanda",
+      name: "Plataforma central",
+      desc: "Gestión de todas las áreas desde un único panel.",
+    },
+    {
+      name: "Venta en línea y precios dinámicos",
+      desc: "Vende con antelación y ajusta precios según la demanda.",
     },
     {
       name: "Control de accesos",
-      desc: "QR, tarjetas o RFID sin colas ni instalaciones complejas",
+      desc: "Validaciones rápidas (QR, tarjetas o RFID) sin obras complejas.",
     },
     {
-      name: "Alquiler & Inventario",
-      desc: "Gestión simplificada del material con control de stock",
+      name: "Alquiler e Inventario",
+      desc: "Material localizado, stock controlado y menos esperas.",
     },
     {
-      name: "Escuela & Clases",
-      desc: "Reservas, asignación de monitores y cobros anticipados",
+      name: "Escuela y Clases",
+      desc: "Reservas, asignación de monitores y cobro por adelantado.",
     },
     {
-      name: "BI & CRM",
-      desc: "Visibilidad en tiempo real y segmentación de clientes",
+      name: "Análisis y clientes",
+      desc: "Visión en tiempo real y comunicación segmentada con tus visitantes.",
     },
   ];
 
   const advantages = [
-    "Mejora la experiencia del cliente sin sobredimensionar el sistema",
-    "Reduce la carga operativa del equipo en taquillas, escuela y alquiler",
-    "Aumenta la facturación anticipada y reduce los cuellos de botella",
-    "Escalable por módulos según evolución de la estación",
-    "Ahorro real al reutilizar hardware y evitar sistemas sobrediseñados",
+    "Mejor atención al visitante sin sobredimensionar el sistema.",
+    "Mejor experiencia del cliente con menos colas.",
+    "Menos carga operativa en taquillas, escuela y alquiler.",
+    "Más facturación anticipada y menos cuellos de botella.",
+    "Escalable por módulos según vaya creciendo la estación.",
+    "Ahorro real al reutilizar equipos y evitar sistemas complejos.",
   ];
 
   return (
@@ -72,16 +76,16 @@ const SoftwareGestionSkiResortMediano = () => {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-xl mx-auto">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-lime-100 text-lime-900 px-4 py-2 border border-lime-200">
-              Resorts Medianos
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Software de Gestión para Resorts de Esquí Medianos
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+              Software de Gestión para Resorts de Esquí
             </h1>
+            <h2 className="text-2xl md:text-xl text-slate-900 mb-4">
+              Gestión profesional para Estaciones de esquí, sin complicaciones
+            </h2>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto">
-              Los centros de esquí medianos enfrentan retos específicos: tienen
-              que ofrecer una experiencia moderna y profesional, pero sin los
-              recursos de los grandes resorts.
+              Moderniza tu estación con inversión ajustada y sin cambiar lo que
+              ya funciona. Conecta venta, accesos, alquiler, escuela y análisis
+              en una sola plataforma.
             </p>
           </div>
         </div>
@@ -93,10 +97,11 @@ const SoftwareGestionSkiResortMediano = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Desafíos típicos
+                Entendemos los retos de tu estación{" "}
               </h2>
               <p className="text-lg text-slate-600 mb-8">
-                Algunos desafíos típicos incluyen:
+                Cuando el equipo es reducido y hay que cubrir varias áreas,
+                aparecen algunos retos:{" "}
               </p>
               <div className="space-y-4">
                 {challenges.map((challenge, index) => (
@@ -114,16 +119,14 @@ const SoftwareGestionSkiResortMediano = () => {
                   <Building className="h-8 w-8 text-primary" />
                 </div>
                 <CardTitle className="text-2xl font-bold text-slate-800">
-                  La solución: un sistema completo, adaptable y sin excesos
+                  Un sistema completo, adaptable y a tu medida{" "}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-700">
-                  Ski Solution 360 permite a estaciones medianas digitalizar sus
-                  operaciones con una inversión ajustada y sin necesidad de
-                  reemplazar su infraestructura. Gracias a su enfoque modular,
-                  puedes implementar lo que necesitas ahora y escalar más
-                  adelante.
+                  Ski Solution 360 digitaliza tu operación con módulos que
+                  puedes activar poco a poco. Aprovecha el hardware que ya
+                  tienes y añade funciones cuando lo necesites.
                 </p>
               </CardContent>
             </Card>
@@ -136,11 +139,11 @@ const SoftwareGestionSkiResortMediano = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Módulos recomendados
+              Activa solo lo que necesitas (y escala cuando quieras){" "}
             </h2>
-            <p className="text-lg text-slate-600">
+            {/*<p className="text-lg text-slate-600">
               Implementa solo lo que necesitas, escala cuando quieras
-            </p>
+            </p>*/}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -171,7 +174,7 @@ const SoftwareGestionSkiResortMediano = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Ventajas para estaciones medianas
+              Ventajas para tu estación
             </h2>
           </div>
 
@@ -200,7 +203,7 @@ const SoftwareGestionSkiResortMediano = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Impacto en tu operación
+              Lo que notarás en el día a día:{" "}
             </h2>
           </div>
 
@@ -211,14 +214,13 @@ const SoftwareGestionSkiResortMediano = () => {
                 <div className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <DollarSign className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="text-xl font-bold text-emerald-900">
-                  Aumenta ingresos
+                <CardTitle className="text-xl font-bold text-primary">
+                  Más ingresos{" "}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600">
-                  Venta anticipada y pricing dinámico para maximizar la
-                  facturación
+                  Ventas anticipadas y precios ajustados a la demanda.
                 </p>
               </CardContent>
             </Card>
@@ -229,13 +231,13 @@ const SoftwareGestionSkiResortMediano = () => {
                 <div className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Clock className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="text-xl font-bold text-emerald-900">
-                  Ahorra tiempo
+                <CardTitle className="text-xl font-bold text-primary">
+                  Menos tiempo perdido{" "}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600">
-                  Automatiza procesos y reduce la carga operativa diaria
+                  Procesos automatizados y equipo enfocado en lo importante.{" "}
                 </p>
               </CardContent>
             </Card>
@@ -246,13 +248,13 @@ const SoftwareGestionSkiResortMediano = () => {
                 <div className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Target className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="text-xl font-bold text-emerald-900">
-                  Decisiones precisas
+                <CardTitle className="text-xl font-bold text-primary">
+                  Decisiones con fundamento{" "}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600">
-                  Datos en tiempo real para optimizar recursos y operaciones
+                  Datos en tiempo real para optimizar recursos y operaciones.{" "}
                 </p>
               </CardContent>
             </Card>
@@ -264,11 +266,11 @@ const SoftwareGestionSkiResortMediano = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900 p-10">
         <div className="max-w-4xl mx-auto text-center p-10">
           <h2 className="text-3xl font-bold text-white mb-6">
-            ¿Estás preparado para dar el salto?
+            ¿Lo vemos con tu caso?{" "}
           </h2>
           <p className="text-xl text-slate-300 mb-4">
-            Ski Solution 360 – La solución profesional que se adapta a
-            estaciones como la tuya
+            Te preparamos una demostración adaptada a tu estación para que
+            valores el impacto antes de decidir.
           </p>
           <Button
             size="lg"
@@ -283,7 +285,7 @@ const SoftwareGestionSkiResortMediano = () => {
                 BRAND)
             }
           >
-            Solicita una demo adaptada a tu estación
+            Solicita una demo
           </Button>
         </div>
       </section>

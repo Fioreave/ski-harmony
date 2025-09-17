@@ -1,7 +1,6 @@
 import React from "react";
 import mountainsAurora from "@/assets/mountains-aurora.png";
 import { useLanguage } from "@/contexts/LanguageContext";
-import logo from "@/assets/ski-solution-logo-negativo.png";
 
 const MetricsSection = () => {
   const { t } = useLanguage();
@@ -44,32 +43,32 @@ const MetricsSection = () => {
           ))}
         </div>
 
-        {/* Client logos */}
+        {/* Client logos 
         <div className="border-t border-border pt-8">
           <p className="text-center text-secondary-foreground mb-6 text-sm uppercase tracking-wide">
             {t("metrics.trust")}
           </p>
           <div className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center justify-center opacity-60">
             <div className="h-16 px-2 bg-background/20 rounded flex items-center justify-center text-xs text-secondary-foreground">
-              <img src={logo} alt="Ski Solution 360" />
+              <img src={"/src/assets/logos/candanchu.png"} alt="Candanchu" />
             </div>
             <div className="h-16 bg-background/20 px-2 rounded flex items-center justify-center text-xs text-secondary-foreground">
-              <img src={logo} alt="Ski Solution 360" />
+              <img src={"/src/assets/logos/candanchu.png"} alt="Candanchu" />
             </div>
             <div className="h-16 bg-background/20 px-2 rounded flex items-center justify-center text-xs text-secondary-foreground">
-              <img src={logo} alt="Ski Solution 360" />
+              <img src={"/src/assets/logos/candanchu.png"} alt="Candanchu" />
             </div>
             <div className="h-16 bg-background/20 px-2 rounded flex items-center justify-center text-xs text-secondary-foreground">
-              <img src={logo} alt="Ski Solution 360" />
+              <img src={"/src/assets/logos/candanchu.png"} alt="Candanchu" />
             </div>
             <div className="h-16 bg-background/20 px-2 rounded flex items-center justify-center text-xs text-secondary-foreground">
-              <img src={logo} alt="Ski Solution 360" />
+              <img src={"/src/assets/logos/candanchu.png"} alt="Candanchu" />
             </div>
             <div className="h-16 bg-background/20 px-2 rounded flex items-center justify-center text-xs text-secondary-foreground">
-              <img src={logo} alt="Ski Solution 360" />
+              <img src={"/src/assets/logos/candanchu.png"} alt="Candanchu" />
             </div>
           </div>
-        </div>
+        </div>*/}
       </div>
     </section>
   );

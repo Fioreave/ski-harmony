@@ -22,42 +22,42 @@ import Navbar from "@/components/Navbar";
 
 const SoftwareGestionBikeParks = () => {
   const challenges = [
-    "Control de accesos para remontes reutilizando la infraestructura de invierno",
-    "Gestión del alquiler de bicicletas, cascos y protecciones con alta rotación",
-    "Reserva y cobro de clases o clinics de MTB",
-    "Evitar colas y saturaciones en momentos punta",
+    "Control de accesos usando remontes de invierno sin generar colas.",
+    "Gestión del alquiler de bicicletas, cascos y protecciones con alta rotación.",
+    "Reserva y cobro de clases o clinics de MTB de forma sencilla.",
+    "Evitar saturaciones en los momentos punta.",
     "Falta de visibilidad sobre el uso de pistas y afluencia diaria",
   ];
 
   const modules = [
     {
       name: "Ticketing & Dynamic Pricing",
-      desc: "Venta online de bike pass con precios por día, medio día o packs",
+      desc: "Venta online de bike passes por día, medio día o packs, con precios flexibles.",
       icon: <Calendar className="h-6 w-6" />,
     },
     {
       name: "Control de accesos RFID/QR",
-      desc: "Uso de los mismos tornos de invierno para entradas rápidas",
+      desc: "Usa los mismos tornos de invierno para entradas rápidas y sin colas.",
       icon: <CheckCircle className="h-6 w-6" />,
     },
     {
       name: "Alquiler & Inventario",
-      desc: "Gestión de bicis, tallas, cascos y protecciones con trazabilidad",
+      desc: "Gestiona bicicletas, tallas, cascos y protecciones con trazabilidad completa.",
       icon: <Bike className="h-6 w-6" />,
     },
     {
       name: "Escuela & Clases",
-      desc: "Reservas online de clinics, rutas guiadas o formación técnica",
+      desc: "Reservas online de clinics, rutas guiadas o formación técnica.",
       icon: <Users className="h-6 w-6" />,
     },
     {
       name: "BI & CRM",
-      desc: "Datos de afluencia, segmentación y comunicación a clientes",
+      desc: "Datos de afluencia, segmentación y comunicación con clientes",
       icon: <BarChart3 className="h-6 w-6" />,
     },
     {
       name: "Plataforma Core",
-      desc: "Coordinación central de todas las áreas en un único panel",
+      desc: "Coordinación central de todas las áreas desde un único panel.",
       icon: <Sun className="h-6 w-6" />,
     },
   ];
@@ -69,21 +69,16 @@ const SoftwareGestionBikeParks = () => {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-primary/10 text-[hsl(var(--ski-lime-dark))] px-4 py-2">
-              Bike Parks
-            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Software de Gestión para Bike Parks
             </h1>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8">
-              Gestiona accesos, alquiler y actividades de tu bike park con Ski
-              Solution 360. Optimiza ventas, control de aforo y operaciones en
-              temporada de verano.
+              Gestiona accesos, alquiler y actividades desde una sola
+              plataforma.
             </p>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Los bike parks son una gran oportunidad de ingresos fuera de la
-              temporada de nieve, pero requieren una gestión ágil y adaptada a
-              una operación muy dinámica.
+              Optimiza ventas, control de aforo y operaciones en verano. Menos
+              colas, más ingresos y todo bajo control.
             </p>
           </div>
         </div>
@@ -95,7 +90,7 @@ const SoftwareGestionBikeParks = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Los principales desafíos incluyen:
+                Conocemos los retos de los bike parks{" "}
               </h2>
               <div className="space-y-4">
                 {challenges.map((challenge, index) => (
@@ -113,15 +108,14 @@ const SoftwareGestionBikeParks = () => {
                   <Bike className="h-8 w-8 text-white" />
                 </div>
                 <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
-                  La solución: Ski Solution 360 adaptado al verano
+                  Una plataforma que convierte tu estación en bike park{" "}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-700">
-                  Ski Solution 360 permite reconvertir fácilmente la
-                  infraestructura y módulos de invierno para gestionar bike
-                  parks, maximizando el uso de recursos y aumentando la
-                  facturación estival.
+                  Ski Solution 360 adapta tus módulos de invierno para el
+                  verano, centralizando accesos, alquiler, reservas y análisis
+                  para maximizar recursos y facturación estival.
                 </p>
               </CardContent>
             </Card>
@@ -134,11 +128,8 @@ const SoftwareGestionBikeParks = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Módulos recomendados
+              Todo lo que necesitas, en un solo lugar{" "}
             </h2>
-            <p className="text-lg text-slate-600">
-              Reutiliza tu infraestructura de invierno para el verano
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -225,8 +216,12 @@ to-[hsl(var(--ski-lime-dark)/3)]
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Beneficios clave
+              Resultados que puedes esperar{" "}
             </h2>
+            <p className="text-lg text-slate-600">
+              Más ingresos, menos gestión y operaciones más fluidas durante toda
+              la temporada estival.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -248,8 +243,8 @@ to-[hsl(var(--ski-lime-dark)/3)]
               },
               {
                 icon: <BarChart3 className="h-8 w-8" />,
-                title: "Datos valiosos",
-                desc: "Analítica de temporada completa",
+                title: "Analítica completa",
+                desc: "Analítica para tomar decisiones rápidas",
               },
             ].map((benefit, index) => (
               <Card
@@ -334,17 +329,18 @@ to-[hsl(var(--ski-lime-dark)/3)]
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            ¿Quieres que tu estación siga generando ingresos todo el año?
+            ¿Quieres que tu estación siga generando ingresos todo el año?{" "}
           </h2>
           <p className="text-xl text-slate-300 mb-8">
-            Ski Solution 360 – Haz que tu verano sea tan rentable como el
-            invierno
+            Ski Solution 360 hace que tu verano sea tan rentable como el
+            invierno. Pide una demo y descubre en 20 minutos cómo mejorar
+            control, ventas y experiencia de tus clientes.
           </p>
           <Button
             size="lg"
             className="bg-primary hover:bg-[hsl(var(--ski-lime-dark))] text-slate px-8 py-3"
           >
-            Solicita una demo para bike parks
+            Solicita una demo
           </Button>
         </div>
       </section>

@@ -23,6 +23,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
   const { t } = useLanguage();
 
   const [submitting, setSubmitting] = React.useState(false);
+  const [acceptPrivacy, setAcceptPrivacy] = React.useState(false);
+  const [acceptMarketing, setAcceptMarketing] = React.useState(false);
 
   const modules = [
     "contactForm.moduleTicketing",
@@ -37,33 +39,74 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const formDataElement = e.target as HTMLFormElement;
-    const data = {
-      name: (formDataElement.querySelector("#name") as HTMLInputElement).value,
-      email: (formDataElement.querySelector("#email") as HTMLInputElement)?.value || "",
-      company: (formDataElement.querySelector("#company") as HTMLInputElement).value,
-      phone: (formDataElement.querySelector("#phone") as HTMLInputElement)?.value || "",
-      message: (formDataElement.querySelector("#information") as HTMLTextAreaElement).value,
-      modules: Array.from(
-        formDataElement.querySelectorAll("input[type=checkbox]:checked")
-      ).map((el) => (el as HTMLInputElement).id),
+    if (!acceptPrivacy) {
+      alert("Debes aceptar la política de privacidad");
+      return;
+    }
+
+    const form = e.target as HTMLFormElement;
+
+    const name = (form.querySelector("#name") as HTMLInputElement).value.trim();
+    const email = (
+      form.querySelector("#email") as HTMLInputElement
+    ).value.trim();
+    const company = (
+      form.querySelector("#company") as HTMLInputElement
+    ).value.trim();
+    const phone =
+      (form.querySelector("#phone") as HTMLInputElement)?.value.trim() || "";
+    const information = (
+      form.querySelector("#information") as HTMLTextAreaElement
+    ).value.trim();
+
+    const selectedModules = Array.from(
+      form.querySelectorAll<HTMLInputElement>("input[type=checkbox]:checked")
+    ).map((el) => el.id);
+
+    // Mensaje + módulos (si hay)
+    const message =
+      information +
+      (selectedModules.length
+        ? ` | Módulos: ${selectedModules.join(", ")}`
+        : "");
+
+    // ⚠️ Backend: name, email, message, type, privacy (y opcional phone/company)
+    const payload = {
+      type: "contact",
+      name,
+      email,
+      phone,
+      company,
+      message,
+      privacy: acceptPrivacy,
+      marketing_optin: acceptMarketing,
+      modules: selectedModules, // opcional; el backend lo admite como array
     };
 
     setSubmitting(true);
-    const result = await sendForm(data, "contact-form");
+    const result = await sendForm(payload, "contact-form"); // tu helper; el 2º arg es solo etiqueta
     setSubmitting(false);
 
     if (result.success) {
       alert("✅ Formulario enviado exitosamente. Te contactaremos pronto.");
+      form.reset();
+      setAcceptPrivacy(false);
+      setAcceptMarketing(false);
       onClose();
-      // Limpiar formulario
-      formDataElement.reset();
     } else {
       console.error("Error al enviar:", result);
-      if (result.status === 0) {
-        alert("Error de conexión. Verifica tu conexión a internet e inténtalo de nuevo.");
+      const errs = result?.error?.errors;
+      if (errs) {
+        const pretty = Object.entries(errs)
+          .map(([k, v]) => `${k}: ${(v as string[]).join(", ")}`)
+          .join("\n");
+        alert("Errores de validación:\n" + pretty);
       } else {
-        alert(`Error al enviar el formulario (HTTP ${result.status ?? "?"}). Inténtalo de nuevo.`);
+        alert(
+          `Error al enviar el formulario (HTTP ${
+            result.status ?? "?"
+          }). Inténtalo de nuevo.`
+        );
       }
     }
   };
@@ -98,6 +141,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
               <Label htmlFor="phone">Teléfono</Label>
               <Input id="phone" type="tel" />
             </div>
+
             <div className="space-y-2">
               <Label>{t("contactForm.modules")}</Label>
               <div className="space-y-2">
@@ -111,12 +155,47 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
                 ))}
               </div>
             </div>
+
             <div className="space-y-2">
               <Label htmlFor="information">
                 {t("contactForm.information")}
               </Label>
               <Textarea id="information" rows={4} required />
             </div>
+
+            {/* ✅ Consentimiento */}
+            <div className="space-y-2">
+              <div className="flex items-start space-x-2">
+                <Checkbox
+                  id="privacy"
+                  checked={acceptPrivacy}
+                  onCheckedChange={(c) => setAcceptPrivacy(Boolean(c))}
+                />
+                <Label htmlFor="privacy" className="text-sm leading-relaxed">
+                  Acepto la{" "}
+                  <a
+                    href="/privacidad"
+                    className="text-primary hover:underline"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    política de privacidad
+                  </a>{" "}
+                  y el tratamiento de mis datos personales *
+                </Label>
+              </div>
+              <div className="flex items-start space-x-2">
+                <Checkbox
+                  id="marketing"
+                  checked={acceptMarketing}
+                  onCheckedChange={(c) => setAcceptMarketing(Boolean(c))}
+                />
+                <Label htmlFor="marketing" className="text-sm leading-relaxed">
+                  Acepto recibir comunicaciones comerciales
+                </Label>
+              </div>
+            </div>
+
             <Button type="submit" disabled={submitting} className="w-full">
               {submitting
                 ? t("contactForm.sending") ?? "Enviando..."

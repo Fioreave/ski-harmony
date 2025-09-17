@@ -32,27 +32,27 @@ const SoftwareGestionMuseo = () => {
   const modules = [
     {
       name: "Ticketing",
-      desc: "Venta online de entradas individuales o paquetes",
+      desc: "Venta online de entradas individuales, paquetes o pases especiales.",
       icon: <Calendar className="h-6 w-6" />,
     },
     {
       name: "Control de accesos",
-      desc: "QR, RFID o códigos de barras para validar en segundos",
+      desc: "Validación rápida con QR, RFID o códigos de barras.",
       icon: <QrCode className="h-6 w-6" />,
     },
     {
-      name: "Escuela & Clases (adaptado)",
-      desc: "Gestión de visitas guiadas, talleres y actividades",
+      name: "Escuela & Clases",
+      desc: "Gestión de visitas guiadas, talleres y actividades educativas.",
       icon: <Users className="h-6 w-6" />,
     },
     {
       name: "CRM & BI",
-      desc: "Recogida de datos, segmentación y comunicación con visitantes",
+      desc: "Recogida de datos, segmentación y comunicación personalizada con visitantes.",
       icon: <Target className="h-6 w-6" />,
     },
     {
       name: "Plataforma Core",
-      desc: "Coordinación global de la operación y análisis de resultados",
+      desc: "Coordinación global de la operación y análisis de resultados.",
       icon: <Building className="h-6 w-6" />,
     },
   ];
@@ -60,8 +60,8 @@ const SoftwareGestionMuseo = () => {
   const benefits = [
     "Venta online 24/7 con pago anticipado",
     "Control de aforo en tiempo real",
-    "Gestión eficiente de grupos escolares",
-    "Análisis detallado del comportamiento de visitantes",
+    "Gestión eficiente de grupos escolares y talleres",
+    "Análisis detallado del comportamiento de los visitantes",
     "Campañas de fidelización personalizadas",
     "Reducción de colas y tiempo de espera",
   ];
@@ -83,32 +83,20 @@ const SoftwareGestionMuseo = () => {
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-4xl mx-auto mt-6">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-lime-100 text-lime-900 px-4 py-2">
-              Museos y Centros Culturales
-            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Software de Gestión para Museos y Centros Culturales
             </h1>
+            <h2 className="text-2xl md:text-xl text-slate-900 mb-4">
+              Gestiona venta de entradas, control de accesos y reservas desde
+              una sola plataforma.
+            </h2>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8">
-              Gestiona venta de entradas, control de accesos y reservas de
-              grupos con Ski Solution 360. Optimiza la experiencia del visitante
-              y la operación de tu museo.
+              Optimiza la experiencia del visitante y la operación de tu museo o
+              centro cultural. Menos colas, más control y visitantes
+              satisfechos.
             </p>
-          </div>
-
-          {/* Museum Types Grid */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {museumTypes.map((type, index) => (
-              <Badge
-                key={index}
-                variant="secondary"
-                className="bg-purple-100 text-purple-900 px-4 py-2"
-              >
-                {type}
-              </Badge>
-            ))}
           </div>
         </div>
       </section>
@@ -119,16 +107,11 @@ const SoftwareGestionMuseo = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Retos comunes en museos y centros culturales
+                Conocemos los retos de los museos y centros culturales{" "}
               </h2>
               <p className="text-lg text-slate-600 mb-6">
-                Los museos y centros culturales reciben un público variado,
-                gestionan actividades puntuales y grupos organizados, y
-                necesitan optimizar tanto la experiencia del visitante como la
-                operación interna.
-              </p>
-              <p className="text-lg text-slate-600 mb-8">
-                Entre los retos más habituales están:
+                Recibir público diverso y gestionar actividades simultáneas
+                requiere un sistema ágil y centralizado.
               </p>
               <div className="space-y-4">
                 {challenges.map((challenge, index) => (
@@ -146,14 +129,15 @@ const SoftwareGestionMuseo = () => {
                   <Building className="h-8 w-8 text-white" />
                 </div>
                 <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
-                  La solución: Ski Solution 360 para el sector cultural
+                  Una plataforma que conecta tu museo con tus visitantes{" "}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-700">
-                  Ski Solution 360 ofrece un sistema integral para digitalizar
-                  la venta de entradas, controlar accesos y gestionar reservas
-                  de grupos o actividades, todo desde una plataforma central.
+                  Ski Solution 360 digitaliza venta de entradas, controla
+                  accesos y gestiona reservas de grupos y actividades desde un
+                  único sistema, adaptado a la operación de tu museo o centro
+                  cultural.
                 </p>
               </CardContent>
             </Card>
@@ -166,11 +150,11 @@ const SoftwareGestionMuseo = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Módulos recomendados
-            </h2>
-            <p className="text-lg text-slate-600">
               Tecnología adaptada al sector cultural
-            </p>
+            </h2>
+            {/*<p className="text-lg text-slate-600">
+              Tecnología adaptada al sector cultural
+            </p>*/}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -201,7 +185,7 @@ const SoftwareGestionMuseo = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Beneficios para tu museo
+              Resultados que puedes esperar
             </h2>
           </div>
 
@@ -225,7 +209,7 @@ const SoftwareGestionMuseo = () => {
         </div>
       </section>
 
-      {/* Features Highlight */}
+      {/* Features Highlight 
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -278,7 +262,7 @@ const SoftwareGestionMuseo = () => {
             </Card>
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* Use Cases Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
@@ -299,17 +283,17 @@ const SoftwareGestionMuseo = () => {
               {
                 icon: <Users className="h-8 w-8" />,
                 title: "Visitas guiadas",
-                desc: "Reservas por horarios y idiomas",
+                desc: "Reservas por horarios e idiomas",
               },
               {
                 icon: <Building className="h-8 w-8" />,
                 title: "Eventos culturales",
-                desc: "Conciertos, conferencias y actividades",
+                desc: "Conciertos, conferencias y actividades especiales",
               },
               {
                 icon: <Target className="h-8 w-8" />,
                 title: "Aforo controlado",
-                desc: "Gestión de límites por sala o exposición",
+                desc: "Límites por sala o exposición para mayor seguridad",
               },
             ].map((useCase, index) => (
               <Card
@@ -338,19 +322,21 @@ const SoftwareGestionMuseo = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/95">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Digitaliza tu museo o centro cultural
           </h2>
           <p className="text-xl text-slate-300 mb-8">
-            Mejora la experiencia de tus visitantes y optimiza tu operación
+            Ski Solution 360 te ayuda a mejorar la experiencia de tus visitantes
+            y optimizar tu operación. Pide una demo y descubre en 20 minutos
+            cómo ahorrar tiempo, ganar control y fidelizar a tu público.{" "}
           </p>
           <Button
             size="lg"
             className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary hover:bg-purple-700 text-slate-950 px-8 py-3"
           >
-            Solicita una demo para tu museo
+            Solicita una demo
           </Button>
         </div>
       </section>

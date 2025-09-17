@@ -24,7 +24,7 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
   const challenges = [
     "Reservas desorganizadas entre múltiples canales",
     "Dificultad para asignar instructores y embarcaciones de forma óptima",
-    "Falta de control sobre el alquiler y mantenimiento de material",
+    "Falta de control sobre el alquiler y mantenimiento del material",
     "Cobros tardíos o problemas con la gestión de anticipos",
     "Escasa comunicación y seguimiento post-curso con los clientes",
   ];
@@ -36,13 +36,13 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
       icon: <Users className="h-6 w-6" />,
     },
     {
-      name: "Alquiler & Inventario",
-      desc: "Control de tablas, trajes, equipos de buceo o embarcaciones",
+      name: "Alquiler e Inventario",
+      desc: "Control de tablas, trajes, equipos de buceo o embarcaciones con mantenimiento preventivo.",
       icon: <Package className="h-6 w-6" />,
     },
     {
       name: "Ticketing",
-      desc: "Venta online de experiencias, salidas o paquetes combinados",
+      desc: "Venta online de experiencias, salidas o paquetes combinados.",
       icon: <Calendar className="h-6 w-6" />,
     },
     {
@@ -58,11 +58,11 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
   ];
 
   const advantages = [
-    "Simplificación de la gestión diaria y de las reservas",
-    "Asignación eficiente de instructores y recursos",
-    "Control de inventario y mantenimiento preventivo del equipo",
-    "Mayor conversión gracias a la venta anticipada online",
-    "Escalable a múltiples sedes o actividades",
+    "Gestión diaria y reservas simplificadas.",
+    "Asignación eficiente de instructores y embarcaciones.",
+    "Control de inventario y mantenimiento preventivo del material.",
+    "Mayor conversión con venta anticipada online.",
+    "Escalable a múltiples sedes o actividades.",
   ];
 
   const sports = [
@@ -83,30 +83,17 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-lime-100 text-lime-900 px-4 py-2">
-              Vela & Buceo
-            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Software de Gestión para Escuelas de Vela y Buceo
             </h1>
+            <h2 className="text-2xl md:text-xl text-slate-900 mb-4">
+              Gestiona reservas, cursos, monitores y alquiler de material desde
+              una sola plataforma.{" "}
+            </h2>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8">
-              Gestiona reservas, cursos, monitores y alquiler de material para
-              deportes acuáticos con Ski Solution 360. Ideal para escuelas de
-              vela, buceo, surf o kitesurf.
+              Centraliza vela, buceo, surf, kitesurf y más. Menos caos, más
+              control y una experiencia fluida para tus alumnos.
             </p>
-          </div>
-
-          {/* Sports Grid */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {sports.map((sport, index) => (
-              <Badge
-                key={index}
-                variant="secondary"
-                className="bg-lime-100 text-[hsl(var(--ski-lime-dark))] px-4 py-2"
-              >
-                {sport}
-              </Badge>
-            ))}
           </div>
         </div>
       </section>
@@ -117,16 +104,12 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                Retos comunes en escuelas náuticas y de buceo
+                Conocemos los retos de las escuelas náuticas y de buceo{" "}
               </h2>
               <p className="text-lg text-slate-600 mb-6">
-                Las escuelas de deportes acuáticos combinan cursos, alquiler de
-                material y en muchos casos venta de experiencias turísticas.
-                Esto implica coordinar personas, equipo y calendario en entornos
-                muy variables.
-              </p>
-              <p className="text-lg text-slate-600 mb-8">
-                Los principales desafíos son:
+                Coordinar cursos, alquiler de material y experiencias turísticas
+                puede ser complicado si no se tiene un sistema centralizado y
+                adaptado al entorno acuático.
               </p>
               <div className="space-y-4">
                 {challenges.map((challenge, index) => (
@@ -144,15 +127,15 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
                   <Waves className="h-8 w-8 text-white" />
                 </div>
                 <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
-                  La solución: Ski Solution 360 adaptado a deportes acuáticos
+                  Una plataforma que organiza tu escuela acuática{" "}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-slate-700">
-                  Ski Solution 360 ofrece una plataforma modular que cubre todas
-                  las necesidades operativas de una escuela de vela o buceo,
-                  desde la reserva online hasta el análisis de ocupación y
-                  ventas.
+                  Ski Solution 360 centraliza toda la operación: reservas
+                  online, asignación de instructores y embarcaciones, alquiler
+                  de material y análisis de ocupación y ventas. Todo en un solo
+                  lugar, modular y adaptable a tu escuela.
                 </p>
               </CardContent>
             </Card>
@@ -165,11 +148,8 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Módulos recomendados
+              Todo lo que necesitas para tu escuela náutica{" "}
             </h2>
-            <p className="text-lg text-slate-600">
-              Todo lo que necesitas para gestionar tu escuela náutica
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -200,8 +180,12 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Ventajas para escuelas de vela y buceo
+              Resultados que puedes esperar
             </h2>
+            <p className="text-lg text-slate-600 mb-8">
+              Simplifica tu gestión, optimiza recursos y mejora la experiencia
+              de tus alumnos.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -224,7 +208,7 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
         </div>
       </section>
 
-      {/* Features Highlight */}
+      {/* Features Highlight 
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -279,7 +263,7 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
             </Card>
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* Specialties Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
@@ -345,13 +329,15 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
             ¿Quieres que tu escuela sea más ágil y rentable?
           </h2>
           <p className="text-xl text-slate-300 mb-8">
-            Ski Solution 360 – La tecnología que navega contigo hacia el éxito
+            Ski Solution 360 te acompaña para centralizar reservas, cursos y
+            alquiler de material. Pide una demo y descubre en 20 minutos cómo
+            ganar tiempo, control y satisfacción de tus alumnos.{" "}
           </p>
           <Button
             size="lg"
             className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary hover:bg-blue-700 text-slate-950 px-8 py-3"
           >
-            Solicita una demo para tu escuela náutica
+            Solicita una demo
           </Button>
         </div>
       </section>

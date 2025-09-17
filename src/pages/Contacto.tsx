@@ -125,9 +125,15 @@ const Contacto = () => {
     } else {
       console.error("Error envío contacto:", result);
       if (result.status === 0) {
-        toast.error("Error de conexión. Verifica tu conexión a internet e inténtalo de nuevo.");
+        toast.error(
+          "Error de conexión. Verifica tu conexión a internet e inténtalo de nuevo."
+        );
       } else {
-        toast.error(`Error al enviar el formulario (HTTP ${result.status ?? "?"}). Inténtalo de nuevo.`);
+        toast.error(
+          `Error al enviar el formulario (HTTP ${
+            result.status ?? "?"
+          }). Inténtalo de nuevo.`
+        );
       }
     }
   };
@@ -345,28 +351,15 @@ const Contacto = () => {
                       <div>
                         <p className="font-medium">Información:</p>
                         <a
-                          href="mailto:info@bdrinformatica.com"
+                          href="mailto:hello@skisolution360.com"
                           className="text-primary hover:underline"
                         >
-                          info@bdrinformatica.com
+                          hello@skisolution360.com
                         </a>
                       </div>
                     </div>
 
-                    <div className="flex items-center space-x-3">
-                      <Mail className="h-5 w-5 text-primary" />
-                      <div>
-                        <p className="font-medium">Soporte:</p>
-                        <a
-                          href="mailto:soporte@bdrinformatica.com"
-                          className="text-primary hover:underline"
-                        >
-                          soporte@bdrinformatica.com
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="pt-4">
+                    {/*<div className="pt-4">
                       <p className="font-medium mb-3">
                         Nuestras redes sociales:
                       </p>
@@ -384,7 +377,7 @@ const Contacto = () => {
                           <Instagram className="h-4 w-4" />
                         </Button>
                       </div>
-                    </div>
+                    </div>*/}
                   </CardContent>
                 </Card>
 
