@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import rockClimbing from "@/assets/rock-climbing.jpg";
 
 const SoftwareGestionMuseo = () => {
   const challenges = [
@@ -280,8 +281,44 @@ const SoftwareGestionMuseo = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Cultural Experience Image */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                Experiencias culturales únicas
+              </h2>
+              <p className="text-lg text-slate-600 mb-6">
+                Los museos y centros culturales ofrecen experiencias únicas que combinan 
+                arte, historia y conocimiento. Con Ski Solution 360, puedes gestionar 
+                desde exposiciones permanentes hasta eventos especiales y actividades 
+                educativas.
+              </p>
+              <div className="flex items-center gap-2">
+                <BookOpen className="h-5 w-5 text-[hsl(var(--ski-lime-dark))]" />
+                <span className="font-semibold text-slate-900">
+                  Tecnología al servicio de la cultura
+                </span>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden">
+              <img 
+                src={rockClimbing} 
+                alt="Experiencia educativa y cultural" 
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end">
+                <div className="text-white p-6">
+                  <h3 className="text-lg font-bold">Actividades educativas</h3>
+                  <p className="text-sm opacity-90">Talleres, visitas guiadas y experiencias interactivas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      {/* Use Cases Section */}
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">

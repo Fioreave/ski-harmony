@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import mountainPanorama from "@/assets/mountain-panorama.jpg";
 
 const SoftwareGestionSkiResort = () => {
   const challenges = [
@@ -41,8 +42,16 @@ const SoftwareGestionSkiResort = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={mountainPanorama} 
+            alt="Panorámica de montañas nevadas" 
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-50/90 to-blue-50/90"></div>
+        </div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <Badge className="mb-4 bg-primary/10 border-primary text-primary px-4 py-2">
               Grandes Resorts

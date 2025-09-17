@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import familyWaterPlay from "@/assets/family-water-play.jpg";
 
 const SoftwareGestionJardinesNieve = () => {
   const challenges = [
@@ -216,6 +217,37 @@ const SoftwareGestionJardinesNieve = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Family Fun Image Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="relative rounded-2xl overflow-hidden">
+              <img 
+                src={familyWaterPlay} 
+                alt="Familia divirtiéndose con juegos de agua" 
+                className="w-full h-64 object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                Diversión familiar organizada
+              </h3>
+              <p className="text-slate-600 mb-6">
+                Los jardines de nieve son espacios especiales donde los más pequeños 
+                disfrutan de la montaña de forma segura y divertida. Con Ski Solution 360, 
+                mantienes el control total de grupos, horarios y la seguridad de cada niño.
+              </p>
+              <div className="flex items-center gap-2">
+                <Heart className="h-5 w-5 text-[hsl(var(--ski-lime-dark))]" />
+                <span className="font-semibold text-slate-900">
+                  Diseñado para el cuidado infantil
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

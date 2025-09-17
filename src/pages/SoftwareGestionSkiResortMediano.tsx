@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import mountainPanorama from "@/assets/mountain-panorama.jpg";
 
 const BRAND = "#BFFF00"; // lima
 const BRAND_HOVER = "#A6E600"; // lima más oscuro para hover/accesibilidad
@@ -83,6 +84,29 @@ const SoftwareGestionSkiResortMediano = () => {
               que ofrecer una experiencia moderna y profesional, pero sin los
               recursos de los grandes resorts.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mountain View Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="relative rounded-2xl overflow-hidden mb-16">
+            <img 
+              src={mountainPanorama} 
+              alt="Vista panorámica de montañas nevadas - Resort mediano" 
+              className="w-full h-64 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/20 flex items-center">
+              <div className="text-white p-8">
+                <h2 className="text-3xl font-bold mb-4">
+                  Para resorts que buscan crecer sin complicaciones
+                </h2>
+                <p className="text-lg opacity-90">
+                  Aprovecha toda la infraestructura de montaña con tecnología adaptada a tu escala
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

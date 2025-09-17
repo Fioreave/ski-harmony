@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import mountainPanorama from "@/assets/mountain-panorama.jpg";
 
 const SoftwareGestionEscuelasEsqui = () => {
   const challenges = [
@@ -234,8 +235,29 @@ const SoftwareGestionEscuelasEsqui = () => {
         </div>
       </section>
 
-      {/* Features Highlight */}
+      {/* Ski Slopes Image Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto mb-16">
+          <div className="relative rounded-2xl overflow-hidden">
+            <img 
+              src={mountainPanorama} 
+              alt="Pistas de esquí en montañas nevadas" 
+              className="w-full h-80 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end">
+              <div className="text-white p-8 w-full">
+                <h3 className="text-2xl font-bold mb-2">
+                  Enseña en las mejores condiciones
+                </h3>
+                <p className="text-lg opacity-90">
+                  Tu escuela de esquí organizada y profesional con tecnología de vanguardia
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      {/* Features Highlight */}
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="text-center border-0 shadow-md ">

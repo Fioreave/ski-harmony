@@ -19,6 +19,9 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import windsurf from "@/assets/windsurf.jpg";
+import kayakCouple from "@/assets/kayak-couple.jpg";
+import dinghyCouple from "@/assets/dinghy-couple.jpg";
 
 const SoftwareGestionEscuelasVelaBuceo = () => {
   const challenges = [
@@ -107,6 +110,58 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
                 {sport}
               </Badge>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Water Sports Gallery */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Deportes acuáticos para todos los niveles
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="relative rounded-2xl overflow-hidden group">
+              <img 
+                src={windsurf} 
+                alt="Windsurf en acción" 
+                className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                <div className="text-white p-6">
+                  <h3 className="text-xl font-bold mb-2">Windsurf</h3>
+                  <p className="text-sm opacity-90">Cursos desde iniciación hasta perfeccionamiento</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden group">
+              <img 
+                src={kayakCouple} 
+                alt="Pareja en kayak" 
+                className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                <div className="text-white p-6">
+                  <h3 className="text-xl font-bold mb-2">Kayak</h3>
+                  <p className="text-sm opacity-90">Experiencias en pareja y actividades familiares</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden group">
+              <img 
+                src={dinghyCouple} 
+                alt="Pareja navegando en bote" 
+                className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                <div className="text-white p-6">
+                  <h3 className="text-xl font-bold mb-2">Vela</h3>
+                  <p className="text-sm opacity-90">Navegación recreativa y titulaciones oficiales</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

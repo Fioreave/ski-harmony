@@ -19,6 +19,9 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import rockClimbing from "@/assets/rock-climbing.jpg";
+import raftingAction from "@/assets/rafting-action.jpg";
+import raftingTeam from "@/assets/rafting-team.jpg";
 
 const SoftwareGestionEscuelaAventura = () => {
   const challenges = [
@@ -160,8 +163,53 @@ const SoftwareGestionEscuelaAventura = () => {
         </div>
       </section>
 
-      {/* Case Study Section */}
+      {/* Adventure Activities Gallery */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="relative rounded-2xl overflow-hidden group">
+              <img 
+                src={rockClimbing} 
+                alt="Escalada en roca con instructor" 
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                <div className="text-white p-4">
+                  <h3 className="font-bold">Escalada</h3>
+                  <p className="text-sm opacity-90">Rutas guiadas y cursos</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden group">
+              <img 
+                src={raftingAction} 
+                alt="Rafting en aguas bravas" 
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                <div className="text-white p-4">
+                  <h3 className="font-bold">Rafting</h3>
+                  <p className="text-sm opacity-90">Aventura en aguas bravas</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden group">
+              <img 
+                src={raftingTeam} 
+                alt="Equipo de rafting en el río" 
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                <div className="text-white p-4">
+                  <h3 className="font-bold">Multiaventura</h3>
+                  <p className="text-sm opacity-90">Experiencias en grupo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      {/* Case Study Section */}
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">

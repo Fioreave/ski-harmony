@@ -19,6 +19,8 @@ import {
 } from "lucide-react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import mountainBikeForest from "@/assets/mountain-bike-forest.jpg";
+import bikeJump from "@/assets/bike-jump.jpg";
 
 const SoftwareGestionBikeParks = () => {
   const challenges = [
@@ -65,9 +67,17 @@ const SoftwareGestionBikeParks = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-orange-50">
       <Navbar />
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      {/* Hero Section with Background */}
+      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={bikeJump} 
+            alt="Ciclista saltando en mountain bike" 
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-50/90 to-orange-50/90"></div>
+        </div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-primary/10 text-[hsl(var(--ski-lime-dark))] px-4 py-2">
               Bike Parks
@@ -85,6 +95,37 @@ const SoftwareGestionBikeParks = () => {
               temporada de nieve, pero requieren una gestión ágil y adaptada a
               una operación muy dinámica.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mountain Biking Image Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                Aventura todo el año
+              </h2>
+              <p className="text-lg text-slate-600 mb-6">
+                Convierte tu estación de esquí en un destino de mountain bike durante 
+                el verano. Aprovecha remontes, senderos y toda la infraestructura 
+                existente para crear una experiencia única.
+              </p>
+              <div className="flex items-center gap-2">
+                <Bike className="h-5 w-5 text-[hsl(var(--ski-lime-dark))]" />
+                <span className="font-semibold text-slate-900">
+                  Misma tecnología, nueva aventura
+                </span>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden">
+              <img 
+                src={mountainBikeForest} 
+                alt="Mountain biker en sendero de bosque" 
+                className="w-full h-64 object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
