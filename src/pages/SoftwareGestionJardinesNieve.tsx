@@ -72,7 +72,7 @@ const SoftwareGestionJardinesNieve = () => {
       <section className="pt-24 pb-16 px-4 bg-white sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-5xl leading-relax font-bold mt-20 text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 mt-20">
               Software de Gestión <br />
               para Jardines de Nieve
             </h1>

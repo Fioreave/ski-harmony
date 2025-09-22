@@ -69,7 +69,7 @@ const SoftwareGestionBikeParks = () => {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl mt-20 font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 mt-20">
               Software de Gestión para Bike Parks
             </h1>
             <p className="text-2xl text-slate-600 max-w-4xl mx-auto mb-2">

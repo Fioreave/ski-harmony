@@ -81,10 +81,10 @@ const SoftwareGestionEscuelaAventura = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-lime-50">
       <Navbar />
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 bg-white sm:px-6 lg:px-8 mt-20">
+      <section className="pt-24 pb-16 px-4 bg-white sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+          <div className="text-center mb-12 mt-20">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Software de Gestión para <br /> Actividades de Aventura y Outdoor
             </h1>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-4">

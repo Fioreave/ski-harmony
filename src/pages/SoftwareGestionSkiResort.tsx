@@ -45,7 +45,7 @@ const SoftwareGestionSkiResort = () => {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 mt-20">
               Software de Gestión para Grandes Resorts de Esquí
             </h1>
             <h2 className="text-2xl font-medium text-slate-900 mt-4">

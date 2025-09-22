@@ -76,8 +76,8 @@ const SoftwareGestionSkiResortMediano = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl pt-6 md:text-5xl font-bold text-slate-900 mb-4">
+          <div className="text-center mb-12 mt-20">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Software de Gestión para Resorts de Esquí
             </h1>
             <h2 className="text-2xl md:text-xl text-slate-900 mb-4">
