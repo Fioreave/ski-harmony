@@ -325,19 +325,19 @@ const SoftwareGestionJardinesNieve = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-3xl font-bold text-black mb-6">
             ¿Tu jardín de nieve necesita orden y agilidad?
           </h2>
-          <p className="text-xl text-slate-300 mb-8">
+          <p className="text-xl text-black/80 mb-8">
             Organiza tus grupos, reservas y pagos en minutos. Pide una demo y
             descubre en 20 minutos cómo ganar tiempo y control sin
             complicaciones.
           </p>
           <Button
             size="lg"
-            className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary text-white px-8 py-3"
+            className="bg-black text-primary hover:bg-gray-900 px-8 py-3"
           >
             Solicita una demo
           </Button>

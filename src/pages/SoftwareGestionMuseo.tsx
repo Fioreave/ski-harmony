@@ -340,19 +340,19 @@ const SoftwareGestionMuseo = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/95">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-3xl font-bold text-black mb-6">
             Digitaliza tu museo o centro cultural
           </h2>
-          <p className="text-xl text-slate-300 mb-8">
+          <p className="text-xl text-black/80 mb-8">
             Ski Solution 360 te ayuda a mejorar la experiencia de tus visitantes
             y optimizar tu operación. Pide una demo y descubre en 20 minutos
             cómo ahorrar tiempo, ganar control y fidelizar a tu público.{" "}
           </p>
           <Button
             size="lg"
-            className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary hover:bg-purple-700 text-slate-950 px-8 py-3"
+            className="bg-black text-primary hover:bg-gray-900 px-8 py-3"
           >
             Solicita una demo
           </Button>

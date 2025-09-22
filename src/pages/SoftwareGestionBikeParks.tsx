@@ -343,19 +343,19 @@ to-[hsl(var(--ski-lime-dark)/3)]
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-3xl font-bold text-black mb-6">
             ¿Quieres que tu estación siga generando ingresos todo el año?{" "}
           </h2>
-          <p className="text-xl text-slate-300 mb-8">
+          <p className="text-xl text-black/80 mb-8">
             Ski Solution 360 hace que tu verano sea tan rentable como el
             invierno. Pide una demo y descubre en 20 minutos cómo mejorar
             control, ventas y experiencia de tus clientes.
           </p>
           <Button
             size="lg"
-            className="bg-primary hover:bg-[hsl(var(--ski-lime-dark))] text-slate px-8 py-3"
+            className="bg-black text-primary hover:bg-gray-900 px-8 py-3"
           >
             Solicita una demo
           </Button>

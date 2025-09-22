@@ -364,19 +364,19 @@ const SoftwareGestionEscuelasEsqui = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-3xl font-bold text-black mb-6">
             ¿Listos para dar clase sin perder el control?
           </h2>
-          <p className="text-xl text-slate-300 mb-8">
+          <p className="text-xl text-black/80 mb-8">
             Tu escuela organizada, conectada y lista para crecer. Pide una demo
             y descubre en 20 minutos cómo simplificar la gestión y mejorar la
             experiencia de tus alumnos.{" "}
           </p>
           <Button
             size="lg"
-            className="bg-[hsl(var(--ski-lime-dark))] hover:bg-green-700 text-white px-8 py-3"
+            className="bg-black text-primary hover:bg-gray-900 px-8 py-3"
           >
             Solicita una demo
           </Button>

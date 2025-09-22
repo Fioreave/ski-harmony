@@ -329,19 +329,19 @@ const SoftwareGestionEscuelaAventura = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-950 ">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-3xl font-bold text-black mb-6">
             ¿Listo para vivir tu temporada más organizada?
           </h2>
-          <p className="text-xl text-slate-300 mb-8">
+          <p className="text-xl text-black/80 mb-8">
             Centraliza tus actividades, reservas y pagos con Ski Solution 360.
             Pide una demo y descubre en 20 minutos cómo ganar tiempo, control y
             satisfacción de tus clientes.
           </p>
           <Button
             size="lg"
-            className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary hover:bg-emerald-700 text-black px-8 py-3"
+            className="bg-black text-primary hover:bg-gray-900 px-8 py-3"
           >
             Solicita una demo
           </Button>

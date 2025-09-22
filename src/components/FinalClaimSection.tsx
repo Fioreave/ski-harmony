@@ -11,7 +11,7 @@ const FinalClaimSection = () => {
     <>
       {showDemoForm && <DemoRequestForm onClose={closeDemoForm} />}
       {showContactForm && <ContactForm onClose={closeContactForm} />}
-    <section className="py-20 bg-primary text-primary-foreground">
+    <section className="py-20 bg-primary text-black">
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
@@ -27,7 +27,7 @@ const FinalClaimSection = () => {
             <Button
               size="lg"
               variant="secondary"
-              className="bg-background text-foreground hover:bg-background/90 px-8 py-4 text-lg font-medium"
+              className="bg-black text-primary hover:bg-gray-900 px-8 py-4 text-lg font-medium"
               onClick={openDemoForm}
             >
               Solicita una demo gratuita
@@ -36,7 +36,7 @@ const FinalClaimSection = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 text-lg"
+              className="border-black text-black hover:bg-black hover:text-primary px-8 py-4 text-lg"
               onClick={openContactForm}
             >
               Contacta con nosotros

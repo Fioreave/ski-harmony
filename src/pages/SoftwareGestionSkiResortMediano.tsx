@@ -284,27 +284,18 @@ const SoftwareGestionSkiResortMediano = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900 p-10">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary p-10">
         <div className="max-w-4xl mx-auto text-center p-10">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-3xl font-bold text-black mb-6">
             ¿Lo vemos con tu caso?{" "}
           </h2>
-          <p className="text-xl text-slate-300 mb-4">
+          <p className="text-xl text-black/80 mb-4">
             Te preparamos una demostración adaptada a tu estación para que
             valores el impacto antes de decidir.
           </p>
           <Button
             size="lg"
-            className="text-slate-900 font-semibold px-8 py-3 border border-lime-300 hover:border-lime-400"
-            style={{ backgroundColor: BRAND }}
-            onMouseEnter={(e) =>
-              ((e.currentTarget as HTMLButtonElement).style.backgroundColor =
-                BRAND_HOVER)
-            }
-            onMouseLeave={(e) =>
-              ((e.currentTarget as HTMLButtonElement).style.backgroundColor =
-                BRAND)
-            }
+            className="bg-black text-primary hover:bg-gray-900 px-8 py-3"
           >
             Solicita una demo
           </Button>
