@@ -77,12 +77,7 @@ const PuntoVentaRestauracion = () => {
 
         <div className="container-custom relative z-10">
           <div className="text-center">
-            <Badge
-              variant="outline"
-              className="mb-6 border-accent text-accent bg-accent/10 font-semibold px-4 py-2"
-            >
-              F&B & Retail
-            </Badge>
+            
             <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
               Ventas y stock <span className="text-accent">unificados</span>{" "}
               para tu estación
