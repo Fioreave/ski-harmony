@@ -69,16 +69,15 @@ const SoftwareGestionBikeParks = () => {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            <h1 className="text-4xl md:text-5xl mt-20 font-bold text-slate-900 mb-6">
               Software de Gestión para Bike Parks
             </h1>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8">
-              Gestiona accesos, alquiler y actividades desde una sola
-              plataforma.
+            <p className="text-2xl text-slate-600 max-w-4xl mx-auto mb-2">
+              Accesos, alquiler y actividades desde una sola plataforma.
             </p>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Optimiza ventas, control de aforo y operaciones en verano. Menos
-              colas, más ingresos y todo bajo control.
+            <p className="text-2xl text-slate-600 max-w-3xl mx-auto">
+              Optimiza ventas, control de aforo y operaciones en verano. <br />{" "}
+              Menos colas, más ingresos y todo bajo control.
             </p>
           </div>
         </div>
@@ -102,23 +101,19 @@ const SoftwareGestionBikeParks = () => {
               </div>
             </div>
 
-            <Card className="bg-primary/5 border-0 shadow-xl">
-              <CardHeader>
-                <div className="bg-[hsl(var(--ski-lime-dark))] w-16 h-16 rounded-xl flex items-center justify-center mb-4">
-                  <Bike className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
-                  Una plataforma que convierte tu estación en bike park{" "}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-700">
-                  Ski Solution 360 adapta tus módulos de invierno para el
-                  verano, centralizando accesos, alquiler, reservas y análisis
-                  para maximizar recursos y facturación estival.
-                </p>
-              </CardContent>
-            </Card>
+            {/* Columna imagen + card */}
+            <div className="space-y-6">
+              {/* Imagen (cámbiala por la que prefieras) */}
+              <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5">
+                <img
+                  src="/img/bike-park.jpg"
+                  alt="Clase de esquí para niños con monitor"
+                  className="h-64 w-full object-cover sm:h-80 lg:h-[420px]"
+                  loading="lazy"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-white/10" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -189,18 +184,18 @@ to-[hsl(var(--ski-lime-dark)/3)]
                 </div>
                 <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6">
                   <div className="text-center">
-                    <div className="text-4xl text-slate-700 font-bold mb-2">
+                    <div className="text-4xl text-white font-bold mb-2">
                       300%
                     </div>
-                    <div className="text-sm text-slate-700">
+                    <div className="text-sm text-white">
                       Aumento ingresos verano
                     </div>
                   </div>
                   <div className="text-center mt-4">
-                    <div className="text-4xl font-bold mb-2 text-slate-700">
+                    <div className="text-4xl font-bold mb-2 text-white">
                       60%
                     </div>
-                    <div className="text-sm text-slate-700">
+                    <div className="text-sm text-white">
                       Menos tiempo gestión
                     </div>
                   </div>
@@ -267,6 +262,28 @@ to-[hsl(var(--ski-lime-dark)/3)]
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <Card className="bg-white border-0 shadow-xl">
+            <CardHeader>
+              <div className="bg-[hsl(var(--ski-lime-dark))] w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <Bike className="h-8 w-8 text-white" />
+              </div>
+              <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
+                Una plataforma que convierte tu estación en bike park{" "}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-slate-700">
+                Ski Solution 360 adapta tus módulos de invierno para el verano,
+                centralizando accesos, alquiler, reservas y análisis para
+                maximizar recursos y facturación estival.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

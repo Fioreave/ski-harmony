@@ -81,11 +81,11 @@ const SoftwareGestionEscuelaAventura = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-lime-50">
       <Navbar />
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-24 pb-16 px-4 bg-white sm:px-6 lg:px-8 mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Software de Gestión para Actividades de Aventura y Outdoor
+              Software de Gestión para <br /> Actividades de Aventura y Outdoor
             </h1>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-4">
               Gestiona reservas, grupos, alquiler y pagos desde una sola
@@ -125,24 +125,19 @@ const SoftwareGestionEscuelaAventura = () => {
               </div>
             </div>
 
-            <Card className="bg-white border-0 shadow-xl">
-              <CardHeader>
-                <div className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary w-16 h-16 rounded-xl flex items-center justify-center mb-4">
-                  <Mountain className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
-                  Una plataforma que organiza tu centro de aventura{" "}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-700">
-                  Ski Solution 360 centraliza todas tus actividades en un solo
-                  lugar: reservas online, asignación de guías y control de
-                  inventario de equipo, adaptándose a la estacionalidad de tu
-                  negocio.
-                </p>
-              </CardContent>
-            </Card>
+            {/* Columna imagen + card */}
+            <div className="space-y-6">
+              {/* Imagen (cámbiala por la que prefieras) */}
+              <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5">
+                <img
+                  src="/img/act-outdoor.jpg"
+                  alt="Actividades de Aventura y Outdoor"
+                  className="h-64 w-full object-cover sm:h-80 lg:h-[420px]"
+                  loading="lazy"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-white/10" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -173,7 +168,7 @@ const SoftwareGestionEscuelaAventura = () => {
                     Aventura Total - Centro Multiaventura
                   </p>
                 </div>
-                <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6">
+                <div className="bg-black/10 backdrop-blur-sm rounded-xl p-6">
                   <div className="text-center">
                     <div className="text-4xl font-bold mb-2">80%</div>
                     <div className="text-sm text-lime-100">
@@ -228,23 +223,46 @@ const SoftwareGestionEscuelaAventura = () => {
         </div>
       </section>
 
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50">
+        <div className="max-w-6xl mx-auto">
+          <Card className="bg-white border-0 shadow-xl">
+            <CardHeader>
+              <div className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <Mountain className="h-8 w-8 text-white" />
+              </div>
+              <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
+                Una plataforma que organiza tu centro de aventura{" "}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-slate-700">
+                Ski Solution 360 centraliza todas tus actividades en un solo
+                lugar: reservas online, asignación de guías y control de
+                inventario de equipo, adaptándose a la estacionalidad de tu
+                negocio.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Advantages Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 bg-white sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Ventajas</h2>
+            <h2 className="text-3xl font-bold text-black mb-4">Ventajas</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {advantages.map((advantage, index) => (
               <Card
                 key={index}
-                className="border-0 bg-gradient-to-br from-green-50 to-emerald-50 hover:shadow-md transition-shadow"
+                className="border-0 bg-white shadow-md hover:shadow-md transition-shadow"
               >
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-green-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="h-5 w-5 text-green-600" />
+                    <div className="bg-lime-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <CheckCircle className="h-5 w-5 text-lime-400" />
                     </div>
                     <p className="text-slate-700 font-medium">{advantage}</p>
                   </div>

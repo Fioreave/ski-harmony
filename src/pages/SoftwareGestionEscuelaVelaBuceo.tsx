@@ -80,26 +80,27 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-lime-50">
       <Navbar />
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-24 pb-16 px-4 bg-white sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Software de Gestión para Escuelas de Vela y Buceo
+          <div className="text-center mb-12 mt-20">
+            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
+              Software de Gestión para <br />
+              Escuelas de Vela y Buceo
             </h1>
             <h2 className="text-2xl md:text-xl text-slate-900 mb-4">
               Gestiona reservas, cursos, monitores y alquiler de material desde
               una sola plataforma.{" "}
             </h2>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8">
-              Centraliza vela, buceo, surf, kitesurf y más. Menos caos, más
-              control y una experiencia fluida para tus alumnos.
+              Centraliza vela, buceo, surf, kitesurf y más. Más control y una
+              experiencia fluida para tus alumnos.
             </p>
           </div>
         </div>
       </section>
 
       {/* Challenges Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 bg-white sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -120,25 +121,19 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
                 ))}
               </div>
             </div>
-
-            <Card className="bg-white border-0 shadow-xl">
-              <CardHeader>
-                <div className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary w-16 h-16 rounded-xl flex items-center justify-center mb-4">
-                  <Waves className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
-                  Una plataforma que organiza tu escuela acuática{" "}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-700">
-                  Ski Solution 360 centraliza toda la operación: reservas
-                  online, asignación de instructores y embarcaciones, alquiler
-                  de material y análisis de ocupación y ventas. Todo en un solo
-                  lugar, modular y adaptable a tu escuela.
-                </p>
-              </CardContent>
-            </Card>
+            {/* Columna imagen + card */}
+            <div className="space-y-6">
+              {/* Imagen (cámbiala por la que prefieras) */}
+              <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5">
+                <img
+                  src="/img/vela-buceo.jpg"
+                  alt="Actividades de Vela y Buceo"
+                  className="h-64 w-full object-cover sm:h-80 lg:h-[420px]"
+                  loading="lazy"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-white/10" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -175,6 +170,29 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
         </div>
       </section>
 
+      <section className="py-16 bg-white px-4 sm:px-6 lg:px-8 bg-slate-50">
+        <div className="max-w-6xl mx-auto">
+          <Card className="bg-white border-0 shadow-xl">
+            <CardHeader>
+              <div className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <Waves className="h-8 w-8 text-white" />
+              </div>
+              <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
+                Una plataforma que organiza tu escuela acuática{" "}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-slate-700">
+                Ski Solution 360 centraliza toda la operación: reservas online,
+                asignación de instructores y embarcaciones, alquiler de material
+                y análisis de ocupación y ventas. Todo en un solo lugar, modular
+                y adaptable a tu escuela.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Advantages Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50">
         <div className="max-w-6xl mx-auto">
@@ -192,7 +210,7 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
             {advantages.map((advantage, index) => (
               <Card
                 key={index}
-                className="border-0 bg-primary/5 hover:shadow-md transition-shadow"
+                className="border-0 bg-white hover:shadow-md transition-shadow"
               >
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">

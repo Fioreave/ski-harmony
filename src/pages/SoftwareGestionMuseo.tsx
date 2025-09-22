@@ -82,11 +82,12 @@ const SoftwareGestionMuseo = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto mt-6">
+      <section className="pt-24 pb-16 px-4 bg-white sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto mt-20">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Software de Gestión para Museos y Centros Culturales
+              Software de Gestión para <br />
+              Museos y Centros Culturales
             </h1>
             <h2 className="text-2xl md:text-xl text-slate-900 mb-4">
               Gestiona venta de entradas, control de accesos y reservas desde
@@ -102,7 +103,7 @@ const SoftwareGestionMuseo = () => {
       </section>
 
       {/* Challenges Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-white px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -123,24 +124,19 @@ const SoftwareGestionMuseo = () => {
               </div>
             </div>
 
-            <Card className="bg-white border-0 shadow-xl">
-              <CardHeader>
-                <div className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary w-16 h-16 rounded-xl flex items-center justify-center mb-4">
-                  <Building className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
-                  Una plataforma que conecta tu museo con tus visitantes{" "}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-700">
-                  Ski Solution 360 digitaliza venta de entradas, controla
-                  accesos y gestiona reservas de grupos y actividades desde un
-                  único sistema, adaptado a la operación de tu museo o centro
-                  cultural.
-                </p>
-              </CardContent>
-            </Card>
+            {/* Columna imagen + card */}
+            <div className="space-y-6">
+              {/* Imagen (cámbiala por la que prefieras) */}
+              <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5">
+                <img
+                  src="/img/museos.jpg"
+                  alt="Museos y Centros Culturales"
+                  className="h-64 w-full object-cover sm:h-80 lg:h-[420px]"
+                  loading="lazy"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-white/10" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -177,6 +173,28 @@ const SoftwareGestionMuseo = () => {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white px-4 sm:px-6 lg:px-8 bg-slate-50">
+        <div className="max-w-6xl mx-auto">
+          <Card className="bg-white border-0 shadow-xl">
+            <CardHeader>
+              <div className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <Building className="h-8 w-8 text-white" />
+              </div>
+              <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
+                Una plataforma que conecta tu museo con tus visitantes{" "}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-slate-700">
+                Ski Solution 360 digitaliza venta de entradas, controla accesos
+                y gestiona reservas de grupos y actividades desde un único
+                sistema, adaptado a la operación de tu museo o centro cultural.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

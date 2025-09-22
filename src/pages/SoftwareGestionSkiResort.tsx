@@ -116,31 +116,37 @@ const SoftwareGestionSkiResort = () => {
             </h3>
           </div>
 
-          <div className="bg-primary text-primary-foreground rounded-2xl p-8 md:p-12 text-white">
+          <div
+            className="bg-gradient-to-l
+             from-[hsl(var(--primary))]
+             via-[hsl(var(--ski-lime-dark))]
+             to-[hsl(var(--ski-lime-dark))]
+             border-0 text-white text-primary-foreground rounded-2xl p-8 md:p-12 text-white"
+          >
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
               <div className="lg:col-span-2">
-                <blockquote className="text-xl text-black md:text-2xl font-medium mb-6">
+                <blockquote className="text-xl md:text-2xl font-medium mb-6">
                   "Desde que integramos Ski Solution 360, reducimos un 40% el
                   tiempo medio en taquillas y aumentamos un 25% la venta
                   anticipada online. Ahora tenemos visibilidad total de cada
                   área del resort en tiempo real."
                 </blockquote>
-                <p className="text-gray-600">
+                <p className="text-white text-medium text-xl">
                   Resultado directo de aplicar Ski Solution 360
                 </p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <div className="text-center">
-                  <div className="text-4xl text-black font-bold mb-2">40%</div>
-                  <div className="text-sm text-gray-600">
+                  <div className="text-4xl text-black text-white font-bold mb-2">
+                    40%
+                  </div>
+                  <div className="text-sm text-white">
                     Reducción tiempo taquillas
                   </div>
                 </div>
                 <div className="text-center mt-4">
-                  <div className="text-4xl text-black font-bold mb-2">25%</div>
-                  <div className="text-sm text-gray-600">
-                    Aumento venta online
-                  </div>
+                  <div className="text-4xl text-white font-bold mb-2">25%</div>
+                  <div className="text-sm text-white">Aumento venta online</div>
                 </div>
               </div>
             </div>

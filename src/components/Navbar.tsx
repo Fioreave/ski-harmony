@@ -195,7 +195,7 @@ const Navbar = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              {/* Casos de éxito */}
+              {/* Casos de éxito 
               <NavigationMenuItem>
                 <NavigationMenuLink
                   asChild
@@ -203,7 +203,7 @@ const Navbar = () => {
                 >
                   <Link to="/casos-exito">{t("nav.success-stories")}</Link>
                 </NavigationMenuLink>
-              </NavigationMenuItem>
+              </NavigationMenuItem>*/}
 
               {/* Recursos */}
               <NavigationMenuItem>
@@ -444,13 +444,13 @@ const Navbar = () => {
                   >
                     {t("nav.blog")}
                   </Link>
-                  <Link
+                  {/*<Link
                     to="/casos-exito"
                     className="block py-2 hover:text-primary font-medium"
                     onClick={closeMobileMenu}
                   >
                     {t("nav.success-stories")}
-                  </Link>
+                  </Link>*/}
                   <Link
                     to="/partners"
                     className="block py-2 hover:text-primary font-medium"

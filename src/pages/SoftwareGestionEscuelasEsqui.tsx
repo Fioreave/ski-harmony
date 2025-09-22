@@ -74,7 +74,7 @@ const SoftwareGestionEscuelasEsqui = () => {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mt-6 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mt-20 mb-6">
               Gestiona reservas, clases, monitores y pagos desde una sola
               plataforma{" "}
             </h1>
@@ -87,7 +87,7 @@ const SoftwareGestionEscuelasEsqui = () => {
         </div>
       </section>
 
-      {/* Challenges Section */}
+      {/* Challenges Section
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -131,6 +131,48 @@ const SoftwareGestionEscuelasEsqui = () => {
         </div>
       </section>
 
+
+      {/* Challenges Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Columna de texto */}
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                Conocemos los retos habituales en las escuelas de esquí{" "}
+              </h2>
+              <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8">
+                Sabemos que manejar cientos de alumnos y coordinar monitores
+                puede ser un caos cuando se usan varios sistemas o procesos
+                manuales.
+              </p>
+              <div className="space-y-4">
+                {challenges.map((challenge, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-[hsl(var(--ski-lime-dark))] rounded-full mt-3 flex-shrink-0"></div>
+                    <p className="text-slate-600">{challenge}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Columna imagen + card */}
+            <div className="space-y-6">
+              {/* Imagen (cámbiala por la que prefieras) */}
+              <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5">
+                <img
+                  src="/img/escuela-ski.jpg"
+                  alt="Clase de esquí para niños con monitor"
+                  className="h-64 w-full object-cover sm:h-80 lg:h-[420px]"
+                  loading="lazy"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-white/10" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Case Study Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -148,14 +190,12 @@ const SoftwareGestionEscuelasEsqui = () => {
              border-0 text-white"
           >
             <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
-              Así transformamos la Escuela de Esquí Valle Blanco{" "}
+              <p className="text-gray font-medium">
+                Así transformamos la Escuela de Esquí Valle Blanco{" "}
+              </p>
             </CardTitle>{" "}
             <CardContent className="p-8 md:p-12">
               <div className="flex items-start gap-4 mb-6">
-                <p className="text-slate-700">
-                  Esto es lo que cambió en su día a día tras implantar Ski
-                  Solution 360:
-                </p>
                 <Quote className="h-8 w-8 text-white flex-shrink-0" />
                 <blockquote className="text-xl md:text-2xl font-medium">
                   "Antes llevábamos las reservas por WhatsApp y papel. Ahora
@@ -206,6 +246,29 @@ const SoftwareGestionEscuelasEsqui = () => {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          {" "}
+          <Card className="bg-primary/5 border-0 shadow-xl">
+            <CardHeader>
+              <div className="bg-[hsl(var(--ski-lime-dark))] w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                <GraduationCap className="h-8 w-8 text-white" />
+              </div>
+              <CardTitle className="text-2xl font-bold text-[hsl(var(--ski-lime-dark))]">
+                Una plataforma que organiza tu escuela{" "}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-slate-700">
+                Ski Solution 360 centraliza reservas, asignaciones, pagos y
+                seguimiento de alumnos. Funciona con tu sistema actual y se
+                adapta al tamaño de tu escuela
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
