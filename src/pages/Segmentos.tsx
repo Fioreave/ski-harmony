@@ -86,13 +86,25 @@ const Segmentos = () => {
         {/* Hero Section */}
         <section className="section-spacing bg-gradient-to-br from-background via-background to-muted/30">
           <div className="container-custom">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
-                {t('segmentos.title')}
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground animate-stagger-1">
-                {t('segmentos.subtitle')}
-              </p>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="text-center lg:text-left">
+                <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
+                  {t('segmentos.title')}
+                </h1>
+                <p className="text-lg md:text-xl text-muted-foreground animate-stagger-1">
+                  {t('segmentos.subtitle')}
+                </p>
+              </div>
+              <div className="flex justify-center">
+                <img 
+                  src="/img/mountain-panorama.jpg" 
+                  alt="Panorama de montaña" 
+                  className="rounded-xl shadow-lg max-w-full h-auto object-cover"
+                  loading="lazy"
+                  width="600"
+                  height="400"
+                />
+              </div>
             </div>
           </div>
         </section>

@@ -91,7 +91,7 @@ const Empresa = () => {
     { year: "2010", event: "Expansión internacional" },
     { year: "2018", event: "Lanzamiento de Ski Solution 360" },
     { year: "2022", event: "Integración con principales partners" },
-    { year: "2024", event: "50+ estaciones digitalizadas" },
+    { year: "2024", event: "35+ estaciones digitalizadas" },
   ];
 
   return (
@@ -235,7 +235,7 @@ const Empresa = () => {
       <section className="section-spacing bg-gradient-to-br from-background to-muted">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-5xl font-bold mb-6 text-primary">
+            <h2 className="text-5xl font-bold mb-6 text-foreground">
               {t('empresa.matrix.title')}
             </h2>
             <p className="text-slay-800 mb-8">

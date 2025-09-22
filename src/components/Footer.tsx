@@ -264,6 +264,10 @@ const Footer = () => {
               >
                 Cookies
               </a>
+              <span className="text-muted-foreground">|</span>
+              <span className="text-foreground font-medium">
+                ISO 27001 Certificado
+              </span>
             </div>
           </div>
         </div>

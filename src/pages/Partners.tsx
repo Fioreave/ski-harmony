@@ -174,6 +174,33 @@ const Partners = () => {
           </div>
         </section>
 
+        {/* Partners Logos Section */}
+        <section className="section-spacing bg-muted/30">
+          <div className="container-custom">
+            <h2 className="text-3xl font-bold text-center mb-8">Nuestros Clientes</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-center opacity-80">
+              <div className="flex items-center justify-center">
+                <img src="/clientes/cliente1.png" alt="Cliente 1" className="max-h-16 w-auto object-contain filter grayscale hover:filter-none transition-all duration-300" loading="lazy" />
+              </div>
+              <div className="flex items-center justify-center">
+                <img src="/clientes/cliente2.png" alt="Cliente 2" className="max-h-16 w-auto object-contain filter grayscale hover:filter-none transition-all duration-300" loading="lazy" />
+              </div>
+              <div className="flex items-center justify-center">
+                <img src="/clientes/cliente3.png" alt="Cliente 3" className="max-h-16 w-auto object-contain filter grayscale hover:filter-none transition-all duration-300" loading="lazy" />
+              </div>
+              <div className="flex items-center justify-center">
+                <img src="/clientes/cliente4.png" alt="Cliente 4" className="max-h-16 w-auto object-contain filter grayscale hover:filter-none transition-all duration-300" loading="lazy" />
+              </div>
+              <div className="flex items-center justify-center">
+                <img src="/clientes/cliente5.png" alt="Cliente 5" className="max-h-16 w-auto object-contain filter grayscale hover:filter-none transition-all duration-300" loading="lazy" />
+              </div>
+              <div className="flex items-center justify-center">
+                <img src="/clientes/cliente6.png" alt="Cliente 6" className="max-h-16 w-auto object-contain filter grayscale hover:filter-none transition-all duration-300" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="section-spacing bg-gradient-to-br from-background to-primary/5">
           <div className="container-custom text-center">

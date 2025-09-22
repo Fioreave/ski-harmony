@@ -110,6 +110,8 @@ const SoftwareGestionBikeParks = () => {
                   alt="Clase de esquí para niños con monitor"
                   className="h-64 w-full object-cover sm:h-80 lg:h-[420px]"
                   loading="lazy"
+                  width="600"
+                  height="420"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-white/10" />
               </div>

@@ -248,7 +248,7 @@ const Navbar = () => {
                   asChild
                   className="px-5 py-2 w-max items-center justify-center rounded-md bg-background text-md transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
                 >
-                  <Link to="/empresa">{t("nav.company")}</Link>
+                  <Link to="/empresa">SOBRE NOSOTROS</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               {/* <NavigationMenuItem>

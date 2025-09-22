@@ -386,7 +386,7 @@ const Contacto = () => {
                   {offices.map((office) => (
                     <Card key={office.name}>
                       <CardContent className="p-6">
-                        <h4 className="text-lg font-semibold text-primary mb-3">
+                        <h4 className="text-lg font-semibold text-foreground mb-3">
                           {office.name}
                         </h4>
                         <div className="space-y-2">
