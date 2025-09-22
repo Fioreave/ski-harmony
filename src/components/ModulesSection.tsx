@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import {
   ShoppingCart,
   Shield,
@@ -9,6 +10,7 @@ import {
   BarChart3,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 
 const ModulesSection = () => {
   const { t } = useLanguage();
@@ -18,31 +20,37 @@ const ModulesSection = () => {
       icon: <ShoppingCart className="h-8 w-8 text-primary" />,
       title: t('homepage.ticketing.title'),
       description: t('homepage.ticketing.description'),
+      href: '/precio-dinamico-forfaits',
     },
     {
       icon: <Shield className="h-8 w-8 text-primary" />,
       title: t('homepage.access.title'),
       description: t('homepage.access.description'),
+      href: '/control-accesos-rfid',
     },
     {
       icon: <Bike className="h-8 w-8 text-primary" />,
       title: t('homepage.rental.title'),
       description: t('homepage.rental.description'),
+      href: '/gestion-alquiler-equipo',
     },
     {
       icon: <GraduationCap className="h-8 w-8 text-primary" />,
       title: t('homepage.school.title'),
       description: t('homepage.school.description'),
+      href: '/software-escuela-esqui',
     },
     {
       icon: <Utensils className="h-8 w-8 text-primary" />,
       title: t('homepage.restaurant.title'),
       description: t('homepage.restaurant.description'),
+      href: '/punto-venta-restauracion',
     },
     {
       icon: <BarChart3 className="h-8 w-8 text-primary" />,
       title: t('homepage.crm.title'),
       description: t('homepage.crm.description'),
+      href: '/bi-crm-ski',
     },
   ];
 
@@ -75,9 +83,21 @@ const ModulesSection = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground text-center">
+                <p className="text-muted-foreground text-center mb-6">
                   {module.description}
                 </p>
+                <Button 
+                  asChild 
+                  variant="outline" 
+                  className="w-full hover:bg-primary hover:text-primary-foreground transition-colors"
+                >
+                  <Link 
+                    to={module.href}
+                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  >
+                    Ver más
+                  </Link>
+                </Button>
               </CardContent>
             </Card>
           ))}

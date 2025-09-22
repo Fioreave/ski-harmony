@@ -19,7 +19,7 @@ const FinalClaimSection = () => {
           </h2>
 
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Únete a las +25 estaciones que ya han transformado su operación con
+            Únete a las +35 estaciones que ya han transformado su operación con
             Ski Solution 360
           </p>
 
@@ -39,7 +39,7 @@ const FinalClaimSection = () => {
               className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 text-lg"
               onClick={openContactForm}
             >
-              Hablar con un especialista
+              Contacta con nosotros
             </Button>
           </div>
 

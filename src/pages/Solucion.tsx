@@ -134,7 +134,7 @@ const Solucion = () => {
         <section className="py-20 bg-muted/50">
           <div className="container-custom">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center animate-fade-in-up">
-              {t("solucion.benefits.title")}
+              Mejora la gestión de tu estación
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
               {benefits.map((benefit, index) => {
@@ -184,7 +184,7 @@ const Solucion = () => {
         <section className="section-spacing">
           <div className="container-custom">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center animate-fade-in-up">
-              {t("solucion.modules.title")}
+              Plataforma Core
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {modules.map((module, index) => {

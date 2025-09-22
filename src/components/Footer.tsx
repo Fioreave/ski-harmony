@@ -90,59 +90,86 @@ const Footer = () => {
             <h3 className="font-bold mb-4">Soluciones</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
-                  href="/ski-solution-360"
-                  className="hover:text-primary transition-colors"
-                >
-                  Core
-                </a>
+                <Link to="/ski-solution-360" className="hover:text-primary transition-colors">
+                  Ski Solution 360
+                </Link>
               </li>
               <li>
-                <a
-                  href="/bi-crm-ski"
-                  className="hover:text-primary transition-colors"
-                >
+                <Link to="/precio-dinamico-forfaits" className="hover:text-primary transition-colors">
+                  Precio Dinámico Forfaits
+                </Link>
+              </li>
+              <li>
+                <Link to="/control-accesos-rfid" className="hover:text-primary transition-colors">
+                  Control Accesos RFID
+                </Link>
+              </li>
+              <li>
+                <Link to="/software-escuela-esqui" className="hover:text-primary transition-colors">
+                  Software Escuela Esquí
+                </Link>
+              </li>
+              <li>
+                <Link to="/gestion-alquiler-equipo" className="hover:text-primary transition-colors">
+                  Gestión Alquiler Equipo
+                </Link>
+              </li>
+              <li>
+                <Link to="/punto-venta-restauracion" className="hover:text-primary transition-colors">
+                  Punto Venta Restauración
+                </Link>
+              </li>
+              <li>
+                <Link to="/bi-crm-ski" className="hover:text-primary transition-colors">
                   BI & CRM
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/partners"
-                  className="hover:text-primary transition-colors"
-                >
-                  Partners
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Segmentos */}
           <div>
             <h3 className="font-bold mb-4">{t("nav.segments")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link
-                  to="/software-gestion-ski-resort"
-                  className="hover:text-primary transition-colors"
-                >
+                <Link to="/software-gestion-ski-resort" className="hover:text-primary transition-colors">
                   {t("segments.large-resorts")}
                 </Link>
               </li>
               <li>
-                <a
-                  href="/software-gestion-ski-resort-mediano"
-                  className="hover:text-primary transition-colors"
-                >
+                <Link to="/software-gestion-ski-resort-mediano" className="hover:text-primary transition-colors">
                   {t("segments.medium-resorts")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/software-gestion-escuelas-esqui"
-                  className="hover:text-primary transition-colors"
-                >
+                <Link to="/software-gestion-escuelas-esqui" className="hover:text-primary transition-colors">
                   {t("segments.ski-schools")}
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/software-gestion-jardines-nieve" className="hover:text-primary transition-colors">
+                  Jardines de Nieve
+                </Link>
+              </li>
+              <li>
+                <Link to="/software-gestion-bike-parks" className="hover:text-primary transition-colors">
+                  Bike Parks
+                </Link>
+              </li>
+              <li>
+                <Link to="/software-gestion-escuela-aventura" className="hover:text-primary transition-colors">
+                  Escuelas de Aventura
+                </Link>
+              </li>
+              <li>
+                <Link to="/software-gestion-escuela-vela-buceo" className="hover:text-primary transition-colors">
+                  Escuelas Vela y Buceo
+                </Link>
+              </li>
+              <li>
+                <Link to="/software-gestion-museo" className="hover:text-primary transition-colors">
+                  Museos
+                </Link>
               </li>
             </ul>
           </div>
