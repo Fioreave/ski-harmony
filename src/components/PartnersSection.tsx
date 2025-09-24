@@ -2,12 +2,13 @@ import React from "react";
 
 const PartnersSection: React.FC = () => {
   const logos = [
-    { src: "/clientes/cliente1.png", alt: "Cliente 1", name: "cliente1" },
-    { src: "/clientes/cliente2.png", alt: "Cliente 2", name: "cliente2" },
-    { src: "/clientes/cliente3.png", alt: "Cliente 3", name: "cliente3" },
-    { src: "/clientes/cliente4.png", alt: "Cliente 4", name: "cliente4" },
-    { src: "/clientes/cliente5.png", alt: "Cliente 5", name: "cliente5" },
-    { src: "/clientes/cliente6.png", alt: "Cliente 6", name: "cliente6" },
+    { src: "/clientes/cliente1.png", alt: "Cliente 1", name: "Candanchu" },
+    { src: "/clientes/cliente2.png", alt: "Cliente 2", name: "Sierranevada" },
+    { src: "/clientes/cliente3.png", alt: "Cliente 3", name: "Cerler" },
+    { src: "/clientes/cliente4.png", alt: "Cliente 4", name: "Lago Hermoso" },
+    { src: "/clientes/cliente5.png", alt: "Cliente 5", name: "Shahdag" },
+    { src: "/clientes/cliente6.png", alt: "Cliente 6", name: "Formigal" },
+    
   ];
 
   const strip = [...logos, ...logos];
