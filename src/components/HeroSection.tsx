@@ -5,6 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import DemoRequestForm from "./DemoRequestForm";
 import ContactForm from "./ContactForm";
 import { useForms } from "@/hooks/useForms";
+import mountain from "/img/mountain.jpg";
 
 const HeroSection = () => {
   const {
@@ -22,21 +23,34 @@ const HeroSection = () => {
       {showDemoForm && <DemoRequestForm onClose={closeDemoForm} />}
       {showContactForm && <ContactForm onClose={closeContactForm} />}
 
-      <section className="pt-20 py-20 flex items-center justify-center bg-background pt-16">
-        <div className="container mx-auto text-center">
+      <section
+        className="min-h-screen relative pt-20 md:pt-24 flex items-center justify-center bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${mountain})` }}
+      >
+        <div
+          className="absolute inset-0 z-0 pointer-events-none
+                  bg-gradient-to-b from-black/60 via-black/40 to-black/20
+                  backdrop-blur-[1px]"
+        />
+        <div className="relative z-10 container mx-auto text-center text-white">
           <div className="max-w-4xl mx-auto">
-            <h1 className="pt-20 text-5xl md:text-7xl font-bold mb-6 text-foreground leading-tight">
+            <h1
+              className="pt-20 text-5xl md:text-7xl font-bold mb-6 leading-tight
+                     drop-shadow-[0_3px_12px_rgba(0,0,0,0.6)]"
+            >
               {t("hero.h1")}
             </h1>
 
-            <h2 className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+            <h2
+              className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-white/90
+                     drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]"
+            >
               {t("hero.h2")}
             </h2>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center ">
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 text-lg font-medium"
+                className="bg-primary text-primary-foreground hover:bg-black hover:text-primary px-8 py-4 text-lg font-medium"
                 onClick={openDemoForm}
               >
                 {t("nav.request-demo")}
@@ -45,7 +59,7 @@ const HeroSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="text-lg"
+                className="text-black px-8 border-none text-lg font-medium hover:bg-black hover:text-primary"
                 onClick={openContactForm}
               >
                 Contacta con un experto

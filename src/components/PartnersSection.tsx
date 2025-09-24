@@ -8,7 +8,15 @@ const PartnersSection: React.FC = () => {
     { src: "/clientes/cliente4.png", alt: "Cliente 4", name: "Lago Hermoso" },
     { src: "/clientes/cliente5.png", alt: "Cliente 5", name: "Shahdag" },
     { src: "/clientes/cliente6.png", alt: "Cliente 6", name: "Formigal" },
-    
+    { src: "/clientes/cliente7.webp", alt: "Cliente 7", name: "Axxes" },
+    { src: "/clientes/cliente8.png", alt: "Cliente 8", name: "Doblemente" },
+    { src: "/clientes/cliente9.png", alt: "Cliente 9", name: "Webdreams" },
+    { src: "/clientes/cliente10.png", alt: "Cliente 10", name: "Skidata" },
+    { src: "/clientes/cliente11.svg", alt: "Cliente 11", name: "Redsys" },
+    { src: "/clientes/cliente12.svg", alt: "Cliente 12", name: "Suprema" },
+    { src: "/clientes/cliente13.svg", alt: "Cliente 13", name: "Ceca" },
+    { src: "/clientes/cliente14.svg", alt: "Cliente 14", name: "Skicase" },
+    { src: "/clientes/cliente15.svg", alt: "Cliente 15", name: "Shahdag" },
   ];
 
   const strip = [...logos, ...logos];
@@ -47,7 +55,7 @@ const PartnersSection: React.FC = () => {
                 src={logo.src}
                 alt={logo.alt}
                 loading="lazy"
-                className="block max-h-20 max-w-full object-contain filter grayscale opacity-80 hover:opacity-100 hover:filter-none transition-all duration-300 mb-3"
+                className="block mb-6 min-h-15 max-h-20 max-w-full object-contain filter grayscale opacity-80 hover:opacity-100 hover:filter-none transition-all duration-300 mb-3"
               />
               <span className="text-sm font-medium text-muted-foreground">
                 {logo.name}
