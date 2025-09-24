@@ -109,46 +109,52 @@ const SoftwareGestionSkiResort = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Descubre el caso de éxito Granvalira{" "}
+              Casos de éxito reales
             </h2>
             <h3 className="text-xl text-slate-900 mt-4">
-              Así cambió su día a día tras implantar Ski Solution 360:
+              Descubre cómo nuestros clientes han transformado sus operaciones:
             </h3>
           </div>
 
-          <div
-            className="bg-gradient-to-l
-             from-[hsl(var(--primary))]
-             via-[hsl(var(--ski-lime-dark))]
-             to-[hsl(var(--ski-lime-dark))]
-             border-0 text-white text-primary-foreground rounded-2xl p-8 md:p-12 text-white"
-          >
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-              <div className="lg:col-span-2">
-                <blockquote className="text-xl md:text-2xl font-medium mb-6">
-                  "Desde que integramos Ski Solution 360, reducimos un 40% el
-                  tiempo medio en taquillas y aumentamos un 25% la venta
-                  anticipada online. Ahora tenemos visibilidad total de cada
-                  área del resort en tiempo real."
-                </blockquote>
-                <p className="text-white text-medium text-xl">
-                  Resultado directo de aplicar Ski Solution 360
-                </p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <div className="text-center">
-                  <div className="text-4xl text-black text-white font-bold mb-2">
-                    40%
-                  </div>
-                  <div className="text-sm text-white">
-                    Reducción tiempo taquillas
-                  </div>
-                </div>
-                <div className="text-center mt-4">
-                  <div className="text-4xl text-white font-bold mb-2">25%</div>
-                  <div className="text-sm text-white">Aumento venta online</div>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Testimonial 1 - Resort */}
+            <div className="bg-gradient-to-l from-[hsl(var(--primary))] via-[hsl(var(--ski-lime-dark))] to-[hsl(var(--ski-lime-dark))] border-0 text-white rounded-2xl p-8">
+              <blockquote className="text-lg font-medium mb-4">
+                "Para un resort del tamaño de Grandvalira RESORTS, necesitábamos una solución robusta y escalable. Ski Solution 360 se ha adaptado perfectamente a nuestras necesidades y al volumen de visitantes que recibimos cada temporada."
+              </blockquote>
+              <p className="text-white/80 text-sm">
+                - Resort de gran tamaño
+              </p>
+            </div>
+
+            {/* Testimonial 2 - Candanchú */}
+            <div className="bg-gradient-to-l from-[hsl(var(--primary))] via-[hsl(var(--ski-lime-dark))] to-[hsl(var(--ski-lime-dark))] border-0 text-white rounded-2xl p-8">
+              <blockquote className="text-lg font-medium mb-4">
+                "Nos sorprendió la facilidad de personalizar el sistema a nuestras particularidades. Candanchú tiene características únicas y Ski Solution 360 se adaptó perfectamente, sin necesidad de procesos largos ni complicados."
+              </blockquote>
+              <p className="text-white/80 text-sm">
+                - Candanchú
+              </p>
+            </div>
+
+            {/* Testimonial 3 - Escuela de Esquí */}
+            <div className="bg-gradient-to-l from-[hsl(var(--primary))] via-[hsl(var(--ski-lime-dark))] to-[hsl(var(--ski-lime-dark))] border-0 text-white rounded-2xl p-8">
+              <blockquote className="text-lg font-medium mb-4">
+                "Para una escuela de esquí, contar con una herramienta digital como Ski Solution 360 nos ha ayudado a dar un salto de calidad. La imagen de profesionalidad que transmitimos es mucho más sólida y moderna."
+              </blockquote>
+              <p className="text-white/80 text-sm">
+                - Escuela Formigal
+              </p>
+            </div>
+
+            {/* Testimonial 4 - Lago Hermoso */}
+            <div className="bg-gradient-to-l from-[hsl(var(--primary))] via-[hsl(var(--ski-lime-dark))] to-[hsl(var(--ski-lime-dark))] border-0 text-white rounded-2xl p-8">
+              <blockquote className="text-lg font-medium mb-4">
+                "En Lago Hermoso estamos en plena fase de expansión y necesitábamos una herramienta que nos acompañara en ese crecimiento. Con Ski Solution 360 tenemos un sistema que gestiona tanto entradas como reservas de actividades, todo en una sola plataforma."
+              </blockquote>
+              <p className="text-white/80 text-sm">
+                - Lago Hermoso
+              </p>
             </div>
           </div>
         </div>
