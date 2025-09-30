@@ -19,6 +19,9 @@ import {
 } from "lucide-react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import bikePark from "@/assets/img/bike-park.jpg";
+import DemoRequestForm from "@/components/DemoRequestForm";
+import { useForms } from "@/hooks/useForms";
 
 const SoftwareGestionBikeParks = () => {
   const challenges = [
@@ -61,9 +64,12 @@ const SoftwareGestionBikeParks = () => {
       icon: <Sun className="h-6 w-6" />,
     },
   ];
+  const { showDemoForm, openDemoForm, closeDemoForm } = useForms();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-orange-50">
+      {showDemoForm && <DemoRequestForm onClose={closeDemoForm} />}
+
       <Navbar />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -106,7 +112,7 @@ const SoftwareGestionBikeParks = () => {
               {/* Imagen (cámbiala por la que prefieras) */}
               <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5">
                 <img
-                  src="/img/bike-park.jpg"
+                  src={bikePark}
                   alt="Clase de esquí para niños con monitor"
                   className="h-64 w-full object-cover sm:h-80 lg:h-[420px]"
                   loading="lazy"
@@ -345,10 +351,10 @@ to-[hsl(var(--ski-lime-dark)/3)]
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-black mb-6">
-            ¿Quieres que tu estación siga generando ingresos todo el año?{" "}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary p-10">
+        <div className="max-w-4xl mx-auto text-center p-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-black leading-snug">
+            ¿Quieres que tu estación siga <br /> generando ingresos todo el año?{" "}
           </h2>
           <p className="text-xl text-black/80 mb-8">
             Ski Solution 360 hace que tu verano sea tan rentable como el
@@ -357,7 +363,9 @@ to-[hsl(var(--ski-lime-dark)/3)]
           </p>
           <Button
             size="lg"
-            className="bg-black text-primary hover:bg-gray-900 px-8 py-3"
+            variant="secondary"
+            className="bg-black text-primary hover:bg-gray-900 px-8 py-4 text-lg font-medium"
+            onClick={openDemoForm}
           >
             Solicita una demo
           </Button>

@@ -8,6 +8,7 @@ import ModulesSection from "@/components/ModulesSection";
 import FinalClaimSection from "@/components/FinalClaimSection";
 import Footer from "@/components/Footer";
 import PartnersSection from "@/components/PartnersSection";
+import ClientsSection from "@/components/ClientsSection";
 
 const Index = () => {
   return (
@@ -15,11 +16,11 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
-                <VideoSection />
+        <VideoSection />
         <BenefitsSection />
         <MetricsSection />
         <ModulesSection />
-        <PartnersSection />
+        <ClientsSection />
         <FinalClaimSection />
       </main>
       <Footer />

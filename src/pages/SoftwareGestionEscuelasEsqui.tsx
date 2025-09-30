@@ -19,8 +19,13 @@ import {
 } from "lucide-react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import escuelaSki from "@/assets/img/escuela-ski.jpg";
+import { useForms } from "@/hooks/useForms";
+import DemoRequestForm from "@/components/DemoRequestForm";
 
 const SoftwareGestionEscuelasEsqui = () => {
+  const { showDemoForm, openDemoForm, closeDemoForm } = useForms();
+
   const challenges = [
     "Las reservas, asignaciones y horarios no siempre están coordinados.",
     "Cobros por adelantado y cancelaciones pueden ser complicados de gestionar.",
@@ -69,6 +74,8 @@ const SoftwareGestionEscuelasEsqui = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
+      {showDemoForm && <DemoRequestForm onClose={closeDemoForm} />}
+
       <Navbar />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -161,7 +168,7 @@ const SoftwareGestionEscuelasEsqui = () => {
               {/* Imagen (cámbiala por la que prefieras) */}
               <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5">
                 <img
-                  src="/img/escuela-ski.jpg"
+                  src={escuelaSki}
                   alt="Clase de esquí para niños con monitor"
                   className="h-64 w-full object-cover sm:h-80 lg:h-[420px]"
                   loading="lazy"
@@ -362,11 +369,10 @@ const SoftwareGestionEscuelasEsqui = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-black mb-6">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary p-10">
+        <div className="max-w-4xl mx-auto text-center p-10">
+          <h2 className="text-4xl md:text-4xl font-bold mb-8 text-black">
             ¿Listos para dar clase sin perder el control?
           </h2>
           <p className="text-xl text-black/80 mb-8">
@@ -376,7 +382,9 @@ const SoftwareGestionEscuelasEsqui = () => {
           </p>
           <Button
             size="lg"
-            className="bg-black text-primary hover:bg-gray-900 px-8 py-3"
+            variant="secondary"
+            className="bg-black text-primary hover:bg-gray-900 px-8 py-4 text-lg font-medium"
+            onClick={openDemoForm}
           >
             Solicita una demo
           </Button>

@@ -211,7 +211,9 @@ const Navbar = () => {
                   asChild
                   className="px-5 py-2 w-max items-center justify-center rounded-md bg-background text-md transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
                 >
-                  <Link to="/blog">{t("nav.blog")}</Link>
+                  <Link to="/blog" reloadDocument>
+                    {t("nav.blog")}
+                  </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
@@ -439,11 +441,13 @@ const Navbar = () => {
                 <div className="space-y-4">
                   <Link
                     to="/blog"
+                    reloadDocument
                     className="block py-2 hover:text-primary font-medium"
                     onClick={closeMobileMenu}
                   >
                     {t("nav.blog")}
                   </Link>
+
                   {/*<Link
                     to="/casos-exito"
                     className="block py-2 hover:text-primary font-medium"
@@ -463,7 +467,7 @@ const Navbar = () => {
                     className="block py-2 hover:text-primary font-medium"
                     onClick={closeMobileMenu}
                   >
-                  Sobre Nosotros
+                    Sobre Nosotros
                   </Link>
                   {/*<Link
                     to="/faq-software-gestion-estacion-esqui"

@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Settings, Zap, Calendar, CheckCircle2 } from "lucide-react";
+import mockup from "@/assets/img/mockup-core.png";
+import { useForms } from "@/hooks/useForms";
+import DemoRequestForm from "@/components/DemoRequestForm";
 
 const benefits = [
   {
@@ -32,38 +35,26 @@ const benefits = [
       "Añade o quita módulos según las necesidades de tu estación. Funciona tanto para resorts grandes como para escuelas independientes.Adaptable a temporada de invierno y verano.",
   },
 ];
-
 const SkiSolution360 = () => {
+  const { showDemoForm, openDemoForm, closeDemoForm } = useForms();
+
   return (
     <div className="min-h-screen bg-background">
+      {showDemoForm && <DemoRequestForm onClose={closeDemoForm} />}
+
       <Navbar />
 
       <main className="pt-16">
-        {/* Breadcrumbs */}
-        <nav className="py-4 px-4">
-          <div className="container-custom">
-            <span className="text-sm text-muted-foreground animate-fade-in">
-              <Link to="/" className="hover:text-foreground transition-colors">
-                Inicio
-              </Link>{" "}
-              /
-              <Link
-                to="/solucion"
-                className="hover:text-foreground transition-colors"
-              >
-                {" "}
-                Solución
-              </Link>{" "}
-              / Plataforma Core
-            </span>
-          </div>
-        </nav>
-
         {/* Hero Section */}
         <section
           id="#core"
           className="section-spacing bg-gradient-to-br from-background via-background to-muted/30"
         >
+          {/* Background gradient */}
+          <div className="absolute z-index bg-gradient-to-br from-accent/20 via-background to-muted/30"></div>
+          {/* Decorative elements */}
+          <div className="absolute top-20 right-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
               <div className="w-20 h-20 mx-auto mb-8 bg-primary/10 rounded-full flex items-center justify-center animate-scale-in">
@@ -91,7 +82,7 @@ const SkiSolution360 = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center animate-fade-in-up">
               Beneficios clave
             </h2>
-            <div className="grid md:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-4 gap-3">
               {benefits.map((benefit, index) => {
                 const Icon = benefit.icon;
                 return (
@@ -122,7 +113,7 @@ const SkiSolution360 = () => {
         </section>
 
         {/* How it Works Section */}
-        <section className="section-spacing">
+        <section className="section-spacing bg-[e1e1e1]">
           <div className="container-custom">
             <div className="grid lg:grid-cols-2 gap-12 items-center ">
               <div className="animate-fade-in-up">
@@ -162,50 +153,63 @@ const SkiSolution360 = () => {
                 </div>
               </div>
 
-              <div className="animate-stagger-2">
-                <div className="relative">
-                  <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 border border-primary/20">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-background p-4 rounded-lg shadow-sm">
-                        <Settings className="w-6 h-6 text-primary mb-2" />
-                        <h3 className="text-sm font-medium pb-2">
-                          Centraliza la información de todos los puntos de
-                          venta:
-                        </h3>
-                        <p className="text-sm">
-                          Taquillas, ecommerce, kioscos de autoservicio y iPOS
-                          móviles.
-                        </p>
-                      </div>
-                      <div className="bg-background p-4 rounded-lg shadow-sm">
-                        <Zap className="w-6 h-6 text-primary mb-2" />
-                        <h3 className="text-sm font-medium pb-2">
-                          Sincroniza inventarios y accesos en tiempo real:
-                        </h3>
-                        <p className="text-sm">
-                          Evitando sobreventas o colas innecesarias.
-                        </p>
-                      </div>
-                      <div className="bg-background p-4 rounded-lg shadow-sm">
-                        <Calendar className="w-6 h-6 text-primary mb-2" />
-                        <h3 className="text-sm font-medium pb-2">
-                          Genera informes automáticos para gerencia y dirección:
-                        </h3>
-                        <p className="text-sm">
-                          Con datos precisos para la toma de decisiones.
-                        </p>
-                      </div>
-                      <div className="bg-background p-4 rounded-lg shadow-sm">
-                        <CheckCircle2 className="w-6 h-6 text-primary mb-2" />
-                        <h3 className="text-sm font-medium pb-2">
-                          Centraliza la información de todos los puntos de
-                          venta:
-                        </h3>
-                        <p className="text-sm">
-                          Taquillas, ecommerce, kioscos de autoservicio e iPOS
-                          móviles.
-                        </p>
-                      </div>
+              <div className="relative overflow-hidden ring-1 ring-black/5">
+                <img
+                  src={mockup}
+                  alt="Clase de esquí para niños con monitor"
+                  className="h-64 w-full object-cover sm:h-80 lg:h-[420px]"
+                  loading="lazy"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-white/10" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section-spacing bg-gradient-to-br from-primary/10 to-primary/5 p-8">
+          <div className="container-custom">
+            {" "}
+            <div className="animate-stagger-2">
+              <div className="relative">
+                <div className=" ">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-background p-4 rounded-lg shadow-sm">
+                      <Settings className="w-6 h-6 text-primary mb-2" />
+                      <h3 className="text-sm font-medium pb-2">
+                        Centraliza la información de todos los puntos de venta:
+                      </h3>
+                      <p className="text-sm">
+                        Taquillas, ecommerce, kioscos de autoservicio y iPOS
+                        móviles.
+                      </p>
+                    </div>
+                    <div className="bg-background p-4 rounded-lg shadow-sm">
+                      <Zap className="w-6 h-6 text-primary mb-2" />
+                      <h3 className="text-sm font-medium pb-2">
+                        Sincroniza inventarios y accesos en tiempo real:
+                      </h3>
+                      <p className="text-sm">
+                        Evitando sobreventas o colas innecesarias.
+                      </p>
+                    </div>
+                    <div className="bg-background p-4 rounded-lg shadow-sm">
+                      <Calendar className="w-6 h-6 text-primary mb-2" />
+                      <h3 className="text-sm font-medium pb-2">
+                        Genera informes automáticos para gerencia y dirección:
+                      </h3>
+                      <p className="text-sm">
+                        Con datos precisos para la toma de decisiones.
+                      </p>
+                    </div>
+                    <div className="bg-background p-4 rounded-lg shadow-sm">
+                      <CheckCircle2 className="w-6 h-6 text-primary mb-2" />
+                      <h3 className="text-sm font-medium pb-2">
+                        Centraliza la información de todos los puntos de venta:
+                      </h3>
+                      <p className="text-sm">
+                        Taquillas, ecommerce, kioscos de autoservicio e iPOS
+                        móviles.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -215,17 +219,20 @@ const SkiSolution360 = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
-          <div className="container-custom text-center">
-            <div className="max-w-2xl mx-auto animate-fade-in-up">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6">
-                Unifica tu estación en un único sistema y gana control,
-                eficiencia y rentabilidad.
-              </h3>
-              <Button size="lg" className="btn-demo text-lg px-8 py-3">
-                Solicita una demo
-              </Button>
-            </div>
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary p-10">
+          <div className="max-w-4xl mx-auto text-center p-10">
+            <h2 className="text-4xl font-bold text-black mb-6">
+              Unifica tu estación en un único sistema y gana control, eficiencia
+              y rentabilidad.{" "}
+            </h2>
+            <Button
+              size="lg"
+              variant="secondary"
+              className="bg-black text-primary hover:bg-gray-900 px-8 py-4 text-lg font-medium"
+              onClick={openDemoForm}
+            >
+              Solicita una demo
+            </Button>
           </div>
         </section>
       </main>

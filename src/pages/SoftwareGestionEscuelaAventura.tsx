@@ -19,8 +19,13 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import actOutdoor from "@/assets/img/act-outdoor.jpg";
+import DemoRequestForm from "@/components/DemoRequestForm";
+import { useForms } from "@/hooks/useForms";
 
 const SoftwareGestionEscuelaAventura = () => {
+  const { showDemoForm, openDemoForm, closeDemoForm } = useForms();
+
   const challenges = [
     "Reservas dispersas entre teléfono, email y redes sociales",
     "Gestión manual de grupos, guias y horarios",
@@ -79,6 +84,8 @@ const SoftwareGestionEscuelaAventura = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-lime-50">
+      {showDemoForm && <DemoRequestForm onClose={closeDemoForm} />}
+
       <Navbar />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 bg-white sm:px-6 lg:px-8">
@@ -130,7 +137,7 @@ const SoftwareGestionEscuelaAventura = () => {
               {/* Imagen (cámbiala por la que prefieras) */}
               <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5">
                 <img
-                  src="/img/act-outdoor.jpg"
+                  src={actOutdoor}
                   alt="Actividades de Aventura y Outdoor"
                   className="h-64 w-full object-cover sm:h-80 lg:h-[420px]"
                   loading="lazy"
@@ -331,10 +338,11 @@ const SoftwareGestionEscuelaAventura = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-black mb-6">
-            ¿Listo para vivir tu temporada más organizada?
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary p-10">
+        <div className="max-w-4xl mx-auto text-center p-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-black leading-snug">
+            ¿Listo para vivir tu <br />
+            temporada más organizada?
           </h2>
           <p className="text-xl text-black/80 mb-8">
             Centraliza tus actividades, reservas y pagos con Ski Solution 360.
@@ -343,12 +351,15 @@ const SoftwareGestionEscuelaAventura = () => {
           </p>
           <Button
             size="lg"
-            className="bg-black text-primary hover:bg-gray-900 px-8 py-3"
+            variant="secondary"
+            className="bg-black text-primary hover:bg-gray-900 px-8 py-4 text-lg font-medium"
+            onClick={openDemoForm}
           >
             Solicita una demo
           </Button>
         </div>
       </section>
+
       <Footer />
     </div>
   );

@@ -20,11 +20,16 @@ import {
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import mountainPanorama from "/img/mountain-panorama.jpg";
+import { useForms } from "@/hooks/useForms";
+import DemoRequestForm from "@/components/DemoRequestForm";
+import mountain from "/img/mountain.jpg";
 
 const BRAND = "#BFFF00"; // lima
 const BRAND_HOVER = "#A6E600"; // lima más oscuro para hover/accesibilidad
 
 const SoftwareGestionSkiResortMediano = () => {
+  const { showDemoForm, openDemoForm, closeDemoForm } = useForms();
+
   const challenges = [
     "El personal debe atender varias tareas a la vez y cuesta mantener todo coordinado.",
     "Modernizar sin grandes compras de hardware puede ser un reto.",
@@ -71,49 +76,53 @@ const SoftwareGestionSkiResortMediano = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-primary-50/40">
-      <Navbar />
+      {showDemoForm && <DemoRequestForm onClose={closeDemoForm} />}
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 mt-20">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Software de Gestión para Resorts de Esquí
+      <Navbar />
+      <section
+        className="min-h-screen relative pt-20 md:pt-24 flex items-center justify-center bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${mountainPanorama})` }}
+      >
+        <div
+          className="absolute inset-0 z-0 pointer-events-none
+                  bg-gradient-to-b from-black/60 via-black/40 to-black/20
+                  backdrop-blur-[1px]"
+        />
+        <div className="relative z-10 container mx-auto text-center text-white">
+          <div className="max-w-4xl mx-auto">
+            <h1
+              className="pt-20 text-5xl md:text-6xl font-bold mb-6 leading-tight
+                     drop-shadow-[0_3px_12px_rgba(0,0,0,0.6)]"
+            >
+              Resorts que buscan crecer{" "}
             </h1>
-            <h2 className="text-2xl md:text-xl text-slate-900 mb-4">
+
+            <h2
+              className="text-xl md:text-2xl mb-4 max-w-3xl mx-auto leading-relaxed text-white/90
+                     drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]"
+            >
               Gestión profesional para Estaciones de esquí, sin complicaciones
             </h2>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto">
+            <p className="text-xl mb-6">
               Moderniza tu estación con inversión ajustada y sin cambiar lo que
-              ya funciona. Conecta venta, accesos, alquiler, escuela y análisis
-              en una sola plataforma.
+              ya funciona. <br /> Conecta venta, accesos, alquiler, escuela y
+              análisis en una sola plataforma.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Mountain View Section */}
-      <section className=" bg-white">
-        <div className="w-full mx-auto">
-          <div className="relative overflow-hidden mb-16">
-            <img
-              src={mountainPanorama}
-              alt="Vista panorámica de montañas nevadas - Resort mediano"
-              className="w-full h-64 object-cover"
-            />
-            <div className=" absolute inset-0 bg-gradient-to-r from-black/60 to-black/20 flex items-center">
-              <div className="container text-center max-w-6xl text-white p-8">
-                <h2 className="text-5xl font-bold mb-4">
-                  Para resorts que buscan crecer
-                </h2>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center ">
+              <Button
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-black hover:text-primary px-8 py-4 text-lg font-medium"
+                onClick={openDemoForm}
+              >
+                Solicita una demo{" "}
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Challenges Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 pt-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -286,16 +295,18 @@ const SoftwareGestionSkiResortMediano = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary p-10">
         <div className="max-w-4xl mx-auto text-center p-10">
-          <h2 className="text-3xl font-bold text-black mb-6">
+          <h2 className="text-5xl font-bold text-black mb-6">
             ¿Lo vemos con tu caso?{" "}
           </h2>
-          <p className="text-xl text-black/80 mb-4">
-            Te preparamos una demostración adaptada a tu estación para que
-            valores el impacto antes de decidir.
+          <p className="text-2xl mb-6 text-black/80 mb-4">
+            Te preparamos una demostración adaptada a tu estación <br />
+            para que valores el impacto antes de decidir.
           </p>
           <Button
             size="lg"
-            className="bg-black text-primary hover:bg-gray-900 px-8 py-3"
+            variant="secondary"
+            className="bg-black text-primary hover:bg-gray-900 px-8 py-4 text-lg font-medium"
+            onClick={openDemoForm}
           >
             Solicita una demo
           </Button>

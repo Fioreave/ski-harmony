@@ -28,13 +28,13 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
 
   // ✅ Opciones y estado controlado de módulos (ids en string)
   const moduleOptions = [
-    "ticketing", // Ticketing y Precio Dinámico
-    "access", // Control de Accesos RFID
-    "rental", // Gestión de Alquiler de Equipos
-    "school", // Software Escuela de Esquí
-    "pos", // Punto de Venta Restauración
-    "bicrm", // BI & CRM para Ski Resorts
-    "analytics", // Analytics & Reporting
+    "Ticketing", // Ticketing y Precio Dinámico
+    "Access", // Control de Accesos RFID
+    "Rental", // Gestión de Alquiler de Equipos
+    "School", // Software Escuela de Esquí
+    "POS", // Punto de Venta Restauración
+    "BICRM", // BI & CRM para Ski Resorts
+    "Analytics", // Analytics & Reporting
   ];
   const [selectedModules, setSelectedModules] = React.useState<string[]>([]);
 
@@ -113,11 +113,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-      <Card className="w-full max-w-md max-h-[90vh] overflow-y-auto">
+    <div className=" fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+      <Card className="mt-20 mb-6 w-full max-w-md max-h-[90vh] overflow-y-auto">
         <CardHeader>
           <div className="flex items-center justify-between">
-            <CardTitle>{t("contactForm.title")}</CardTitle>
+            <CardTitle>¡Solicita tu Demo!</CardTitle>
             <Button variant="ghost" size="sm" onClick={onClose}>
               <X className="h-4 w-4" />
             </Button>
@@ -167,7 +167,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
 
             <div className="space-y-2">
               <Label htmlFor="information">
-                {t("contactForm.information")}
+                ¿Que disponibilidad tienes? (día/hora)
               </Label>
               <Textarea id="information" rows={4} required />
             </div>
@@ -208,7 +208,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
             <Button type="submit" disabled={submitting} className="w-full">
               {submitting
                 ? t("contactForm.sending") ?? "Enviando..."
-                : t("contactForm.submit")}
+                : "Solicita demo gratuita"}
             </Button>
           </form>
         </CardContent>

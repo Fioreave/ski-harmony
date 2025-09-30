@@ -17,8 +17,12 @@ import {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
+import DemoRequestForm from "@/components/DemoRequestForm";
+import { useForms } from "@/hooks/useForms";
 
 const BiCrmSki = () => {
+  const { showDemoForm, openDemoForm, closeDemoForm } = useForms();
+
   const { t } = useLanguage();
   const benefits = [
     {
@@ -67,7 +71,9 @@ const BiCrmSki = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen  bg-background">
+      {showDemoForm && <DemoRequestForm onClose={closeDemoForm} />}
+
       <Navbar />
       {/* Hero Section */}
       <section className="relative py-24 px-4 overflow-hidden">
@@ -79,20 +85,17 @@ const BiCrmSki = () => {
 
         <div className="container-custom relative z-10">
           <div className="text-center mb-12">
-            <Badge
-              variant="outline"
-              className="mb-6 border-accent text-accent bg-accent/10 font-semibold px-4 py-2"
-            >
-              BI & CRM
-            </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
-              {t('bicrm.hero.title')}
+            <h1 className="text-5xl whitespace-pre-line mt-20 md:text-5xl font-bold mb-8 text-foreground bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
+              {t("bicrm.hero.title")}
             </h1>
-            <p className="text-lg text-muted-foreground mb-10 max-w-4xl mx-auto leading-relaxed">
-              {t('bicrm.hero.description')}
+            <p className="text-lg whitespace-pre-line text-muted-foreground mb-10 max-w-4xl mx-auto leading-relaxed">
+              {t("bicrm.hero.description")}
             </p>
-            <Button className="btn-demo text-lg px-8 py-4 shadow-lg hover:shadow-xl">
-              {t('common.request-demo')}
+            <Button
+              className="btn-demo text-lg px-8 py-4 shadow-lg hover:shadow-xl"
+              onClick={openDemoForm}
+            >
+              {t("common.request-demo")}
             </Button>
           </div>
         </div>
@@ -195,16 +198,16 @@ const BiCrmSki = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-spacing bg-gradient-to-r from-foreground via-foreground to-foreground/95 text-primary-foreground relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc+')] opacity-50"></div>
-        <div className="absolute top-20 left-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
-        <div className="container-custom text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white leading-tight">
-            <span className="text-accent">Convierte datos</span> en decisiones
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary p-10">
+        <div className="max-w-4xl mx-auto text-center p-10">
+          <h2 className="text-5xl font-bold text-black mb-6">
+            Convierte datos en decisiones{" "}
           </h2>
           <Button
             size="lg"
-            className="bg-accent text-accent-foreground hover:bg-accent/90 text-xl px-12 py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+            variant="secondary"
+            className="bg-black text-primary hover:bg-gray-900 px-8 py-4 text-lg font-medium"
+            onClick={openDemoForm}
           >
             Solicita una demo
           </Button>

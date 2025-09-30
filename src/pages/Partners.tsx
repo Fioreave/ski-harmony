@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import PartnersSection from "@/components/PartnersSection";
+import { Button } from "react-day-picker";
 
 const Partners = () => {
   const { t } = useLanguage();
@@ -12,23 +13,11 @@ const Partners = () => {
       <Navbar />
 
       <main className="pt-16">
-        {/* Breadcrumbs */}
-        <nav className="py-4 px-4">
-          <div className="container-custom">
-            <span className="text-sm text-muted-foreground">
-              <Link to="/" className="hover:text-foreground">
-                Inicio
-              </Link>{" "}
-              / Partners
-            </span>
-          </div>
-        </nav>
-
         {/* Hero Section */}
         <section className="section-spacing bg-gradient-to-br from-primary/5 to-primary/10">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent animate-fade-in">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/80 bg-clip-text  animate-fade-in">
                 {t("partners.hero.title")}
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in animation-delay-200">
@@ -277,20 +266,22 @@ const Partners = () => {
         </section>
 
         <PartnersSection />
+
         {/* CTA Section */}
-        <section className="section-spacing bg-gradient-to-br from-background to-primary/5">
-          <div className="container-custom text-center">
-            <div className="max-w-2xl mx-auto animate-fade-in">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                {t("partners.need-integration")}
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                {t("partners.integration-description")}
-              </p>
-              <button className="bg-primary hover:bg-primary/90 text-black font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg text-lg">
-                Solicita una demo
-              </button>
-            </div>
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary p-10">
+          <div className="max-w-5xl mx-auto text-center p-10">
+            <h2 className="text-4xl md:text-4xl font-bold mb-6 text-black leading-snug">
+              {t("partners.need-integration")}
+            </h2>
+            <p className="text-xl text-black/80 mb-8">
+              {t("partners.integration-description")}
+            </p>
+            <Link
+              className="bg-black rounded text-primary hover:bg-gray-900 px-4 py-3 text-lg font-medium"
+              to={"/contacto"}
+            >
+              ¡Ponte en contacto!{" "}
+            </Link>
           </div>
         </section>
       </main>

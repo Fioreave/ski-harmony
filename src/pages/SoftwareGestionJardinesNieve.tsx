@@ -19,6 +19,9 @@ import {
 } from "lucide-react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import jardinSki from "@/assets/img/jardin-ski.jpeg";
+import DemoRequestForm from "@/components/DemoRequestForm";
+import { useForms } from "@/hooks/useForms";
 
 const SoftwareGestionJardinesNieve = () => {
   const challenges = [
@@ -65,8 +68,12 @@ const SoftwareGestionJardinesNieve = () => {
     "Precio ajustado, ideal para jardines pequeños o independientes",
   ];
 
+  const { showDemoForm, openDemoForm, closeDemoForm } = useForms();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-lime-50">
+      {showDemoForm && <DemoRequestForm onClose={closeDemoForm} />}
+
       <Navbar />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 bg-white sm:px-6 lg:px-8">
@@ -115,7 +122,7 @@ const SoftwareGestionJardinesNieve = () => {
               {/* Imagen (cámbiala por la que prefieras) */}
               <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5">
                 <img
-                  src="/img/jardin-ski.jpeg"
+                  src={jardinSki}
                   alt="Clase de esquí para niños con monitor"
                   className="h-64 w-full object-cover sm:h-80 lg:h-[420px]"
                   loading="lazy"
@@ -325,24 +332,27 @@ const SoftwareGestionJardinesNieve = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-black mb-6">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary p-10">
+        <div className="max-w-3xl mx-auto text-center p-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black leading-tight">
             ¿Tu jardín de nieve necesita orden y agilidad?
           </h2>
-          <p className="text-xl text-black/80 mb-8">
+          <p className="text-xl text-black/80 mb-6">
             Organiza tus grupos, reservas y pagos en minutos. Pide una demo y
             descubre en 20 minutos cómo ganar tiempo y control sin
             complicaciones.
           </p>
           <Button
             size="lg"
-            className="bg-black text-primary hover:bg-gray-900 px-8 py-3"
+            variant="secondary"
+            className="bg-black text-primary hover:bg-gray-900 px-8 py-4 text-lg font-medium"
+            onClick={openDemoForm}
           >
             Solicita una demo
           </Button>
         </div>
       </section>
+
       <Footer />
     </div>
   );

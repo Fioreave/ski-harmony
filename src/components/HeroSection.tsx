@@ -6,6 +6,7 @@ import DemoRequestForm from "./DemoRequestForm";
 import ContactForm from "./ContactForm";
 import { useForms } from "@/hooks/useForms";
 import mountain from "/img/mountain.jpg";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const {
@@ -56,14 +57,12 @@ const HeroSection = () => {
                 {t("nav.request-demo")}
               </Button>
 
-              <Button
-                variant="outline"
-                size="lg"
-                className="text-black px-8 border-none text-lg font-medium hover:bg-black hover:text-primary"
-                onClick={openContactForm}
+              <Link
+                className="py-2 border border-black text-black px-8 border-none rounded-lg bg-white text-lg font-medium hover:bg-black hover:text-primary"
+                to={"/contacto"}
               >
                 Contacta con un experto
-              </Button>
+              </Link>
             </div>
 
             {/* Hero visual placeholder 

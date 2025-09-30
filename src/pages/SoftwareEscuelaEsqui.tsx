@@ -11,6 +11,8 @@ import {
   CreditCard,
   CheckCircle2,
 } from "lucide-react";
+import { useForms } from "@/hooks/useForms";
+import DemoRequestForm from "@/components/DemoRequestForm";
 
 const benefits = [
   {
@@ -51,31 +53,15 @@ const benefits = [
 ];
 
 const SoftwareEscuelaEsqui = () => {
+  const { showDemoForm, openDemoForm, closeDemoForm } = useForms();
+
   return (
     <div className="min-h-screen bg-background">
+      {showDemoForm && <DemoRequestForm onClose={closeDemoForm} />}
+
       <Navbar />
 
       <main className="pt-16">
-        {/* Breadcrumbs */}
-        <nav className="py-4 px-4">
-          <div className="container-custom">
-            <span className="text-sm text-muted-foreground animate-fade-in">
-              <Link to="/" className="hover:text-foreground transition-colors">
-                Inicio
-              </Link>{" "}
-              /
-              <Link
-                to="/solucion"
-                className="hover:text-foreground transition-colors"
-              >
-                {" "}
-                Solución
-              </Link>{" "}
-              / Escuela & Clases
-            </span>
-          </div>
-        </nav>
-
         {/* Hero Section */}
         <section className="section-spacing bg-gradient-to-br from-background via-background to-muted/30">
           <div className="container-custom">
@@ -230,19 +216,22 @@ const SoftwareEscuelaEsqui = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
-          <div className="container-custom text-center">
-            <div className="max-w-2xl mx-auto animate-fade-in-up">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6">
-                Planifica, organiza y gestiona
-              </h3>
-              <p className="text-lg text-muted-foreground mb-8">
-                Planifica, organiza y gestiona cada actividad como nunca antes
-              </p>
-              <Button size="lg" className="btn-demo text-lg px-8 py-3">
-                Solicita una demo
-              </Button>
-            </div>
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary p-10">
+          <div className="max-w-4xl mx-auto text-center p-10">
+            <h2 className="text-5xl font-bold text-black mb-6">
+              Planifica, organiza y gestiona
+            </h2>
+            <p className="text-2xl mb-6 text-black/80 mb-4">
+              Planifica, organiza y gestiona cada actividad como nunca antes
+            </p>
+            <Button
+              size="lg"
+              variant="secondary"
+              className="bg-black text-primary hover:bg-gray-900 px-8 py-4 text-lg font-medium"
+              onClick={openDemoForm}
+            >
+              Solicita una demo
+            </Button>
           </div>
         </section>
       </main>

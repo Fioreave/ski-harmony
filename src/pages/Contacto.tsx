@@ -150,7 +150,7 @@ const Contacto = () => {
 
       <Navbar />
 
-      <main className="pt-20">
+      <main className="">
         {/* Hero */}
         <section className="py-20 bg-gradient-to-br from-primary/10 to-background">
           <div className="container mx-auto px-4">

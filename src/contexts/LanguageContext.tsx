@@ -1438,10 +1438,14 @@ const translations: Translations = {
 
   // BI & CRM Page
   "bicrm.hero.title": {
-    es: "Datos que impulsan decisiones y fidelizan clientes",
-    cat: "Dades que impulsen decisions i fidelitzen clients",
-    en: "Data that drives decisions and builds customer loyalty",
-    fr: "Données qui stimulent les décisions et fidélisent les clients",
+    es: `Datos que impulsan
+decisiones y fidelizan clientes`,
+    cat: `Dades que impulsen
+decisions i fidelitzen clients`,
+    en: `Data that drives decisions
+and builds customer loyalty`,
+    fr: `Données qui stimulent les décisions
+et fidélisent les clients`,
   },
   "bicrm.hero.subtitle": {
     es: "BI & CRM",
@@ -1450,7 +1454,8 @@ const translations: Translations = {
     fr: "BI & CRM",
   },
   "bicrm.hero.description": {
-    es: "Toma decisiones basadas en datos y fideliza a tus clientes con el módulo BI & CRM de Ski Solution 360. Informes en tiempo real, segmentación y campañas personalizadas.",
+    es: `Toma decisiones basadas en datos y fideliza a tus clientes nuestro módulo BI & CRM.
+    Informes en tiempo real, segmentación y campañas personalizadas.`,
     cat: "Pren decisions basades en dades i fidelitza els teus clients amb el mòdul BI & CRM de Ski Solution 360. Informes en temps real, segmentació i campanyes personalitzades.",
     en: "Make data-driven decisions and build customer loyalty with Ski Solution 360's BI & CRM module. Real-time reports, segmentation and personalized campaigns.",
     fr: "Prenez des décisions basées sur les données et fidélisez vos clients avec le module BI & CRM de Ski Solution 360. Rapports en temps réel, segmentation et campagnes personnalisées.",

@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import DemoRequestForm from "@/components/DemoRequestForm";
+import { useForms } from "@/hooks/useForms";
 
 const SoftwareGestionSkiResort = () => {
   const challenges = [
@@ -36,9 +38,12 @@ const SoftwareGestionSkiResort = () => {
     "Datos fiables para tomar decisiones rápidas y con impacto",
     "Todo medido en tiempo real para decidir con rapidez",
   ];
+  const { showDemoForm, openDemoForm, closeDemoForm } = useForms();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {showDemoForm && <DemoRequestForm onClose={closeDemoForm} />}
+
       <Navbar />
 
       {/* Hero Section */}
@@ -46,7 +51,7 @@ const SoftwareGestionSkiResort = () => {
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 mt-20">
-              Software de Gestión para Grandes Resorts de Esquí
+              Software de Gestión para <br /> Grandes Resorts de Esquí
             </h1>
             <h2 className="text-2xl font-medium text-slate-900 mt-4">
               Gestiona todo tu resort desde una sola plataforma
@@ -120,41 +125,46 @@ const SoftwareGestionSkiResort = () => {
             {/* Testimonial 1 - Resort */}
             <div className="bg-gradient-to-l from-[hsl(var(--primary))] via-[hsl(var(--ski-lime-dark))] to-[hsl(var(--ski-lime-dark))] border-0 text-white rounded-2xl p-8">
               <blockquote className="text-lg font-medium mb-4">
-                "Para un resort del tamaño de Grandvalira RESORTS, necesitábamos una solución robusta y escalable. Ski Solution 360 se ha adaptado perfectamente a nuestras necesidades y al volumen de visitantes que recibimos cada temporada."
+                "Para un resort del tamaño de Grandvalira RESORTS, necesitábamos
+                una solución robusta y escalable. Ski Solution 360 se ha
+                adaptado perfectamente a nuestras necesidades y al volumen de
+                visitantes que recibimos cada temporada."
               </blockquote>
-              <p className="text-white/80 text-sm">
-                - Resort de gran tamaño
-              </p>
+              <p className="text-white/80 text-sm">- Resort de gran tamaño</p>
             </div>
 
             {/* Testimonial 2 - Candanchú */}
             <div className="bg-gradient-to-l from-[hsl(var(--primary))] via-[hsl(var(--ski-lime-dark))] to-[hsl(var(--ski-lime-dark))] border-0 text-white rounded-2xl p-8">
               <blockquote className="text-lg font-medium mb-4">
-                "Nos sorprendió la facilidad de personalizar el sistema a nuestras particularidades. Candanchú tiene características únicas y Ski Solution 360 se adaptó perfectamente, sin necesidad de procesos largos ni complicados."
+                "Nos sorprendió la facilidad de personalizar el sistema a
+                nuestras particularidades. Candanchú tiene características
+                únicas y Ski Solution 360 se adaptó perfectamente, sin necesidad
+                de procesos largos ni complicados."
               </blockquote>
-              <p className="text-white/80 text-sm">
-                - Candanchú
-              </p>
+              <p className="text-white/80 text-sm">- Candanchú</p>
             </div>
 
             {/* Testimonial 3 - Escuela de Esquí */}
             <div className="bg-gradient-to-l from-[hsl(var(--primary))] via-[hsl(var(--ski-lime-dark))] to-[hsl(var(--ski-lime-dark))] border-0 text-white rounded-2xl p-8">
               <blockquote className="text-lg font-medium mb-4">
-                "Para una escuela de esquí, contar con una herramienta digital como Ski Solution 360 nos ha ayudado a dar un salto de calidad. La imagen de profesionalidad que transmitimos es mucho más sólida y moderna."
+                "Para una escuela de esquí, contar con una herramienta digital
+                como Ski Solution 360 nos ha ayudado a dar un salto de calidad.
+                La imagen de profesionalidad que transmitimos es mucho más
+                sólida y moderna."
               </blockquote>
-              <p className="text-white/80 text-sm">
-                - Escuela Formigal
-              </p>
+              <p className="text-white/80 text-sm">- Escuela Formigal</p>
             </div>
 
             {/* Testimonial 4 - Lago Hermoso */}
             <div className="bg-gradient-to-l from-[hsl(var(--primary))] via-[hsl(var(--ski-lime-dark))] to-[hsl(var(--ski-lime-dark))] border-0 text-white rounded-2xl p-8">
               <blockquote className="text-lg font-medium mb-4">
-                "En Lago Hermoso estamos en plena fase de expansión y necesitábamos una herramienta que nos acompañara en ese crecimiento. Con Ski Solution 360 tenemos un sistema que gestiona tanto entradas como reservas de actividades, todo en una sola plataforma."
+                "En Lago Hermoso estamos en plena fase de expansión y
+                necesitábamos una herramienta que nos acompañara en ese
+                crecimiento. Con Ski Solution 360 tenemos un sistema que
+                gestiona tanto entradas como reservas de actividades, todo en
+                una sola plataforma."
               </blockquote>
-              <p className="text-white/80 text-sm">
-                - Lago Hermoso
-              </p>
+              <p className="text-white/80 text-sm">- Lago Hermoso</p>
             </div>
           </div>
         </div>
@@ -245,18 +255,20 @@ const SoftwareGestionSkiResort = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-black mb-6">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary p-10">
+        <div className="max-w-4xl mx-auto text-center p-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-black leading-tight">
             ¿Lo vemos funcionando?{" "}
           </h2>
           <p className="text-xl text-black/80 mb-8">
-            Te preparamos una demostración con tus necesidades. Verás en 20
-            minutos cómo reducir colas y ganar visibilidad.
+            Te preparamos una demostración con tus necesidades. <br />
+            Verás en 20 minutos cómo reducir colas y ganar visibilidad.
           </p>
           <Button
             size="lg"
-            className="bg-black text-primary hover:bg-gray-900 px-8 py-3"
+            variant="secondary"
+            className="bg-black text-primary hover:bg-gray-900 px-8 py-4 text-lg font-medium"
+            onClick={openDemoForm}
           >
             Solicita una demo
           </Button>

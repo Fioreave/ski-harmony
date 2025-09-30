@@ -16,8 +16,12 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import DemoRequestForm from "@/components/DemoRequestForm";
+import { useForms } from "@/hooks/useForms";
 
 const PuntoVentaRestauracion = () => {
+  const { showDemoForm, openDemoForm, closeDemoForm } = useForms();
+
   const benefits = [
     {
       icon: <ShoppingCart className="w-6 h-6" />,
@@ -66,6 +70,8 @@ const PuntoVentaRestauracion = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {showDemoForm && <DemoRequestForm onClose={closeDemoForm} />}
+
       <Navbar />
       {/* Hero Section */}
       <section className="relative py-24 px-4 overflow-hidden">
@@ -75,24 +81,26 @@ const PuntoVentaRestauracion = () => {
         <div className="absolute top-20 right-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
 
-        <div className="container-custom relative z-10">
+        <div className="pt-20 container-custom relative z-10">
           <div className="text-center">
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-foreground ">
               Ventas y stock <span className="text-accent">unificados</span>{" "}
-              para tu estación
+              <br /> para tu estación
             </h1>
-            <p className="text-2xl text-muted-foreground mb-6 max-w-3xl mx-auto font-medium">
+            <p className="text-xl text-muted-foreground mb-6 max-w-3xl mx-auto font-medium">
               Gestión de bares, restaurantes y tiendas en estaciones de esquí
             </p>
-            <p className="text-lg text-muted-foreground mb-10 max-w-4xl mx-auto leading-relaxed">
+            {/*<p className="text-lg text-muted-foreground mb-10 max-w-4xl mx-auto leading-relaxed">
               Optimiza la gestión de puntos de venta en restauración y retail
               con el módulo F&B & Retail de Ski Solution 360. Stock en tiempo
               real, integración con ERP y ventas centralizadas.
             </p>
-            <Button className="btn-demo text-lg px-8 py-4 shadow-lg hover:shadow-xl">
+            <Button
+              onClick={openDemoForm}
+              className="btn-demo text-lg px-8 py-4 shadow-lg hover:shadow-xl"
+            >
               Solicita una demo
-            </Button>
+            </Button>*/}
           </div>
         </div>
       </section>
@@ -194,17 +202,16 @@ const PuntoVentaRestauracion = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-spacing bg-gradient-to-r from-foreground via-foreground to-foreground/95 text-primary-foreground relative overflow-hidden">
-        <div className="absolute inset-0"></div>
-        <div className="absolute top-20 right-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
-        <div className="container-custom text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white leading-tight">
-            <span className="text-accent">Simplifica</span>, controla y potencia
-            tus ventas dentro de la estación.
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary p-10">
+        <div className="max-w-4xl mx-auto text-center p-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-black leading-tight">
+            Simplifica, controla y potencia tus ventas dentro de la estación.
           </h2>
           <Button
             size="lg"
-            className="bg-accent text-accent-foreground hover:bg-accent/90 text-xl px-12 py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+            variant="secondary"
+            className="bg-black text-primary hover:bg-gray-900 px-8 py-4 text-lg font-medium"
+            onClick={openDemoForm}
           >
             Solicita una demo
           </Button>

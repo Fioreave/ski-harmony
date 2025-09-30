@@ -13,30 +13,31 @@ import {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 
 const Empresa = () => {
   const { t } = useLanguage();
-  
+
   const values = [
     {
       icon: Target,
-      title: t('empresa.values.specialization.title'),
-      description: t('empresa.values.specialization.description'),
+      title: t("empresa.values.specialization.title"),
+      description: t("empresa.values.specialization.description"),
     },
     {
       icon: Lightbulb,
-      title: t('empresa.values.innovation.title'),
-      description: t('empresa.values.innovation.description'),
+      title: t("empresa.values.innovation.title"),
+      description: t("empresa.values.innovation.description"),
     },
     {
       icon: Zap,
-      title: t('empresa.values.efficiency.title'),
-      description: t('empresa.values.efficiency.description'),
+      title: t("empresa.values.efficiency.title"),
+      description: t("empresa.values.efficiency.description"),
     },
     {
       icon: Heart,
-      title: t('empresa.values.commitment.title'),
-      description: t('empresa.values.commitment.description'),
+      title: t("empresa.values.commitment.title"),
+      description: t("empresa.values.commitment.description"),
     },
   ];
 
@@ -102,27 +103,29 @@ const Empresa = () => {
           <div className="max-w-4xl mx-auto text-center">
             <Building2 className="w-16 h-16 text-accent mx-auto mb-6" />
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              {t('empresa.title')}
+              {t("empresa.title")}
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              {t('empresa.hero.subtitle')}
+              {t("empresa.hero.subtitle")}
             </p>
             <div className="flex justify-center space-x-8 text-center">
               <div>
                 <div className="text-3xl font-bold text-accent">27+</div>
                 <p className="text-sm text-muted-foreground">
-                  {t('empresa.years-experience')}
+                  {t("empresa.years-experience")}
                 </p>
               </div>
               <div>
                 <div className="text-3xl font-bold text-accent">35+</div>
                 <p className="text-sm text-muted-foreground">
-                  {t('empresa.resorts-transformed')}
+                  {t("empresa.resorts-transformed")}
                 </p>
               </div>
               <div>
                 <div className="text-3xl font-bold text-accent">7+</div>
-                <p className="text-sm text-muted-foreground">{t('empresa.countries')}</p>
+                <p className="text-sm text-muted-foreground">
+                  {t("empresa.countries")}
+                </p>
               </div>
             </div>
           </div>
@@ -133,27 +136,29 @@ const Empresa = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">{t('empresa.history.title')}</h2>
+              <h2 className="text-3xl font-bold mb-6">
+                {t("empresa.history.title")}
+              </h2>
               <p className="text-muted-foreground mb-6">
-                {t('empresa.history.paragraph1')}
+                {t("empresa.history.paragraph1")}
               </p>
               <p className="text-muted-foreground mb-8">
-                {t('empresa.history.paragraph2')}
+                {t("empresa.history.paragraph2")}
               </p>
 
               <div className="bg-accent/5 p-6 rounded-lg">
                 <h3 className="font-bold text-lg mb-3 flex items-center">
                   <Target className="w-5 h-5 text-accent mr-2" />
-                  {t('empresa.mission.title')}
+                  {t("empresa.mission.title")}
                 </h3>
-                <p className="text-sm">
-                  {t('empresa.mission.description')}
-                </p>
+                <p className="text-sm">{t("empresa.mission.description")}</p>
               </div>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-6">{t('empresa.milestones.title')}</h3>
+              <h3 className="text-xl font-bold mb-6">
+                {t("empresa.milestones.title")}
+              </h3>
               <div className="space-y-4">
                 {milestones.map((milestone, index) => (
                   <div key={index} className="flex items-center space-x-4">
@@ -172,9 +177,11 @@ const Empresa = () => {
       <section className="section-spacing bg-muted/30">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">{t('empresa.values.title')}</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              {t("empresa.values.title")}
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              {t('empresa.values.subtitle')}
+              {t("empresa.values.subtitle")}
             </p>
           </div>
 
@@ -230,47 +237,9 @@ const Empresa = () => {
             ))}
           </div>
         </div>
-      </section>*/}
-      {/* BDR Matrix */}
-      <section className="section-spacing bg-gradient-to-br from-background to-muted">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-5xl font-bold mb-6 text-foreground">
-              {t('empresa.matrix.title')}
-            </h2>
-            <p className="text-slay-800 mb-8">
-              {t('empresa.matrix.description')}
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="p-6 bg-background rounded-lg">
-                <TrendingUp className="w-8 h-8 text-accent mx-auto mb-4" />
-                <h3 className="font-bold mb-2">{t('empresa.matrix.financial-stability')}</h3>
-                <p className="text-sm text-muted-foreground">
-                  {t('empresa.matrix.financial-description')}
-                </p>
-              </div>
-
-              <div className="p-6 bg-background rounded-lg">
-                <Users2 className="w-8 h-8 text-accent mx-auto mb-4" />
-                <h3 className="font-bold mb-2">{t('empresa.matrix.experienced-team')}</h3>
-                <p className="text-sm text-muted-foreground">
-                  {t('empresa.matrix.team-description')}
-                </p>
-              </div>
-
-              <div className="p-6 bg-background rounded-lg">
-                <Award className="w-8 h-8 text-accent mx-auto mb-4" />
-                <h3 className="font-bold mb-2">{t('empresa.matrix.recognition')}</h3>
-                <p className="text-sm text-muted-foreground">
-                  {t('empresa.matrix.recognition-description')}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
-      {/* Contact CTA */}
+      {/* BDR Matrix */}
+      {/* Contact CTA 
       <section className="section-spacing">
         <div className="container-custom text-center">
           <h2 className="text-3xl font-bold mb-4">
@@ -285,6 +254,23 @@ const Empresa = () => {
           >
             {t('empresa.contact.button')}
           </Button>
+        </div>
+      </section>*/}
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary p-10">
+        <div className="max-w-5xl mx-auto text-center p-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-black leading-snug">
+            {t("empresa.contact.title")}
+          </h2>
+          <p className="text-xl mb-6 text-black/80 mb-8">
+            {t("empresa.contact.description")}
+          </p>
+          <Link
+            className="bg-black rounded text-primary hover:bg-gray-900 px-4 py-3 text-lg font-medium"
+            to={"/contacto"}
+          >
+            {t("empresa.contact.button")}
+          </Link>
         </div>
       </section>
       <Footer />

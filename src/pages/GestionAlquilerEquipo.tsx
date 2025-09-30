@@ -12,6 +12,8 @@ import {
   DollarSign,
   Clock,
 } from "lucide-react";
+import DemoRequestForm from "@/components/DemoRequestForm";
+import { useForms } from "@/hooks/useForms";
 
 const benefits = [
   {
@@ -53,33 +55,22 @@ const benefits = [
 ];
 
 const GestionAlquilerEquipo = () => {
+  const { showDemoForm, openDemoForm, closeDemoForm } = useForms();
+
   return (
     <div className="min-h-screen bg-background">
+      {showDemoForm && <DemoRequestForm onClose={closeDemoForm} />}
+
       <Navbar />
 
       <main className="pt-16">
-        {/* Breadcrumbs */}
-        <nav className="py-4 px-4">
-          <div className="container-custom">
-            <span className="text-sm text-muted-foreground animate-fade-in">
-              <Link to="/" className="hover:text-foreground transition-colors">
-                Inicio
-              </Link>{" "}
-              /
-              <Link
-                to="/solucion"
-                className="hover:text-foreground transition-colors"
-              >
-                {" "}
-                Solución
-              </Link>{" "}
-              / Plataforma Core
-            </span>
-          </div>
-        </nav>
-
         {/* Hero Section */}
         <section className="section-spacing bg-gradient-to-br from-background via-background to-muted/30">
+          {/* Background gradient */}
+          <div className="absolute z-index bg-gradient-to-br from-accent/20 via-background to-muted/30"></div>
+          {/* Decorative elements */}
+          <div className="absolute top-20 right-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
               <div className="w-20 h-20 mx-auto mb-8 bg-primary/10 rounded-full flex items-center justify-center animate-scale-in">
@@ -190,16 +181,19 @@ const GestionAlquilerEquipo = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
-          <div className="container-custom text-center">
-            <div className="max-w-2xl mx-auto animate-fade-in-up">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6">
-                Mantén tu operación siempre equipada, controlada y rentable.
-              </h3>
-              <Button size="lg" className="btn-demo text-lg px-8 py-3">
-                Solicita una demo
-              </Button>
-            </div>
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary p-10">
+          <div className="max-w-4xl mx-auto text-center p-10">
+            <h2 className="text-5xl font-bold text-black mb-6">
+              Mantén tu operación siempre equipada, controlada y rentable.
+            </h2>
+            <Button
+              size="lg"
+              variant="secondary"
+              className="bg-black text-primary hover:bg-gray-900 px-8 py-4 text-lg font-medium"
+              onClick={openDemoForm}
+            >
+              Solicita una demo
+            </Button>
           </div>
         </section>
       </main>

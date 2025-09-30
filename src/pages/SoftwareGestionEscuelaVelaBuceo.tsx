@@ -19,6 +19,9 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import velabuceo from "@/assets/img/vela-buceo.jpg";
+import { useForms } from "@/hooks/useForms";
+import DemoRequestForm from "@/components/DemoRequestForm";
 
 const SoftwareGestionEscuelasVelaBuceo = () => {
   const challenges = [
@@ -75,9 +78,12 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
     "Kayak",
     "Motonáutica",
   ];
+  const { showDemoForm, openDemoForm, closeDemoForm } = useForms();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-lime-50">
+      {showDemoForm && <DemoRequestForm onClose={closeDemoForm} />}
+
       <Navbar />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 bg-white sm:px-6 lg:px-8">
@@ -126,7 +132,7 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
               {/* Imagen (cámbiala por la que prefieras) */}
               <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5">
                 <img
-                  src="/img/vela-buceo.jpg"
+                  src={velabuceo}
                   alt="Actividades de Vela y Buceo"
                   className="h-64 w-full object-cover sm:h-80 lg:h-[420px]"
                   loading="lazy"
@@ -341,24 +347,27 @@ const SoftwareGestionEscuelasVelaBuceo = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-black mb-6">
-            ¿Quieres que tu escuela sea más ágil y rentable?
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary p-10">
+        <div className="max-w-5xl mx-auto text-center p-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-black leading-snug">
+            ¿Quieres que tu escuela <br /> sea más ágil y rentable?
           </h2>
           <p className="text-xl text-black/80 mb-8">
             Ski Solution 360 te acompaña para centralizar reservas, cursos y
             alquiler de material. Pide una demo y descubre en 20 minutos cómo
-            ganar tiempo, control y satisfacción de tus alumnos.{" "}
+            ganar tiempo, control y satisfacción de tus alumnos.
           </p>
           <Button
             size="lg"
-            className="bg-gradient-to-br from-[hsl(var(--ski-lime-dark))] to-primary hover:bg-blue-700 text-slate-950 px-8 py-3"
+            variant="secondary"
+            className="bg-black text-primary hover:bg-gray-900 px-8 py-4 text-lg font-medium"
+            onClick={openDemoForm}
           >
             Solicita una demo
           </Button>
         </div>
       </section>
+
       <Footer />
     </div>
   );

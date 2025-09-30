@@ -19,8 +19,13 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import museos from "@/assets/img/museos.jpg";
+import { useForms } from "@/hooks/useForms";
+import DemoRequestForm from "@/components/DemoRequestForm";
 
 const SoftwareGestionMuseo = () => {
+  const { showDemoForm, openDemoForm, closeDemoForm } = useForms();
+
   const challenges = [
     "Control de aforo y entradas poco automatizado",
     "Procesos de compra y reserva poco atractivos o lentos",
@@ -79,6 +84,8 @@ const SoftwareGestionMuseo = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-lime-50">
+      {showDemoForm && <DemoRequestForm onClose={closeDemoForm} />}
+
       <Navbar />
 
       {/* Hero Section */}
@@ -129,7 +136,7 @@ const SoftwareGestionMuseo = () => {
               {/* Imagen (cámbiala por la que prefieras) */}
               <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5">
                 <img
-                  src="/img/museos.jpg"
+                  src={museos}
                   alt="Museos y Centros Culturales"
                   className="h-64 w-full object-cover sm:h-80 lg:h-[420px]"
                   loading="lazy"
@@ -340,9 +347,9 @@ const SoftwareGestionMuseo = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-black mb-6">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary p-10">
+        <div className="max-w-5xl mx-auto text-center p-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-black leading-snug">
             Digitaliza tu museo o centro cultural
           </h2>
           <p className="text-xl text-black/80 mb-8">
@@ -352,7 +359,9 @@ const SoftwareGestionMuseo = () => {
           </p>
           <Button
             size="lg"
-            className="bg-black text-primary hover:bg-gray-900 px-8 py-3"
+            variant="secondary"
+            className="bg-black text-primary hover:bg-gray-900 px-8 py-4 text-lg font-medium"
+            onClick={openDemoForm}
           >
             Solicita una demo
           </Button>
