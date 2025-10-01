@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Settings, Zap, Calendar, CheckCircle2 } from "lucide-react";
-import mockup from "@/assets/img/mockup-core.png";
+import mockup from "@/assets/img/mockup.svg";
 import { useForms } from "@/hooks/useForms";
 import DemoRequestForm from "@/components/DemoRequestForm";
 
@@ -113,7 +113,7 @@ const SkiSolution360 = () => {
         </section>
 
         {/* How it Works Section */}
-        <section className="section-spacing bg-[e1e1e1]">
+        <section className="section-spacing bg-gradient-to-br from-bg-muted/50 to-bg-muted">
           <div className="container-custom">
             <div className="grid lg:grid-cols-2 gap-12 items-center ">
               <div className="animate-fade-in-up">
@@ -153,11 +153,11 @@ const SkiSolution360 = () => {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden ring-1 ring-black/5">
+              <div className="relative rounded-2xl shadow-md overflow-hidden ring-1 ring-black/5">
                 <img
                   src={mockup}
                   alt="Clase de esquí para niños con monitor"
-                  className="h-64 w-full object-cover sm:h-80 lg:h-[420px]"
+                  className="h-64 w-full  object-cover sm:h-80 lg:h-[420px]"
                   loading="lazy"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-white/10" />
@@ -166,14 +166,14 @@ const SkiSolution360 = () => {
           </div>
         </section>
 
-        <section className="section-spacing bg-gradient-to-br from-primary/10 to-primary/5 p-8">
+        <section className="section-spacing bg-muted/20 p-8">
           <div className="container-custom">
             {" "}
             <div className="animate-stagger-2">
               <div className="relative">
                 <div className=" ">
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-background p-4 rounded-lg shadow-sm">
+                    <div className="bg-background p-4 rounded-lg shadow-md">
                       <Settings className="w-6 h-6 text-primary mb-2" />
                       <h3 className="text-sm font-medium pb-2">
                         Centraliza la información de todos los puntos de venta:
@@ -183,7 +183,7 @@ const SkiSolution360 = () => {
                         móviles.
                       </p>
                     </div>
-                    <div className="bg-background p-4 rounded-lg shadow-sm">
+                    <div className="bg-background p-4 rounded-lg shadow-md">
                       <Zap className="w-6 h-6 text-primary mb-2" />
                       <h3 className="text-sm font-medium pb-2">
                         Sincroniza inventarios y accesos en tiempo real:
@@ -192,7 +192,7 @@ const SkiSolution360 = () => {
                         Evitando sobreventas o colas innecesarias.
                       </p>
                     </div>
-                    <div className="bg-background p-4 rounded-lg shadow-sm">
+                    <div className="bg-background p-4 rounded-lg shadow-md">
                       <Calendar className="w-6 h-6 text-primary mb-2" />
                       <h3 className="text-sm font-medium pb-2">
                         Genera informes automáticos para gerencia y dirección:
@@ -201,7 +201,7 @@ const SkiSolution360 = () => {
                         Con datos precisos para la toma de decisiones.
                       </p>
                     </div>
-                    <div className="bg-background p-4 rounded-lg shadow-sm">
+                    <div className="bg-background p-4 rounded-lg shadow-md">
                       <CheckCircle2 className="w-6 h-6 text-primary mb-2" />
                       <h3 className="text-sm font-medium pb-2">
                         Centraliza la información de todos los puntos de venta:
